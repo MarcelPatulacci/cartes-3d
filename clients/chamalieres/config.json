@@ -2262,7 +2262,7 @@
   "notes": ""
  },
  "mapGeneratedAt": "2026-10-30T03:00:23.331Z",
- "publishedAt": "2026-10-31T15:39:28.824Z",
+ "publishedAt": "2026-10-31T15:42:38.517Z",
  "gen": {},
  "style": "maquette",
  "zoneMode": "quartiers",
@@ -2294,9 +2294,9 @@
    "note": "reprise de l’ancienne configuration"
   },
   "customIcons": {
-   "active": true,
+   "active": false,
    "since": "2026-10-31",
-   "until": null
+   "until": "2026-10-31"
   },
   "priority": {
    "active": true,
