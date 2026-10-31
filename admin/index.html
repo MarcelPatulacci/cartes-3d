@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Espace commune — carte 3D</title>
+<style>
+:root{--primary:#244b40;--accent:#c76c50;--paper:#fbfaf5;--ink:#1f2a26;--muted:#6f7a72;--line:#e2e5dc;font-family:Inter,'Segoe UI',system-ui,sans-serif;color:var(--ink);background:#eef1ea}
+@font-face{font-family:Inter;font-weight:400;src:url(../fonts/inter-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:600;src:url(../fonts/inter-latin-600-normal.woff2) format('woff2')}
+*{box-sizing:border-box}body{margin:0;min-height:100dvh}
+[hidden]{display:none!important}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.top{display:flex;align-items:center;gap:14px;padding:14px 24px;background:var(--paper);border-bottom:1px solid var(--line)}
+.top img{height:38px;width:auto}
+.top strong{font-size:17px}.top small{display:block;color:var(--muted);font-size:12px}
+.top .sp{flex:1}
+.btn{border:0;border-radius:999px;padding:10px 18px;background:var(--primary);color:#fff;font-weight:600;font-size:14px}
+.btn.ghost{background:transparent;color:var(--primary);border:1px solid var(--line)}
+.btn:disabled{opacity:.5;cursor:default}
+#login{max-width:420px;margin:12vh auto;background:var(--paper);padding:36px;border-radius:18px;box-shadow:0 20px 60px #0001}
+#login h1{font-size:24px;margin:0 0 8px}#login p{color:var(--muted);font-size:14px;line-height:1.6}
+label{display:block;font-size:12px;font-weight:600;margin:16px 0 6px;color:var(--muted);letter-spacing:.3px}
+input[type=text],input[type=url],input[type=password],textarea{width:100%;padding:11px 13px;border:1px solid #cfd5c9;border-radius:10px;background:#fff;font-size:15px}
+textarea{min-height:150px;resize:vertical;line-height:1.5}
+.msg{margin-top:14px;font-size:14px;padding:10px 12px;border-radius:10px;background:#fff4ec;color:#8a3d1d}
+.msg.ok{background:#eaf5ec;color:#1e5c33}
+#app{display:grid;grid-template-columns:320px 1fr;min-height:calc(100dvh - 67px)}
+#list{border-right:1px solid var(--line);background:#f7f8f3;overflow:auto;max-height:calc(100dvh - 67px)}
+#list input{margin:14px;width:calc(100% - 28px)}
+.item{display:flex;gap:10px;align-items:center;width:100%;text-align:left;padding:11px 16px;border:0;border-bottom:1px solid var(--line);background:none}
+.item img,.item .ph{width:44px;height:44px;border-radius:8px;object-fit:cover;background:#dfe4d9;flex:none}
+.item b{display:block;font-size:14px;font-weight:600}.item small{color:var(--muted);font-size:12px}
+.item.on{background:#fff;box-shadow:inset 3px 0 var(--primary)}
+#form{padding:28px 36px;max-width:760px}
+#form h2{margin:0 0 4px;font-size:22px}.hint{color:var(--muted);font-size:13px;line-height:1.5}
+.opt{display:flex;gap:8px;align-items:center;font-size:13px;margin:6px 0;cursor:pointer}.opt input{width:auto;margin:0}#opts{padding:14px 16px;border-bottom:1px solid var(--line);background:#fff}#opts b{display:block;font-size:12px;letter-spacing:.5px;margin-bottom:4px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px}
+.gal figure{position:relative;margin:0}.gal img{width:100%;height:110px;object-fit:cover;border-radius:10px;background:#dfe4d9;display:block}
+.gal figure.main img{outline:3px solid var(--primary);outline-offset:-3px}
+.gal .tools{position:absolute;top:5px;right:5px;display:flex;gap:4px}
+.gal .tools button{border:0;border-radius:6px;background:#000a;color:#fff;font-size:12px;padding:3px 7px;cursor:pointer}
+.gal input{margin-top:4px;font-size:11px;padding:5px 7px}
+.gal figcaption{position:absolute;left:6px;top:6px;background:var(--primary);color:#fff;font-size:10px;padding:2px 7px;border-radius:99px}
+.row{display:grid;grid-template-columns:1fr 1.6fr;gap:14px}
+.actions{display:flex;gap:10px;align-items:center;margin-top:24px;flex-wrap:wrap}
+.count{font-size:11px;color:var(--muted);text-align:right}
+.card{margin-top:26px;border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff}
+.card .k{font-size:9px;letter-spacing:1.6px;font-weight:700;color:var(--muted)}
+.card h3{font-family:Georgia,serif;font-weight:400;font-size:22px;margin:6px 0}
+.card img{width:100%;height:170px;object-fit:cover;border-radius:10px}
+.card p{font-size:13px;line-height:1.6;color:#5b665e;white-space:pre-line}
+.card a{display:inline-block;padding:9px 15px;border-radius:999px;background:var(--primary);color:#fff;text-decoration:none;font-size:12px;font-weight:600}
+@media(max-width:800px){#app{grid-template-columns:1fr}#list{max-height:260px}#form{padding:20px}.row{grid-template-columns:1fr}.photo{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="top"><img id="logo" alt="" hidden><div><strong id="cname">Espace commune</strong><small>Modifier les vignettes de la carte 3D</small></div><span class="sp"></span><a id="viewLink" class="btn ghost" target="_blank" rel="noopener" hidden>Voir la carte ↗</a><button id="logout" class="btn ghost" hidden>Se déconnecter</button></div>
+
+<section id="login">
+  <h1>Connexion</h1>
+  <p>Saisissez le code d’accès remis par ANTEMIC. Il est personnel à votre commune : ne le transmettez qu’aux personnes chargées de la carte.</p>
+  <form id="loginForm"><label for="code">Code d’accès</label><input id="code" type="password" autocomplete="current-password" placeholder="ex. ORCINES-7K2Q-MX9P" required>
+  <div class="actions"><button class="btn" type="submit">Se connecter</button></div></form>
+  <div id="loginMsg" class="msg" hidden></div>
+</section>
+
+<section id="app" hidden>
+  <nav id="list"><div id="opts"><b>Options de la carte</b>
+    <label class="opt"><input type="checkbox" id="oTime"> Heure du jour (jour / nuit)</label>
+    <label class="opt"><input type="checkbox" id="oSun"> Soleil visible</label>
+    <label class="opt"><input type="checkbox" id="oMusic"> Ambiance musicale</label>
+    <div id="optItin" hidden><b style="margin-top:10px">Itinéraires</b>
+      <label class="opt">Vitesse du tracé <input type="range" id="oSpeed" min="0.25" max="3" step="0.25" style="flex:1"> <span id="oSpeedV" class="hint"></span></label>
+      <label class="opt"><input type="radio" name="oOrd" value="optimise"> Ordre le plus rapide</label>
+      <label class="opt"><input type="radio" name="oOrd" value="ordre"> Respecter l’ordre choisi</label>
+      <label class="opt"><input type="checkbox" id="oPick"> Ajout des étapes par clic sur la carte</label></div>
+    <div id="optIcons" hidden><b style="margin-top:10px">Icônes</b><div id="iconList"></div></div>
+    <span id="optMsg" class="hint"></span></div><input id="filter" type="text" placeholder="Rechercher un lieu…" aria-label="Rechercher un lieu"><div id="items"></div></nav>
+  <form id="form" hidden>
+    <h2 id="fTitle"></h2><p class="hint">Les changements sont visibles sur la carte dès l’enregistrement. La position et le modèle 3D des lieux sont gérés par ANTEMIC.</p>
+    <label for="title">Titre de la vignette</label><input id="title" type="text" maxlength="120" required>
+    <label>Photos <span id="photoCount" class="hint"></span></label>
+    <div class="gal" id="gal"></div>
+    <input id="photoFile" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+    <p class="hint">Jusqu’à 6 photos. La première (encadrée) est la photo principale ; ◀ pour avancer une photo. JPEG, PNG ou WebP, réduites automatiquement (1 600 px). Utilisez des photos dont vous détenez les droits et indiquez le crédit.</p>
+    <label for="text">Texte</label><textarea id="text" maxlength="4000"></textarea><div class="count" id="textCount"></div>
+    <div class="row"><div><label for="bLabel">Libellé du bouton</label><input id="bLabel" type="text" maxlength="40" placeholder="En savoir plus"></div>
+    <div><label for="bUrl">Lien du bouton (laisser vide pour masquer le bouton)</label><input id="bUrl" type="text" placeholder="www.exemple.fr"></div></div>
+    <div class="actions"><button class="btn" id="save" type="submit">Enregistrer</button><button class="btn ghost" id="reset" type="button">Annuler les modifications</button><span id="saveMsg" class="hint"></span></div>
+    <div class="card" aria-label="Aperçu de la vignette"><div class="k" id="pvK"></div><h3 id="pvT"></h3><img id="pvI" alt="" hidden><p id="pvP"></p><a id="pvA" target="_blank" rel="noopener" hidden></a></div>
+  </form>
+</section>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const S = { cfg: null, slug: null, token: null, rows: [], cur: null, photos: [] };
+  const MAXPH = 6;
+  const rowPhotos = (row) => (Array.isArray(row.photos) && row.photos.length ? row.photos : row.photo_url ? [{ url: row.photo_url, credit: '' }] : []).map(q => ({ url: q.url, credit: q.credit || '' }));
+  const SITE = new URL('../', location.href).href;
+  const slugFromCode = c => c.trim().toUpperCase().split('-').slice(0, -2).join('-').toLowerCase();
+  const sb = () => S.cfg.supabase;
+  const H = (json) => ({ apikey: sb().anonKey, ...(S.token ? { Authorization: 'Bearer ' + S.token } : String(sb().anonKey).startsWith('sb_') ? {} : { Authorization: 'Bearer ' + sb().anonKey }), ...(json ? { 'Content-Type': 'application/json' } : {}) });
+  const show = (el, txt, ok) => { el.textContent = txt; el.hidden = !txt; el.classList.toggle('ok', !!ok); };
+
+  async function login(code) {
+    const slug = slugFromCode(code); if (!slug) throw new Error('Code incomplet.');
+    const r = await fetch(SITE + 'clients/' + slug + '/config.json', { cache: 'no-cache' });
+    if (!r.ok) throw new Error('Code inconnu.');
+    S.cfg = await r.json(); S.slug = slug;
+    if (!sb()?.url) throw new Error('Cette carte n’est pas encore reliée à l’espace commune. Contactez ANTEMIC.');
+    const t = await fetch(sb().url + '/auth/v1/token?grant_type=password', { method: 'POST', headers: { apikey: sb().anonKey, 'Content-Type': 'application/json' }, body: JSON.stringify({ email: slug + '@clients.antemic.fr', password: code.trim().toUpperCase() }) });
+    if (!t.ok) throw new Error(t.status === 400 ? 'Code incorrect.' : 'Connexion impossible (' + t.status + ').');
+    const j = await t.json(); S.token = j.access_token; S.exp = Date.now() + (j.expires_in - 60) * 1000;
+    try { sessionStorage.setItem('antemic-admin', JSON.stringify({ slug, token: S.token, exp: S.exp })); } catch (e) {}
+  }
+  function theme() {
+    const th = S.cfg.theme || {}; const r = document.documentElement.style;
+    if (th.primary) r.setProperty('--primary', th.primary); if (th.accent) r.setProperty('--accent', th.accent);
+    $('#cname').textContent = S.cfg.name; if (th.logo) { const l = $('#logo'); l.src = /^https?:/.test(th.logo) ? th.logo : SITE + 'clients/' + S.slug + '/' + th.logo; l.hidden = false; }
+    const v = $('#viewLink'); v.href = SITE + '?c=' + S.slug; v.hidden = false; $('#logout').hidden = false;
+  }
+  const photoUrl = u => !u ? '' : /^https?:/.test(u) ? u : SITE + 'clients/' + S.slug + '/' + u;
+  // options d'affichage : null en base = valeur définie par ANTEMIC (config publiée)
+  const LIC = (id) => !!(S.cfg.licenses?.[id]?.active ?? (id === 'itinerary' ? S.cfg.modules?.itinerary : false));
+  async function loadOpts() {
+    const mod = Object.assign({ time: true, sun: true, music: true }, S.cfg.modules || {});
+    let row = null; try { const r = await fetch(sb().url + '/rest/v1/client_options?client_id=eq.' + encodeURIComponent(S.slug) + '&select=*', { headers: H() }); if (r.ok) row = (await r.json())[0] || null; } catch (e) {}
+    $('#oTime').checked = row?.show_time ?? mod.time; $('#oSun').checked = row?.show_sun ?? mod.sun; $('#oMusic').checked = row?.show_music ?? mod.music;
+    // options acquises : leurs réglages apparaissent ici
+    S.itin = Object.assign({ speed: 1, order: 'optimise', pickOnMap: true }, S.cfg.itinerary || {}, row?.itinerary || {});
+    $('#optItin').hidden = !LIC('itinerary');
+    $('#oSpeed').value = S.itin.speed; $('#oSpeedV').textContent = '× ' + S.itin.speed; document.querySelectorAll('[name=oOrd]').forEach(r => r.checked = r.value === S.itin.order); $('#oPick').checked = S.itin.pickOnMap;
+    S.icons = { cat: { ...(S.cfg.icons?.cat || {}), ...(row?.icons?.cat || {}) }, poi: { ...(row?.icons?.poi || {}) } };
+    $('#optIcons').hidden = !(LIC('customIcons') && S.cfg.icons?.enabled); drawIcons();
+  }
+  function drawIcons() {
+    const box = $('#iconList'); box.innerHTML = '';
+    for (const c of S.cfg.categories || []) {
+      const lab = document.createElement('label'); lab.className = 'opt'; const u = S.icons.cat[c.id];
+      const im = document.createElement('img'); im.style.cssText = 'width:26px;height:26px;object-fit:contain;background:#f3f3f3;border-radius:5px'; if (u) im.src = photoUrl(u); else im.style.visibility = 'hidden';
+      const f = document.createElement('input'); f.type = 'file'; f.accept = 'image/png,image/webp'; f.style.cssText = 'width:120px;font-size:10px;padding:2px';
+      f.onchange = async () => { const fl = f.files[0]; if (!fl) return; $('#optMsg').textContent = 'Envoi…'; const name = `${S.slug}/icons/cat-${c.id}-${Date.now()}.${fl.type === 'image/webp' ? 'webp' : 'png'}`;
+        const up = await fetch(`${sb().url}/storage/v1/object/photos/${name}`, { method: 'POST', headers: { ...H(), 'Content-Type': fl.type }, body: fl });
+        if (!up.ok) { $('#optMsg').textContent = 'Envoi refusé (' + up.status + ')'; return; } S.icons.cat[c.id] = `${sb().url}/storage/v1/object/public/photos/${name}`; drawIcons(); saveOpts(); };
+      const t = document.createElement('span'); t.textContent = c.label; t.style.flex = '1'; lab.append(im, t, f); box.append(lab);
+    }
+  }
+  $('#oSpeed').addEventListener('input', () => { $('#oSpeedV').textContent = '× ' + $('#oSpeed').value; });
+  async function saveOpts() {
+    $('#optMsg').textContent = 'Enregistrement…';
+    try {
+      const r = await fetch(sb().url + '/rest/v1/client_options?on_conflict=client_id', { method: 'POST', headers: { ...H(true), Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify({ client_id: S.slug, show_time: $('#oTime').checked, show_sun: $('#oSun').checked, show_music: $('#oMusic').checked, updated_by: S.slug + '@clients.antemic.fr',
+        ...(LIC('itinerary') ? { itinerary: { speed: +$('#oSpeed').value, order: document.querySelector('[name=oOrd]:checked')?.value || 'optimise', pickOnMap: $('#oPick').checked } } : {}),
+        ...(LIC('customIcons') && S.cfg.icons?.enabled ? { icons: S.icons } : {}) }) });
+      if (!r.ok) throw new Error(r.status === 404 ? 'option indisponible (base à mettre à jour par ANTEMIC)' : 'refus ' + r.status);
+      $('#optMsg').textContent = 'Enregistré : visible au prochain chargement de la carte.';
+    } catch (e) { $('#optMsg').textContent = 'Erreur : ' + e.message; }
+  }
+  ['oTime', 'oSun', 'oMusic', 'oSpeed', 'oPick'].forEach(id => $('#' + id).addEventListener('change', saveOpts)); document.querySelectorAll('[name=oOrd]').forEach(r => r.addEventListener('change', saveOpts));
+  async function load() {
+    loadOpts();
+    const r = await fetch(sb().url + '/rest/v1/pois?client_id=eq.' + encodeURIComponent(S.slug) + '&select=*&order=title', { headers: H() });
+    if (!r.ok) throw new Error('Lecture impossible (' + r.status + ')');
+    S.rows = await r.json(); renderList();
+  }
+  function renderList() {
+    const f = $('#filter').value.toLowerCase(); const box = $('#items'); box.innerHTML = '';
+    const cats = Object.fromEntries((S.cfg.categories || []).map(c => [c.id, c.label]));
+    const base = Object.fromEntries((S.cfg.pois || []).map(p => [p.id, p]));
+    for (const row of S.rows) {
+      if (f && !row.title.toLowerCase().includes(f)) continue;
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'item' + (S.cur?.poi_id === row.poi_id ? ' on' : '');
+      const im = row.photo_url ? Object.assign(document.createElement('img'), { src: photoUrl(row.photo_url), alt: '' }) : Object.assign(document.createElement('span'), { className: 'ph' });
+      const t = document.createElement('span'); const bb = document.createElement('b'); bb.textContent = row.title; const sm = document.createElement('small'); sm.textContent = cats[base[row.poi_id]?.cat] || '';
+      t.append(bb, sm); b.append(im, t); b.onclick = () => edit(row); box.append(b);
+    }
+  }
+  function edit(row) {
+    S.cur = row; S.photos = rowPhotos(row); $('#form').hidden = false; renderList();
+    $('#fTitle').textContent = row.title; $('#title').value = row.title || ''; $('#text').value = row.text || '';
+    $('#bLabel').value = row.button_label || ''; $('#bUrl').value = row.button_url || ''; $('#photoFile').value = '';
+    $('#saveMsg').textContent = ''; drawGal(); preview();
+  }
+  function preview() {
+    const base = (S.cfg.pois || []).find(p => p.id === S.cur.poi_id); const cat = (S.cfg.categories || []).find(c => c.id === base?.cat);
+    $('#pvK').textContent = (cat?.label || '').toUpperCase(); $('#pvT').textContent = $('#title').value;
+    $('#pvP').textContent = $('#text').value; $('#textCount').textContent = $('#text').value.length + ' / 4000';
+    const f = S.photos[0]; const src = f ? (f.preview || photoUrl(f.url)) : '';
+    $('#pvI').src = src; $('#pvI').hidden = !src;
+    const a = $('#pvA'); a.textContent = ($('#bLabel').value || 'En savoir plus') + ' ↗'; a.href = $('#bUrl').value || '#'; a.hidden = !$('#bUrl').value;
+  }
+  ['title', 'text', 'bLabel', 'bUrl'].forEach(id => $('#' + id).addEventListener('input', preview));
+  async function shrink(file) {
+    const img = await createImageBitmap(file); const k = Math.min(1, 1600 / Math.max(img.width, img.height));
+    const c = document.createElement('canvas'); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    const blob = await new Promise(r => c.toBlob(r, 'image/jpeg', 0.84)); return { blob, preview: c.toDataURL('image/jpeg', 0.6) };
+  }
+  function drawGal() {
+    const g = $('#gal'); g.innerHTML = ''; $('#photoCount').textContent = `(${S.photos.length} / ${MAXPH})`; $('#photoFile').disabled = S.photos.length >= MAXPH;
+    S.photos.forEach((q, i) => {
+      const fig = document.createElement('figure'); if (i === 0) fig.className = 'main';
+      const im = document.createElement('img'); im.src = q.preview || photoUrl(q.url); im.alt = 'Photo ' + (i + 1); fig.append(im);
+      if (i === 0) { const c = document.createElement('figcaption'); c.textContent = 'Principale'; fig.append(c); }
+      const t = document.createElement('div'); t.className = 'tools';
+      if (i > 0) { const b = document.createElement('button'); b.type = 'button'; b.textContent = '◀'; b.title = 'Avancer'; b.onclick = () => { [S.photos[i - 1], S.photos[i]] = [S.photos[i], S.photos[i - 1]]; drawGal(); preview(); }; t.append(b); }
+      const x = document.createElement('button'); x.type = 'button'; x.textContent = '✕'; x.title = 'Retirer'; x.onclick = () => { S.photos.splice(i, 1); drawGal(); preview(); }; t.append(x); fig.append(t);
+      const cr = document.createElement('input'); cr.type = 'text'; cr.placeholder = 'Crédit (auteur)'; cr.maxLength = 200; cr.value = q.credit || ''; cr.oninput = () => { q.credit = cr.value; }; fig.append(cr);
+      g.append(fig);
+    });
+  }
+  $('#photoFile').onchange = async e => {
+    const files = [...e.target.files]; const room = MAXPH - S.photos.length; if (files.length > room) alert(`${MAXPH} photos au maximum : ${Math.max(0, room)} seront ajoutées.`);
+    for (const f of files.slice(0, room)) { if (f.size > 25e6) { alert(f.name + ' : fichier trop lourd (25 Mo max).'); continue; } const r = await shrink(f); S.photos.push({ url: '', credit: '', blob: r.blob, preview: r.preview }); }
+    e.target.value = ''; drawGal(); preview();
+  };
+  $('#reset').onclick = () => edit(S.cur);
+  $('#form').onsubmit = async e => {
+    e.preventDefault(); const btn = $('#save'); btn.disabled = true; $('#saveMsg').textContent = 'Enregistrement…';
+    try {
+      if (Date.now() > S.exp) throw new Error('Session expirée : reconnectez-vous.');
+      let u = $('#bUrl').value.trim(); if (u && !/^https?:\/\//i.test(u)) u = 'https://' + u.replace(/^\/+/, ''); try { if (u) new URL(u); } catch { throw new Error('Lien du bouton invalide.'); } $('#bUrl').value = u;
+      const patch = { title: $('#title').value.trim(), text: $('#text').value, button_label: $('#bLabel').value.trim() || 'En savoir plus', button_url: u };
+      for (const [k, q] of S.photos.entries()) if (q.blob) {
+        const name = `${S.slug}/${S.cur.poi_id}-${Date.now()}-${k}.jpg`;
+        const up = await fetch(`${sb().url}/storage/v1/object/photos/${name}`, { method: 'POST', headers: { ...H(), 'Content-Type': 'image/jpeg' }, body: q.blob });
+        if (!up.ok) throw new Error('Envoi de la photo refusé (' + up.status + ').');
+        q.url = `${sb().url}/storage/v1/object/public/photos/${name}`; delete q.blob;
+      }
+      patch.photos = S.photos.map(q => ({ url: q.url, credit: (q.credit || '').trim() })); patch.photo_url = patch.photos[0]?.url || '';
+      const send = (body) => fetch(`${sb().url}/rest/v1/pois?client_id=eq.${encodeURIComponent(S.slug)}&poi_id=eq.${encodeURIComponent(S.cur.poi_id)}`, { method: 'PATCH', headers: { ...H(true), Prefer: 'return=representation' }, body: JSON.stringify(body) });
+      let r = await send(patch);
+      if (!r.ok && (r.status === 400 || r.status === 401 || r.status === 403) && /photos/.test(await r.clone().text())) { const { photos, ...p1 } = patch; r = await send(p1); if (r.ok) $('#saveMsg').dataset.warn = '1'; } // base sans galerie : 1 photo
+      if (!r.ok) throw new Error('Enregistrement refusé (' + r.status + ').');
+      const [row] = await r.json(); if (!row) throw new Error('Ce lieu ne peut pas être modifié avec ce code.');
+      Object.assign(S.cur, row); renderList(); edit(S.cur); $('#saveMsg').textContent = 'Enregistré. La carte est à jour.';
+    } catch (err) { $('#saveMsg').textContent = err.message; } finally { btn.disabled = false; }
+  };
+  $('#filter').oninput = renderList;
+  $('#logout').onclick = () => { try { sessionStorage.removeItem('antemic-admin'); } catch (e) {} location.reload(); };
+  async function start(code) {
+    await login(code); theme(); $('#login').hidden = true; $('#app').hidden = false; await load();
+    if (S.rows.length) edit(S.rows[0]);
+  }
+  $('#loginForm').onsubmit = async e => { e.preventDefault(); show($('#loginMsg'), ''); try { await start($('#code').value); } catch (err) { show($('#loginMsg'), err.message); } };
+  (async () => { try { // reprise de session (onglet ouvert, jeton encore valide)
+    const s = JSON.parse(sessionStorage.getItem('antemic-admin') || 'null'); if (!s || Date.now() > s.exp) return;
+    const r = await fetch(SITE + 'clients/' + s.slug + '/config.json', { cache: 'no-cache' }); if (!r.ok) return;
+    S.cfg = await r.json(); S.slug = s.slug; S.token = s.token; S.exp = s.exp; theme(); $('#login').hidden = true; $('#app').hidden = false; await load(); if (S.rows.length) edit(S.rows[0]);
+  } catch (e) {} })();
+})();
+</script>
+</body>
+</html>
