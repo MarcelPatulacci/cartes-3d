@@ -155,6 +155,7 @@ footer small{font-size:7px;letter-spacing:1.7px;display:block;margin-top:8px;col
 .tour-n.edge{opacity:.8}.tour-n.edge b{transform:scale(.85)}
 .route-hint{position:absolute;z-index:1650;top:84px;left:calc(50% + 185px);transform:translateX(-50%);max-width:min(560px,calc(100% - 420px));pointer-events:none;background:var(--btn,var(--primary));color:var(--btn-text,#fff);font-size:19px;font-weight:700;line-height:1.3;text-align:center;padding:12px 22px;border-radius:12px;box-shadow:0 6px 22px #0004}
 .route-hint[hidden]{display:none}
+.apercu-band{position:fixed;z-index:3000;left:50%;bottom:10px;transform:translateX(-50%);background:#b3261e;color:#fff;font:600 12px/1 system-ui;letter-spacing:.04em;padding:8px 14px;border-radius:20px;pointer-events:none;box-shadow:0 4px 14px #0004}
 @media(max-width:700px){.route-hint{top:auto;bottom:96px;left:50%;max-width:calc(100% - 32px);font-size:16px;padding:10px 16px}}
 #tourList{max-height:190px;overflow:auto;border:1px solid #e3e7dc;border-radius:8px;margin-top:6px;padding:4px 6px;scrollbar-width:thin;background:#fff}
 .tgroup{font-size:8px;letter-spacing:1.6px;font-weight:700;color:#8e947f;text-transform:uppercase;margin:8px 4px 3px}
@@ -167,6 +168,10 @@ footer small{font-size:7px;letter-spacing:1.7px;display:block;margin-top:8px;col
 .calc{margin-top:12px}
 .calc .primary,.route-links .primary{width:100%;border:0;background:var(--accent);color:#fff;border-radius:22px;padding:11px;font-size:12.5px;font-weight:700;box-shadow:0 5px 16px color-mix(in srgb,var(--accent) 25%,transparent)}
 .calc .primary:disabled{opacity:.45;box-shadow:none}
+.calc .quit{display:block;width:100%;margin-top:8px;border:1.5px solid var(--btn,var(--primary));background:transparent;color:var(--btn,var(--primary));border-radius:22px;padding:9px;font-size:12.5px;font-weight:700;cursor:pointer}
+.calc .quit:hover{background:color-mix(in srgb,var(--btn,var(--primary)) 8%,transparent)}
+#routeQuitMap{order:3;pointer-events:auto;border:0;background:#fff;color:var(--btn,var(--primary));border-radius:22px;padding:11px 16px;font-size:12.5px;font-weight:700;box-shadow:0 5px 16px #0002;cursor:pointer}
+#routeQuitMap[hidden]{display:none}
 .legs{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:2px;position:relative}
 .legs li{display:flex;gap:10px;align-items:flex-start;padding:6px 0;position:relative}
 .legs li:not(:last-child)::after{content:'';position:absolute;left:11px;top:30px;bottom:-6px;width:2px;background:#e3c3b6}
@@ -369,7 +374,7 @@ body.edit .pin{cursor:move}
 <main id="map" aria-label="Carte 3D interactive de la commune">
   <div id="canvas"></div><div id="topo" aria-hidden="true"></div><div id="signs"></div><div id="stops"></div><div id="labels"></div>
   <button id="openMenu" aria-label="Ouvrir les villages et lieux">☰</button>
-  <div class="map-heading"><span class="badge">EXPLORATION 3D</span><button id="routeBtn" hidden type="button" aria-expanded="false" aria-controls="routePanel"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.7 11.3 12.7 2.3a1 1 0 0 0-1.4 0l-9 9a1 1 0 0 0 0 1.4l9 9a1 1 0 0 0 1.4 0l9-9a1 1 0 0 0 0-1.4zM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5z"/></svg> Itinéraire</button><span id="mapStatus"></span></div>
+  <div class="map-heading"><span class="badge">EXPLORATION 3D</span><button id="routeQuitMap" type="button" hidden>✕ Quitter l’itinéraire</button><button id="routeBtn" hidden type="button" aria-expanded="false" aria-controls="routePanel"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.7 11.3 12.7 2.3a1 1 0 0 0-1.4 0l-9 9a1 1 0 0 0 0 1.4l9 9a1 1 0 0 0 1.4 0l9-9a1 1 0 0 0 0-1.4zM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5z"/></svg> Itinéraire</button><span id="mapStatus"></span></div>
   <section id="routePanel" role="dialog" aria-label="Préparer un itinéraire" hidden>
     <button id="closeRoute" aria-label="Fermer l’itinéraire">×</button>
     <div class="detail-kicker">ITINÉRAIRE</div><h2>Préparer votre visite</h2>
@@ -381,7 +386,7 @@ body.edit .pin{cursor:move}
     </div>
     <div id="routeGo">
       <label class="rl" for="routeTo">Destination</label>
-      <div class="addr-wrap"><input id="routeTo" type="text" autocomplete="off" placeholder="Lieu, village, Clermont, Vulcania…" role="combobox" aria-autocomplete="list" aria-controls="routeToSugg"><ul id="routeToSugg" class="sugg" role="listbox" hidden></ul></div>
+      <div class="addr-wrap"><input id="routeTo" type="text" autocomplete="off" placeholder="Lieu, village ou adresse…" role="combobox" aria-autocomplete="list" aria-controls="routeToSugg"><ul id="routeToSugg" class="sugg" role="listbox" hidden></ul></div>
     </div>
     <div id="routeTour" hidden>
       <label class="rl" for="tourFilter">Étapes à visiter <span id="tourCount">Aucune étape</span></label>
@@ -393,7 +398,7 @@ body.edit .pin{cursor:move}
       <label class="chk"><input type="checkbox" id="tourReturn"> Revenir au point de départ</label>
     </div>
     <div id="routeMode" role="group" aria-label="Mode de déplacement"><button type="button" data-mode="car" aria-pressed="true">En voiture</button><button type="button" data-mode="walk" aria-pressed="false">À pied</button></div>
-    <div class="calc"><button id="goCalc" type="button" class="primary">Calculer l’itinéraire</button></div>
+    <div class="calc"><button id="goCalc" type="button" class="primary">Calculer l’itinéraire</button><button id="routeQuit" type="button" class="quit">✕ Quitter l’itinéraire</button></div>
     <p id="routeMsg" hidden></p>
     <div id="routeOut" hidden></div>
   </section>

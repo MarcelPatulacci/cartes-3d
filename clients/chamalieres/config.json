@@ -1,0 +1,2312 @@
+{
+ "schema": 1,
+ "slug": "chamalieres",
+ "name": "Chamalières",
+ "insee": "63075",
+ "codePostal": "63400",
+ "website": "https://www.ville-chamalieres.fr/",
+ "createdAt": "2026-10-30T00:47:30.604Z",
+ "theme": {
+  "primary": "#002a4e",
+  "accent": "#e30613",
+  "paper": "#f7f9fb",
+  "font": "Inter",
+  "titleFont": "Georgia",
+  "logo": "logo.svg",
+  "fonts": [],
+  "ink": "#1e1e1e",
+  "button": "#e30613",
+  "buttonText": "#ffffff",
+  "card": "#ffffff"
+ },
+ "texts": {
+  "sub": "PUY-DE-DÔME · AUVERGNE",
+  "eyebrow": "UNE AUTRE FAÇON DE DÉCOUVRIR",
+  "title": "La commune,\nen perspective.",
+  "intro": "Une ville attractive et citoyenne, entre patrimoine historique, nature en ville et thermalisme.",
+  "welcomeKicker": "BIENVENUE À CHAMALIÈRES",
+  "welcomeTitle": "Bienvenue à Chamalières",
+  "welcomeText": "Chamalières est une ville attractive et citoyenne, à la fois ville santé, culturelle, sportive et thermale. Découvrez ses services, ses démarches en ligne, son agenda et son patrimoine.",
+  "welcomeLink": {
+   "label": "Site de la commune",
+   "url": "https://www.ville-chamalieres.fr/"
+  },
+  "territoryName": "La commune de Chamalières",
+  "territory": "Ses limites sont celles de la maquette",
+  "footer": "Mairie de Chamalières",
+  "status": "La commune de Chamalières",
+  "about": ""
+ },
+ "categories": [
+  {
+   "id": "pub",
+   "label": "Bâtiments publics",
+   "icon": "⌂"
+  },
+  {
+   "id": "com",
+   "label": "Commerces & services",
+   "icon": "◈"
+  },
+  {
+   "id": "res",
+   "label": "Restaurants & hébergements",
+   "icon": "☕"
+  },
+  {
+   "id": "dec",
+   "label": "Patrimoine",
+   "icon": "✦"
+  },
+  {
+   "id": "nat",
+   "label": "Nature & paysages",
+   "icon": "❀"
+  }
+ ],
+ "modules": {
+  "itinerary": true,
+  "transit": false,
+  "directions": false,
+  "music": false,
+  "time": true,
+  "sun": true,
+  "sunDate": true
+ },
+ "villages": [
+  {
+   "name": "Beaulieu",
+   "x": 605,
+   "y": 699,
+   "r": 643,
+   "ring": [
+    316,
+    1176,
+    378,
+    1127,
+    393,
+    1009,
+    481,
+    794,
+    680,
+    860,
+    743,
+    793,
+    830,
+    825,
+    1028,
+    256,
+    708,
+    215,
+    695,
+    344,
+    610,
+    596,
+    192,
+    518,
+    185,
+    631,
+    247,
+    758,
+    227,
+    984
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "INSEE / IGN (IRIS)"
+  },
+  {
+   "name": "Beaurepaire",
+   "x": 991,
+   "y": -187,
+   "r": 504,
+   "ring": [
+    1032,
+    244,
+    1125,
+    -24,
+    1135,
+    -44,
+    1180,
+    -54,
+    1176,
+    -136,
+    1150,
+    -214,
+    1162,
+    -316,
+    1151,
+    -391,
+    1170,
+    -412,
+    1177,
+    -451,
+    1202,
+    -476,
+    1174,
+    -513,
+    1251,
+    -594,
+    1198,
+    -618,
+    1128,
+    -554,
+    1060,
+    -543,
+    935,
+    -414,
+    730,
+    -313,
+    736,
+    -280,
+    797,
+    -264,
+    813,
+    -243,
+    766,
+    -166,
+    794,
+    -161,
+    780,
+    -113,
+    798,
+    -102,
+    769,
+    -53,
+    750,
+    71,
+    808,
+    100,
+    912,
+    181
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "INSEE / IGN (IRIS)"
+  },
+  {
+   "name": "Centre",
+   "x": 418,
+   "y": 323,
+   "r": 398,
+   "ring": [
+    708,
+    215,
+    503,
+    183,
+    276,
+    50,
+    239,
+    107,
+    196,
+    242,
+    188,
+    240,
+    142,
+    395,
+    128,
+    459,
+    133,
+    477,
+    165,
+    508,
+    192,
+    518,
+    610,
+    596,
+    648,
+    511,
+    695,
+    344
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "INSEE / IGN (IRIS)"
+  },
+  {
+   "name": "Fontmaure",
+   "x": -36,
+   "y": 293,
+   "r": 120,
+   "ring": [
+    -34,
+    295,
+    -34,
+    290,
+    -39,
+    290,
+    -39,
+    295
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "L'Écorchade",
+   "x": -355,
+   "y": 6,
+   "r": 920,
+   "ring": [
+    -293,
+    -664,
+    -307,
+    -656,
+    -270,
+    -592,
+    -242,
+    -438,
+    -315,
+    -429,
+    -525,
+    -476,
+    -582,
+    -537,
+    -681,
+    -532,
+    -707,
+    -598,
+    -750,
+    -602,
+    -739,
+    -495,
+    -816,
+    -390,
+    -723,
+    -273,
+    -695,
+    -188,
+    -717,
+    -42,
+    -739,
+    -42,
+    -763,
+    16,
+    -797,
+    20,
+    -681,
+    234,
+    -800,
+    387,
+    -823,
+    457,
+    -875,
+    501,
+    -889,
+    552,
+    -985,
+    620,
+    -969,
+    675,
+    -910,
+    634,
+    -764,
+    376,
+    -645,
+    265,
+    -489,
+    168,
+    -68,
+    137,
+    0,
+    196,
+    196,
+    242,
+    276,
+    50,
+    68,
+    -90
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "INSEE / IGN (IRIS)"
+  },
+  {
+   "name": "la Côte",
+   "x": -259,
+   "y": 676,
+   "r": 120,
+   "ring": [
+    -257,
+    678,
+    -257,
+    673,
+    -262,
+    673,
+    -262,
+    678
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "le Carrefour Europe",
+   "x": 265,
+   "y": 68,
+   "r": 120,
+   "ring": [
+    267,
+    70,
+    267,
+    65,
+    262,
+    65,
+    262,
+    70
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "le Pré l'Abbé",
+   "x": 617,
+   "y": 682,
+   "r": 120,
+   "ring": [
+    619,
+    684,
+    619,
+    679,
+    614,
+    679,
+    614,
+    684
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "les Baumes",
+   "x": -8,
+   "y": 1013,
+   "r": 120,
+   "ring": [
+    -6,
+    1015,
+    -6,
+    1010,
+    -11,
+    1010,
+    -11,
+    1015
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "les Combes",
+   "x": 363,
+   "y": -816,
+   "r": 120,
+   "ring": [
+    365,
+    -814,
+    365,
+    -819,
+    360,
+    -819,
+    360,
+    -814
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "Les Farnettes",
+   "x": -511,
+   "y": 1054,
+   "r": 350,
+   "ring": null,
+   "sub": "",
+   "kind": "quartier",
+   "src": "OpenStreetMap"
+  },
+  {
+   "name": "Les Galoubies",
+   "x": 757,
+   "y": -543,
+   "r": 624,
+   "ring": [
+    1198,
+    -618,
+    1070,
+    -654,
+    952,
+    -835,
+    855,
+    -929,
+    825,
+    -937,
+    805,
+    -978,
+    705,
+    -951,
+    547,
+    -984,
+    433,
+    -976,
+    431,
+    -921,
+    504,
+    -822,
+    435,
+    -794,
+    387,
+    -710,
+    478,
+    -710,
+    513,
+    -472,
+    491,
+    -458,
+    408,
+    -479,
+    343,
+    -470,
+    316,
+    -421,
+    374,
+    -354,
+    452,
+    -217,
+    510,
+    -175,
+    530,
+    -102,
+    636,
+    -292,
+    730,
+    -313,
+    935,
+    -414,
+    1060,
+    -543,
+    1128,
+    -554
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "INSEE / IGN (IRIS)"
+  },
+  {
+   "name": "les Hauts de Chamalières",
+   "x": -721,
+   "y": 807,
+   "r": 707,
+   "ring": [
+    -612,
+    247,
+    -481,
+    424,
+    -449,
+    645,
+    -321,
+    841,
+    -295,
+    911,
+    -299,
+    1009,
+    -417,
+    1367,
+    -442,
+    1366,
+    -442,
+    1330,
+    -480,
+    1302,
+    -546,
+    1276,
+    -573,
+    1217,
+    -663,
+    1145,
+    -657,
+    1091,
+    -684,
+    997,
+    -675,
+    850,
+    -753,
+    860,
+    -857,
+    783,
+    -974,
+    785,
+    -1075,
+    816,
+    -1153,
+    786,
+    -976,
+    679,
+    -976,
+    613,
+    -869,
+    522,
+    -722,
+    285,
+    -695,
+    261,
+    -661,
+    281
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "Les Hauts-de-Chamalières",
+   "x": -629,
+   "y": 727,
+   "r": 350,
+   "ring": null,
+   "sub": "",
+   "kind": "quartier",
+   "src": "OpenStreetMap"
+  },
+  {
+   "name": "les Poulignes",
+   "x": -334,
+   "y": 358,
+   "r": 120,
+   "ring": [
+    -332,
+    360,
+    -332,
+    355,
+    -337,
+    355,
+    -337,
+    360
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "Les Roches",
+   "x": 256,
+   "y": -659,
+   "r": 897,
+   "ring": [
+    794,
+    -1000,
+    772,
+    -1084,
+    666,
+    -1141,
+    403,
+    -1369,
+    198,
+    -1337,
+    80,
+    -1221,
+    23,
+    -1123,
+    -9,
+    -962,
+    -79,
+    -812,
+    -89,
+    -690,
+    -163,
+    -706,
+    -188,
+    -680,
+    -225,
+    -712,
+    -293,
+    -664,
+    68,
+    -90,
+    126,
+    -38,
+    276,
+    50,
+    177,
+    -142,
+    182,
+    -195,
+    118,
+    -354,
+    151,
+    -392,
+    192,
+    -403,
+    216,
+    -384,
+    194,
+    -410,
+    268,
+    -493,
+    316,
+    -421,
+    343,
+    -470,
+    513,
+    -472,
+    478,
+    -710,
+    387,
+    -710,
+    435,
+    -794,
+    504,
+    -822,
+    431,
+    -921,
+    433,
+    -976,
+    547,
+    -984,
+    705,
+    -951,
+    778,
+    -960,
+    805,
+    -978
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "INSEE / IGN (IRIS)"
+  },
+  {
+   "name": "les Savarounes",
+   "x": 75,
+   "y": 643,
+   "r": 120,
+   "ring": [
+    77,
+    645,
+    77,
+    640,
+    72,
+    640,
+    72,
+    645
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "Les Savarounes-Les Hauts de Chamalières",
+   "x": -431,
+   "y": 766,
+   "r": 979,
+   "ring": [
+    -969,
+    675,
+    -1142,
+    783,
+    -1178,
+    783,
+    -1168,
+    808,
+    -1023,
+    820,
+    -833,
+    793,
+    -748,
+    843,
+    -666,
+    852,
+    -664,
+    1148,
+    -443,
+    1368,
+    -314,
+    1398,
+    -32,
+    1370,
+    15,
+    1394,
+    43,
+    1353,
+    230,
+    1283,
+    316,
+    1176,
+    227,
+    984,
+    247,
+    758,
+    185,
+    631,
+    192,
+    518,
+    128,
+    459,
+    188,
+    240,
+    0,
+    196,
+    -68,
+    137,
+    -489,
+    168,
+    -645,
+    265,
+    -764,
+    376,
+    -910,
+    634
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "INSEE / IGN (IRIS)"
+  },
+  {
+   "name": "les Vignettes",
+   "x": -742,
+   "y": 392,
+   "r": 120,
+   "ring": [
+    -740,
+    394,
+    -740,
+    389,
+    -745,
+    389,
+    -745,
+    394
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "Montjoly",
+   "x": 575,
+   "y": -118,
+   "r": 591,
+   "ring": [
+    1028,
+    256,
+    1032,
+    244,
+    750,
+    71,
+    769,
+    -53,
+    798,
+    -102,
+    780,
+    -113,
+    794,
+    -161,
+    766,
+    -166,
+    813,
+    -243,
+    797,
+    -264,
+    736,
+    -280,
+    730,
+    -313,
+    636,
+    -292,
+    530,
+    -102,
+    510,
+    -175,
+    452,
+    -217,
+    374,
+    -354,
+    268,
+    -493,
+    238,
+    -440,
+    194,
+    -410,
+    216,
+    -384,
+    192,
+    -403,
+    161,
+    -399,
+    118,
+    -354,
+    136,
+    -337,
+    182,
+    -195,
+    177,
+    -142,
+    206,
+    -61,
+    222,
+    -24,
+    275,
+    27,
+    276,
+    50,
+    503,
+    183
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "INSEE / IGN (IRIS)"
+  },
+  {
+   "name": "Richelieu",
+   "x": 458,
+   "y": 757,
+   "r": 350,
+   "ring": null,
+   "sub": "",
+   "kind": "quartier",
+   "src": "OpenStreetMap"
+  },
+  {
+   "name": "Saint-Gilbert",
+   "x": 350,
+   "y": -1143,
+   "r": 120,
+   "ring": [
+    352,
+    -1141,
+    352,
+    -1146,
+    347,
+    -1146,
+    347,
+    -1141
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  },
+  {
+   "name": "Thermal",
+   "x": 20,
+   "y": -469,
+   "r": 120,
+   "ring": [
+    22,
+    -467,
+    22,
+    -472,
+    17,
+    -472,
+    17,
+    -467
+   ],
+   "sub": "",
+   "kind": "quartier",
+   "src": "IGN BD TOPO"
+  }
+ ],
+ "view": {},
+ "pois": [
+  {
+   "id": "hotel-de-ville",
+   "cat": "pub",
+   "x": 566.3,
+   "y": 13.6,
+   "title": "Hôtel de Ville",
+   "text": "Mairie de Chamalières : accueil, standard et service Etat-Civil (passeports, CNI, mariages, actes).\n1 Place Claude Wolff, 63400 Chamalières\nTél : 04 73 19 57 57",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/service/"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "bureau-de-police-municipale-et-polic",
+   "cat": "pub",
+   "x": 590.4,
+   "y": 285.5,
+   "title": "Bureau de Police Municipale et Police Nationale",
+   "text": "Bureau de la Police Municipale et de la Police Nationale, ouvert du lundi au vendredi.\n15 place Sully, 63400 Chamalières\nTél : 04 73 36 88 17",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/service/"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "centre-aquatique-les-hautes-roches",
+   "cat": "pub",
+   "x": 511,
+   "y": -349.7,
+   "title": "Centre aquatique Les Hautes Roches",
+   "text": "Piscine avec bassin olympique de 50 m, bassin à vagues, toboggan de 42 m, espace bien-être, solarium et jeux d'eau extérieurs. Inaugurée en 1976, étendue en 1998.\nAvenue de la 1ère Armée Rhin Danube, 63400 Chamalières\nTél : 04 63 66 96 30",
+   "photo": {
+    "url": "photos/centre-aquatique-les-hautes-roches-81344.jpg",
+    "alt": "Centre aquatique Les Hautes Roches",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/ma-ville/sport-associations/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/centre-aquatique-les-hautes-roches-81344.jpg",
+     "alt": "Centre aquatique Les Hautes Roches",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/centre-aquatique-les-hautes-roches-81388.jpg",
+     "alt": "Centre aquatique Les Hautes Roches",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/centre-aquatique-les-hautes-roches-81597.png",
+     "alt": "Centre aquatique Les Hautes Roches",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "centre-communal-d-action-sociale",
+   "cat": "pub",
+   "x": 777.9,
+   "y": 215.9,
+   "title": "Centre Communal d'Action Sociale",
+   "text": "CCAS de Chamalières : aide sociale et accompagnement des habitants.\n17 avenue de Royat, 63400 Chamalières\nTél : 04 73 19 57 64",
+   "photo": {
+    "url": "photos/centre-communal-d-action-sociale-82869.jpg",
+    "alt": "Centre Communal d'Action Sociale",
+    "credit": "sogefi sig · etalab-2.0 · Panoramax"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/service/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/centre-communal-d-action-sociale-82869.jpg",
+     "alt": "Centre Communal d'Action Sociale",
+     "credit": "sogefi sig · etalab-2.0 · Panoramax"
+    },
+    {
+     "url": "photos/centre-communal-d-action-sociale-83002.jpg",
+     "alt": "Centre Communal d'Action Sociale",
+     "credit": "sogefi sig · etalab-2.0 · Panoramax"
+    },
+    {
+     "url": "photos/centre-communal-d-action-sociale-83187.jpg",
+     "alt": "Centre Communal d'Action Sociale",
+     "credit": "sogefi sig · etalab-2.0 · Panoramax"
+    }
+   ]
+  },
+  {
+   "id": "centre-de-loisirs-du-colombier",
+   "cat": "pub",
+   "x": -846.3,
+   "y": 516.6,
+   "title": "Centre de loisirs du Colombier",
+   "text": "Accueil de loisirs ouvert les mercredis et pendant les vacances scolaires.\nVoie Romaine (Site du Colombier), 63400 Chamalières\nTél : 04 73 19 11 31",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/service/"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "centre-technique-municipal",
+   "cat": "pub",
+   "x": 665.7,
+   "y": 769.8,
+   "title": "Centre Technique Municipal",
+   "text": "Centre technique de la commune.\n14 rue du Pré l'Abbé, 63400 Chamalières\nTél : 04 73 37 84 79",
+   "photo": {
+    "url": "photos/centre-technique-municipal-90922.jpg",
+    "alt": "Centre Technique Municipal",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/centre-technique-municipal-90922.jpg",
+     "alt": "Centre Technique Municipal",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/centre-technique-municipal-90984.jpg",
+     "alt": "Centre Technique Municipal",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "service-urbanisme",
+   "cat": "pub",
+   "x": 412.9,
+   "y": -42.3,
+   "title": "Service urbanisme",
+   "text": "Réception, instruction et suivi des demandes d'autorisation du sol ; accueil sur rendez-vous.\n26 bis, avenue des Thermes, 63400 Chamalières\nTél : 04 73 19 57 74",
+   "photo": {
+    "url": "photos/service-urbanisme-92196.jpg",
+    "alt": "Service urbanisme",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/service-urbanisme-92196.jpg",
+     "alt": "Service urbanisme",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/service-urbanisme-92266.jpg",
+     "alt": "Service urbanisme",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "services-techniques",
+   "cat": "pub",
+   "x": 407.6,
+   "y": -12.3,
+   "title": "Services Techniques",
+   "text": "Services techniques de la ville.\n26 Avenue des Thermes, 63400 Chamalières\nTél : 04 73 19 57 63",
+   "photo": {
+    "url": "photos/services-techniques-95425.jpg",
+    "alt": "Services Techniques",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/services-techniques-95425.jpg",
+     "alt": "Services Techniques",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/services-techniques-95488.jpg",
+     "alt": "Services Techniques",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "maison-des-associations",
+   "cat": "pub",
+   "x": 486,
+   "y": 330.7,
+   "title": "Maison des Associations",
+   "text": "Accueille le Service des Sports et de la Vie Associative, qui apporte un soutien technique et logistique aux associations ; réservation de salles.\n11 rue des Saulées, 63400 Chamalières\nTél : 04 73 36 45 97",
+   "photo": {
+    "url": "photos/maison-des-associations-99140.jpg",
+    "alt": "Maison des Associations",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/ma-ville/sport-associations/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/maison-des-associations-99140.jpg",
+     "alt": "Maison des Associations",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/maison-des-associations-99180.jpg",
+     "alt": "Maison des Associations",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/maison-des-associations-99386.png",
+     "alt": "Maison des Associations",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "emea-pole-administratif",
+   "cat": "pub",
+   "x": 592.7,
+   "y": 295.7,
+   "title": "EMEA – Pôle administratif",
+   "text": "Pôle administratif des Écoles Municipales d'Enseignements Artistiques.\n1 place de l'Arsenal, 63400 Chamalières\nTél : 04 73 37 87 84",
+   "photo": {
+    "url": "photos/emea-pole-administratif-100623.jpg",
+    "alt": "EMEA – Pôle administratif",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/emea-pole-administratif-100623.jpg",
+     "alt": "EMEA – Pôle administratif",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/emea-pole-administratif-100682.jpg",
+     "alt": "EMEA – Pôle administratif",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "la-fac-fontmaure-art-culture-chamali",
+   "cat": "dec",
+   "x": -43.1,
+   "y": 232.1,
+   "title": "La FAC – Fontmaure Art Culture Chamalières Charreton",
+   "text": "Pôle culturel de Fontmaure, ouvert du mardi au samedi de 14h à 18h.\nAllée de Fontmaure, 63400 Chamalières\nTél : 04 73 19 57 83",
+   "photo": {
+    "url": "photos/la-fac-fontmaure-art-culture-chamali-104047.jpg",
+    "alt": "La FAC – Fontmaure Art Culture Chamalières Charreton",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/la-fac-fontmaure-art-culture-chamali-104047.jpg",
+     "alt": "La FAC – Fontmaure Art Culture Chamalières Charreton",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/la-fac-fontmaure-art-culture-chamali-104108.jpg",
+     "alt": "La FAC – Fontmaure Art Culture Chamalières Charreton",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "galerie-municipale-d-art",
+   "cat": "dec",
+   "x": 202.5,
+   "y": 135.4,
+   "title": "Galerie Municipale d'Art",
+   "text": "Galerie d'art municipale, fermée le lundi et le dimanche.\n3 avenue Valéry Giscard d'Estaing, 63400 Chamalières\nTél : 04 73 30 97 22",
+   "photo": {
+    "url": "photos/galerie-municipale-d-art-107457.jpg",
+    "alt": "Galerie Municipale d'Art",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/galerie-municipale-d-art-107457.jpg",
+     "alt": "Galerie Municipale d'Art",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/galerie-municipale-d-art-107519.jpg",
+     "alt": "Galerie Municipale d'Art",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "ecole-municipale-de-gravure",
+   "cat": "pub",
+   "x": -43.1,
+   "y": 232.1,
+   "title": "École Municipale de Gravure",
+   "text": "École municipale d'enseignement de la gravure, rattachée aux EMEA.\nAllée de Fontmaure, 63400 Chamalières\nTél : 04 73 37 87 84",
+   "photo": {
+    "url": "photos/ecole-municipale-de-gravure-108655.jpg",
+    "alt": "École Municipale de Gravure",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/ecole-municipale-de-gravure-108655.jpg",
+     "alt": "École Municipale de Gravure",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/ecole-municipale-de-gravure-108717.jpg",
+     "alt": "École Municipale de Gravure",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "service-de-soins-infirmiers-a-domici",
+   "cat": "pub",
+   "x": 426.2,
+   "y": 20.1,
+   "title": "Service de Soins Infirmiers à Domicile (SISAD)",
+   "text": "Soins infirmiers à domicile assurés 7j/7, y compris les jours fériés.\n19 bis Avenue des Thermes, 63400 Chamalières\nTél : 04 73 40 01 62",
+   "photo": {
+    "url": "photos/service-de-soins-infirmiers-a-domici-110119.jpg",
+    "alt": "Service de Soins Infirmiers à Domicile (SISAD)",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/service-de-soins-infirmiers-a-domici-110119.jpg",
+     "alt": "Service de Soins Infirmiers à Domicile (SISAD)",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/service-de-soins-infirmiers-a-domici-110176.jpg",
+     "alt": "Service de Soins Infirmiers à Domicile (SISAD)",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "cham-point-jeunes",
+   "cat": "pub",
+   "x": 174.4,
+   "y": 74.3,
+   "title": "Cham Point Jeunes",
+   "text": "Structure d'accueil pour les jeunes.\n24 place Charles de Gaulle, 63400 Chamalières\nTél : 04 73 31 24 06",
+   "photo": {
+    "url": "photos/cham-point-jeunes-113448.jpg",
+    "alt": "Cham Point Jeunes",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/cham-point-jeunes-113448.jpg",
+     "alt": "Cham Point Jeunes",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/cham-point-jeunes-114040.jpg",
+     "alt": "Cham Point Jeunes",
+     "credit": "Tabl-trai · CC BY-SA 3.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/cham-point-jeunes-114647.jpg",
+     "alt": "Cham Point Jeunes",
+     "credit": "Tabl-trai · CC BY-SA 4.0 · Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "id": "cham-ados",
+   "cat": "pub",
+   "x": 533.3,
+   "y": -500.9,
+   "title": "Cham'Ados",
+   "text": "Centre de loisirs pour adolescents, ouvert pendant les vacances scolaires de 8h à 18h.\nFoyer des Jeunes, 6 rue Paul Lapie, 63400 Chamalières\nTél : 06 71 77 49 28",
+   "photo": {
+    "url": "photos/cham-ados-119270.jpg",
+    "alt": "Cham'Ados",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/cham-ados-119270.jpg",
+     "alt": "Cham'Ados",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/cham-ados-119663.jpg",
+     "alt": "Cham'Ados",
+     "credit": "Fabien1309 · CC-BY-SA-4.0 · Panoramax"
+    },
+    {
+     "url": "photos/cham-ados-119723.jpg",
+     "alt": "Cham'Ados",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "cham-ados-2",
+   "cat": "pub",
+   "x": 174.4,
+   "y": 74.3,
+   "title": "Cham'Ados +",
+   "text": "Accueil jeunes ouvert pendant les vacances scolaires de 8h à 18h.\n24 place Charles de Gaulle, 63400 Chamalières\nTél : 06 08 70 86 93",
+   "photo": {
+    "url": "photos/cham-ados-2-123778.jpg",
+    "alt": "Cham'Ados +",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/cham-ados-2-123778.jpg",
+     "alt": "Cham'Ados +",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/cham-ados-2-123976.jpg",
+     "alt": "Cham'Ados +",
+     "credit": "Tabl-trai · CC BY-SA 3.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/cham-ados-2-124077.jpg",
+     "alt": "Cham'Ados +",
+     "credit": "Tabl-trai · CC BY-SA 4.0 · Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "id": "l-ilot-tendresse",
+   "cat": "pub",
+   "x": 288.3,
+   "y": 301.5,
+   "title": "L'îlot tendresse",
+   "text": "Structure petite enfance municipale.\nRésidence Antonia, 3 rue Victor Hugo, 63400 Chamalières\nTél : 04 73 37 91 24",
+   "photo": {
+    "url": "photos/l-ilot-tendresse-125266.jpg",
+    "alt": "L'îlot tendresse",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/l-ilot-tendresse-125266.jpg",
+     "alt": "L'îlot tendresse",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/l-ilot-tendresse-125328.jpg",
+     "alt": "L'îlot tendresse",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "le-jardin-de-jeanne",
+   "cat": "pub",
+   "x": 374,
+   "y": 264.5,
+   "title": "Le Jardin de Jeanne",
+   "text": "Structure petite enfance municipale.\n3 rue Dolly, 63400 Chamalières\nTél : 04 73 31 26 28",
+   "photo": {
+    "url": "photos/le-jardin-de-jeanne-126538.jpg",
+    "alt": "Le Jardin de Jeanne",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/le-jardin-de-jeanne-126538.jpg",
+     "alt": "Le Jardin de Jeanne",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/le-jardin-de-jeanne-126599.jpg",
+     "alt": "Le Jardin de Jeanne",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "les-apprenti-sages",
+   "cat": "pub",
+   "x": 1075.5,
+   "y": -60.1,
+   "title": "Les Apprenti'Sages",
+   "text": "Structure petite enfance municipale.\n36 Avenue Pasteur, 63400 Chamalières\nTél : 04 73 19 57 54",
+   "photo": {
+    "url": "photos/les-apprenti-sages-127735.jpg",
+    "alt": "Les Apprenti'Sages",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/les-apprenti-sages-127735.jpg",
+     "alt": "Les Apprenti'Sages",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/les-apprenti-sages-127798.jpg",
+     "alt": "Les Apprenti'Sages",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "les-bout-choux",
+   "cat": "pub",
+   "x": 420.1,
+   "y": -658.2,
+   "title": "Les Bout'Choux",
+   "text": "Structure petite enfance municipale.\nImpasse des Hautes Roches, 63400 Chamalières\nTél : 04 73 93 28 92",
+   "photo": {
+    "url": "photos/les-bout-choux-128908.jpg",
+    "alt": "Les Bout'Choux",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/les-bout-choux-128908.jpg",
+     "alt": "Les Bout'Choux",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/les-bout-choux-128967.jpg",
+     "alt": "Les Bout'Choux",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "les-petits-mousses",
+   "cat": "pub",
+   "x": 682.7,
+   "y": 639.7,
+   "title": "Les Petits Mousses",
+   "text": "Structure petite enfance municipale.\n8 avenue Bergougnan, 63400 Chamalières\nTél : 04 73 37 33 91",
+   "photo": {
+    "url": "photos/les-petits-mousses-130077.jpg",
+    "alt": "Les Petits Mousses",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/les-petits-mousses-130077.jpg",
+     "alt": "Les Petits Mousses",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/les-petits-mousses-130138.jpg",
+     "alt": "Les Petits Mousses",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "les-petits-poucets",
+   "cat": "pub",
+   "x": 301.9,
+   "y": 242.4,
+   "title": "Les Petits Poucets",
+   "text": "Structure petite enfance municipale.\n5 avenue de Villars, 63400 Chamalières\nTél : 04 73 36 12 80",
+   "photo": {
+    "url": "photos/les-petits-poucets-131279.jpg",
+    "alt": "Les Petits Poucets",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/les-petits-poucets-131279.jpg",
+     "alt": "Les Petits Poucets",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/les-petits-poucets-131347.jpg",
+     "alt": "Les Petits Poucets",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "les-pitchounets",
+   "cat": "pub",
+   "x": 664.7,
+   "y": 375.3,
+   "title": "Les Pitchounets",
+   "text": "Structure petite enfance municipale.\n25 bis avenue Joseph Claussat, 63400 Chamalières\nTél : 04 73 30 90 87",
+   "photo": {
+    "url": "photos/les-pitchounets-134970.jpg",
+    "alt": "Les Pitchounets",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/les-pitchounets-134970.jpg",
+     "alt": "Les Pitchounets",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/les-pitchounets-135201.jpg",
+     "alt": "Les Pitchounets",
+     "credit": "sig_clermontmetropole · etalab-2.0 · Panoramax"
+    },
+    {
+     "url": "photos/les-pitchounets-135308.jpg",
+     "alt": "Les Pitchounets",
+     "credit": "sogefi sig · etalab-2.0 · Panoramax"
+    }
+   ]
+  },
+  {
+   "id": "recreamomes",
+   "cat": "pub",
+   "x": 368.9,
+   "y": 160.5,
+   "title": "RécréAmômes",
+   "text": "Centre de loisirs : accueil du matin entre 8h et 9h, départs entre 17h et 18h.\n1 allée de la Saigne, 63400 Chamalières\nTél : 04 73 40 30 16",
+   "photo": {
+    "url": "photos/recreamomes-139057.jpg",
+    "alt": "RécréAmômes",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/recreamomes-139057.jpg",
+     "alt": "RécréAmômes",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/recreamomes-139118.jpg",
+     "alt": "RécréAmômes",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "relais-petite-enfance",
+   "cat": "pub",
+   "x": 301.8,
+   "y": 109.5,
+   "title": "Relais Petite Enfance",
+   "text": "Relais petite enfance avec permanences le vendredi et permanences téléphoniques le lundi.\n48 ter avenue de Royat, 63400 Chamalières\nTél : 04 73 31 12 13",
+   "photo": {
+    "url": "photos/relais-petite-enfance-142118.jpg",
+    "alt": "Relais Petite Enfance",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/citoyenne/services-municipaux/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/relais-petite-enfance-142118.jpg",
+     "alt": "Relais Petite Enfance",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/relais-petite-enfance-142181.jpg",
+     "alt": "Relais Petite Enfance",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "complexe-sportif-claude-wolff",
+   "cat": "pub",
+   "x": -846.3,
+   "y": 516.6,
+   "title": "Complexe Sportif Claude Wolff",
+   "text": "Complexe dédié au football (pelouse synthétique) et à l'athlétisme (piste de 4 couloirs, aires de saut et de lancer), au cœur de la forêt du Colombier.\nLe Colombier – Voie Romaine, 63400 Chamalières",
+   "photo": {
+    "url": "photos/complexe-sportif-claude-wolff-145830.jpg",
+    "alt": "Complexe Sportif Claude Wolff",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/ma-ville/sport-associations/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/complexe-sportif-claude-wolff-145830.jpg",
+     "alt": "Complexe Sportif Claude Wolff",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/complexe-sportif-claude-wolff-145873.jpg",
+     "alt": "Complexe Sportif Claude Wolff",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/complexe-sportif-claude-wolff-146077.png",
+     "alt": "Complexe Sportif Claude Wolff",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "complexe-sportif-pierre-chatrousse",
+   "cat": "pub",
+   "x": 533.3,
+   "y": -500.9,
+   "title": "Complexe Sportif Pierre Chatrousse",
+   "text": "7 salles de sport et un terrain extérieur : danse, badminton, sports collectifs, gymnastique, arts martiaux, escrime, arts du cirque.\n6 rue Paul Lapie, 63400 Chamalières",
+   "photo": {
+    "url": "photos/complexe-sportif-pierre-chatrousse-149172.jpg",
+    "alt": "Complexe Sportif Pierre Chatrousse",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/ma-ville/sport-associations/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/complexe-sportif-pierre-chatrousse-149172.jpg",
+     "alt": "Complexe Sportif Pierre Chatrousse",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/complexe-sportif-pierre-chatrousse-149347.jpg",
+     "alt": "Complexe Sportif Pierre Chatrousse",
+     "credit": "Fabien1309 · CC-BY-SA-4.0 · Panoramax"
+    },
+    {
+     "url": "photos/complexe-sportif-pierre-chatrousse-149390.jpg",
+     "alt": "Complexe Sportif Pierre Chatrousse",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "complexe-sportif-alain-bresson",
+   "cat": "pub",
+   "x": -768.1,
+   "y": 333.5,
+   "title": "Complexe Sportif Alain Bresson",
+   "text": "4 200 m² avec halle des sports (deux terrains), salle de gymnastique et salle de tir à l'arc.\n2 bis Allée du Gymnase, 63400 Chamalières",
+   "photo": {
+    "url": "photos/complexe-sportif-alain-bresson-150440.jpg",
+    "alt": "Complexe Sportif Alain Bresson",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/ma-ville/sport-associations/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/complexe-sportif-alain-bresson-150440.jpg",
+     "alt": "Complexe Sportif Alain Bresson",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/complexe-sportif-alain-bresson-150481.jpg",
+     "alt": "Complexe Sportif Alain Bresson",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/complexe-sportif-alain-bresson-150690.png",
+     "alt": "Complexe Sportif Alain Bresson",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "espace-simone-veil",
+   "cat": "pub",
+   "x": 210.7,
+   "y": 113.5,
+   "title": "Espace Simone Veil",
+   "text": "Salle de 230 places assises et 40 m d'affichage linéaire pour expositions, spectacles, conférences et réunions.\n1 rue Valéry Giscard d'Estaing, 63400 Chamalières",
+   "photo": {
+    "url": "photos/espace-simone-veil-154372.jpg",
+    "alt": "Espace Simone Veil",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/ma-ville/sport-associations/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/espace-simone-veil-154372.jpg",
+     "alt": "Espace Simone Veil",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/espace-simone-veil-154409.jpg",
+     "alt": "Espace Simone Veil",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/espace-simone-veil-154607.png",
+     "alt": "Espace Simone Veil",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "espace-rene-paput",
+   "cat": "dec",
+   "x": 262,
+   "y": 51.4,
+   "title": "Espace René Paput",
+   "text": "Galerie d'exposition de 116 m² avec 37 m de linéaire, destinée à présenter l'art sous toutes ses formes.\n24 place Charles de Gaulle – Carrefour Europe, 63400 Chamalières",
+   "photo": {
+    "url": "photos/espace-rene-paput-158216.jpg",
+    "alt": "Espace René Paput",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/ma-ville/sport-associations/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/espace-rene-paput-158216.jpg",
+     "alt": "Espace René Paput",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/espace-rene-paput-158845.jpg",
+     "alt": "Espace René Paput",
+     "credit": "conseil départemental du puy-de-dôme · etalab-2.0 · Panoramax"
+    },
+    {
+     "url": "photos/espace-rene-paput-159181.jpg",
+     "alt": "Espace René Paput",
+     "credit": "sogefi sig · etalab-2.0 · Panoramax"
+    }
+   ]
+  },
+  {
+   "id": "centre-courty",
+   "cat": "pub",
+   "x": 686.9,
+   "y": 596.2,
+   "title": "Centre Courty",
+   "text": "Situé dans le quartier de Beaulieu, il accueille diverses activités dans ses 3 salles.\n2 avenue Bergougnan, 63400 Chamalières",
+   "photo": {
+    "url": "photos/centre-courty-160255.jpg",
+    "alt": "Centre Courty",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/ma-ville/sport-associations/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/centre-courty-160255.jpg",
+     "alt": "Centre Courty",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/centre-courty-160297.jpg",
+     "alt": "Centre Courty",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/centre-courty-160508.png",
+     "alt": "Centre Courty",
+     "credit": "www.ville-chamalieres.fr"
+    }
+   ]
+  },
+  {
+   "id": "theatre-du-casino",
+   "cat": "dec",
+   "x": 610.9,
+   "y": -111.3,
+   "title": "Théâtre du Casino",
+   "text": "Théâtre du Casino de Royat-Chamalières, rénové en avril 2012, d'une capacité d'environ 600 personnes.\nAllée du Pariou, 63400 Chamalières\nTél : 04 73 29 52 52",
+   "photo": {
+    "url": "photos/theatre-du-casino-164263.jpg",
+    "alt": "Théâtre du Casino",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/ma-ville/sport-associations/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/theatre-du-casino-164263.jpg",
+     "alt": "Théâtre du Casino",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/theatre-du-casino-164852.jpg",
+     "alt": "Théâtre du Casino",
+     "credit": "MARQUE FRANÇAISE · CC BY-SA 4.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/theatre-du-casino-166643.jpg",
+     "alt": "Théâtre du Casino",
+     "credit": "MARQUE FRANÇAISE · CC BY-SA 4.0 · Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "id": "thermes-de-royat-chamalieres",
+   "cat": "dec",
+   "x": 303.6,
+   "y": -26.7,
+   "title": "Thermes de Royat-Chamalières",
+   "text": "Station thermale de Royat-Chamalières, partenaire de la ville pour des micro-cures thermales proposées aux agents municipaux depuis mars 2025.",
+   "photo": {
+    "url": "photos/thermes-de-royat-chamalieres-170545.jpg",
+    "alt": "Thermes de Royat-Chamalières",
+    "credit": "www.ville-chamalieres.fr"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/attractive/ville-sante-oms/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/thermes-de-royat-chamalieres-170545.jpg",
+     "alt": "Thermes de Royat-Chamalières",
+     "credit": "www.ville-chamalieres.fr"
+    },
+    {
+     "url": "photos/thermes-de-royat-chamalieres-170622.jpg",
+     "alt": "Thermes de Royat-Chamalières",
+     "credit": "Tabl-trai · CC BY-SA 3.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/thermes-de-royat-chamalieres-170918.jpg",
+     "alt": "Thermes de Royat-Chamalières",
+     "credit": "O.Taris · CC BY-SA 3.0 · Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "id": "ancienne-gare-de-royat-chamalieres",
+   "cat": "dec",
+   "x": 303.6,
+   "y": -26.7,
+   "title": "Ancienne gare de Royat-Chamalières",
+   "text": "Élément du patrimoine présenté dans le panorama de la page d'accueil.",
+   "photo": {
+    "url": "photos/ancienne-gare-de-royat-chamalieres-174187.jpg",
+    "alt": "Ancienne gare de Royat-Chamalières",
+    "credit": "Tabl-trai · CC BY-SA 3.0 · Wikimedia Commons"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.ville-chamalieres.fr/"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/ancienne-gare-de-royat-chamalieres-174187.jpg",
+     "alt": "Ancienne gare de Royat-Chamalières",
+     "credit": "Tabl-trai · CC BY-SA 3.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/ancienne-gare-de-royat-chamalieres-174405.jpg",
+     "alt": "Ancienne gare de Royat-Chamalières",
+     "credit": "sogefi sig · etalab-2.0 · Panoramax"
+    },
+    {
+     "url": "photos/ancienne-gare-de-royat-chamalieres-174521.jpg",
+     "alt": "Ancienne gare de Royat-Chamalières",
+     "credit": "sogefi sig · etalab-2.0 · Panoramax"
+    }
+   ]
+  },
+  {
+   "id": "nouveau-lieu",
+   "cat": "dec",
+   "x": 610.3,
+   "y": 312.6,
+   "title": "Eglise Notre-Dame de Chamalières",
+   "text": "Eglise Notre-Dame de Chamalières\n4,1/5 (7 avis) · Église catholique dans Chamalières\n7bis Rue de l'Arsenal Chamalières\n04 73 37 36 06",
+   "photo": {
+    "url": "photos/nouveau-lieu-ref1.jpg",
+    "alt": "Eglise Notre-Dame de Chamalières",
+    "credit": "Romary · CC BY 2.5 · Wikimedia Commons"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "icon": "✝",
+   "autoChurch": true,
+   "model": {
+    "file": "models/nouveau-lieu.glb",
+    "v": 1793330974403,
+    "x": 623.6,
+    "y": 310.4,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 3,
+    "hideAt": [
+     [
+      623.6,
+      310.4
+     ]
+    ],
+    "source": "Claude (photos Wikimedia Commons + emprise IGN)"
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-ref1.jpg",
+     "alt": "Eglise Notre-Dame de Chamalières",
+     "credit": "Romary · CC BY 2.5 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/nouveau-lieu-ref2.jpg",
+     "alt": "Eglise Notre-Dame de Chamalières",
+     "credit": "Antoine Garnier · CC BY-SA 4.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/nouveau-lieu-ref3.jpg",
+     "alt": "Eglise Notre-Dame de Chamalières",
+     "credit": "Antoine Garnier · CC BY-SA 4.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/nouveau-lieu-ref4.jpg",
+     "alt": "Eglise Notre-Dame de Chamalières",
+     "credit": "Antoine Garnier · CC BY-SA 4.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/nouveau-lieu-ref5.jpg",
+     "alt": "Eglise Notre-Dame de Chamalières",
+     "credit": "Antoine Garnier · CC BY-SA 4.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/nouveau-lieu-ref6.jpg",
+     "alt": "Eglise Notre-Dame de Chamalières",
+     "credit": "sig_clermontmetropole · etalab-2.0 · Panoramax"
+    }
+   ]
+  },
+  {
+   "id": "eglise",
+   "cat": "dec",
+   "x": -255.6,
+   "y": 348.8,
+   "title": "Église",
+   "icon": "♜",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [],
+   "autoChurch": true,
+   "model": {
+    "file": "models/eglise.glb",
+    "v": 1793330981550,
+    "x": -262.3,
+    "y": 346.3,
+    "scale": 1,
+    "rotation": -151.3,
+    "boost": 3,
+    "hideAt": [
+     [
+      -255.6,
+      348.8
+     ]
+    ],
+    "source": "Modèle automatique (emprise IGN)"
+   }
+  },
+  {
+   "id": "eglise-2",
+   "cat": "dec",
+   "x": 496,
+   "y": 736.1,
+   "title": "Église",
+   "icon": "♜",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [],
+   "autoChurch": true,
+   "model": {
+    "file": "models/eglise-2.glb",
+    "v": 1793330990716,
+    "x": 490.8,
+    "y": 744.8,
+    "scale": 1,
+    "rotation": -65.9,
+    "boost": 3,
+    "hideAt": [
+     [
+      496,
+      736.1
+     ]
+    ],
+    "source": "Modèle automatique (emprise IGN)"
+   }
+  },
+  {
+   "id": "eglise-3",
+   "cat": "dec",
+   "x": -63.6,
+   "y": -543.1,
+   "title": "Église",
+   "icon": "♜",
+   "text": "",
+   "photo": {
+    "url": "photos/eglise-3-184534.jpg",
+    "alt": "Église",
+    "credit": "sig_clermontmetropole · etalab-2.0 · Panoramax"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [
+    {
+     "url": "photos/eglise-3-184534.jpg",
+     "alt": "Église",
+     "credit": "sig_clermontmetropole · etalab-2.0 · Panoramax"
+    },
+    {
+     "url": "photos/eglise-3-184722.jpg",
+     "alt": "Église",
+     "credit": "sig_clermontmetropole · etalab-2.0 · Panoramax"
+    },
+    {
+     "url": "photos/eglise-3-184906.jpg",
+     "alt": "Église",
+     "credit": "Fabien1309 · CC-BY-SA-4.0 · Panoramax"
+    }
+   ],
+   "autoChurch": true,
+   "model": {
+    "file": "models/eglise-3.glb",
+    "v": 1793330999151,
+    "x": -67.4,
+    "y": -540.6,
+    "scale": 1,
+    "rotation": -39.4,
+    "boost": 3,
+    "hideAt": [
+     [
+      -63.6,
+      -543.1
+     ],
+     [
+      -74.9,
+      -531.1
+     ],
+     [
+      -55.3,
+      -539.4
+     ]
+    ],
+    "source": "Modèle automatique (emprise IGN)"
+   }
+  },
+  {
+   "id": "monastere-des-clarisses-capucines-2",
+   "cat": "dec",
+   "x": 84.1,
+   "y": 188.4,
+   "title": "Monastère des Clarisses Capucines",
+   "icon": "♜",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "autoChurch": true,
+   "model": {
+    "file": "models/monastere-des-clarisses-capucines-2.glb",
+    "v": 1793331003882,
+    "x": 86.5,
+    "y": 185.6,
+    "scale": 1,
+    "rotation": 8.7,
+    "boost": 3,
+    "hideAt": [
+     [
+      84.1,
+      188.4
+     ]
+    ],
+    "source": "Modèle automatique (emprise IGN)"
+   },
+   "photos": []
+  },
+  {
+   "id": "nouveau-lieu-2",
+   "cat": "res",
+   "x": 71.4,
+   "y": -763.6,
+   "title": "princesse Flore",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [],
+   "icon": "☕"
+  }
+ ],
+ "supabase": {
+  "url": "https://cqqesqoutshyutxgzyvo.supabase.co",
+  "anonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxcWVzcW91dHNoeXV0eGd6eXZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM0NTAxODEsImV4cCI6MjEwOTAyNjE4MX0.wp5V3Mz4aiIMQDHBhQJChDweDQP1a3-sXWz498yo5dE"
+ },
+ "plan": {
+  "offer": "base",
+  "poiIncluded": 30,
+  "services": [
+   {
+    "id": "contents",
+    "label": "Saisie de contenus",
+    "price": 25,
+    "qty": 1,
+    "note": "",
+    "date": "2026-10-31"
+   },
+   {
+    "id": "contents",
+    "label": "Saisie de contenus",
+    "price": 25,
+    "qty": 5,
+    "note": "",
+    "date": "2026-10-31"
+   }
+  ],
+  "extraPois": 1
+ },
+ "client": {
+  "contact": "",
+  "email": "",
+  "notes": ""
+ },
+ "mapGeneratedAt": "2026-10-30T03:00:23.331Z",
+ "publishedAt": "2026-10-31T15:39:28.824Z",
+ "gen": {},
+ "style": "maquette",
+ "zoneMode": "quartiers",
+ "brandPalette": [
+  "#e30613",
+  "#002a4e",
+  "#494949",
+  "#727272",
+  "#efefef",
+  "#333333",
+  "#c5c5c5",
+  "#6dc4c4",
+  "#c81c1e",
+  "#1b870b",
+  "#f5f5f5",
+  "#226e3a"
+ ],
+ "icons": {
+  "enabled": false,
+  "cat": {
+   "pub": "icons/cat-pub.png"
+  },
+  "poi": {}
+ },
+ "licenses": {
+  "itinerary": {
+   "active": true,
+   "since": "2026-10-30",
+   "note": "reprise de l’ancienne configuration"
+  },
+  "customIcons": {
+   "active": true,
+   "since": "2026-10-31",
+   "until": null
+  },
+  "priority": {
+   "active": true,
+   "since": "2026-10-31",
+   "until": null
+  }
+ },
+ "itinerary": {
+  "speed": 1.25,
+  "order": "optimise",
+  "pickOnMap": true
+ }
+}
