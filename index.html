@@ -350,6 +350,43 @@ dialog>button{position:absolute;right:15px;top:12px;background:none;border:0;fon
 .made{font-size:11px!important}
 body.embed-compact #sidebar{display:none}
 body.edit .pin{cursor:move}
+
+/* bandeau heure / musique : pleine largeur, une seule ligne, repliable */
+.time-panel{left:16px;right:16px;width:auto;max-width:none;transform:none;bottom:30px;padding:7px 10px 7px 14px;display:flex;align-items:center;gap:16px;border-radius:12px}
+.time-panel .time-heading{flex:0 0 auto;gap:9px}
+.time-panel .tiny-label{display:none}
+.time-panel .time-heading strong{font-size:13px;white-space:nowrap}
+.time-panel .time-heading output{font-size:16px;min-width:46px}
+.time-panel .tp-mid{flex:1 1 220px;min-width:140px}
+.time-panel .range-row{margin-top:2px;gap:8px;font-size:13px}
+.time-panel .time-ticks{height:13px;margin:0 22px}.time-panel .time-ticks button{padding:1px 0}
+.time-panel .date-row{margin:0;padding:0 0 0 14px;border-top:0;border-left:1px solid #dce2d2;flex:0 0 auto}
+.time-panel .music-player{border-top:0;margin:0;padding:0 0 0 14px;border-left:1px solid #dce2d2;flex:0 0 auto}
+.time-panel[hidden]{display:none!important}
+.tp-hide{border:0;background:none;font-size:15px;color:#89917c;width:26px;height:26px;border-radius:50%;flex:0 0 auto;cursor:pointer}.tp-hide:hover{background:#0000000d}
+.tp-open{position:absolute;z-index:1500;left:16px;bottom:30px;display:flex;align-items:center;gap:6px;border:1px solid #fff9;background:color-mix(in srgb,var(--paper) 95%,transparent);border-radius:99px;padding:7px 13px;font-size:12px;color:var(--ink,#22302a);box-shadow:0 6px 24px color-mix(in srgb,var(--primary) 10%,transparent);cursor:pointer}
+.tp-open b{font-variant-numeric:tabular-nums;font-weight:600}.tp-open .tp-sep,.tp-open .tp-up{color:#89917c}
+body:not(.tp-closed) .hint{bottom:86px}
+.night .tp-open{background:color-mix(in srgb,#141a22 88%,transparent);color:#d3d9d2;border-color:#ffffff22}
+@media(max-width:1050px){
+  .time-panel{flex-wrap:wrap;gap:4px 12px;padding:6px 8px 5px 12px}
+  .time-panel .time-heading strong{display:none}
+  .time-panel .tp-mid{order:5;flex-basis:100%}
+  .time-panel .music-title{display:none}.time-panel .music-player input[type=range]{width:64px}
+  .time-panel .music-player::before{content:'♪';color:#89917c;font-size:13px}
+  .time-panel .tp-hide{margin-left:auto}
+  body:not(.tp-closed) .hint{display:none}
+}
+@media(max-width:700px){
+  .time-panel{left:10px;right:10px;bottom:28px;flex-wrap:wrap;gap:6px 10px;padding:7px 8px 6px 10px}
+  .time-panel .time-heading strong{display:none}
+  .time-panel .tp-mid{order:5;flex-basis:100%}
+  .time-panel .music-player input[type=range]{width:56px}
+  .time-panel .date-row{border-left:0;padding-left:0}
+  .time-panel .tp-hide{margin-left:auto}
+  .tp-open{left:10px;bottom:28px}
+  body:not(.tp-closed) .hint{display:none}
+}
 </style>
 </head>
 <body>
@@ -414,13 +451,15 @@ body.edit .pin{cursor:move}
     <button id="toggleLabels" title="Afficher ou masquer les repères" aria-label="Afficher ou masquer les repères" aria-pressed="true">⚑</button>
   </div>
   <div class="compass" title="Nord géographique"><span>N</span><svg id="compassNeedle" width="28" height="36" viewBox="0 0 28 36"><path d="M14 2L24 30L14 24Z" fill="var(--accent)"/><path d="M14 2L4 30L14 24Z" fill="var(--primary)"/></svg></div>
-  <div class="time-panel">
-    <div class="time-heading"><div><span class="tiny-label">AU FIL DE LA JOURNÉE</span><strong id="timeTitle">La douceur de l’après-midi</strong></div><button id="playTime" aria-label="Animer le cycle de la journée" aria-pressed="false">▶</button><output id="timeValue" for="time">15:00</output></div>
-    <div class="range-row"><span>☀</span><input id="time" aria-label="Heure de la journée" type="range" min="0" max="24" value="15" step="0.05"><span>☾</span></div>
-    <div class="time-ticks"><button data-hour="6">Aube</button><button data-hour="12">Midi</button><button data-hour="18">Crépuscule</button><button data-hour="23">Nuit</button></div>
+  <div class="time-panel" id="timePanel">
+    <div class="time-heading"><button id="playTime" aria-label="Animer le cycle de la journée" aria-pressed="false">▶</button><div><span class="tiny-label">AU FIL DE LA JOURNÉE</span><strong id="timeTitle">La douceur de l’après-midi</strong></div><output id="timeValue" for="time">15:00</output></div>
+    <div class="tp-mid"><div class="range-row"><span>☀</span><input id="time" aria-label="Heure de la journée" type="range" min="0" max="24" value="15" step="0.05"><span>☾</span></div>
+    <div class="time-ticks"><button data-hour="6">Aube</button><button data-hour="12">Midi</button><button data-hour="18">Crépuscule</button><button data-hour="23">Nuit</button></div></div>
     <div class="date-row" id="sunDateRow" hidden><label>Date <input id="sunDate" type="date" aria-label="Date pour la position du soleil"></label><small id="sunTimes"></small></div>
     <div class="music-player"><button id="musicPlay" aria-label="Lire la musique" aria-pressed="false">▶</button><div class="music-title"><strong>Nappes douces</strong><span id="musicStatus" aria-live="polite">Ambiance musicale · générée en direct</span></div><input id="musicVolume" type="range" min="0" max="100" step="1" value="15" aria-label="Volume de la musique"><output id="musicVolumeValue" for="musicVolume">15 %</output></div>
+    <button class="tp-hide" id="tpHide" type="button" aria-label="Masquer le panneau de l’heure et de la musique" title="Masquer">▾</button>
   </div>
+  <button class="tp-open" id="tpOpen" type="button" hidden aria-label="Afficher le panneau de l’heure et de la musique"><span>☀</span> <b id="tpOpenTime">15:00</b> <span class="tp-sep">·</span> <span>♪</span> <span class="tp-up">▴</span></button>
   <div class="hint">Glisser pour tourner <i>·</i> Molette pour zoomer <i>·</i> Clic droit pour déplacer</div>
   <div class="map-footer"><span id="buildingCount">Données géographiques en chargement</span><button id="dataInfo">À propos des données ↗</button></div>
   <section id="photoPopover" role="dialog" aria-label="Photos du lieu" hidden><button id="closePhotos" aria-label="Fermer les photos">×</button><div class="detail-kicker" id="photoKicker">EN IMAGES</div><h2 id="photoTitle"></h2><div id="photoGrid"></div><div id="photoText"></div></section>

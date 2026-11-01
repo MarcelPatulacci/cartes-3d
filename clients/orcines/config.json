@@ -590,15 +590,16 @@
    ],
    "model": {
     "file": "models/aire-de-camping-car-orcines.glb",
-    "v": 1793496775366,
-    "version": 1,
+    "v": 1793497697964,
+    "version": 4,
     "x": 917.8,
     "y": 45.6,
-    "scale": 1,
+    "scale": 10,
     "rotation": 0,
     "boost": 1,
     "hideAt": [],
-    "source": "Import tube exemple.glb"
+    "source": "Blender (addon ANTEMIC)",
+    "dz": 0
    }
   },
   {
@@ -887,12 +888,20 @@
     "boost": 5,
     "hideAt": [
      [
+      983.7,
+      -665.1
+     ],
+     [
       972.4,
       -660.2
      ],
      [
-      983.7,
-      -665.1
+      977.8,
+      -676.5
+     ],
+     [
+      965.1,
+      -666.9
      ]
     ],
     "source": "Blender/Claude (photos)"
@@ -1174,7 +1183,7 @@
   "services": []
  },
  "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
- "publishedAt": "2026-11-01T01:34:03.867Z",
+ "publishedAt": "2026-11-01T01:48:27.464Z",
  "brandPalette": [
   "#f7f7f7",
   "#f2f2f2",
