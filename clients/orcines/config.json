@@ -880,7 +880,7 @@
     "credit": "Pymouss (Wikimedia Commons, CC BY-SA 4.0)"
    },
    "model": {
-    "file": "models/mairie.glb",
+    "file": "models/mairie_v002.glb",
     "x": 981.9,
     "y": -662.4,
     "scale": 1,
@@ -888,23 +888,19 @@
     "boost": 5,
     "hideAt": [
      [
-      983.7,
+      983.71,
       -665.1
      ],
      [
-      972.4,
-      -660.2
-     ],
-     [
-      977.8,
-      -676.5
-     ],
-     [
-      965.1,
-      -666.9
+      972.4166666666666,
+      -660.1833333333333
      ]
     ],
-    "source": "Blender/Claude (photos)"
+    "source": "Blender (addon ANTEMIC)",
+    "v": 1793499785722,
+    "version": 2,
+    "dz": 0,
+    "idx": 4285
    },
    "photos": [
     {
@@ -1183,7 +1179,7 @@
   "services": []
  },
  "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
- "publishedAt": "2026-11-01T02:02:14.854Z",
+ "publishedAt": "2026-11-01T02:25:44.246Z",
  "brandPalette": [
   "#f7f7f7",
   "#f2f2f2",
