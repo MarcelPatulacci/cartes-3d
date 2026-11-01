@@ -1179,7 +1179,7 @@
   "services": []
  },
  "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
- "publishedAt": "2026-11-01T02:25:53.258Z",
+ "publishedAt": "2026-11-01T02:27:06.731Z",
  "brandPalette": [
   "#f7f7f7",
   "#f2f2f2",
@@ -1203,25 +1203,6 @@
   "cat": {},
   "poi": {}
  },
- "objects": [
-  {
-   "id": "obj-building_phase_3_001",
-   "name": "Building_phase_3.001",
-   "source": "Blender",
-   "model": {
-    "file": "models/obj-building_phase_3_001.glb",
-    "v": 1793496512579,
-    "version": 1,
-    "x": 917.8,
-    "y": 45.6,
-    "dz": 2,
-    "rotation": 0,
-    "scale": 1,
-    "hideAt": [],
-    "boost": 1,
-    "source": "Blender (addon ANTEMIC)"
-   }
-  }
- ],
+ "objects": [],
  "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/"
 }
