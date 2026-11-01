@@ -1,0 +1,1209 @@
+{
+ "schema": 1,
+ "slug": "orcines",
+ "name": "Orcines",
+ "insee": "63263",
+ "codePostal": "63870",
+ "website": "https://www.orcines.fr/",
+ "createdAt": "2026-10-29T00:00:00.000Z",
+ "client": {
+  "contact": "",
+  "email": "",
+  "notes": "Carte de démonstration. Configuration remise au standard v0.0.1 le 31/10/2026 (ancienne config : _cahier1/config.json)."
+ },
+ "theme": {
+  "primary": "#00356d",
+  "accent": "#00aafb",
+  "paper": "#f7f8fa",
+  "font": "Inter",
+  "titleFont": "Georgia",
+  "logo": "logo.png",
+  "fonts": [],
+  "ink": "#202124",
+  "button": "#00356d",
+  "buttonText": "#ffffff",
+  "card": "#f0f0f0"
+ },
+ "texts": {
+  "sub": "PUY-DE-DÔME · AUVERGNE",
+  "eyebrow": "UNE AUTRE FAÇON DE DÉCOUVRIR",
+  "title": "La commune,\nen perspective.",
+  "intro": "Orcines : une commune riche de 17 villages et de sites naturels classés au patrimoine mondial de l’Unesco.",
+  "welcomeKicker": "BIENVENUE À ORCINES",
+  "welcomeTitle": "Bienvenue à Orcines",
+  "welcomeText": "Orcines est une commune du Puy-de-Dôme composée de 17 villages, au cœur de sites naturels classés au patrimoine mondial de l’Unesco. Retrouvez sur ce site l’information locale, la vie municipale et les démarches administratives en ligne.",
+  "welcomeLink": {
+   "label": "Site de la commune",
+   "url": "https://www.orcines.fr/"
+  },
+  "territoryName": "La commune d’Orcines",
+  "territory": "Ses limites sont celles de la maquette",
+  "footer": "Mairie d’Orcines · Place Saint Julien – 63870 Orcines · 04 73 62 10 09",
+  "status": "La commune d’Orcines",
+  "about": ""
+ },
+ "categories": [
+  {
+   "id": "pub",
+   "label": "Bâtiments publics",
+   "icon": "⌂"
+  },
+  {
+   "id": "com",
+   "label": "Commerces & services",
+   "icon": "◈"
+  },
+  {
+   "id": "res",
+   "label": "Restaurants & hébergements",
+   "icon": "☕"
+  },
+  {
+   "id": "dec",
+   "label": "Patrimoine",
+   "icon": "✦"
+  },
+  {
+   "id": "nat",
+   "label": "Nature & paysages",
+   "icon": "❀"
+  }
+ ],
+ "modules": {
+  "itinerary": true,
+  "transit": false,
+  "music": true,
+  "time": true,
+  "sun": true,
+  "sunDate": true
+ },
+ "licenses": {
+  "itinerary": {
+   "active": true,
+   "since": "2026-10-31",
+   "until": null,
+   "note": "carte de démonstration"
+  }
+ },
+ "itinerary": {
+  "speed": 1,
+  "order": "optimise",
+  "pickOnMap": true
+ },
+ "zoneMode": "villages",
+ "villages": [
+  {
+   "name": "La Baraque",
+   "x": 1495,
+   "y": -1247,
+   "sub": "Carrefour des routes de Limoges et de Bordeaux"
+  },
+  {
+   "name": "Le Cheix",
+   "x": 1630,
+   "y": -1531,
+   "sub": "Entre la Baraque et Fontanas"
+  },
+  {
+   "name": "Chez Vasson",
+   "x": 1550,
+   "y": -525,
+   "sub": "Au nord-est du bourg"
+  },
+  {
+   "name": "Ternant",
+   "x": 918,
+   "y": 2104,
+   "sub": "Le village du nord de la commune"
+  },
+  {
+   "name": "Fontanas",
+   "x": 1278,
+   "y": -2284,
+   "sub": "Sur la route des Dômes"
+  },
+  {
+   "name": "La Font-de-l’Arbre",
+   "x": 213,
+   "y": -2416,
+   "sub": "Au départ du Panoramique des Dômes"
+  },
+  {
+   "name": "Enval",
+   "x": -239,
+   "y": -2599,
+   "sub": "Près du maar d’Enval"
+  },
+  {
+   "name": "Montrodeix",
+   "x": 517,
+   "y": -2828,
+   "sub": "Au pied du puy de Montrodeix"
+  },
+  {
+   "name": "Solagnat",
+   "x": 1439,
+   "y": -3095,
+   "sub": "Le hameau le plus au sud"
+  },
+  {
+   "name": "Le Gressigny",
+   "x": 1494,
+   "y": -35,
+   "sub": "Au nord du bourg"
+  },
+  {
+   "name": "Bonnabry",
+   "x": 1959,
+   "y": -115,
+   "sub": "Sur le plateau, vers Durtol"
+  },
+  {
+   "name": "Sarcenat",
+   "x": 2504,
+   "y": 979,
+   "sub": "Hameau et château de Sarcenat"
+  },
+  {
+   "name": "Bellevue",
+   "x": 2535,
+   "y": -765,
+   "sub": "Le balcon sur Clermont-Ferrand"
+  },
+  {
+   "name": "Villars",
+   "x": 2483,
+   "y": -1428,
+   "sub": "Au bord du maar de Villars"
+  },
+  {
+   "name": "La Fontaine-du-Berger",
+   "x": -604,
+   "y": 1067,
+   "sub": "Sur la route de Limoges, au pied des puys"
+  },
+  {
+   "name": "Maupertuis",
+   "x": 1489,
+   "y": -604,
+   "sub": "À l’est du bourg"
+  }
+ ],
+ "view": {},
+ "style": "maquette",
+ "pois": [
+  {
+   "id": "other-skin",
+   "cat": "com",
+   "x": 1199.7,
+   "y": -2324.6,
+   "title": "Other Skin",
+   "text": "Boutique de vêtements de sport pour femmes\n113 route des Dômes, Fontanas\n63870 ORCINES\nTél : 06 89 74 54 97",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "les-bicyclettes-du-grenier",
+   "cat": "com",
+   "x": 1199.7,
+   "y": -2324.6,
+   "title": "Les bicyclettes du grenier",
+   "text": "Magasin de vélos\n113 route des Dômes, Fontanas\n63870 ORCINES\nTél : 06 89 74 54 97",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "pharmacie",
+   "cat": "com",
+   "x": 2144.3,
+   "y": -920.6,
+   "title": "Pharmacie",
+   "text": "2 rue de Pignol",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "bar-tabac-presse-l-arborifontain",
+   "cat": "com",
+   "x": 759.5,
+   "y": -2162.5,
+   "title": "Bar Tabac Presse L'Arborifontain",
+   "text": "36 route du puy de Dôme, La Font de l'Arbre\n63870 ORCINES\nTél : 04 73 77 07 19",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/bar-tabac-presse-l-arborifontain.jpg",
+    "alt": "Bar Tabac Presse L'Arborifontain",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/bar-tabac-presse-l-arborifontain.jpg",
+     "alt": "Bar Tabac Presse L'Arborifontain",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "sancy-camp",
+   "cat": "com",
+   "x": 2316.2,
+   "y": -950.7,
+   "title": "Sancy camp",
+   "text": "36 bis rue de la Chaloux - La baraque\n63870 ORCINES",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "stations-bees",
+   "cat": "com",
+   "x": 334.1,
+   "y": -2227.1,
+   "title": "Stations Bees",
+   "text": "92 route du puy de Dôme - La Font de l'Arbre\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.stationsbees.com/"
+   },
+   "photo": {
+    "url": "photos/stations-bees.jpg",
+    "alt": "Stations Bees",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/stations-bees.jpg",
+     "alt": "Stations Bees",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "la-ferme-des-sonnailles",
+   "cat": "com",
+   "x": 244.2,
+   "y": -2701.2,
+   "title": "La Ferme des Sonnailles",
+   "text": "1 rue de l'Etang - Montrodeix\n63870 Orcines\nTél : 07 82 27 86 72",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "gaec-penysarcenat",
+   "cat": "com",
+   "x": 2650.2,
+   "y": 918.8,
+   "title": "gaec penysarcenat",
+   "text": "route de La Clinique - Sarcenat\n63870 Orcines\nTél : 06 43 88 20 86",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/gaec-penysarcenat.jpg",
+    "alt": "gaec penysarcenat",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/gaec-penysarcenat.jpg",
+     "alt": "gaec penysarcenat",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "boutique-du-village-auvergnat",
+   "cat": "com",
+   "x": 333.2,
+   "y": -2228.8,
+   "title": "Boutique du Village Auvergnat",
+   "text": "92 route du Puy de Dôme - La Font de l'Arbre\n63870 Orcines\nTél : 04 73 88 37 64",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/boutique-du-village-auvergnat.jpg",
+    "alt": "Boutique du Village Auvergnat",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/boutique-du-village-auvergnat.jpg",
+     "alt": "Boutique du Village Auvergnat",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "carrefour-express",
+   "cat": "com",
+   "x": 1212.1,
+   "y": -470.5,
+   "title": "Carrefour Express",
+   "text": "9 route des Puys\n63870 Orcines\nTél : 09 67 60 72 71",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/carrefour-express.jpg",
+    "alt": "Carrefour Express",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/carrefour-express.jpg",
+     "alt": "Carrefour Express",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "rebatet-fruits-dr-me-ard-che",
+   "cat": "com",
+   "x": 2059.8,
+   "y": -932.4,
+   "title": "Rebatet Fruits Drôme Ardèche",
+   "text": "43 route de La Baraque - La Baraque\n63870 Orcines\nTél : 04 73 62 21 75",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/rebatet-fruits-dr-me-ard-che.jpg",
+    "alt": "Rebatet Fruits Drôme Ardèche",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/rebatet-fruits-dr-me-ard-che.jpg",
+     "alt": "Rebatet Fruits Drôme Ardèche",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "jnv-garage-automobile",
+   "cat": "com",
+   "x": 1092.1,
+   "y": -2159.4,
+   "title": "JNV Garage Automobile",
+   "text": "8 rue des Fauvettes - La Font de l'Arbre\n63870 Orcines\nTél : 04 73 78 50 14",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/jnv-garage-automobile.jpg",
+    "alt": "JNV Garage Automobile",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/jnv-garage-automobile.jpg",
+     "alt": "JNV Garage Automobile",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "boulangerie-patisserie-lastique",
+   "cat": "com",
+   "x": 572.7,
+   "y": -2237,
+   "title": "Boulangerie Patisserie LASTIQUE",
+   "text": "74 route du Puy-de-Dôme - La Font de l'Arbre\n63870 Orcines\nTél : 04 73 62 15 14",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/boulangerie-patisserie-lastique.jpg",
+    "alt": "Boulangerie Patisserie LASTIQUE",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/boulangerie-patisserie-lastique.jpg",
+     "alt": "Boulangerie Patisserie LASTIQUE",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "boulangerie-patisserie-le-puy-de-farine",
+   "cat": "com",
+   "x": 1740.1,
+   "y": -858.4,
+   "title": "Boulangerie Patisserie Le Puy de Farine",
+   "text": "15 route de Limoges - La Baraque\n63870 Orcines\nTél. : 04 73 62 10 08",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/boulangerie-patisserie-le-puy-de-farine.jpg",
+    "alt": "Boulangerie Patisserie Le Puy de Farine",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/boulangerie-patisserie-le-puy-de-farine.jpg",
+     "alt": "Boulangerie Patisserie Le Puy de Farine",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "parking-du-panoramique",
+   "cat": "pub",
+   "x": -908.4,
+   "y": -1821.1,
+   "title": "Parking du Panoramique",
+   "text": "chemin des Couleyras",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/parking-du-panoramique.jpg",
+    "alt": "Parking du Panoramique",
+    "credit": "Moktarama (Wikimedia Commons, CC BY 3.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/parking-du-panoramique.jpg",
+     "alt": "Parking du Panoramique",
+     "credit": "Moktarama (Wikimedia Commons, CC BY 3.0)"
+    }
+   ]
+  },
+  {
+   "id": "parking-du-col-des-goules",
+   "cat": "pub",
+   "x": -881.2,
+   "y": 1586.8,
+   "title": "Parking du Col des Goules",
+   "text": "route de Limoges",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "borne-electrique",
+   "cat": "pub",
+   "x": 1103.4,
+   "y": -565.3,
+   "title": "Borne Electrique",
+   "text": "10 Rte des Puys\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/borne-electrique.jpg",
+    "alt": "Borne Electrique",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/borne-electrique.jpg",
+     "alt": "Borne Electrique",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "aire-de-covoiturage",
+   "cat": "pub",
+   "x": 1061.2,
+   "y": -518.2,
+   "title": "Aire de Covoiturage",
+   "text": "9 Rue de la Liberté\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/aire-de-covoiturage.jpg",
+    "alt": "Aire de Covoiturage",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/aire-de-covoiturage.jpg",
+     "alt": "Aire de Covoiturage",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ],
+   "icon": "Ⓟ"
+  },
+  {
+   "id": "aire-de-camping-car-orcines",
+   "cat": "pub",
+   "x": 917.8,
+   "y": 45.6,
+   "title": "Aire de Camping-Car Orcines",
+   "text": "60 route de limoges\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/aire-de-camping-car-orcines.jpg",
+    "alt": "Aire de Camping-Car Orcines",
+    "credit": "sogefi sig (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/aire-de-camping-car-orcines.jpg",
+     "alt": "Aire de Camping-Car Orcines",
+     "credit": "sogefi sig (Panoramax, CC BY-SA 4.0)"
+    }
+   ],
+   "model": {
+    "file": "models/aire-de-camping-car-orcines.glb",
+    "v": 1793497697964,
+    "version": 4,
+    "x": 917.8,
+    "y": 40,
+    "scale": 5,
+    "rotation": 0,
+    "boost": 1,
+    "hideAt": [],
+    "source": "Blender (addon ANTEMIC)",
+    "dz": 0
+   }
+  },
+  {
+   "id": "salle-des-fetes-de-ternant",
+   "cat": "pub",
+   "x": 818.5,
+   "y": 1989.2,
+   "title": "Salle des Fetes de Ternant",
+   "text": "1 rue du Barye - Ternant\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "cimetiere-de-ternant",
+   "cat": "pub",
+   "x": 885.1,
+   "y": 2450.9,
+   "title": "Cimetiere de Ternant",
+   "text": "12 rue de la Pont Simade - Ternant\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "cimetiere-orcines",
+   "cat": "pub",
+   "x": 918.9,
+   "y": -564,
+   "title": "Cimetiere Orcines",
+   "text": "3 Rue de la Liberté\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/cimetiere-orcines.jpg",
+    "alt": "Cimetiere Orcines",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/cimetiere-orcines.jpg",
+     "alt": "Cimetiere Orcines",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "la-poste",
+   "cat": "pub",
+   "x": 990.3,
+   "y": -593.9,
+   "title": "La Poste",
+   "text": "1 Rue de la Poste\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/la-poste.jpg",
+    "alt": "La Poste",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/la-poste.jpg",
+     "alt": "La Poste",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "eglise-st-julien",
+   "cat": "dec",
+   "x": 1002.5,
+   "y": -617.4,
+   "title": "Eglise St Julien",
+   "text": "4 Rue de la Poste\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/eglise-st-julien.jpg",
+    "alt": "Eglise St Julien",
+    "credit": "Pymouss (Wikimedia Commons, CC BY-SA 4.0)"
+   },
+   "model": {
+    "file": "models/eglise.glb",
+    "x": 1020.6,
+    "y": -620.9,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 5,
+    "hideAt": [
+     [
+      1003.5,
+      -617.5
+     ],
+     [
+      1036.6,
+      -624.8
+     ],
+     [
+      1015.2,
+      -622
+     ]
+    ],
+    "source": "Blender/Claude (photos)"
+   },
+   "photos": [
+    {
+     "url": "photos/eglise-st-julien.jpg",
+     "alt": "Eglise St Julien",
+     "credit": "Pymouss (Wikimedia Commons, CC BY-SA 4.0)"
+    }
+   ],
+   "icon": "✝"
+  },
+  {
+   "id": "terrain-de-bmx",
+   "cat": "pub",
+   "x": 976.8,
+   "y": -210.9,
+   "title": "Terrain de Bmx",
+   "text": "56 route de limoges\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "tennis-club-orcines",
+   "cat": "pub",
+   "x": 961.5,
+   "y": -140.6,
+   "title": "Tennis Club Orcines",
+   "text": "60 route de limoges\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": [],
+   "model": {
+    "file": "models/tennis-club-orcines.glb",
+    "v": 1793462444394,
+    "version": 1,
+    "x": 960.5,
+    "y": -141.3,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 1,
+    "hideAt": [
+     [
+      960.5,
+      -141.3
+     ]
+    ],
+    "source": "Claude (références + analyse + corrections)"
+   }
+  },
+  {
+   "id": "salle-omnisports",
+   "cat": "pub",
+   "x": 853,
+   "y": -77.6,
+   "title": "Salle Omnisports",
+   "text": "60 route de limoges\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": [],
+   "model": {
+    "file": "models/salle-omnisports.glb",
+    "v": 1793462111195,
+    "version": 1,
+    "x": 847.8,
+    "y": -73.3,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 1,
+    "hideAt": [
+     [
+      847.8,
+      -73.3
+     ]
+    ],
+    "source": "Claude (références + analyse + corrections)"
+   }
+  },
+  {
+   "id": "le-foyer-rural",
+   "cat": "pub",
+   "x": 1049.8,
+   "y": -493.3,
+   "title": "Le Foyer Rural",
+   "text": "9 rue de la Liberté\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/le-foyer-rural.jpg",
+    "alt": "Le Foyer Rural",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/le-foyer-rural.jpg",
+     "alt": "Le Foyer Rural",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "l-atelier",
+   "cat": "pub",
+   "x": 982.1,
+   "y": -564.8,
+   "title": "L'Atelier",
+   "text": "3 rue de la Poste\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/l-atelier.jpg",
+    "alt": "L'Atelier",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/l-atelier.jpg",
+     "alt": "L'Atelier",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "bibliotheque",
+   "cat": "pub",
+   "x": 1092.9,
+   "y": -592.9,
+   "title": "Bibliotheque",
+   "text": "10 Rte des Puys\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "mairie",
+   "cat": "pub",
+   "x": 991.5,
+   "y": -664.7,
+   "title": "Mairie",
+   "text": "2 Rue de la Mairie\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/mairie.jpg",
+    "alt": "Mairie",
+    "credit": "Pymouss (Wikimedia Commons, CC BY-SA 4.0)"
+   },
+   "model": {
+    "file": "models/mairie_v002.glb",
+    "x": 981.9,
+    "y": -662.4,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 5,
+    "hideAt": [
+     [
+      983.71,
+      -665.1
+     ],
+     [
+      972.4166666666666,
+      -660.1833333333333
+     ]
+    ],
+    "source": "Blender (addon ANTEMIC)",
+    "v": 1793499785722,
+    "version": 2,
+    "dz": 0,
+    "idx": 4285
+   },
+   "photos": [
+    {
+     "url": "photos/mairie.jpg",
+     "alt": "Mairie",
+     "credit": "Pymouss (Wikimedia Commons, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "ecole-sainte-anne",
+   "cat": "pub",
+   "x": 1041.7,
+   "y": -761.4,
+   "title": "Ecole Sainte Anne",
+   "text": "25-27 Rte des Puys\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/ecole-sainte-anne.jpg",
+    "alt": "Ecole Sainte Anne",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/ecole-sainte-anne.jpg",
+     "alt": "Ecole Sainte Anne",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "ecole-publique-orcines",
+   "cat": "pub",
+   "x": 658.2,
+   "y": -2165.1,
+   "title": "Ecole Publique Orcines",
+   "text": "50 Rte du Puy de Dôme\n63870 Orcines",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/ecole-publique-orcines.jpg",
+    "alt": "Ecole Publique Orcines",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/ecole-publique-orcines.jpg",
+     "alt": "Ecole Publique Orcines",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "le-chalet",
+   "cat": "res",
+   "x": 330.4,
+   "y": -2269,
+   "title": "Le Chalet",
+   "text": "Le chalet du puy de Dôme\n97 route du puy de Dôme, La Font de l'Arbre\n63870 ORCINES\nTél : 06 79 46 28 54 / 04 73 62 68 38",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/le-chalet.jpg",
+    "alt": "Le Chalet",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/le-chalet.jpg",
+     "alt": "Le Chalet",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "le-relais-des-puys",
+   "cat": "res",
+   "x": 1765.4,
+   "y": -1019,
+   "title": "Le Relais des Puys",
+   "text": "Hôtel Restaurant\n59 route de La Baraque\n63870 ORCINES\nTél : 04 73 62 10 51",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/le-relais-des-puys.jpg",
+    "alt": "Le Relais des Puys",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/le-relais-des-puys.jpg",
+     "alt": "Le Relais des Puys",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "le-p-tit-casse-graine",
+   "cat": "res",
+   "x": 783.4,
+   "y": -2157.9,
+   "title": "Le P'tit Casse-Graine",
+   "text": "Bar - Restaurant\n34 route du puy de Dôme, La Font de l'Arbre\n63870 ORCINES\nTél : 04 73 62 11 24",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/le-p-tit-casse-graine.jpg",
+    "alt": "Le P'tit Casse-Graine",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/le-p-tit-casse-graine.jpg",
+     "alt": "Le P'tit Casse-Graine",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "le-petit-graillou",
+   "cat": "res",
+   "x": 513.2,
+   "y": -2796.6,
+   "title": "Le Petit Graillou",
+   "text": "Bar - Restaurant\n9 place des Parsières, Montrodeix\n63870 ORCINES\nTél : 04 73 69 37 13",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "le-resto-d-epicure",
+   "cat": "res",
+   "x": -2814.4,
+   "y": -2068.7,
+   "title": "Le Resto d'Epicure",
+   "text": "Restaurant Sommet du puy de Dôme\n1 rue des Couleyras\n63870 ORCINES\nTél : 04 73 87 43 02",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/le-resto-d-epicure.jpg",
+    "alt": "Le Resto d'Epicure",
+    "credit": "Clermont63 (Wikimedia Commons, CC BY-SA 3.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/le-resto-d-epicure.jpg",
+     "alt": "Le Resto d'Epicure",
+     "credit": "Clermont63 (Wikimedia Commons, CC BY-SA 3.0)"
+    }
+   ]
+  },
+  {
+   "id": "h-tel-restaurant-les-hirondelles",
+   "cat": "res",
+   "x": 1304.3,
+   "y": -339.6,
+   "title": "Hôtel Restaurant Les Hirondelles",
+   "text": "Hôtel Restaurant\n34 route de Limoges\n63870 ORCINES\nTél : 04 73 62 22 43",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "c-t-tiretaine-by-nathalie",
+   "cat": "res",
+   "x": 1199.7,
+   "y": -2324.6,
+   "title": "Côté Tiretaine By Nathalie",
+   "text": "Restaurant Crêperie\n113 route des Dômes, Fontanas\n63870 ORCINES\nTél : 04 73 61 52 35",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": null,
+   "photos": []
+  },
+  {
+   "id": "auberge-de-la-fontaine-du-berger",
+   "cat": "res",
+   "x": -544,
+   "y": 1190,
+   "title": "Auberge de La Fontaine du Berger",
+   "text": "Restaurant\n167 route de Limoges\n63870 ORCINES\nTél : 04 73 62 22 52",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/auberge-de-la-fontaine-du-berger.jpg",
+    "alt": "Auberge de La Fontaine du Berger",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/auberge-de-la-fontaine-du-berger.jpg",
+     "alt": "Auberge de La Fontaine du Berger",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "auberge-de-la-baraque",
+   "cat": "res",
+   "x": 1737.6,
+   "y": -984,
+   "title": "Auberge de la Baraque",
+   "text": "Restaurant\n2 route de Bordeaux\n63870 ORCINES\nTél : 04 73 62 26 24",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/auberge-de-la-baraque.jpg",
+    "alt": "Auberge de la Baraque",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/auberge-de-la-baraque.jpg",
+     "alt": "Auberge de la Baraque",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  },
+  {
+   "id": "arum",
+   "cat": "res",
+   "x": 1022.6,
+   "y": -276.4,
+   "title": "Arum",
+   "text": "Hôtel Restaurant\n63 route de Limoges\n63870 ORCINES\nTél : 04 73 62 26 29",
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photo": {
+    "url": "photos/arum.jpg",
+    "alt": "Arum",
+    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+   },
+   "photos": [
+    {
+     "url": "photos/arum.jpg",
+     "alt": "Arum",
+     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    }
+   ]
+  }
+ ],
+ "supabase": {
+  "url": "https://cqqesqoutshyutxgzyvo.supabase.co",
+  "anonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxcWVzcW91dHNoeXV0eGd6eXZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM0NTAxODEsImV4cCI6MjEwOTAyNjE4MX0.wp5V3Mz4aiIMQDHBhQJChDweDQP1a3-sXWz498yo5dE"
+ },
+ "plan": {
+  "offer": "base",
+  "poiIncluded": 20,
+  "services": []
+ },
+ "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
+ "publishedAt": "2026-11-01T02:27:25.297Z",
+ "brandPalette": [
+  "#f7f7f7",
+  "#f2f2f2",
+  "#202124",
+  "#ebebeb",
+  "#5472d2",
+  "#8d6dc4",
+  "#2a2a2a",
+  "#00c1cf",
+  "#fe6c61",
+  "#4cadc9",
+  "#cec2ab",
+  "#50485b",
+  "#75d69c",
+  "#f7be68",
+  "#5aa1e3",
+  "#6dab3c"
+ ],
+ "icons": {
+  "enabled": false,
+  "cat": {},
+  "poi": {}
+ },
+ "objects": [],
+ "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/"
+}

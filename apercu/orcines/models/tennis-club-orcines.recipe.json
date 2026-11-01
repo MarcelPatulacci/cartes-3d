@@ -1,0 +1,687 @@
+{
+ "name": "Tennis Club Orcines",
+ "notes": "Aucune vraie photo du bâtiment n'a été fournie, seulement des rendus du modèle. La comparaison porte donc sur la cohérence avec l'emprise et l'analyse. Vue de dessus : l'emprise rouge est bien couverte, avec un débord de toit d'environ 0,3 m seulement, et l'orientation à 67,5° est correcte. Les volumes, la hauteur (faîtage à 6,7 m, égout à 4,8 m) et la pente du toit (environ 12°) sont conservés. Corrections : la faîtière est affinée de 0,5 à 0,35 m, car elle formait une bande trop sombre et trop large en vue de dessus. Le soubassement est raccourci et part de -1 m au lieu de -2 m : il reste enterré pour suivre la pente du terrain, sans fondation excessive. Les translucides des longs pans sont élargis à 34,6 m pour éviter un vide visible aux angles. Sans photo, les couleurs restent des valeurs types.",
+ "parts": [
+  {
+   "type": "box",
+   "size": [
+    35.4,
+    2,
+    17.7
+   ],
+   "pos": [
+    0,
+    -1,
+    0
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#B9B4A8"
+  },
+  {
+   "type": "box",
+   "size": [
+    35.2,
+    3.8,
+    17.5
+   ],
+   "pos": [
+    0,
+    1,
+    0
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#7A8478"
+  },
+  {
+   "type": "gable",
+   "length": 35.3,
+   "width": 17.6,
+   "rise": 1.9,
+   "overhang": 0.3,
+   "pos": [
+    0,
+    4.8,
+    0
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#8C9196"
+  },
+  {
+   "type": "gable",
+   "length": 0.08,
+   "width": 17.5,
+   "rise": 1.85,
+   "overhang": 0,
+   "pos": [
+    -6.766,
+    4.8,
+    16.335
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#7A8478"
+  },
+  {
+   "type": "gable",
+   "length": 0.08,
+   "width": 17.5,
+   "rise": 1.85,
+   "overhang": 0,
+   "pos": [
+    6.766,
+    4.8,
+    -16.335
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#7A8478"
+  },
+  {
+   "type": "box",
+   "size": [
+    35.9,
+    0.1,
+    0.35
+   ],
+   "pos": [
+    0,
+    6.66,
+    0
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    35.9,
+    0.15,
+    0.15
+   ],
+   "pos": [
+    8.407,
+    4.6,
+    3.483
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    35.9,
+    0.15,
+    0.15
+   ],
+   "pos": [
+    -8.407,
+    4.6,
+    -3.483
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    34.6,
+    0.8,
+    0.1
+   ],
+   "pos": [
+    8.13,
+    3.8,
+    3.368
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#D8DCD6"
+  },
+  {
+   "type": "box",
+   "size": [
+    34.6,
+    0.8,
+    0.1
+   ],
+   "pos": [
+    -8.13,
+    3.8,
+    -3.368
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#D8DCD6"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.1,
+    0.8,
+    16
+   ],
+   "pos": [
+    -6.793,
+    3.8,
+    16.399
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#D8DCD6"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.1,
+    0.8,
+    16
+   ],
+   "pos": [
+    6.793,
+    3.8,
+    -16.399
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#D8DCD6"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.35,
+    3.8,
+    0.3
+   ],
+   "pos": [
+    1.441,
+    1,
+    19.648
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    3.8,
+    0.25
+   ],
+   "pos": [
+    3.673,
+    1,
+    14.261
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    3.8,
+    0.25
+   ],
+   "pos": [
+    5.927,
+    1,
+    8.82
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    3.8,
+    0.25
+   ],
+   "pos": [
+    8.177,
+    1,
+    3.387
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    3.8,
+    0.25
+   ],
+   "pos": [
+    10.427,
+    1,
+    -2.046
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    3.8,
+    0.25
+   ],
+   "pos": [
+    12.681,
+    1,
+    -7.487
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.35,
+    3.8,
+    0.3
+   ],
+   "pos": [
+    14.913,
+    1,
+    -12.874
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.35,
+    3.8,
+    0.3
+   ],
+   "pos": [
+    -14.913,
+    1,
+    12.874
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    3.8,
+    0.25
+   ],
+   "pos": [
+    -12.681,
+    1,
+    7.487
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    3.8,
+    0.25
+   ],
+   "pos": [
+    -10.427,
+    1,
+    2.046
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    3.8,
+    0.25
+   ],
+   "pos": [
+    -8.177,
+    1,
+    -3.387
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    3.8,
+    0.25
+   ],
+   "pos": [
+    -5.927,
+    1,
+    -8.82
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    3.8,
+    0.25
+   ],
+   "pos": [
+    -3.673,
+    1,
+    -14.261
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.35,
+    3.8,
+    0.3
+   ],
+   "pos": [
+    -1.441,
+    1,
+    -19.648
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.15,
+    2.2,
+    1
+   ],
+   "pos": [
+    -9.546,
+    0,
+    15.205
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#4A5A66"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.12,
+    2.35,
+    1.2
+   ],
+   "pos": [
+    -9.52,
+    -0.05,
+    15.195
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    1.2,
+    0.12,
+    1.8
+   ],
+   "pos": [
+    -9.756,
+    2.4,
+    15.713
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    1.2,
+    0.2,
+    2
+   ],
+   "pos": [
+    -9.775,
+    -0.1,
+    15.759
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#A9A59A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.15,
+    3,
+    3
+   ],
+   "pos": [
+    -4.002,
+    0,
+    17.501
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.12,
+    0.15,
+    3.3
+   ],
+   "pos": [
+    -4.01,
+    3,
+    17.505
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#4A4F52"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.1,
+    0.8,
+    4.2
+   ],
+   "pos": [
+    -6.781,
+    4.95,
+    16.371
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#E8E4D8"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.12,
+    0.25,
+    4
+   ],
+   "pos": [
+    -6.79,
+    5.05,
+    16.375
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#2E6B3A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.15,
+    2.1,
+    1
+   ],
+   "pos": [
+    8.622,
+    0,
+    -15.588
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.8,
+    0.1,
+    1.4
+   ],
+   "pos": [
+    8.823,
+    2.25,
+    -16.003
+   ],
+   "rot": [
+    0,
+    67.5,
+    0
+   ],
+   "color": "#5E6366"
+  }
+ ]
+}
