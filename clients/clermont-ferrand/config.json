@@ -1,0 +1,430 @@
+{
+ "schema": 1,
+ "slug": "clermont-ferrand",
+ "name": "Clermont-Ferrand",
+ "insee": "63113",
+ "codePostal": "63000",
+ "website": "https://clermont-ferrand.fr/",
+ "createdAt": "2026-10-30T01:57:37.270Z",
+ "theme": {
+  "primary": "#cd1316",
+  "accent": "#0071b8",
+  "paper": "#fbf9f6",
+  "font": "Inter",
+  "titleFont": "Georgia",
+  "logo": "logo.svg",
+  "fonts": []
+ },
+ "texts": {
+  "sub": "PUY-DE-DÔME · AUVERGNE",
+  "eyebrow": "UNE AUTRE FAÇON DE DÉCOUVRIR",
+  "title": "La commune,\nen perspective.",
+  "intro": "Bienvenue sur le site de la Ville de Clermont-Ferrand : actualités, agenda, démarches et services pour les habitants.",
+  "welcomeKicker": "BIENVENUE À CLERMONT-FERRAND",
+  "welcomeTitle": "Bienvenue à Clermont-Ferrand",
+  "welcomeText": "Retrouvez l'actualité de la ville, l'agenda des sorties et les démarches en ligne. Découvrez aussi les lieux emblématiques, les parcs et jardins, et les grands projets des quartiers.",
+  "welcomeLink": {
+   "label": "Site de la commune",
+   "url": "https://clermont-ferrand.fr/"
+  },
+  "territoryName": "La commune de Clermont-Ferrand",
+  "territory": "Ses limites sont celles de la maquette",
+  "footer": "Mairie de Clermont-Ferrand",
+  "status": "La commune de Clermont-Ferrand",
+  "about": ""
+ },
+ "categories": [
+  {
+   "id": "pub",
+   "label": "Bâtiments publics",
+   "icon": "⌂"
+  },
+  {
+   "id": "com",
+   "label": "Commerces & services",
+   "icon": "◈"
+  },
+  {
+   "id": "res",
+   "label": "Restaurants & hébergements",
+   "icon": "☕"
+  },
+  {
+   "id": "dec",
+   "label": "Patrimoine",
+   "icon": "✦"
+  },
+  {
+   "id": "nat",
+   "label": "Nature & paysages",
+   "icon": "❀"
+  }
+ ],
+ "modules": {
+  "itinerary": false,
+  "transit": false,
+  "directions": false,
+  "music": false,
+  "time": true
+ },
+ "villages": [],
+ "view": {},
+ "pois": [
+  {
+   "id": "cathedrale-notre-dame-de-l-assomptio",
+   "cat": "dec",
+   "x": -2129.1,
+   "y": -921.5,
+   "title": "Cathédrale Notre-Dame de l'Assomption",
+   "icon": "♜",
+   "text": "",
+   "photo": {
+    "url": "photos/cathedrale-notre-dame-de-l-assomptio-1.jpg",
+    "alt": "Cathédrale Notre-Dame de l'Assomption",
+    "credit": "zarmel http://www.geodiversite.net/auteur2 · CC BY-SA 3.0 · Wikimedia Commons"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "autoChurch": true,
+   "model": {
+    "file": "models/cathedrale-notre-dame-de-l-assomptio.glb",
+    "v": 1793355402562,
+    "x": -2129.1,
+    "y": -921.5,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 1,
+    "hideAt": [
+     [
+      -2129.1,
+      -921.5
+     ]
+    ],
+    "source": "Claude (références + analyse + corrections)"
+   },
+   "photos": [
+    {
+     "url": "photos/cathedrale-notre-dame-de-l-assomptio-1.jpg",
+     "alt": "Cathédrale Notre-Dame de l'Assomption",
+     "credit": "zarmel http://www.geodiversite.net/auteur2 · CC BY-SA 3.0 · Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "id": "eglise-2",
+   "cat": "dec",
+   "x": -63.6,
+   "y": -543.1,
+   "title": "Église",
+   "icon": "♜",
+   "text": "",
+   "photo": {
+    "url": "photos/eglise-2-1.jpg",
+    "alt": "Église",
+    "credit": "Paul Chatonnet · CC BY-SA 4.0 · Wikimedia Commons"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "autoChurch": true,
+   "model": {
+    "file": "models/eglise-2.glb",
+    "v": 1793329477953,
+    "x": -63.6,
+    "y": -543.1,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 3,
+    "hideAt": [],
+    "source": "Claude (photos Wikimedia Commons + emprise IGN)"
+   },
+   "photos": [
+    {
+     "url": "photos/eglise-2-1.jpg",
+     "alt": "Église",
+     "credit": "Paul Chatonnet · CC BY-SA 4.0 · Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "id": "mosquee-mevlana",
+   "cat": "dec",
+   "x": -329.7,
+   "y": -426.6,
+   "title": "Mosquée Mevlana",
+   "icon": "♜",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": []
+  },
+  {
+   "id": "mosquee-mevlana-2",
+   "cat": "dec",
+   "x": -329.7,
+   "y": -426.6,
+   "title": "Mosquée Mevlana",
+   "icon": "♜",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "autoChurch": true,
+   "model": {
+    "file": "models/mosquee-mevlana-2.glb",
+    "v": 1793329630987,
+    "x": -334.1,
+    "y": -424.8,
+    "scale": 1,
+    "rotation": -53.6,
+    "boost": 3,
+    "hideAt": [
+     [
+      -329.7,
+      -426.6
+     ]
+    ],
+    "source": "Modèle automatique (emprise IGN)"
+   },
+   "photos": []
+  },
+  {
+   "id": "ancienne-chapelle-des-carmes-dechaux",
+   "cat": "dec",
+   "x": -1381.2,
+   "y": -369.2,
+   "title": "Ancienne Chapelle des Carmes-Déchaux",
+   "icon": "♜",
+   "text": "",
+   "photo": {
+    "url": "photos/ancienne-chapelle-des-carmes-dechaux-1.jpg",
+    "alt": "Ancienne Chapelle des Carmes-Déchaux",
+    "credit": "Romainbehar · CC0 · Wikimedia Commons"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "autoChurch": true,
+   "model": {
+    "file": "models/ancienne-chapelle-des-carmes-dechaux.glb",
+    "v": 1793329671499,
+    "x": -1381.2,
+    "y": -369.2,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 3,
+    "hideAt": [
+     [
+      -1381.2,
+      -369.2
+     ]
+    ],
+    "source": "Claude (photos Wikimedia Commons + emprise IGN)"
+   },
+   "photos": [
+    {
+     "url": "photos/ancienne-chapelle-des-carmes-dechaux-1.jpg",
+     "alt": "Ancienne Chapelle des Carmes-Déchaux",
+     "credit": "Romainbehar · CC0 · Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "id": "eglise-sainte-jeanne-d-arc",
+   "cat": "dec",
+   "x": -2561,
+   "y": -2076.8,
+   "title": "Église Sainte-Jeanne d'Arc",
+   "icon": "♜",
+   "text": "",
+   "photo": {
+    "url": "photos/eglise-sainte-jeanne-d-arc-1.jpg",
+    "alt": "Église Sainte-Jeanne d'Arc",
+    "credit": "Romainbehar · CC0 · Wikimedia Commons"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "autoChurch": true,
+   "model": {
+    "file": "models/eglise-sainte-jeanne-d-arc.glb",
+    "v": 1793329615602,
+    "x": -2561,
+    "y": -2076.8,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 3,
+    "hideAt": [
+     [
+      -2561,
+      -2076.8
+     ]
+    ],
+    "source": "Claude (photos Wikimedia Commons + emprise IGN)"
+   },
+   "photos": [
+    {
+     "url": "photos/eglise-sainte-jeanne-d-arc-1.jpg",
+     "alt": "Église Sainte-Jeanne d'Arc",
+     "credit": "Romainbehar · CC0 · Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "id": "monastere-des-clarisses-capucines",
+   "cat": "dec",
+   "x": 84.1,
+   "y": 188.4,
+   "title": "Monastère des Clarisses Capucines",
+   "icon": "♜",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": []
+  },
+  {
+   "id": "monastere-des-clarisses-capucines-2",
+   "cat": "dec",
+   "x": 84.1,
+   "y": 188.4,
+   "title": "Monastère des Clarisses Capucines",
+   "icon": "♜",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "autoChurch": true,
+   "model": {
+    "file": "models/monastere-des-clarisses-capucines-2.glb",
+    "v": 1793329482015,
+    "x": 86.5,
+    "y": 185.6,
+    "scale": 1,
+    "rotation": 8.7,
+    "boost": 3,
+    "hideAt": [],
+    "source": "Modèle automatique (emprise IGN)"
+   },
+   "photos": []
+  },
+  {
+   "id": "eglise-saint-pierre-des-minimes",
+   "cat": "dec",
+   "x": -2491.2,
+   "y": -1048.8,
+   "title": "Église Saint-Pierre des Minimes",
+   "icon": "♜",
+   "text": "",
+   "photo": {
+    "url": "photos/eglise-saint-pierre-des-minimes-1.jpg",
+    "alt": "Église Saint-Pierre des Minimes",
+    "credit": "Romainbehar · CC0 · Wikimedia Commons"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "autoChurch": true,
+   "model": {
+    "file": "models/eglise-saint-pierre-des-minimes.glb",
+    "v": 1793356450900,
+    "x": -2491.2,
+    "y": -1048.8,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 1,
+    "hideAt": [
+     [
+      -2491.2,
+      -1048.8
+     ]
+    ],
+    "source": "Claude (références + analyse + corrections)"
+   },
+   "photos": [
+    {
+     "url": "photos/eglise-saint-pierre-des-minimes-1.jpg",
+     "alt": "Église Saint-Pierre des Minimes",
+     "credit": "Romainbehar · CC0 · Wikimedia Commons"
+    }
+   ]
+  },
+  {
+   "id": "eglise-saint-joseph",
+   "cat": "dec",
+   "x": -1136,
+   "y": -775.9,
+   "title": "Église Saint-Joseph",
+   "icon": "♜",
+   "text": "",
+   "photo": {
+    "url": "photos/eglise-saint-joseph-1.jpg",
+    "alt": "Église Saint-Joseph",
+    "credit": "PJ Fontfrède · CC BY-SA 3.0 · Wikimedia Commons"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "autoChurch": true,
+   "model": {
+    "file": "models/eglise-saint-joseph.glb",
+    "v": 1793329766361,
+    "x": -1136,
+    "y": -775.9,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 3,
+    "hideAt": [
+     [
+      -1136,
+      -775.9
+     ]
+    ],
+    "source": "Claude (photos Wikimedia Commons + emprise IGN)"
+   },
+   "photos": [
+    {
+     "url": "photos/eglise-saint-joseph-1.jpg",
+     "alt": "Église Saint-Joseph",
+     "credit": "PJ Fontfrède · CC BY-SA 3.0 · Wikimedia Commons"
+    }
+   ]
+  }
+ ],
+ "supabase": {
+  "url": "https://cqqesqoutshyutxgzyvo.supabase.co",
+  "anonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxcWVzcW91dHNoeXV0eGd6eXZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM0NTAxODEsImV4cCI6MjEwOTAyNjE4MX0.wp5V3Mz4aiIMQDHBhQJChDweDQP1a3-sXWz498yo5dE"
+ },
+ "plan": {
+  "offer": "base",
+  "poiIncluded": 20
+ },
+ "client": {
+  "contact": "",
+  "email": "",
+  "notes": ""
+ },
+ "mapGeneratedAt": "2026-10-30T03:03:12.336Z",
+ "gen": {
+  "realChurches": true
+ },
+ "style": "maquette",
+ "publishedAt": "2026-11-01T00:05:09.776Z",
+ "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/"
+}

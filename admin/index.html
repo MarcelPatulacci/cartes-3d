@@ -91,7 +91,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
   <img class="brand" src="logo-antemic.svg" alt="ANTEMIC">
   <h1>Espace commune</h1>
   <p>Saisissez le code d’accès remis par ANTEMIC. Il est personnel à votre commune : ne le transmettez qu’aux personnes chargées de la carte.</p>
-  <form id="loginForm"><label for="code">Code d’accès</label><input id="code" type="password" autocomplete="current-password" placeholder="ex. ORCINES-7K2Q-MX9P" required>
+  <form id="loginForm"><label for="code">Code d’accès (ou e-mail de l’équipe ANTEMIC)</label><input id="code" type="password" autocomplete="username" placeholder="ex. ORCINES-7K2Q-MX9P" required><div id="pwRow" hidden><label for="pw">Mot de passe</label><input id="pw" type="password" autocomplete="current-password"></div>
   <div class="actions" style="position:static;background:none"><button class="btn big" type="submit">Se connecter</button></div></form>
   <div id="loginMsg" class="msg" hidden></div>
 </section>
@@ -143,17 +143,18 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
   const SITE = new URL('../', location.href).href;
   const slugFromCode = c => c.trim().toUpperCase().split('-').slice(0, -2).join('-').toLowerCase();
   const sb = () => S.sbc || S.cfg.supabase;
-  const isStaff = c => /^antemic-/i.test(slugFromCode(c));
+  const isStaff = c => /^antemic-/i.test(slugFromCode(c)) || c.includes('@');
+  $('#code').addEventListener('input', () => { const t = $('#code').value.includes('@'); $('#pwRow').hidden = !t; $('#code').type = t ? 'text' : 'password'; });
   const H = (json) => ({ apikey: sb().anonKey, ...(S.token ? { Authorization: 'Bearer ' + S.token } : String(sb().anonKey).startsWith('sb_') ? {} : { Authorization: 'Bearer ' + sb().anonKey }), ...(json ? { 'Content-Type': 'application/json' } : {}) });
   const show = (el, txt, ok) => { el.textContent = txt; el.hidden = !txt; el.classList.toggle('ok', !!ok); };
 
   // accès ANTEMIC (associés) : code ANTEMIC-NOM-XXXX-XXXX, toutes les communes
   async function loginStaff(code) {
-    const id = slugFromCode(code); const r = await fetch(SITE + 'admin/supabase.json', { cache: 'no-cache' }); if (!r.ok) throw new Error('Espace pas encore relié à Supabase : publiez une carte depuis l’éditeur.');
+    const byMail = code.includes('@'); const id = byMail ? code.trim().toLowerCase() : slugFromCode(code); const r = await fetch(SITE + 'admin/supabase.json', { cache: 'no-cache' }); if (!r.ok) throw new Error('Espace pas encore relié à Supabase : publiez une carte depuis l’éditeur.');
     S.sbc = await r.json(); S.cfg = { supabase: S.sbc };
-    const t = await fetch(S.sbc.url + '/auth/v1/token?grant_type=password', { method: 'POST', headers: { apikey: S.sbc.anonKey, 'Content-Type': 'application/json' }, body: JSON.stringify({ email: id + '@equipe.antemic.fr', password: code.trim().toUpperCase() }) });
-    if (!t.ok) throw new Error(t.status === 400 ? 'Code incorrect.' : 'Connexion impossible (' + t.status + ').');
-    const j = await t.json(); S.token = j.access_token; S.exp = Date.now() + (j.expires_in - 60) * 1000; S.staff = id; S.email = id + '@equipe.antemic.fr';
+    const t = await fetch(S.sbc.url + '/auth/v1/token?grant_type=password', { method: 'POST', headers: { apikey: S.sbc.anonKey, 'Content-Type': 'application/json' }, body: JSON.stringify(byMail ? { email: id, password: $('#pw').value } : { email: id + '@equipe.antemic.fr', password: code.trim().toUpperCase() }) });
+    if (!t.ok) throw new Error(t.status === 400 ? (byMail ? 'E-mail ou mot de passe incorrect.' : 'Code incorrect.') : 'Connexion impossible (' + t.status + ').');
+    const j = await t.json(); S.token = j.access_token; S.exp = Date.now() + (j.expires_in - 60) * 1000; S.staff = id; S.email = byMail ? id : id + '@equipe.antemic.fr';
     try { sessionStorage.setItem('antemic-admin', JSON.stringify({ staff: id, sbc: S.sbc, token: S.token, exp: S.exp })); } catch (e) {}
   }
   async function communes() {
@@ -313,7 +314,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
   $('#loginForm').onsubmit = async e => { e.preventDefault(); show($('#loginMsg'), ''); try { await start($('#code').value); } catch (err) { show($('#loginMsg'), err.message); } };
   (async () => { try { // reprise de session (onglet ouvert, jeton encore valide)
     const s = JSON.parse(sessionStorage.getItem('antemic-admin') || 'null'); if (!s || Date.now() > s.exp) return;
-    if (s.staff) { S.sbc = s.sbc; S.cfg = { supabase: s.sbc }; S.token = s.token; S.exp = s.exp; S.staff = s.staff; S.email = s.staff + '@equipe.antemic.fr'; $('#login').hidden = true; $('#app').hidden = false; $('#logout').hidden = false; const l = await communes(); await openCommune(l.some(c => c.id === s.slug) ? s.slug : l[0].id); return; }
+    if (s.staff) { S.sbc = s.sbc; S.cfg = { supabase: s.sbc }; S.token = s.token; S.exp = s.exp; S.staff = s.staff; S.email = s.staff.includes('@') ? s.staff : s.staff + '@equipe.antemic.fr'; $('#login').hidden = true; $('#app').hidden = false; $('#logout').hidden = false; const l = await communes(); await openCommune(l.some(c => c.id === s.slug) ? s.slug : l[0].id); return; }
     const r = await fetch(SITE + 'clients/' + s.slug + '/config.json', { cache: 'no-cache' }); if (!r.ok) return;
     S.cfg = await r.json(); S.slug = s.slug; S.token = s.token; S.exp = s.exp; theme(); $('#login').hidden = true; $('#app').hidden = false; await load(); if (S.rows.length) edit(S.rows[0]);
   } catch (e) {} })();
