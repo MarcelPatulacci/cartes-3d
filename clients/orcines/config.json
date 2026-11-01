@@ -587,7 +587,19 @@
      "alt": "Vue depuis la rue",
      "credit": "sogefi sig (Panoramax, CC BY-SA 4.0)"
     }
-   ]
+   ],
+   "model": {
+    "file": "models/aire-de-camping-car-orcines.glb",
+    "v": 1793496775366,
+    "version": 1,
+    "x": 917.8,
+    "y": 45.6,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 1,
+    "hideAt": [],
+    "source": "Import tube exemple.glb"
+   }
   },
   {
    "id": "salle-des-fetes-de-ternant",
@@ -1162,7 +1174,7 @@
   "services": []
  },
  "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
- "publishedAt": "2026-11-01T01:28:43.935Z",
+ "publishedAt": "2026-11-01T01:34:03.867Z",
  "brandPalette": [
   "#f7f7f7",
   "#f2f2f2",
