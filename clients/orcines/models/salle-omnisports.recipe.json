@@ -1,0 +1,761 @@
+{
+ "name": "Salle Omnisports – Orcines",
+ "notes": "Il n'y a pas de photo réelle : les corrections viennent seulement de la comparaison entre les rendus et l'emprise rouge. (1) Le débord du toit de la grande salle passe de 0,3 à 0,15 m, pour réduire le dépassement de l'emprise près du décrochement ouest et du coin D. (2) La marquise de l'entrée de l'annexe dépassait nettement de l'emprise en vue de dessus : elle passe de 2,5 à 1,5 m de profondeur et de 8 à 7 m de long, et elle est recentrée contre la façade G-H. (3) Ajout d'acrotères (0,5 m) le long des façades sud, est et nord de l'annexe et d'un acrotère sur la façade est du hall de liaison, pour mieux lire les toits-terrasses. (4) Ajout d'une rive métallique sombre en tête des longs pans de la salle, à l'égout. Les volumes, les hauteurs et les orientations n'ont pas changé, car ils sont déjà cohérents avec l'emprise et la hauteur IGN.",
+ "parts": [
+  {
+   "type": "prism",
+   "points": [
+    [
+     -36.7,
+     0.1
+    ],
+    [
+     4,
+     19
+    ],
+    [
+     4.4,
+     18.2
+    ],
+    [
+     11.9,
+     1.1
+    ],
+    [
+     17.6,
+     -9.3
+    ],
+    [
+     -22.9,
+     -28.4
+    ],
+    [
+     -25.5,
+     -23.2
+    ],
+    [
+     -26,
+     -23.4
+    ],
+    [
+     -30.9,
+     -12.4
+    ]
+   ],
+   "height": 4.8,
+   "pos": [
+    0,
+    -2,
+    0
+   ],
+   "color": "#9A958C"
+  },
+  {
+   "type": "prism",
+   "points": [
+    [
+     -36.7,
+     0.1
+    ],
+    [
+     4,
+     19
+    ],
+    [
+     4.4,
+     18.2
+    ],
+    [
+     11.9,
+     1.1
+    ],
+    [
+     17.6,
+     -9.3
+    ],
+    [
+     -22.9,
+     -28.4
+    ],
+    [
+     -25.5,
+     -23.2
+    ],
+    [
+     -26,
+     -23.4
+    ],
+    [
+     -30.9,
+     -12.4
+    ]
+   ],
+   "height": 5.2,
+   "pos": [
+    0,
+    2.8,
+    0
+   ],
+   "color": "#C9C4B8"
+  },
+  {
+   "type": "gable",
+   "length": 45,
+   "width": 31.5,
+   "rise": 1.6,
+   "overhang": 0.15,
+   "pos": [
+    -9.5,
+    8,
+    -4.65
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#8A8D90"
+  },
+  {
+   "type": "box",
+   "size": [
+    45.3,
+    0.15,
+    0.4
+   ],
+   "pos": [
+    -9.5,
+    9.55,
+    -4.65
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#6E7174"
+  },
+  {
+   "type": "box",
+   "size": [
+    45,
+    0.25,
+    0.25
+   ],
+   "pos": [
+    -16.37,
+    7.85,
+    10
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#6E7174"
+  },
+  {
+   "type": "box",
+   "size": [
+    45,
+    0.25,
+    0.25
+   ],
+   "pos": [
+    -2.63,
+    7.85,
+    -19.3
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#6E7174"
+  },
+  {
+   "type": "box",
+   "size": [
+    40,
+    1.4,
+    0.3
+   ],
+   "pos": [
+    -16.41,
+    5.8,
+    9.69
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#DDE6E8"
+  },
+  {
+   "type": "box",
+   "size": [
+    40,
+    1.4,
+    0.3
+   ],
+   "pos": [
+    -2.59,
+    5.8,
+    -18.99
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#DDE6E8"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.4,
+    5.2,
+    0.35
+   ],
+   "pos": [
+    -32.73,
+    2.8,
+    2.09
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#A8A49A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.4,
+    5.2,
+    0.35
+   ],
+   "pos": [
+    -21.86,
+    2.8,
+    7.16
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#A8A49A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.4,
+    5.2,
+    0.35
+   ],
+   "pos": [
+    -10.98,
+    2.8,
+    12.24
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#A8A49A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.4,
+    5.2,
+    0.35
+   ],
+   "pos": [
+    -0.11,
+    2.8,
+    17.31
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#A8A49A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.4,
+    5.2,
+    0.35
+   ],
+   "pos": [
+    -18.89,
+    2.8,
+    -26.61
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#A8A49A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.4,
+    5.2,
+    0.35
+   ],
+   "pos": [
+    -8.02,
+    2.8,
+    -21.54
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#A8A49A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.4,
+    5.2,
+    0.35
+   ],
+   "pos": [
+    2.86,
+    2.8,
+    -16.46
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#A8A49A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.4,
+    5.2,
+    0.35
+   ],
+   "pos": [
+    13.73,
+    2.8,
+    -11.39
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#A8A49A"
+  },
+  {
+   "type": "box",
+   "size": [
+    2,
+    2.4,
+    0.3
+   ],
+   "pos": [
+    -5.54,
+    0,
+    14.77
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#4F5A63"
+  },
+  {
+   "type": "box",
+   "size": [
+    2,
+    2.4,
+    0.3
+   ],
+   "pos": [
+    -27.28,
+    0,
+    4.61
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#4F5A63"
+  },
+  {
+   "type": "box",
+   "size": [
+    3,
+    3,
+    0.3
+   ],
+   "pos": [
+    -2.59,
+    0,
+    -18.99
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#5A6066"
+  },
+  {
+   "type": "prism",
+   "points": [
+    [
+     4.4,
+     18.2
+    ],
+    [
+     7,
+     19.3
+    ],
+    [
+     8.8,
+     15.5
+    ],
+    [
+     14.6,
+     2.4
+    ],
+    [
+     11.9,
+     1.1
+    ]
+   ],
+   "height": 5.5,
+   "pos": [
+    0,
+    -2,
+    0
+   ],
+   "color": "#D8D2C4"
+  },
+  {
+   "type": "prism",
+   "points": [
+    [
+     4.4,
+     18.2
+    ],
+    [
+     7,
+     19.3
+    ],
+    [
+     8.8,
+     15.5
+    ],
+    [
+     14.6,
+     2.4
+    ],
+    [
+     11.9,
+     1.1
+    ]
+   ],
+   "height": 0.15,
+   "pos": [
+    0,
+    3.5,
+    0
+   ],
+   "color": "#5E6166"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.4,
+    14.4
+   ],
+   "pos": [
+    11.7,
+    3.5,
+    8.95
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#B9B3A6"
+  },
+  {
+   "type": "prism",
+   "points": [
+    [
+     8.8,
+     15.5
+    ],
+    [
+     23.2,
+     22.2
+    ],
+    [
+     32.3,
+     2.5
+    ],
+    [
+     17.8,
+     -3.7
+    ],
+    [
+     14.6,
+     2.4
+    ]
+   ],
+   "height": 7,
+   "pos": [
+    0,
+    -2,
+    0
+   ],
+   "color": "#D8D2C4"
+  },
+  {
+   "type": "prism",
+   "points": [
+    [
+     8.8,
+     15.5
+    ],
+    [
+     23.2,
+     22.2
+    ],
+    [
+     32.3,
+     2.5
+    ],
+    [
+     17.8,
+     -3.7
+    ],
+    [
+     14.6,
+     2.4
+    ]
+   ],
+   "height": 0.15,
+   "pos": [
+    0,
+    5,
+    0
+   ],
+   "color": "#5E6166"
+  },
+  {
+   "type": "box",
+   "size": [
+    15.9,
+    0.5,
+    0.3
+   ],
+   "pos": [
+    16,
+    5,
+    18.85
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#B9B3A6"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.5,
+    21.7
+   ],
+   "pos": [
+    27.75,
+    5,
+    12.35
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#B9B3A6"
+  },
+  {
+   "type": "box",
+   "size": [
+    15.8,
+    0.5,
+    0.3
+   ],
+   "pos": [
+    25.05,
+    5,
+    -0.6
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#B9B3A6"
+  },
+  {
+   "type": "box",
+   "size": [
+    2.5,
+    1,
+    1.5
+   ],
+   "pos": [
+    22,
+    5.15,
+    10
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#9DA0A3"
+  },
+  {
+   "type": "box",
+   "size": [
+    6,
+    2.6,
+    0.3
+   ],
+   "pos": [
+    15.94,
+    0,
+    19
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#6F8796"
+  },
+  {
+   "type": "box",
+   "size": [
+    7,
+    0.25,
+    1.5
+   ],
+   "pos": [
+    15.65,
+    3,
+    19.55
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#7A7D80"
+  },
+  {
+   "type": "box",
+   "size": [
+    3,
+    1.2,
+    0.25
+   ],
+   "pos": [
+    20.95,
+    1.6,
+    21.26
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#6F8796"
+  },
+  {
+   "type": "box",
+   "size": [
+    3,
+    1.2,
+    0.25
+   ],
+   "pos": [
+    10.97,
+    1.6,
+    16.62
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#6F8796"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.25,
+    1.2,
+    14
+   ],
+   "pos": [
+    27.86,
+    1.6,
+    12.4
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#6F8796"
+  },
+  {
+   "type": "box",
+   "size": [
+    12,
+    0.8,
+    0.25
+   ],
+   "pos": [
+    25.1,
+    2.2,
+    -0.71
+   ],
+   "rot": [
+    0,
+    -25,
+    0
+   ],
+   "color": "#6F8796"
+  }
+ ]
+}

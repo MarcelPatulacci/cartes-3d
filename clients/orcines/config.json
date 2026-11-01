@@ -12,29 +12,33 @@
   "notes": "Carte de démonstration. Configuration remise au standard v0.0.1 le 31/10/2026 (ancienne config : _cahier1/config.json)."
  },
  "theme": {
-  "primary": "#244b40",
-  "accent": "#c76c50",
-  "paper": "#fbfaf5",
+  "primary": "#00356d",
+  "accent": "#00aafb",
+  "paper": "#f7f8fa",
   "font": "Inter",
   "titleFont": "Georgia",
-  "logo": "logo.svg",
-  "fonts": []
+  "logo": "logo.png",
+  "fonts": [],
+  "ink": "#202124",
+  "button": "#00356d",
+  "buttonText": "#ffffff",
+  "card": "#f0f0f0"
  },
  "texts": {
   "sub": "PUY-DE-DÔME · AUVERGNE",
   "eyebrow": "UNE AUTRE FAÇON DE DÉCOUVRIR",
   "title": "La commune,\nen perspective.",
-  "intro": "Prenez de la hauteur au pied du puy de Dôme, à travers ses seize villages.",
+  "intro": "Orcines : une commune riche de 17 villages et de sites naturels classés au patrimoine mondial de l’Unesco.",
   "welcomeKicker": "BIENVENUE À ORCINES",
-  "welcomeTitle": "Une commune au pied des volcans",
-  "welcomeText": "Du bourg de la place Saint-Julien aux hameaux de Ternant ou de la Font de l’Arbre, Orcines s’étend sur 42 km² jusqu’au sommet du puy de Dôme, au cœur de la Chaîne des Puys inscrite au patrimoine mondial de l’UNESCO.",
+  "welcomeTitle": "Bienvenue à Orcines",
+  "welcomeText": "Orcines est une commune du Puy-de-Dôme composée de 17 villages, au cœur de sites naturels classés au patrimoine mondial de l’Unesco. Retrouvez sur ce site l’information locale, la vie municipale et les démarches administratives en ligne.",
   "welcomeLink": {
    "label": "Site de la commune",
    "url": "https://www.orcines.fr/"
   },
   "territoryName": "La commune d’Orcines",
   "territory": "Ses limites sont celles de la maquette",
-  "footer": "Mairie d’Orcines · Place Saint-Julien · 04 73 62 10 09",
+  "footer": "Mairie d’Orcines · Place Saint Julien – 63870 Orcines · 04 73 62 10 09",
   "status": "La commune d’Orcines",
   "about": ""
  },
@@ -71,7 +75,7 @@
   "music": true,
   "time": true,
   "sun": true,
-  "sunDate": false
+  "sunDate": true
  },
  "licenses": {
   "itinerary": {
@@ -515,8 +519,8 @@
   {
    "id": "borne-electrique",
    "cat": "pub",
-   "x": 1084.5,
-   "y": -595.5,
+   "x": 1103.4,
+   "y": -565.3,
    "title": "Borne Electrique",
    "text": "10 Rte des Puys\n63870 Orcines",
    "button": {
@@ -539,8 +543,8 @@
   {
    "id": "aire-de-covoiturage",
    "cat": "pub",
-   "x": 1049.8,
-   "y": -493.3,
+   "x": 1061.2,
+   "y": -518.2,
    "title": "Aire de Covoiturage",
    "text": "9 Rue de la Liberté\n63870 Orcines",
    "button": {
@@ -558,13 +562,14 @@
      "alt": "Vue depuis la rue",
      "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
     }
-   ]
+   ],
+   "icon": "Ⓟ"
   },
   {
    "id": "aire-de-camping-car-orcines",
    "cat": "pub",
-   "x": 876.3,
-   "y": -127.9,
+   "x": 917.8,
+   "y": 45.6,
    "title": "Aire de Camping-Car Orcines",
    "text": "60 route de limoges\n63870 Orcines",
    "button": {
@@ -724,8 +729,8 @@
   {
    "id": "tennis-club-orcines",
    "cat": "pub",
-   "x": 876.3,
-   "y": -127.9,
+   "x": 961.5,
+   "y": -140.6,
    "title": "Tennis Club Orcines",
    "text": "60 route de limoges\n63870 Orcines",
    "button": {
@@ -733,13 +738,30 @@
     "url": ""
    },
    "photo": null,
-   "photos": []
+   "photos": [],
+   "model": {
+    "file": "models/tennis-club-orcines.glb",
+    "v": 1793462444394,
+    "version": 1,
+    "x": 960.5,
+    "y": -141.3,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 1,
+    "hideAt": [
+     [
+      960.5,
+      -141.3
+     ]
+    ],
+    "source": "Claude (références + analyse + corrections)"
+   }
   },
   {
    "id": "salle-omnisports",
    "cat": "pub",
-   "x": 876.3,
-   "y": -127.9,
+   "x": 853,
+   "y": -77.6,
    "title": "Salle Omnisports",
    "text": "60 route de limoges\n63870 Orcines",
    "button": {
@@ -747,7 +769,24 @@
     "url": ""
    },
    "photo": null,
-   "photos": []
+   "photos": [],
+   "model": {
+    "file": "models/salle-omnisports.glb",
+    "v": 1793462111195,
+    "version": 1,
+    "x": 847.8,
+    "y": -73.3,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 1,
+    "hideAt": [
+     [
+      847.8,
+      -73.3
+     ]
+    ],
+    "source": "Claude (références + analyse + corrections)"
+   }
   },
   {
    "id": "le-foyer-rural",
@@ -1119,8 +1158,53 @@
  },
  "plan": {
   "offer": "base",
-  "poiIncluded": 20
+  "poiIncluded": 20,
+  "services": []
  },
  "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
- "publishedAt": "2026-10-31T15:12:08.780Z"
+ "publishedAt": "2026-11-01T01:28:43.935Z",
+ "brandPalette": [
+  "#f7f7f7",
+  "#f2f2f2",
+  "#202124",
+  "#ebebeb",
+  "#5472d2",
+  "#8d6dc4",
+  "#2a2a2a",
+  "#00c1cf",
+  "#fe6c61",
+  "#4cadc9",
+  "#cec2ab",
+  "#50485b",
+  "#75d69c",
+  "#f7be68",
+  "#5aa1e3",
+  "#6dab3c"
+ ],
+ "icons": {
+  "enabled": false,
+  "cat": {},
+  "poi": {}
+ },
+ "objects": [
+  {
+   "id": "obj-building_phase_3_001",
+   "name": "Building_phase_3.001",
+   "source": "Blender",
+   "model": {
+    "file": "models/obj-building_phase_3_001.glb",
+    "v": 1793496512579,
+    "version": 1,
+    "x": 917.8,
+    "y": 45.6,
+    "dz": 2,
+    "rotation": 0,
+    "scale": 1,
+    "hideAt": [],
+    "boost": 1,
+    "source": "Blender (addon ANTEMIC)"
+   }
+  }
+ ],
+ "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/"
 }

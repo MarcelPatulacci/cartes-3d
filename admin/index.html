@@ -29,7 +29,9 @@ a{color:#ff8fab}
 .btn.big{padding:12px 22px;font-size:15px;border-radius:10px}
 #login{width:min(440px,calc(100% - 32px));margin:10vh auto;background:var(--panel);border:1px solid var(--line);padding:34px;border-radius:18px;box-shadow:0 30px 80px #0008}
 #login .brand{height:22px;margin-bottom:22px}
-#login h1{font-size:24px;margin:0 0 8px}#login p{color:var(--muted);font-size:13.5px;line-height:1.6;margin:0}
+#login h1{font-size:24px;margin:0 0 8px}
+.ltabs{display:flex;gap:4px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:4px;margin:14px 0 6px}.ltabs button{flex:1;border:0;background:none;border-radius:7px;padding:8px;font-weight:600;color:var(--muted)}.ltabs button[aria-selected=true]{background:var(--red);color:#fff}
+#dlwait{position:fixed;inset:0;z-index:50;background:#0f0414e6;display:grid;place-items:center;padding:16px}#dlwait>div{max-width:520px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px;line-height:1.6}#login p{color:var(--muted);font-size:13.5px;line-height:1.6;margin:0}
 label{display:block;font-size:11.5px;font-weight:600;margin:16px 0 6px;color:var(--muted);letter-spacing:.3px}
 input[type=text],input[type=url],input[type=password],input[type=search],textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel2);font-size:14.5px}
 input::placeholder,textarea::placeholder{color:#7d6f86}
@@ -85,14 +87,23 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
 </style>
 </head>
 <body>
-<div class="top"><img class="brand" src="logo-antemic.svg" alt="ANTEMIC"><span class="sep"></span><img id="logo" alt="" hidden><div class="t"><strong id="cname">Espace commune</strong><small id="csub">Carte 3D interactive · vignettes et réglages</small></div><span id="staffTag" class="staff" hidden>ACCÈS ANTEMIC</span><select id="commune" aria-label="Commune" hidden></select><span class="sp"></span><a id="viewLink" class="btn ghost" target="_blank" rel="noopener" hidden>Voir la carte ↗</a><button id="logout" class="btn ghost" hidden>Se déconnecter</button></div>
+<div class="top"><img class="brand" src="logo-antemic.svg" alt="ANTEMIC"><span class="sep"></span><img id="logo" alt="" hidden><div class="t"><strong id="cname">Espace commune</strong><small id="csub">Carte 3D interactive · vignettes et réglages</small></div><span id="staffTag" class="staff" hidden>ACCÈS ANTEMIC</span><select id="commune" aria-label="Commune" hidden></select><span class="sp"></span><button id="dlEditor" class="btn" hidden title="Logiciel éditeur ANTEMIC pour Windows">⬇ Éditeur ANTEMIC</button><a id="viewLink" class="btn ghost" target="_blank" rel="noopener" hidden>Voir la carte ↗</a><button id="logout" class="btn ghost" hidden>Se déconnecter</button></div>
 
 <section id="login">
   <img class="brand" src="logo-antemic.svg" alt="ANTEMIC">
   <h1>Espace commune</h1>
-  <p>Saisissez le code d’accès remis par ANTEMIC. Il est personnel à votre commune : ne le transmettez qu’aux personnes chargées de la carte.</p>
-  <form id="loginForm"><label for="code">Code d’accès (ou e-mail de l’équipe ANTEMIC)</label><input id="code" type="password" autocomplete="username" placeholder="ex. ORCINES-7K2Q-MX9P" required><div id="pwRow" hidden><label for="pw">Mot de passe</label><input id="pw" type="password" autocomplete="current-password"></div>
-  <div class="actions" style="position:static;background:none"><button class="btn big" type="submit">Se connecter</button></div></form>
+  <div class="ltabs" role="tablist"><button type="button" id="lmCommune" aria-selected="true">Commune</button><button type="button" id="lmTeam" aria-selected="false">Équipe ANTEMIC</button></div>
+  <form id="loginForm">
+    <div id="fCommune"><p>Saisissez le code d’accès remis par ANTEMIC. Il est personnel à votre commune : ne le transmettez qu’aux personnes chargées de la carte.</p>
+      <label for="code">Code d’accès</label><input id="code" type="password" autocomplete="off" placeholder="ex. ORCINES-7K2Q-MX9P"></div>
+    <div id="fTeam" hidden><p>Membres de l’équipe ANTEMIC : contenus de toutes les communes et téléchargement de l’éditeur.</p>
+      <label for="tid">Identifiant ou e-mail</label><input id="tid" type="text" autocomplete="username" placeholder="antoine ou antoine@antemic.fr">
+      <label for="pw">Mot de passe</label><input id="pw" type="password" autocomplete="current-password"></div>
+    <div class="actions" style="position:static;background:none"><button class="btn big" type="submit">Se connecter</button></div>
+  </form>
+  <form id="mustForm" hidden><p>Première connexion : choisissez votre mot de passe (10 caractères minimum).</p>
+    <label for="np1">Nouveau mot de passe</label><input id="np1" type="password" autocomplete="new-password"><label for="np2">Confirmer</label><input id="np2" type="password" autocomplete="new-password">
+    <div class="actions" style="position:static;background:none"><button class="btn big" type="submit">Valider</button></div></form>
   <div id="loginMsg" class="msg" hidden></div>
 </section>
 
@@ -144,7 +155,6 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
   const slugFromCode = c => c.trim().toUpperCase().split('-').slice(0, -2).join('-').toLowerCase();
   const sb = () => S.sbc || S.cfg.supabase;
   const isStaff = c => /^antemic-/i.test(slugFromCode(c)) || c.includes('@');
-  $('#code').addEventListener('input', () => { const t = $('#code').value.includes('@'); $('#pwRow').hidden = !t; $('#code').type = t ? 'text' : 'password'; });
   const H = (json) => ({ apikey: sb().anonKey, ...(S.token ? { Authorization: 'Bearer ' + S.token } : String(sb().anonKey).startsWith('sb_') ? {} : { Authorization: 'Bearer ' + sb().anonKey }), ...(json ? { 'Content-Type': 'application/json' } : {}) });
   const show = (el, txt, ok) => { el.textContent = txt; el.hidden = !txt; el.classList.toggle('ok', !!ok); };
 
@@ -311,10 +321,49 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
     await login(code); theme(); $('#login').hidden = true; $('#app').hidden = false; await load();
     if (S.rows.length) edit(S.rows[0]);
   }
-  $('#loginForm').onsubmit = async e => { e.preventDefault(); show($('#loginMsg'), ''); try { await start($('#code').value); } catch (err) { show($('#loginMsg'), err.message); } };
+  let teamMode = false;
+  const setMode = (t) => { teamMode = t; $('#lmTeam').setAttribute('aria-selected', String(t)); $('#lmCommune').setAttribute('aria-selected', String(!t)); $('#fTeam').hidden = !t; $('#fCommune').hidden = t; (t ? $('#tid') : $('#code')).focus(); };
+  $('#lmTeam').onclick = () => setMode(true); $('#lmCommune').onclick = () => setMode(false);
+  if (/[?&#]equipe/.test(location.href)) setMode(true);
+  async function sbBoot() { const r = await fetch(SITE + 'admin/supabase.json', { cache: 'no-cache' }); if (!r.ok) throw new Error('Espace pas encore relié à Supabase : publiez une carte depuis l’éditeur.'); S.sbc = await r.json(); S.cfg = { supabase: S.sbc }; }
+  async function loginTeam(id, pw) { // identifiant ou e-mail + mot de passe (comptes de l'équipe)
+    await sbBoot(); id = id.trim().toLowerCase(); let email = id;
+    if (!id.includes('@')) { const r = await fetch(S.sbc.url + '/rest/v1/rpc/antemic_login_email', { method: 'POST', headers: { apikey: S.sbc.anonKey, 'Content-Type': 'application/json' }, body: JSON.stringify({ u: id }) }); email = r.ok ? await r.json() : null; if (!email) throw new Error('Identifiant inconnu.'); }
+    const t = await fetch(S.sbc.url + '/auth/v1/token?grant_type=password', { method: 'POST', headers: { apikey: S.sbc.anonKey, 'Content-Type': 'application/json' }, body: JSON.stringify({ email, password: pw }) });
+    if (!t.ok) throw new Error(t.status === 400 ? 'Identifiant ou mot de passe incorrect.' : 'Connexion impossible (' + t.status + ').');
+    const j = await t.json(); if (j.user?.app_metadata?.role !== 'antemic') throw new Error('Ce compte n’est pas un compte de l’équipe ANTEMIC.');
+    S.token = j.access_token; S.exp = Date.now() + (j.expires_in - 60) * 1000; S.staff = email; S.email = email; S.level = j.user.app_metadata.level || 'superadmin'; S.meta = j.user.user_metadata || {};
+    try { sessionStorage.setItem('antemic-admin', JSON.stringify({ staff: email, sbc: S.sbc, token: S.token, exp: S.exp, level: S.level })); } catch (e) {}
+  }
+  async function enterTeam() { $('#login').hidden = true; $('#app').hidden = false; $('#logout').hidden = false; $('#dlEditor').hidden = S.level === 'contenu'; const l = await communes(); await openCommune(l[0].id); }
+  $('#mustForm').onsubmit = async e => {
+    e.preventDefault(); show($('#loginMsg'), '');
+    if ($('#np1').value.length < 10) return show($('#loginMsg'), '10 caractères minimum.'); if ($('#np1').value !== $('#np2').value) return show($('#loginMsg'), 'Les deux mots de passe diffèrent.');
+    const r = await fetch(S.sbc.url + '/auth/v1/user', { method: 'PUT', headers: { apikey: S.sbc.anonKey, Authorization: 'Bearer ' + S.token, 'Content-Type': 'application/json' }, body: JSON.stringify({ password: $('#np1').value, data: { ...S.meta, mustChange: false } }) });
+    if (!r.ok) return show($('#loginMsg'), 'Changement refusé (' + r.status + ').');
+    $('#mustForm').hidden = true; show($('#loginMsg'), 'Mot de passe enregistré.', true); await enterTeam();
+  };
+  $('#dlEditor').onclick = async () => { // paquet d'installation de l'éditeur (stockage privé, lisible par l'équipe)
+    const w = document.createElement('div'); w.id = 'dlwait'; w.innerHTML = '<div><b style="font-size:18px">Téléchargement de l’éditeur…</b><p class="hint">Préparation du fichier.</p></div>'; document.body.append(w); const msg = w.querySelector('p');
+    try {
+      const r = await fetch(`${S.sbc.url}/storage/v1/object/authenticated/workspace/_logiciel/installeur.zip`, { headers: H() }); if (!r.ok) throw new Error(r.status === 400 || r.status === 404 ? 'Paquet pas encore en ligne : demandez au super admin (Paramètres → Équipe → Lien de téléchargement).' : 'Téléchargement refusé (' + r.status + ').');
+      const a = document.createElement('a'); a.href = URL.createObjectURL(await r.blob()); a.download = 'antemic-editeur.zip'; document.body.append(a); a.click(); a.remove();
+      w.firstChild.innerHTML = '<b style="font-size:18px">Installer l’éditeur ANTEMIC</b><ol style="padding-left:20px"><li>Dézippez <b>antemic-editeur.zip</b> (par exemple dans Documents\\ANTEMIC).</li><li>Dans le dossier <b>plateforme</b>, double-cliquez sur <b>Installer.bat</b> et acceptez les demandes de Windows (2 à 5 minutes).</li><li>Quand la fenêtre Claude s’ouvre, connectez-vous à <b>votre</b> compte Claude, puis fermez-la.</li><li>Lancez « Editeur cartes 3D ANTEMIC » (bureau) et connectez-vous avec votre identifiant et votre mot de passe : les cartes et les clés arrivent automatiquement.</li></ol><button class="btn" id="dlok">Fermer</button>';
+      w.querySelector('#dlok').onclick = () => w.remove();
+    } catch (err) { msg.textContent = err.message; setTimeout(() => w.remove(), 6000); }
+  };
+  $('#loginForm').onsubmit = async e => {
+    e.preventDefault(); show($('#loginMsg'), '');
+    try {
+      if (!teamMode) return await start($('#code').value);
+      await loginTeam($('#tid').value, $('#pw').value);
+      if (S.meta.mustChange) { $('#loginForm').hidden = true; $('#mustForm').hidden = false; document.querySelector('.ltabs').hidden = true; $('#np1').focus(); return; }
+      await enterTeam();
+    } catch (err) { show($('#loginMsg'), err.message); }
+  };
   (async () => { try { // reprise de session (onglet ouvert, jeton encore valide)
     const s = JSON.parse(sessionStorage.getItem('antemic-admin') || 'null'); if (!s || Date.now() > s.exp) return;
-    if (s.staff) { S.sbc = s.sbc; S.cfg = { supabase: s.sbc }; S.token = s.token; S.exp = s.exp; S.staff = s.staff; S.email = s.staff.includes('@') ? s.staff : s.staff + '@equipe.antemic.fr'; $('#login').hidden = true; $('#app').hidden = false; $('#logout').hidden = false; const l = await communes(); await openCommune(l.some(c => c.id === s.slug) ? s.slug : l[0].id); return; }
+    if (s.staff) { S.sbc = s.sbc; S.cfg = { supabase: s.sbc }; S.token = s.token; S.exp = s.exp; S.staff = s.staff; S.level = s.level || 'superadmin'; $('#dlEditor').hidden = !s.staff.includes('@') || S.level === 'contenu'; S.email = s.staff.includes('@') ? s.staff : s.staff + '@equipe.antemic.fr'; $('#login').hidden = true; $('#app').hidden = false; $('#logout').hidden = false; const l = await communes(); await openCommune(l.some(c => c.id === s.slug) ? s.slug : l[0].id); return; }
     const r = await fetch(SITE + 'clients/' + s.slug + '/config.json', { cache: 'no-cache' }); if (!r.ok) return;
     S.cfg = await r.json(); S.slug = s.slug; S.token = s.token; S.exp = s.exp; theme(); $('#login').hidden = true; $('#app').hidden = false; await load(); if (S.rows.length) edit(S.rows[0]);
   } catch (e) {} })();
