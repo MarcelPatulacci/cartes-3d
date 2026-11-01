@@ -1,0 +1,216 @@
+{
+ "schema": 1,
+ "slug": "vic-le-comte",
+ "name": "Vic-le-Comte",
+ "insee": "63457",
+ "codePostal": "63270",
+ "website": "https://www.vic-le-comte.fr/",
+ "createdAt": "2026-11-01T06:24:20.792Z",
+ "theme": {
+  "primary": "#008080",
+  "accent": "#993300",
+  "paper": "#f6f9f9",
+  "font": "Inter",
+  "titleFont": "Georgia",
+  "logo": "logo.webp",
+  "fonts": [],
+  "ink": "#333333",
+  "button": "#008080",
+  "buttonText": "#ffffff",
+  "card": "#eff2f9"
+ },
+ "texts": {
+  "sub": "PUY-DE-DÔME · AUVERGNE-RHÔNE-ALPES",
+  "eyebrow": "UNE AUTRE FAÇON DE DÉCOUVRIR",
+  "title": "La commune,\nen perspective.",
+  "intro": "Découvrez Vic-le-Comte, commune du Puy-de-Dôme : patrimoine, vie associative, services municipaux et loisirs.",
+  "welcomeKicker": "BIENVENUE À VIC-LE-COMTE",
+  "welcomeTitle": "Bienvenue à Vic-le-Comte",
+  "welcomeText": "Vic-le-Comte est une commune du Puy-de-Dôme, en Auvergne-Rhône-Alpes. Située à proximité de la forêt de la Comté, elle propose de nombreux services, équipements et rendez-vous culturels et associatifs.",
+  "welcomeLink": {
+   "label": "Site de la commune",
+   "url": "https://www.vic-le-comte.fr/"
+  },
+  "territoryName": "La commune de Vic-le-Comte",
+  "territory": "Ses limites sont celles de la maquette",
+  "footer": "Mairie de Vic-le-Comte",
+  "status": "La commune de Vic-le-Comte",
+  "about": ""
+ },
+ "categories": [
+  {
+   "id": "pub",
+   "label": "Bâtiments publics",
+   "icon": "⌂"
+  },
+  {
+   "id": "com",
+   "label": "Commerces & services",
+   "icon": "◈"
+  },
+  {
+   "id": "res",
+   "label": "Restaurants & hébergements",
+   "icon": "☕"
+  },
+  {
+   "id": "dec",
+   "label": "Patrimoine",
+   "icon": "✦"
+  },
+  {
+   "id": "nat",
+   "label": "Nature & paysages",
+   "icon": "❀"
+  }
+ ],
+ "modules": {
+  "itinerary": false,
+  "transit": false,
+  "music": true,
+  "time": true,
+  "sun": true,
+  "sunDate": false
+ },
+ "villages": [],
+ "view": {},
+ "pois": [
+  {
+   "id": "nouveau-lieu",
+   "cat": "pub",
+   "x": 15.3,
+   "y": -383.7,
+   "title": "Mairie",
+   "text": "La mairie de Vic-le-Comte se situe dans le bourg ancien, près de la place de l’Hôtel de Ville. Un point de départ pour explorer les rues et les places du centre.",
+   "photo": {
+    "url": "photos/nouveau-lieu-4683986.jpg",
+    "alt": "Mairie",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.vic-le-comte.fr/"
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-4683986.jpg",
+     "alt": "Mairie",
+     "credit": ""
+    },
+    {
+     "url": "photos/nouveau-lieu-4684025.jpg",
+     "alt": "Mairie",
+     "credit": ""
+    }
+   ],
+   "icon": "⚑"
+  },
+  {
+   "id": "nouveau-lieu-2",
+   "cat": "pub",
+   "x": 262.8,
+   "y": -446.2,
+   "title": "La Sainte Chapelle",
+   "text": "La Sainte-Chapelle de Vic-le-Comte (située dans le Puy-de-Dôme et non à Vincennes) est l'ancienne chapelle castrale des comtes d'Auvergne, construite au XVIe siècle par Jean Stuart et Anne de La Tour sur le modèle de la Sainte-Chapelle de Paris. Devenue l'église Saint-Pierre après la Révolution, elle est reconnue pour son architecture gothique flamboyant, ses vitraux de la Renaissance et son riche mobilier intérieur.",
+   "photo": {
+    "url": "photos/nouveau-lieu-2-4935129.jpg",
+    "alt": "La Sainte Chapelle",
+    "credit": ""
+   },
+   "button": {
+    "label": "",
+    "url": ""
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-2-4935129.jpg",
+     "alt": "La Sainte Chapelle",
+     "credit": ""
+    },
+    {
+     "url": "photos/nouveau-lieu-2-917776.jpg",
+     "alt": "La Sainte Chapelle",
+     "credit": "MOSSOT · CC BY 3.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/nouveau-lieu-2-917881.jpg",
+     "alt": "La Sainte Chapelle",
+     "credit": "Pierre Tribhou · CC BY-SA 4.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/nouveau-lieu-2-4935087.jpg",
+     "alt": "La Sainte Chapelle",
+     "credit": ""
+    },
+    {
+     "url": "photos/nouveau-lieu-2-4935401.jpg",
+     "alt": "La Sainte Chapelle",
+     "credit": ""
+    },
+    {
+     "url": "photos/nouveau-lieu-2-4935437.jpg",
+     "alt": "La Sainte Chapelle",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "eglise-saint-jean-baptiste",
+   "cat": "dec",
+   "x": 82.8,
+   "y": -576.5,
+   "title": "Église Saint-Jean-Baptiste",
+   "icon": "♜",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": []
+  }
+ ],
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "plan": {
+  "offer": "base",
+  "poiIncluded": 20
+ },
+ "client": {
+  "contact": "Emilie De Miras Villeneuve",
+  "email": "communication@marie-vic-le-comte.fr",
+  "notes": ""
+ },
+ "gen": {
+  "types": [
+   "mairie",
+   "enseignement",
+   "sport",
+   "culture"
+  ],
+  "realChurches": true
+ },
+ "mapGeneratedAt": "2026-11-01T06:26:41.502Z",
+ "brandPalette": [
+  "#333333",
+  "#565656",
+  "#008080",
+  "#993300",
+  "#4a4a4a",
+  "#4a9796",
+  "#d3d3d3",
+  "#eff2f9",
+  "#202f3f",
+  "#dddddd",
+  "#555555",
+  "#a9a9a9",
+  "#e1b035"
+ ],
+ "icons": {
+  "enabled": false,
+  "cat": {},
+  "poi": {}
+ }
+}
