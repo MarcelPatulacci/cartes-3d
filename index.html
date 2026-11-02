@@ -351,42 +351,20 @@ dialog>button{position:absolute;right:15px;top:12px;background:none;border:0;fon
 body.embed-compact #sidebar{display:none}
 body.edit .pin{cursor:move}
 
-/* bandeau heure / musique : pleine largeur, une seule ligne, repliable */
-.time-panel{left:16px;right:16px;width:auto;max-width:none;transform:none;bottom:30px;padding:7px 10px 7px 14px;display:flex;align-items:center;gap:16px;border-radius:12px}
-.time-panel .time-heading{flex:0 0 auto;gap:9px}
-.time-panel .tiny-label{display:none}
-.time-panel .time-heading strong{font-size:13px;white-space:nowrap}
-.time-panel .time-heading output{font-size:16px;min-width:46px}
-.time-panel .tp-mid{flex:1 1 220px;min-width:140px}
-.time-panel .range-row{margin-top:2px;gap:8px;font-size:13px}
-.time-panel .time-ticks{height:13px;margin:0 22px}.time-panel .time-ticks button{padding:1px 0}
-.time-panel .date-row{margin:0;padding:0 0 0 14px;border-top:0;border-left:1px solid #dce2d2;flex:0 0 auto}
-.time-panel .music-player{border-top:0;margin:0;padding:0 0 0 14px;border-left:1px solid #dce2d2;flex:0 0 auto}
-.time-panel[hidden]{display:none!important}
-.tp-hide{border:0;background:none;font-size:15px;color:#89917c;width:26px;height:26px;border-radius:50%;flex:0 0 auto;cursor:pointer}.tp-hide:hover{background:#0000000d}
-.tp-open{position:absolute;z-index:1500;left:16px;bottom:30px;display:flex;align-items:center;gap:6px;border:1px solid #fff9;background:color-mix(in srgb,var(--paper) 95%,transparent);border-radius:99px;padding:7px 13px;font-size:12px;color:var(--ink,#22302a);box-shadow:0 6px 24px color-mix(in srgb,var(--primary) 10%,transparent);cursor:pointer}
+/* panneau heure / musique : présentation d'origine, repliable */
+.time-panel .tp-hide{position:absolute;top:6px;right:6px;border:0;background:none;font-size:14px;color:#89917c;width:24px;height:24px;border-radius:50%;cursor:pointer}.time-panel .tp-hide:hover{background:#0000000d}
+.time-panel .time-heading{padding-right:22px}
+.tp-open{position:absolute;z-index:1500;left:50%;transform:translateX(-50%);bottom:62px;display:flex;align-items:center;gap:6px;border:1px solid #fff9;background:color-mix(in srgb,var(--paper) 95%,transparent);border-radius:99px;padding:7px 14px;font-size:12px;color:var(--ink,#22302a);box-shadow:0 6px 24px color-mix(in srgb,var(--primary) 10%,transparent);cursor:pointer}
 .tp-open b{font-variant-numeric:tabular-nums;font-weight:600}.tp-open .tp-sep,.tp-open .tp-up{color:#89917c}
-body:not(.tp-closed) .hint{bottom:86px}
 .night .tp-open{background:color-mix(in srgb,#141a22 88%,transparent);color:#d3d9d2;border-color:#ffffff22}
-@media(max-width:1050px){
-  .time-panel{flex-wrap:wrap;gap:4px 12px;padding:6px 8px 5px 12px}
-  .time-panel .time-heading strong{display:none}
-  .time-panel .tp-mid{order:5;flex-basis:100%}
-  .time-panel .music-title{display:none}.time-panel .music-player input[type=range]{width:64px}
-  .time-panel .music-player::before{content:'♪';color:#89917c;font-size:13px}
-  .time-panel .tp-hide{margin-left:auto}
-  body:not(.tp-closed) .hint{display:none}
-}
-@media(max-width:700px){
-  .time-panel{left:10px;right:10px;bottom:28px;flex-wrap:wrap;gap:6px 10px;padding:7px 8px 6px 10px}
-  .time-panel .time-heading strong{display:none}
-  .time-panel .tp-mid{order:5;flex-basis:100%}
-  .time-panel .music-player input[type=range]{width:56px}
-  .time-panel .date-row{border-left:0;padding-left:0}
-  .time-panel .tp-hide{margin-left:auto}
-  .tp-open{left:10px;bottom:28px}
-  body:not(.tp-closed) .hint{display:none}
-}
+@media(max-width:700px){.tp-open{bottom:66px}}
+/* itinéraire : panneau réductible (smartphone : libère la carte pour cliquer les étapes) */
+#routeMin{position:absolute;right:46px;top:10px;width:30px;height:30px;border:0;border-radius:50%;background:#e9ecdf;font-size:16px;line-height:1;cursor:pointer}
+#routeSum{display:none}
+#routePanel.min{min-height:0;max-height:none;padding-top:12px;padding-bottom:12px;overflow:visible}
+#routePanel.min>:not(#closeRoute):not(#routeMin):not(#routeSum){display:none!important}
+#routePanel.min #routeSum{display:block;padding-right:80px;font-size:13px;font-weight:600;line-height:1.35;cursor:pointer}
+#routePanel.min #routeSum small{display:block;font-weight:400;color:#6e826c;font-size:11.5px}
 </style>
 </head>
 <body>
@@ -417,6 +395,8 @@ body:not(.tp-closed) .hint{bottom:86px}
   <div class="map-heading"><span class="badge">EXPLORATION 3D</span><button id="routeQuitMap" type="button" hidden>✕ Quitter l’itinéraire</button><button id="routeBtn" hidden type="button" aria-expanded="false" aria-controls="routePanel"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.7 11.3 12.7 2.3a1 1 0 0 0-1.4 0l-9 9a1 1 0 0 0 0 1.4l9 9a1 1 0 0 0 1.4 0l9-9a1 1 0 0 0 0-1.4zM14 14.5V12h-4v3H8v-4a1 1 0 0 1 1-1h5V7.5l3.5 3.5z"/></svg> Itinéraire</button><span id="mapStatus"></span></div>
   <section id="routePanel" role="dialog" aria-label="Préparer un itinéraire" hidden>
     <button id="closeRoute" aria-label="Fermer l’itinéraire">×</button>
+    <button id="routeMin" type="button" aria-label="Réduire le panneau" title="Réduire">–</button>
+    <div id="routeSum" role="button" tabindex="0" title="Agrandir"></div>
     <div class="detail-kicker">ITINÉRAIRE</div><h2>Préparer votre visite</h2>
     <div id="routeTabs" role="tablist"><button type="button" role="tab" data-tab="go" aria-selected="true">Aller à un lieu</button><button type="button" role="tab" data-tab="tour" aria-selected="false">Circuit de visite</button></div>
     <label class="rl" for="routeFrom">Départ <span id="routeFromHint"></span></label>
@@ -452,12 +432,12 @@ body:not(.tp-closed) .hint{bottom:86px}
   </div>
   <div class="compass" title="Nord géographique"><span>N</span><svg id="compassNeedle" width="28" height="36" viewBox="0 0 28 36"><path d="M14 2L24 30L14 24Z" fill="var(--accent)"/><path d="M14 2L4 30L14 24Z" fill="var(--primary)"/></svg></div>
   <div class="time-panel" id="timePanel">
-    <div class="time-heading"><button id="playTime" aria-label="Animer le cycle de la journée" aria-pressed="false">▶</button><div><span class="tiny-label">AU FIL DE LA JOURNÉE</span><strong id="timeTitle">La douceur de l’après-midi</strong></div><output id="timeValue" for="time">15:00</output></div>
-    <div class="tp-mid"><div class="range-row"><span>☀</span><input id="time" aria-label="Heure de la journée" type="range" min="0" max="24" value="15" step="0.05"><span>☾</span></div>
-    <div class="time-ticks"><button data-hour="6">Aube</button><button data-hour="12">Midi</button><button data-hour="18">Crépuscule</button><button data-hour="23">Nuit</button></div></div>
+    <button class="tp-hide" id="tpHide" type="button" aria-label="Masquer le panneau de l’heure et de la musique" title="Masquer">▾</button>
+    <div class="time-heading"><div><span class="tiny-label">AU FIL DE LA JOURNÉE</span><strong id="timeTitle">La douceur de l’après-midi</strong></div><button id="playTime" aria-label="Animer le cycle de la journée" aria-pressed="false">▶</button><output id="timeValue" for="time">15:00</output></div>
+    <div class="range-row"><span>☀</span><input id="time" aria-label="Heure de la journée" type="range" min="0" max="24" value="15" step="0.05"><span>☾</span></div>
+    <div class="time-ticks"><button data-hour="6">Aube</button><button data-hour="12">Midi</button><button data-hour="18">Crépuscule</button><button data-hour="23">Nuit</button></div>
     <div class="date-row" id="sunDateRow" hidden><label>Date <input id="sunDate" type="date" aria-label="Date pour la position du soleil"></label><small id="sunTimes"></small></div>
     <div class="music-player"><button id="musicPlay" aria-label="Lire la musique" aria-pressed="false">▶</button><div class="music-title"><strong>Nappes douces</strong><span id="musicStatus" aria-live="polite">Ambiance musicale · générée en direct</span></div><input id="musicVolume" type="range" min="0" max="100" step="1" value="15" aria-label="Volume de la musique"><output id="musicVolumeValue" for="musicVolume">15 %</output></div>
-    <button class="tp-hide" id="tpHide" type="button" aria-label="Masquer le panneau de l’heure et de la musique" title="Masquer">▾</button>
   </div>
   <button class="tp-open" id="tpOpen" type="button" hidden aria-label="Afficher le panneau de l’heure et de la musique"><span>☀</span> <b id="tpOpenTime">15:00</b> <span class="tp-sep">·</span> <span>♪</span> <span class="tp-up">▴</span></button>
   <div class="hint">Glisser pour tourner <i>·</i> Molette pour zoomer <i>·</i> Clic droit pour déplacer</div>

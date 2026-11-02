@@ -84,6 +84,9 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
 .staff{display:inline-block;font-size:10.5px;padding:3px 8px;border-radius:99px;background:#3d1520;color:#ff9aac;font-weight:600}
 @media(max-width:1000px){#form{grid-template-columns:1fr}.card{position:static}}
 @media(max-width:800px){#app{grid-template-columns:1fr}#list,#main{max-height:none}#list{max-height:340px}#form{padding:18px}.row{grid-template-columns:1fr}.top .sep,.top .brand{display:none}}
+.pwwrap{position:relative;display:block;width:100%}.pwwrap>input{width:100%;padding-right:40px!important;box-sizing:border-box}
+.pweye{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:0;color:#9a8aa0;cursor:pointer;padding:4px;display:grid;place-items:center;border-radius:6px;width:auto;margin:0}
+.pweye .slash{display:none}.pweye.on .slash{display:inline}
 </style>
 </head>
 <body>
@@ -332,10 +335,11 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
     const t = await fetch(S.sbc.url + '/auth/v1/token?grant_type=password', { method: 'POST', headers: { apikey: S.sbc.anonKey, 'Content-Type': 'application/json' }, body: JSON.stringify({ email, password: pw }) });
     if (!t.ok) throw new Error(t.status === 400 ? 'Identifiant ou mot de passe incorrect.' : 'Connexion impossible (' + t.status + ').');
     const j = await t.json(); if (j.user?.app_metadata?.role !== 'antemic') throw new Error('Ce compte n’est pas un compte de l’équipe ANTEMIC.');
+    if (j.user.app_metadata.level === 'demo') throw new Error('Compte « démo client » : utilisez l’éditeur ANTEMIC installé (cartes de démonstration). L’espace en ligne modifie les vraies communes.');
     S.token = j.access_token; S.exp = Date.now() + (j.expires_in - 60) * 1000; S.staff = email; S.email = email; S.level = j.user.app_metadata.level || 'superadmin'; S.meta = j.user.user_metadata || {};
     try { sessionStorage.setItem('antemic-admin', JSON.stringify({ staff: email, sbc: S.sbc, token: S.token, exp: S.exp, level: S.level })); } catch (e) {}
   }
-  async function enterTeam() { $('#login').hidden = true; $('#app').hidden = false; $('#logout').hidden = false; $('#dlEditor').hidden = S.level === 'contenu'; const l = await communes(); await openCommune(l[0].id); }
+  async function enterTeam() { $('#login').hidden = true; $('#app').hidden = false; $('#logout').hidden = false; $('#dlEditor').hidden = false; const l = await communes(); await openCommune(l[0].id); }
   $('#mustForm').onsubmit = async e => {
     e.preventDefault(); show($('#loginMsg'), '');
     if ($('#np1').value.length < 10) return show($('#loginMsg'), '10 caractères minimum.'); if ($('#np1').value !== $('#np2').value) return show($('#loginMsg'), 'Les deux mots de passe diffèrent.');
@@ -363,11 +367,13 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
   };
   (async () => { try { // reprise de session (onglet ouvert, jeton encore valide)
     const s = JSON.parse(sessionStorage.getItem('antemic-admin') || 'null'); if (!s || Date.now() > s.exp) return;
-    if (s.staff) { S.sbc = s.sbc; S.cfg = { supabase: s.sbc }; S.token = s.token; S.exp = s.exp; S.staff = s.staff; S.level = s.level || 'superadmin'; $('#dlEditor').hidden = !s.staff.includes('@') || S.level === 'contenu'; S.email = s.staff.includes('@') ? s.staff : s.staff + '@equipe.antemic.fr'; $('#login').hidden = true; $('#app').hidden = false; $('#logout').hidden = false; const l = await communes(); await openCommune(l.some(c => c.id === s.slug) ? s.slug : l[0].id); return; }
+    if (s.staff) { S.sbc = s.sbc; S.cfg = { supabase: s.sbc }; S.token = s.token; S.exp = s.exp; S.staff = s.staff; S.level = s.level || 'superadmin'; $('#dlEditor').hidden = !s.staff.includes('@'); S.email = s.staff.includes('@') ? s.staff : s.staff + '@equipe.antemic.fr'; $('#login').hidden = true; $('#app').hidden = false; $('#logout').hidden = false; const l = await communes(); await openCommune(l.some(c => c.id === s.slug) ? s.slug : l[0].id); return; }
     const r = await fetch(SITE + 'clients/' + s.slug + '/config.json', { cache: 'no-cache' }); if (!r.ok) return;
     S.cfg = await r.json(); S.slug = s.slug; S.token = s.token; S.exp = s.exp; theme(); $('#login').hidden = true; $('#app').hidden = false; await load(); if (S.rows.length) edit(S.rows[0]);
   } catch (e) {} })();
 })();
+// œil sur les champs mot de passe
+(function () { const eyes = () => { for (const i of document.querySelectorAll('input[type=password]:not([data-eye])')) { i.dataset.eye = '1'; const w = document.createElement('span'); w.className = 'pwwrap'; i.replaceWith(w); const b = document.createElement('button'); b.type = 'button'; b.className = 'pweye'; b.title = 'Afficher'; b.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/><path class="slash" d="M3 3l18 18"/></svg>'; b.onclick = () => { const sh = i.type === 'password'; i.type = sh ? 'text' : 'password'; b.classList.toggle('on', sh); b.title = sh ? 'Masquer' : 'Afficher'; i.focus(); }; w.append(i, b); } }; eyes(); new MutationObserver(eyes).observe(document.body, { childList: true, subtree: true }); })();
 </script>
 </body>
 </html>
