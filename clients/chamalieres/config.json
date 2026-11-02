@@ -1960,7 +1960,7 @@
    "cat": "dec",
    "x": 303.6,
    "y": -26.7,
-   "title": "Ancienne gare de Royat-Chamalières",
+   "title": "Ancienne gare de Royat-Chamalières 2",
    "text": "Élément du patrimoine présenté dans le panorama de la page d'accueil.",
    "photo": {
     "url": "photos/ancienne-gare-de-royat-chamalieres-174187.jpg",
@@ -2262,7 +2262,7 @@
   "notes": ""
  },
  "mapGeneratedAt": "2026-10-30T03:00:23.331Z",
- "publishedAt": "2026-11-02T15:22:47.105Z",
+ "publishedAt": "2026-11-02T15:28:05.187Z",
  "gen": {},
  "style": "maquette",
  "zoneMode": "quartiers",
@@ -2315,6 +2315,6 @@
   "days": null,
   "until": null,
   "suspended": false,
-  "at": "2026-11-02T15:22:47.105Z"
+  "at": "2026-11-02T15:28:05.187Z"
  }
 }
