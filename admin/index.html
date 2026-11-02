@@ -245,11 +245,11 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
     S.rows = await r.json(); renderList();
   }
   function renderList() {
-    const f = $('#filter').value.toLowerCase(); const box = $('#items'); box.innerHTML = '';
+    const fold = (x) => String(x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); const f = fold($('#filter').value.trim()); const box = $('#items'); box.innerHTML = '';
     const cats = Object.fromEntries((S.cfg.categories || []).map(c => [c.id, c.label]));
     const base = Object.fromEntries((S.cfg.pois || []).map(p => [p.id, p]));
     for (const row of S.rows) {
-      if (f && !row.title.toLowerCase().includes(f)) continue;
+      if (f && !fold(row.title).includes(f)) continue;
       const b = document.createElement('button'); b.type = 'button'; b.className = 'item' + (S.cur?.poi_id === row.poi_id ? ' on' : '');
       const im = row.photo_url ? Object.assign(document.createElement('img'), { src: photoUrl(row.photo_url), alt: '' }) : Object.assign(document.createElement('span'), { className: 'ph' });
       const t = document.createElement('span'); const bb = document.createElement('b'); bb.textContent = row.title; const sm = document.createElement('small'); sm.textContent = cats[base[row.poi_id]?.cat] || '';
