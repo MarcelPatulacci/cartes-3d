@@ -572,7 +572,7 @@
    "cat": "pub",
    "x": 917.8,
    "y": 45.6,
-   "title": "Aire de Camping-Car Orcines",
+   "title": "Aire de Camping-Car Orcines test",
    "text": "60 route de limoges\n63870 Orcines",
    "button": {
     "label": "En savoir plus",
@@ -580,29 +580,16 @@
    },
    "photo": {
     "url": "photos/aire-de-camping-car-orcines.jpg",
-    "alt": "Aire de Camping-Car Orcines",
+    "alt": "Aire de Camping-Car Orcines test",
     "credit": "sogefi sig (Panoramax, CC BY-SA 4.0)"
    },
    "photos": [
     {
      "url": "photos/aire-de-camping-car-orcines.jpg",
-     "alt": "Aire de Camping-Car Orcines",
+     "alt": "Aire de Camping-Car Orcines test",
      "credit": "sogefi sig (Panoramax, CC BY-SA 4.0)"
     }
-   ],
-   "model": {
-    "file": "models/aire-de-camping-car-orcines.glb",
-    "v": 1793497697964,
-    "version": 4,
-    "x": 917.8,
-    "y": 40,
-    "scale": 5,
-    "rotation": 0,
-    "boost": 1,
-    "hideAt": [],
-    "source": "Blender (addon ANTEMIC)",
-    "dz": 0
-   }
+   ]
   },
   {
    "id": "salle-des-fetes-de-ternant",
@@ -1211,7 +1198,7 @@
   "discounts": {}
  },
  "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
- "publishedAt": "2026-11-02T16:44:48.165Z",
+ "publishedAt": "2026-11-02T16:50:57.205Z",
  "brandPalette": [
   "#f7f7f7",
   "#f2f2f2",
@@ -1250,6 +1237,6 @@
   "days": null,
   "until": null,
   "suspended": false,
-  "at": "2026-11-02T16:44:48.165Z"
+  "at": "2026-11-02T16:50:57.205Z"
  }
 }
