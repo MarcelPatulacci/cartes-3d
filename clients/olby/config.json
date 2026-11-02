@@ -338,7 +338,23 @@
      "alt": "Mairie d'Olby",
      "credit": "motocultrice · CC-BY-SA-4.0 · Panoramax"
     }
-   ]
+   ],
+   "model": {
+    "file": "models/mairie-d-olby.glb",
+    "v": 1793629184019,
+    "version": 1,
+    "x": -621.5,
+    "y": -799.9,
+    "scale": 1,
+    "rotation": 0,
+    "hideAt": [
+     [
+      -621.5,
+      -799.9
+     ]
+    ],
+    "source": "Claude (références + analyse + corrections)"
+   }
   },
   {
    "id": "la-poste",
@@ -815,7 +831,18 @@
  "plan": {
   "offer": "base",
   "poiIncluded": 20,
-  "services": [],
+  "services": [
+   {
+    "id": "model1",
+    "label": "Bâtiment 3D sur mesure — niveau Essentiel",
+    "price": 190,
+    "qty": 1,
+    "note": "Mairie d'Olby",
+    "poi": "mairie-d-olby",
+    "date": "2026-11-02",
+    "offered": false
+   }
+  ],
   "offered": {}
  },
  "client": {
@@ -841,13 +868,13 @@
    "until": null
   }
  },
- "publishedAt": "2026-11-02T10:35:19.618Z",
+ "publishedAt": "2026-11-02T14:19:52.658Z",
  "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/",
  "publication": {
   "mode": "definitive",
   "days": null,
   "until": null,
   "suspended": false,
-  "at": "2026-11-02T10:35:19.618Z"
+  "at": "2026-11-02T14:19:52.658Z"
  }
 }
