@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="robots" content="noindex,nofollow">
+<title>Démonstrations ANTEMIC</title>
+<!--
+  Démonstrations ANTEMIC en ligne : connexion d'équipe (identifiant + mot de passe), liste des cartes de démo,
+  ouverture de la carte 3D (navigateurs récents) ou de la « visite en images » (appareils anciens : iPad 4 / iOS 10, sans WebGL 2).
+  Fichiers lus dans le stockage privé Supabase « demos » par des adresses signées (6 h). Script volontairement compatible Safari 10 (ES5 + fetch).
+-->
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{font:16px/1.45 -apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#0f0414;color:#fff;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:32px 20px}
+.brand{font-weight:800;letter-spacing:.12em;font-size:13px;color:#ff8aa3}
+h1{font-size:28px;margin:6px 0 18px;font-weight:700}
+.card{background:#1d1222;border:1px solid #33233b;border-radius:14px;padding:18px;margin:0 0 14px}
+label{display:block;font-size:13px;color:#cbb9d3;margin:10px 0 4px}
+input{width:100%;font:inherit;padding:12px;border-radius:10px;border:1px solid #3d2c46;background:#130a17;color:#fff;-webkit-appearance:none}
+button{font:inherit;font-weight:600;border:0;border-radius:10px;padding:12px 18px;background:#d72f4c;color:#fff;cursor:pointer;-webkit-appearance:none}
+button.ghost{background:transparent;border:1px solid #4a3753}
+button[disabled]{opacity:.4}
+.err{color:#ff9db0;font-size:14px;margin-top:10px;min-height:20px}
+.demo{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}
+.demo .t{-webkit-box-flex:1;flex:1;min-width:0}.demo .t b{display:block;font-size:18px}.demo .t small{color:#a894b1}
+.demo button{margin-left:8px}
+.hint{color:#a894b1;font-size:13px}
+/* visite en images */
+#visit{position:fixed;top:0;left:0;right:0;bottom:0;background:#e9eee5;color:#1b1420;display:none}
+#visit .bar{position:absolute;top:0;left:0;right:0;height:56px;background:#fff;border-bottom:1px solid #dde2d8;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;padding:0 12px}
+#visit .bar img{height:38px;margin-right:10px}#visit .bar b{font-size:18px;-webkit-box-flex:1;flex:1}
+#visit .bar button{padding:8px 12px;font-size:14px;background:#1b1420}
+#tabs{position:absolute;top:56px;left:0;right:0;height:48px;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;background:#f7f8f4;border-bottom:1px solid #dde2d8;padding:7px 8px}
+#tabs button{display:inline-block;margin-right:6px;padding:7px 12px;font-size:14px;background:#fff;color:#1b1420;border:1px solid #d6dccf}
+#tabs button.on{background:#1b1420;color:#fff;border-color:#1b1420}
+#stage{position:absolute;top:104px;left:0;right:0;bottom:0;overflow:hidden;background:#dfe6d8}
+#frame{position:absolute;left:50%;top:50%}
+#frame img{position:absolute;top:0;left:0;width:100%;height:100%}
+.hs{position:absolute;-webkit-transform:translate(-50%,-100%);transform:translate(-50%,-100%);background:#fff;color:#1b1420;border:0;border-radius:16px;padding:6px 11px;font-size:13px;font-weight:600;box-shadow:0 3px 10px rgba(0,0,0,.25);white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis}
+.hs:after{content:"";position:absolute;left:50%;bottom:-5px;margin-left:-5px;border:5px solid transparent;border-top-color:#fff;border-bottom:0}
+#pop{position:absolute;left:0;right:0;bottom:0;max-height:70%;overflow:auto;-webkit-overflow-scrolling:touch;background:#fff;border-radius:16px 16px 0 0;box-shadow:0 -6px 24px rgba(0,0,0,.2);padding:16px 18px 22px;display:none}
+#pop img{width:100%;max-height:300px;object-fit:cover;border-radius:10px;display:block;margin-bottom:10px}
+#pop h2{margin:0 0 6px;font-size:21px}#pop p{margin:0 0 10px;white-space:pre-line;color:#463c4c}
+#pop .x{float:right;background:#eee;color:#1b1420;padding:6px 12px}
+#pop a.go{display:inline-block;background:#1b1420;color:#fff;text-decoration:none;padding:9px 14px;border-radius:10px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap" id="app">
+  <div class="brand">ANTEMIC · CARTES 3D</div>
+  <h1>Démonstrations</h1>
+  <form class="card" id="login" autocomplete="on">
+    <label for="u">Identifiant ou e-mail</label><input id="u" name="username" autocapitalize="none" autocorrect="off" required>
+    <label for="p">Mot de passe</label><input id="p" name="password" type="password" required>
+    <div style="margin-top:14px"><button type="submit" id="go">Se connecter</button></div>
+    <div class="err" id="err"></div>
+  </form>
+  <div id="list" style="display:none"></div>
+  <p class="hint" id="cap"></p>
+</div>
+<div id="visit"><div class="bar"><img id="vLogo" alt="" style="display:none"><b id="vName"></b><button type="button" id="vBack">✕ Fermer</button></div><div id="tabs"></div><div id="stage"><div id="frame"></div><div id="pop"></div></div></div>
+<script>
+(function () {
+  'use strict';
+  var SB = null, TOKEN = null;
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var hdr = function (auth) { var h = { 'apikey': SB.anonKey, 'Content-Type': 'application/json' }; h.Authorization = 'Bearer ' + (auth ? TOKEN : SB.anonKey); return h; };
+  var json = function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error_description || j.msg || j.message || j.error || ('HTTP ' + r.status)); return j; }); };
+  // capacités : carte 3D (WebGL 2 + Pointer Events) ou visite en images
+  var modern = (function () { try { return !!document.createElement('canvas').getContext('webgl2') && 'PointerEvent' in window; } catch (e) { return false; } })();
+  $('cap').textContent = modern ? 'Cet appareil affiche la carte 3D interactive.' : 'Appareil ancien (sans WebGL 2) : la démonstration s’ouvre en « visite en images ».';
+
+  fetch('supabase.json', { cache: 'no-cache' }).then(json).then(function (j) { SB = j; try { var t = JSON.parse(sessionStorage.getItem('antemic-demo-token') || 'null'); if (t && t.exp > Date.now()) { TOKEN = t.token; showList(); } } catch (e) {} })
+    .catch(function () { $('err').textContent = 'Configuration absente : publiez une démo depuis l’éditeur.'; });
+
+  $('login').onsubmit = function (e) {
+    e.preventDefault(); if (!SB) return; $('err').textContent = ''; $('go').disabled = true;
+    var u = $('u').value.replace(/^\s+|\s+$/g, ''), p = $('p').value;
+    var email = u.indexOf('@') > 0 ? Promise.resolve(u) : fetch(SB.url + '/rest/v1/rpc/antemic_login_email', { method: 'POST', headers: hdr(false), body: JSON.stringify({ u: u }) }).then(json).then(function (m) { if (!m) throw new Error('Identifiant inconnu.'); return m; });
+    email.then(function (m) { return fetch(SB.url + '/auth/v1/token?grant_type=password', { method: 'POST', headers: hdr(false), body: JSON.stringify({ email: m, password: p }) }).then(json); })
+      .then(function (j) { TOKEN = j.access_token; try { sessionStorage.setItem('antemic-demo-token', JSON.stringify({ token: TOKEN, exp: Date.now() + (j.expires_in || 3600) * 900 })); } catch (e) {} showList(); })
+      .catch(function (er) { $('err').textContent = /Invalid login|invalid_grant|inconnu/i.test(er.message) ? 'Identifiant ou mot de passe incorrect.' : 'Connexion impossible : ' + er.message; })
+      .then(function () { $('go').disabled = false; });
+  };
+
+  function showList() {
+    $('login').style.display = 'none'; var L = $('list'); L.style.display = 'block'; L.innerHTML = '<p class="hint">Chargement…</p>';
+    fetch(SB.url + '/rest/v1/demo_links?select=*&order=name', { headers: hdr(true) }).then(json).then(function (rows) {
+      L.innerHTML = rows.length ? '' : '<div class="card">Aucune démonstration en ligne. Dans l’éditeur : client → « ☁ Démo en ligne ».</div>';
+      rows.forEach(function (r) {
+        var d = document.createElement('div'); d.className = 'card demo';
+        d.innerHTML = '<div class="t"><b>' + esc(r.name) + '</b><small>mise à jour le ' + new Date(r.updated_at).toLocaleDateString('fr-FR') + '</small></div>' + (modern ? '<button type="button" data-k="3d">Carte 3D</button>' : '') + '<button type="button" class="ghost" data-k="img">Visite en images</button>';
+        d.onclick = function (e) { var k = e.target && e.target.getAttribute('data-k'); if (k) open(r, k, e.target); };
+        L.appendChild(d);
+      });
+      var out = document.createElement('button'); out.className = 'ghost'; out.textContent = 'Se déconnecter'; out.onclick = function () { try { sessionStorage.removeItem('antemic-demo-token'); } catch (e) {} location.reload(); }; L.appendChild(out);
+    }).catch(function (er) { L.innerHTML = '<div class="card">Liste indisponible : ' + esc(er.message) + '</div>'; if (/JWT|expired/i.test(er.message)) { try { sessionStorage.removeItem('antemic-demo-token'); } catch (e) {} } });
+  }
+
+  // fichiers de la démo → adresses signées (6 h)
+  function signedFiles(prefix) {
+    var all = [];
+    var walk = function (p) {
+      return fetch(SB.url + '/storage/v1/object/list/demos', { method: 'POST', headers: hdr(true), body: JSON.stringify({ prefix: p, limit: 1000 }) }).then(json).then(function (items) {
+        var subs = []; items.forEach(function (x) { if (x.id) all.push(p + x.name); else subs.push(walk(p + x.name + '/')); }); return Promise.all(subs);
+      });
+    };
+    return walk(prefix).then(function () {
+      return fetch(SB.url + '/storage/v1/object/sign/demos', { method: 'POST', headers: hdr(true), body: JSON.stringify({ expiresIn: 21600, paths: all }) }).then(json);
+    }).then(function (list) {
+      var map = {}; list.forEach(function (x) { if (x.signedURL) map[x.path.slice(prefix.length)] = SB.url + '/storage/v1' + x.signedURL; }); return map;
+    });
+  }
+
+  function open(r, kind, btn) {
+    btn.disabled = true; var t = btn.textContent; btn.textContent = 'Ouverture…';
+    signedFiles(r.path).then(function (map) {
+      if (kind === '3d') { sessionStorage.setItem('antemic-files-' + r.slug, JSON.stringify(map)); location.href = '../?c=' + encodeURIComponent(r.slug) + '&files=1'; return; }
+      if (!map['visite.json']) throw new Error('visite en images absente : republiez la démo depuis l’éditeur');
+      return fetch(map['visite.json']).then(json).then(function (v) { visit(v, map); });
+    }).catch(function (er) { alert('Ouverture impossible : ' + er.message); }).then(function () { btn.disabled = false; btn.textContent = t; });
+  }
+
+  // ---------------- visite en images : vues capturées de la carte, lieux cliquables
+  var V = null, MAP = null, cur = 0;
+  function visit(v, map) {
+    V = v; MAP = map; $('vName').textContent = v.name;
+    if (v.logo && map[v.logo]) { $('vLogo').src = map[v.logo]; $('vLogo').style.display = ''; }
+    var tabs = $('tabs'); tabs.innerHTML = '';
+    v.views.forEach(function (w, i) { var b = document.createElement('button'); b.type = 'button'; b.textContent = w.label; b.onclick = function () { show(i); }; tabs.appendChild(b); });
+    $('visit').style.display = 'block'; $('app').style.display = 'none'; show(0);
+  }
+  var POI = function (id) { for (var i = 0; i < V.pois.length; i++) if (V.pois[i].id === id) return V.pois[i]; return null; };
+  function fit() { // image 4:3 ajustée à l'écran
+    var st = $('stage'), W = st.clientWidth, H = st.clientHeight, k = Math.min(W / 1024, H / 768), f = $('frame');
+    f.style.width = Math.round(1024 * k) + 'px'; f.style.height = Math.round(768 * k) + 'px'; f.style.marginLeft = -Math.round(512 * k) + 'px'; f.style.marginTop = -Math.round(384 * k) + 'px';
+  }
+  function show(i) {
+    cur = i; var w = V.views[i]; var tb = $('tabs').children; for (var k = 0; k < tb.length; k++) tb[k].className = k === i ? 'on' : '';
+    $('pop').style.display = 'none'; var f = $('frame'); f.innerHTML = '<img alt="">'; f.firstChild.src = MAP[w.image] || ''; fit();
+    w.pins.forEach(function (p) {
+      var q = POI(p.id); if (!q) return; var b = document.createElement('button'); b.type = 'button'; b.className = 'hs'; b.textContent = q.title;
+      b.style.left = (p.x * 100) + '%'; b.style.top = (p.y * 100) + '%'; b.onclick = function (e) { e.stopPropagation(); card(q); }; f.appendChild(b);
+    });
+  }
+  function card(q) {
+    var ph = q.photo ? (/^https?:/.test(q.photo) ? q.photo : MAP[q.photo]) : '';
+    var p = $('pop'); p.innerHTML = '<button type="button" class="x">✕</button>' + (ph ? '<img alt="" src="' + esc(ph) + '">' : '') + '<h2>' + esc(q.title) + '</h2><p>' + esc(q.text) + '</p>' + (q.button && q.button.url ? '<a class="go" target="_blank" rel="noopener" href="' + esc(q.button.url) + '">' + esc(q.button.label || 'En savoir plus') + '</a>' : '');
+    p.firstChild.onclick = function () { p.style.display = 'none'; }; p.style.display = 'block'; p.scrollTop = 0;
+  }
+  $('stage').onclick = function () { $('pop').style.display = 'none'; };
+  $('vBack').onclick = function () { $('visit').style.display = 'none'; $('app').style.display = 'block'; };
+  window.addEventListener('resize', function () { if (V) fit(); });
+  // balayage horizontal : vue suivante / précédente
+  var sx = null; $('stage').addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, false);
+  $('stage').addEventListener('touchend', function (e) { if (sx == null || !V) return; var dx = e.changedTouches[0].clientX - sx; sx = null; if (Math.abs(dx) > 70) show((cur + (dx < 0 ? 1 : V.views.length - 1)) % V.views.length); }, false);
+})();
+</script>
+</body>
+</html>

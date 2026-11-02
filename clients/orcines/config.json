@@ -9,7 +9,8 @@
  "client": {
   "contact": "",
   "email": "",
-  "notes": "Carte de démonstration. Configuration remise au standard v0.0.1 le 31/10/2026 (ancienne config : _cahier1/config.json)."
+  "notes": "Carte de démonstration. Configuration remise au standard v0.0.1 le 31/10/2026 (ancienne config : _cahier1/config.json).",
+  "mairie": {}
  },
  "theme": {
   "primary": "#00356d",
@@ -22,7 +23,8 @@
   "ink": "#202124",
   "button": "#00356d",
   "buttonText": "#ffffff",
-  "card": "#f0f0f0"
+  "card": "#f0f0f0",
+  "labelHeight": 25
  },
  "texts": {
   "sub": "PUY-DE-DÔME · AUVERGNE",
@@ -70,7 +72,7 @@
   }
  ],
  "modules": {
-  "itinerary": true,
+  "itinerary": false,
   "transit": false,
   "music": true,
   "time": true,
@@ -79,9 +81,9 @@
  },
  "licenses": {
   "itinerary": {
-   "active": true,
+   "active": false,
    "since": "2026-10-31",
-   "until": null,
+   "until": "2026-11-02",
    "note": "carte de démonstration"
   }
  },
@@ -681,8 +683,8 @@
   {
    "id": "eglise-st-julien",
    "cat": "dec",
-   "x": 1002.5,
-   "y": -617.4,
+   "x": 1018.2,
+   "y": -620.8,
    "title": "Eglise St Julien",
    "text": "4 Rue de la Poste\n63870 Orcines",
    "button": {
@@ -696,8 +698,8 @@
    },
    "model": {
     "file": "models/eglise.glb",
-    "x": 1020.6,
-    "y": -620.9,
+    "x": 1018.2,
+    "y": -620.8,
     "scale": 1,
     "rotation": 0,
     "boost": 5,
@@ -723,7 +725,8 @@
      "alt": "Eglise St Julien",
      "credit": "Pymouss (Wikimedia Commons, CC BY-SA 4.0)"
     }
-   ]
+   ],
+   "icon": "✝"
   },
   {
    "id": "terrain-de-bmx",
@@ -956,7 +959,23 @@
      "alt": "Ecole Publique Orcines",
      "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
     }
-   ]
+   ],
+   "model": {
+    "file": "models/ecole-publique-orcines.glb",
+    "v": 1793548011153,
+    "version": 1,
+    "x": 662.6,
+    "y": -2174.5,
+    "scale": 1,
+    "rotation": 0,
+    "hideAt": [
+     [
+      662.6,
+      -2174.5
+     ]
+    ],
+    "source": "Claude (références + analyse + corrections)"
+   }
   },
   {
    "id": "le-chalet",
@@ -1176,10 +1195,23 @@
  "plan": {
   "offer": "base",
   "poiIncluded": 20,
-  "services": []
+  "services": [
+   {
+    "id": "model2",
+    "label": "Bâtiment 3D sur mesure — niveau Détaillé",
+    "price": 390,
+    "qty": 1,
+    "note": "Ecole Publique Orcines",
+    "poi": "ecole-publique-orcines",
+    "date": "2026-11-01",
+    "offered": false
+   }
+  ],
+  "offered": {},
+  "discounts": {}
  },
  "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
- "publishedAt": "2026-11-01T02:27:25.297Z",
+ "publishedAt": "2026-11-02T16:44:03.019Z",
  "brandPalette": [
   "#f7f7f7",
   "#f2f2f2",
@@ -1204,5 +1236,20 @@
   "poi": {}
  },
  "objects": [],
- "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/"
+ "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/",
+ "gen": {
+  "types": []
+ },
+ "terrain": {
+  "smooth": 2,
+  "flat": false
+ },
+ "communes": [],
+ "publication": {
+  "mode": "definitive",
+  "days": null,
+  "until": null,
+  "suspended": false,
+  "at": "2026-11-02T16:44:03.019Z"
+ }
 }
