@@ -2262,7 +2262,7 @@
   "notes": ""
  },
  "mapGeneratedAt": "2026-10-30T03:00:23.331Z",
- "publishedAt": "2026-11-02T15:28:05.187Z",
+ "publishedAt": "2026-11-02T15:35:23.999Z",
  "gen": {},
  "style": "maquette",
  "zoneMode": "quartiers",
@@ -2315,6 +2315,6 @@
   "days": null,
   "until": null,
   "suspended": false,
-  "at": "2026-11-02T15:28:05.187Z"
+  "at": "2026-11-02T15:35:23.999Z"
  }
 }
