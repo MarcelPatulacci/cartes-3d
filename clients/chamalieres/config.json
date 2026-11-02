@@ -2262,7 +2262,7 @@
   "notes": ""
  },
  "mapGeneratedAt": "2026-10-30T03:00:23.331Z",
- "publishedAt": "2026-10-31T15:42:38.517Z",
+ "publishedAt": "2026-11-02T15:22:47.105Z",
  "gen": {},
  "style": "maquette",
  "zoneMode": "quartiers",
@@ -2308,5 +2308,13 @@
   "speed": 1.25,
   "order": "optimise",
   "pickOnMap": true
+ },
+ "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/",
+ "publication": {
+  "mode": "definitive",
+  "days": null,
+  "until": null,
+  "suspended": false,
+  "at": "2026-11-02T15:22:47.105Z"
  }
 }
