@@ -1,0 +1,853 @@
+{
+ "schema": 1,
+ "slug": "olby",
+ "name": "Olby",
+ "insee": "63257",
+ "codePostal": "63210",
+ "website": "https://www.olby.fr/",
+ "createdAt": "2026-10-30T01:50:25.222Z",
+ "theme": {
+  "primary": "#016b5f",
+  "accent": "#f0ad4e",
+  "paper": "#f6faf9",
+  "font": "Inter",
+  "titleFont": "Georgia",
+  "logo": "logo.jpg",
+  "fonts": []
+ },
+ "texts": {
+  "sub": "PUY-DE-DÔME · AUVERGNE",
+  "eyebrow": "UNE AUTRE FAÇON DE DÉCOUVRIR",
+  "title": "La commune,\nen perspective.",
+  "intro": "Commune d'Olby, au cœur du Parc Naturel Régional des Volcans d'Auvergne : vie municipale, patrimoine naturel et historique.",
+  "welcomeKicker": "BIENVENUE À OLBY",
+  "welcomeTitle": "Bienvenue à Olby",
+  "welcomeText": "Olby est située dans le Parc Naturel Régional des Volcans d'Auvergne. Ce site propose aux habitants et visiteurs des informations pratiques sur la vie municipale ainsi que des contenus pour découvrir le patrimoine naturel et historique de la commune.",
+  "welcomeLink": {
+   "label": "Site de la commune",
+   "url": "https://www.olby.fr/"
+  },
+  "territoryName": "La commune de Olby",
+  "territory": "Ses limites sont celles de la maquette",
+  "footer": "Mairie d'Olby · 14 place de la Fontaine, 63210 Olby · 04 73 87 10 77",
+  "status": "La commune de Olby",
+  "about": ""
+ },
+ "categories": [
+  {
+   "id": "pub",
+   "label": "Bâtiments publics",
+   "icon": "⌂"
+  },
+  {
+   "id": "com",
+   "label": "Commerces & services",
+   "icon": "◈"
+  },
+  {
+   "id": "res",
+   "label": "Restaurants & hébergements",
+   "icon": "☕"
+  },
+  {
+   "id": "dec",
+   "label": "Patrimoine",
+   "icon": "✦"
+  },
+  {
+   "id": "nat",
+   "label": "Nature & paysages",
+   "icon": "❀"
+  }
+ ],
+ "modules": {
+  "itinerary": true,
+  "transit": false,
+  "directions": false,
+  "music": false,
+  "time": true
+ },
+ "villages": [
+  {
+   "name": "Bonnabaud",
+   "x": -2595,
+   "y": 4209,
+   "sub": ""
+  },
+  {
+   "name": "Mazaye",
+   "x": -1176,
+   "y": 4151,
+   "sub": ""
+  },
+  {
+   "name": "la Bantusse",
+   "x": -3191,
+   "y": 4250,
+   "sub": ""
+  },
+  {
+   "name": "Roure",
+   "x": -4187,
+   "y": 3867,
+   "sub": ""
+  },
+  {
+   "name": "Champille",
+   "x": 469,
+   "y": 3878,
+   "sub": ""
+  },
+  {
+   "name": "Ceyssat",
+   "x": 1834,
+   "y": 1307,
+   "sub": ""
+  },
+  {
+   "name": "la Gardette",
+   "x": -111,
+   "y": 1854,
+   "sub": ""
+  },
+  {
+   "name": "Coheix",
+   "x": -1746,
+   "y": 1120,
+   "sub": ""
+  },
+  {
+   "name": "la Miouze",
+   "x": -3894,
+   "y": 1203,
+   "sub": ""
+  },
+  {
+   "name": "Say",
+   "x": -5355,
+   "y": 1340,
+   "sub": ""
+  },
+  {
+   "name": "Montmeyre",
+   "x": 2237,
+   "y": 951,
+   "sub": ""
+  },
+  {
+   "name": "Allagnat",
+   "x": 3067,
+   "y": 75,
+   "sub": ""
+  },
+  {
+   "name": "Chez Pierre",
+   "x": 2313,
+   "y": 41,
+   "sub": ""
+  },
+  {
+   "name": "les Bernards",
+   "x": -982,
+   "y": -326,
+   "sub": ""
+  },
+  {
+   "name": "le Monteillet",
+   "x": -3361,
+   "y": -146,
+   "sub": ""
+  },
+  {
+   "name": "Bravant",
+   "x": 938,
+   "y": -1688,
+   "sub": ""
+  },
+  {
+   "name": "Pont d'Olby",
+   "x": -610,
+   "y": -1570,
+   "sub": ""
+  },
+  {
+   "name": "Olby",
+   "x": -600,
+   "y": -540,
+   "sub": ""
+  },
+  {
+   "name": "le Bouchet",
+   "x": -2989,
+   "y": -905,
+   "sub": ""
+  },
+  {
+   "name": "Massagettes",
+   "x": -4745,
+   "y": -1691,
+   "sub": ""
+  },
+  {
+   "name": "Prades",
+   "x": -4710,
+   "y": -686,
+   "sub": ""
+  },
+  {
+   "name": "le Léry",
+   "x": -3017,
+   "y": -1905,
+   "sub": ""
+  },
+  {
+   "name": "Saint-Pierre-Roche",
+   "x": -3953,
+   "y": -2912,
+   "sub": ""
+  },
+  {
+   "name": "Antérioux",
+   "x": 2452,
+   "y": -2806,
+   "sub": ""
+  },
+  {
+   "name": "les Bramauds",
+   "x": 2365,
+   "y": -2400,
+   "sub": ""
+  },
+  {
+   "name": "Nébouzat",
+   "x": 2216,
+   "y": -3114,
+   "sub": ""
+  },
+  {
+   "name": "Villejacques",
+   "x": -726,
+   "y": -3769,
+   "sub": ""
+  },
+  {
+   "name": "Monteribeyre",
+   "x": 191,
+   "y": -2523,
+   "sub": ""
+  },
+  {
+   "name": "Pont des Eaux",
+   "x": 526,
+   "y": -3343,
+   "sub": ""
+  },
+  {
+   "name": "les Quatre Routes",
+   "x": 1364,
+   "y": -2653,
+   "sub": ""
+  },
+  {
+   "name": "les Eaux",
+   "x": 474,
+   "y": -3554,
+   "sub": ""
+  },
+  {
+   "name": "Polagnat",
+   "x": -1925,
+   "y": -3377,
+   "sub": ""
+  },
+  {
+   "name": "Reyvialles",
+   "x": -4151,
+   "y": -3735,
+   "sub": ""
+  },
+  {
+   "name": "la Vialette",
+   "x": -3945,
+   "y": -2935,
+   "sub": ""
+  },
+  {
+   "name": "Saint-Bonnet-près-Orcival",
+   "x": -1082,
+   "y": -4860,
+   "sub": ""
+  },
+  {
+   "name": "Farges",
+   "x": -2618,
+   "y": -3986,
+   "sub": ""
+  },
+  {
+   "name": "Mazaye Haute",
+   "x": -1189,
+   "y": 3836,
+   "sub": ""
+  },
+  {
+   "name": "Ranquet",
+   "x": -2587,
+   "y": 4039,
+   "sub": ""
+  },
+  {
+   "name": "la Gare des Roziers",
+   "x": -2804,
+   "y": 4842,
+   "sub": ""
+  }
+ ],
+ "view": {},
+ "pois": [
+  {
+   "id": "mairie-d-olby",
+   "cat": "pub",
+   "x": -627.3,
+   "y": -800.8,
+   "title": "Mairie d'Olby",
+   "text": "Mairie de la commune d'Olby. Ouverte le lundi de 13h30 à 18h, le mardi de 13h30 à 19h, le jeudi de 9h à 12h30 et le vendredi de 9h à 11h. Rencontre avec les élus sur rendez-vous.\n14 place de la Fontaine, 63210 Olby\nTél : 04 73 87 10 77",
+   "photo": {
+    "url": "photos/mairie-d-olby-186386.jpg",
+    "alt": "Mairie d'Olby",
+    "credit": "Tabl-trai · CC BY-SA 4.0 · Wikimedia Commons"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/mairie/horaires-et-coordonnees"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/mairie-d-olby-186386.jpg",
+     "alt": "Mairie d'Olby",
+     "credit": "Tabl-trai · CC BY-SA 4.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/mairie-d-olby-186707.jpg",
+     "alt": "Mairie d'Olby",
+     "credit": "Tabl-trai · CC BY-SA 4.0 · Wikimedia Commons"
+    },
+    {
+     "url": "photos/mairie-d-olby-186978.jpg",
+     "alt": "Mairie d'Olby",
+     "credit": "motocultrice · CC-BY-SA-4.0 · Panoramax"
+    }
+   ]
+  },
+  {
+   "id": "la-poste",
+   "cat": "pub",
+   "x": -647.1,
+   "y": -786.4,
+   "title": "La Poste",
+   "text": "Bureau de poste ouvert du lundi au vendredi de 8h30 à 12h. Le bureau distributeur est Rochefort-Montagne.\nPlace de la Fontaine, 63210 Olby\nTél : 36 31",
+   "photo": {
+    "url": "photos/la-poste-189780.jpg",
+    "alt": "La Poste",
+    "credit": "motocultrice · CC-BY-SA-4.0 · Panoramax"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/commerces"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/la-poste-189780.jpg",
+     "alt": "La Poste",
+     "credit": "motocultrice · CC-BY-SA-4.0 · Panoramax"
+    },
+    {
+     "url": "photos/la-poste-189941.jpg",
+     "alt": "La Poste",
+     "credit": "motocultrice · CC-BY-SA-4.0 · Panoramax"
+    }
+   ]
+  },
+  {
+   "id": "vival",
+   "cat": "com",
+   "x": -639.5,
+   "y": -833,
+   "title": "Vival",
+   "text": "Épicerie, fruits et légumes frais, produits régionaux et fromages d'Auvergne. Livraison à domicile et point retrait Cdiscount. Ouvert du mardi au samedi de 8h à 12h30 et de 15h à 19h, et le dimanche de 8h à 12h30.\n14 rue du Sancy, 63210 Olby\nTél : 04 73 87 13 95",
+   "photo": {
+    "url": "photos/vival-164252.webp",
+    "alt": "Vival",
+    "credit": "Site de la mairie"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/commerces"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/vival-164252.webp",
+     "alt": "Vival",
+     "credit": "Site de la mairie"
+    }
+   ]
+  },
+  {
+   "id": "boulangerie-patisserie-de-la-fontain",
+   "cat": "com",
+   "x": -647.1,
+   "y": -786.4,
+   "title": "Boulangerie - Pâtisserie de la Fontaine",
+   "text": "Boulangerie de Franck Theret : pains traditionnels, arvernoises, pains campaillou, viennoiseries et pâtisseries.\nPlace de la Fontaine, 63210 Olby\nTél : 04 73 87 12 95",
+   "photo": {
+    "url": "photos/boulangerie-patisserie-de-la-fontain-164271.webp",
+    "alt": "Boulangerie - Pâtisserie de la Fontaine",
+    "credit": "Site de la mairie"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/commerces"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/boulangerie-patisserie-de-la-fontain-164271.webp",
+     "alt": "Boulangerie - Pâtisserie de la Fontaine",
+     "credit": "Site de la mairie"
+    }
+   ]
+  },
+  {
+   "id": "auberge-de-la-fontaine",
+   "cat": "res",
+   "x": -621.9,
+   "y": -825,
+   "title": "Auberge de la Fontaine",
+   "text": "Bar-tabac, café et restaurant tenu par Carole Jasmin et Pierrick Fournier. Soirées pizzas le vendredi, crêpes, gaufres et glaces tous les après-midi.\n17 rue du Sancy, 63210 Olby\nTél : 04 73 88 20 29",
+   "photo": {
+    "url": "photos/auberge-de-la-fontaine-164291.webp",
+    "alt": "Auberge de la Fontaine",
+    "credit": "Site de la mairie"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/commerces"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/auberge-de-la-fontaine-164291.webp",
+     "alt": "Auberge de la Fontaine",
+     "credit": "Site de la mairie"
+    }
+   ]
+  },
+  {
+   "id": "boucherie-chigot",
+   "cat": "com",
+   "x": -634.6,
+   "y": -843.9,
+   "title": "Boucherie Chigot",
+   "text": "Boucherie, charcuterie et traiteur d'Emmanuel et Sophie Chigot.\n26 rue du Sancy, 63210 Olby\nTél : 04 73 61 65 84",
+   "photo": {
+    "url": "photos/boucherie-chigot-164309.webp",
+    "alt": "Boucherie Chigot",
+    "credit": "Site de la mairie"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/commerces"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/boucherie-chigot-164309.webp",
+     "alt": "Boucherie Chigot",
+     "credit": "Site de la mairie"
+    }
+   ]
+  },
+  {
+   "id": "safran-artisan-fleuriste",
+   "cat": "com",
+   "x": -657.1,
+   "y": -732,
+   "title": "Safran Artisan Fleuriste",
+   "text": "Fleuriste de Christelle Giraud : fleurs fraîches, bouquets, plantes et compositions florales, livraison à domicile.\nLe Bourg, 63210 Olby\nTél : 04 73 88 21 13",
+   "photo": {
+    "url": "photos/safran-artisan-fleuriste-164328.webp",
+    "alt": "Safran Artisan Fleuriste",
+    "credit": "Site de la mairie"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/commerces"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/safran-artisan-fleuriste-164328.webp",
+     "alt": "Safran Artisan Fleuriste",
+     "credit": "Site de la mairie"
+    }
+   ]
+  },
+  {
+   "id": "de-a-a-z-confitures",
+   "cat": "com",
+   "x": -657.1,
+   "y": -732,
+   "title": "De A à Z Confitures",
+   "text": "Confiturière (Nathalie Azevedo), présente sur les marchés de Riom, Aubière, Besse et Le Mont-Dore. Compositions possibles pour fêtes et comités d'entreprise.\nLe Bourg, 63210 Olby\nTél : 06 14 18 61 46",
+   "photo": {
+    "url": "photos/de-a-a-z-confitures-164439.webp",
+    "alt": "De A à Z Confitures",
+    "credit": "Site de la mairie"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/commerces"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/de-a-a-z-confitures-164439.webp",
+     "alt": "De A à Z Confitures",
+     "credit": "Site de la mairie"
+    }
+   ]
+  },
+  {
+   "id": "gaec-de-l-etang-du-fung",
+   "cat": "com",
+   "x": -140.8,
+   "y": 1863.7,
+   "title": "GAEC de l'Etang du Fung",
+   "text": "Fromage de chèvre fermier au lait cru, fabriqué à la ferme et vendu en direct : crottins, brique, faisselle, fromages blancs, gaperon, fromages à l'ail des ours.\nL'étang - La Gardette, 63210 Olby\nTél : 06 34 67 29 41",
+   "photo": {
+    "url": "photos/gaec-de-l-etang-du-fung-164460.webp",
+    "alt": "GAEC de l'Etang du Fung",
+    "credit": "Site de la mairie"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/producteurs-locaux"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/gaec-de-l-etang-du-fung-164460.webp",
+     "alt": "GAEC de l'Etang du Fung",
+     "credit": "Site de la mairie"
+    }
+   ]
+  },
+  {
+   "id": "fabien-berger-legumes-bio",
+   "cat": "com",
+   "x": -140.8,
+   "y": 1863.7,
+   "title": "Fabien Berger - Légumes bio",
+   "text": "Légumes de saison issus de l'agriculture biologique et plants de légumes. Vente directe le vendredi de 18h à 20h, ou sur rendez-vous.\nLa Gardette, 63210 Olby\nTél : 06 50 50 85 32",
+   "photo": {
+    "url": "photos/fabien-berger-legumes-bio-164480.webp",
+    "alt": "Fabien Berger - Légumes bio",
+    "credit": "Site de la mairie"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/producteurs-locaux"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/fabien-berger-legumes-bio-164480.webp",
+     "alt": "Fabien Berger - Légumes bio",
+     "credit": "Site de la mairie"
+    }
+   ]
+  },
+  {
+   "id": "gaec-montjeudi",
+   "cat": "com",
+   "x": 1021.7,
+   "y": -1721.4,
+   "title": "GAEC Montjeudi",
+   "text": "Vente de lait (Nicolas Achard).\nBravant, 63210 Olby\nTél : 06 72 80 92 46",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/artisans-/-entreprises"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "syst-er-agence-okofen-grand-centre",
+   "cat": "com",
+   "x": -657.1,
+   "y": -732,
+   "title": "SYST'ER - Agence ÖkoFEN Grand Centre",
+   "text": "Distributeur exclusif des chaudières à granulés de bois ÖkoFEN, EasyPELL et HDG. Services pour particuliers et professionnels.\nLe Bourg, 63210 Olby\nTél : 04 73 87 18 32",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/artisans-/-entreprises"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "dalla-zanna-electricite",
+   "cat": "com",
+   "x": -657.1,
+   "y": -732,
+   "title": "DALLA-ZANNA Électricité",
+   "text": "Électricité générale, domestique et industrielle.\nLe Bourg, 63210 Olby\nTél : 04 73 87 12 10",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/artisans-/-entreprises"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "menuiserie-christophe-roussel",
+   "cat": "com",
+   "x": -605,
+   "y": -1652.6,
+   "title": "Menuiserie Christophe Roussel",
+   "text": "Menuiserie (conception, fabrication, pose), couverture, zinguerie, charpente traditionnelle et bardage.\nPont d'Olby, 63210 Olby\nTél : 04 73 88 21 15",
+   "photo": {
+    "url": "photos/menuiserie-christophe-roussel-201726.jpg",
+    "alt": "Menuiserie Christophe Roussel",
+    "credit": "bicente01 · CC-BY-SA-4.0 · Panoramax"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/artisans-/-entreprises"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/menuiserie-christophe-roussel-201726.jpg",
+     "alt": "Menuiserie Christophe Roussel",
+     "credit": "bicente01 · CC-BY-SA-4.0 · Panoramax"
+    }
+   ]
+  },
+  {
+   "id": "ambulances-du-sancy",
+   "cat": "com",
+   "x": -949.4,
+   "y": -1650.6,
+   "title": "Ambulances du Sancy",
+   "text": "Transports sanitaires.\n125 impasse des Plates, Le Pont d'Olby, 63210 Olby\nTél : 04 73 65 82 29",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/artisans-/-entreprises"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "cabinet-medical-du-dr-audrey-labonne",
+   "cat": "pub",
+   "x": -656.6,
+   "y": -798.1,
+   "title": "Cabinet médical du Dr Audrey Labonne",
+   "text": "Cabinet de médecin généraliste, prise de rendez-vous possible sur Doctolib.\n104 place de la Fontaine, 63210 Olby\nTél : 04 73 87 13 71",
+   "photo": {
+    "url": "photos/cabinet-medical-du-dr-audrey-labonne-207378.jpg",
+    "alt": "Cabinet médical du Dr Audrey Labonne",
+    "credit": "motocultrice · CC-BY-SA-4.0 · Panoramax"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/sante"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/cabinet-medical-du-dr-audrey-labonne-207378.jpg",
+     "alt": "Cabinet médical du Dr Audrey Labonne",
+     "credit": "motocultrice · CC-BY-SA-4.0 · Panoramax"
+    },
+    {
+     "url": "photos/cabinet-medical-du-dr-audrey-labonne-207525.jpg",
+     "alt": "Cabinet médical du Dr Audrey Labonne",
+     "credit": "motocultrice · CC-BY-SA-4.0 · Panoramax"
+    }
+   ]
+  },
+  {
+   "id": "cabinet-dentaire-d-olby",
+   "cat": "pub",
+   "x": -572.3,
+   "y": -1628.2,
+   "title": "Cabinet dentaire d'Olby",
+   "text": "Cabinet dentaire des Dr Julien Rougié, Florie Duval et Clémence Faivre.\n24 impasse des Buissonnets, Le Pont d'Olby, 63210 Olby\nTél : 04 73 78 89 26",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/sante"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "pharmacie-d-olby",
+   "cat": "pub",
+   "x": -572.3,
+   "y": -1628.2,
+   "title": "Pharmacie d'Olby",
+   "text": "Pharmacie du Dr Aymeric Antraigue.\n24 impasse des Buissonnets, Le Pont d'Olby, 63210 Olby\nTél : 04 73 87 11 20",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/sante"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "cabinet-infirmier",
+   "cat": "pub",
+   "x": -669.1,
+   "y": -617.5,
+   "title": "Cabinet infirmier",
+   "text": "Cabinet infirmier de Camille Auzeloux, Myriam Guittard et Yvan Revolier.\n174 rue du Puy de Dôme, 63210 Olby\nTél : 04 73 87 16 20",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/sante"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "cabinet-de-kinesitherapie",
+   "cat": "pub",
+   "x": -670.5,
+   "y": -614.4,
+   "title": "Cabinet de kinésithérapie",
+   "text": "Cabinet de kinésithérapeutes : Matthieu Digne, Lucie Ambert, Mélanie Job (rééducation périnéo-sphinctérienne) et Marie Tourette (pédiatrie).\n178 rue du Puy de Dôme, 63210 Olby\nTél : 04 73 87 16 80",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/sante"
+   },
+   "source": "Site de la mairie",
+   "photos": []
+  },
+  {
+   "id": "maison-d-assistantes-maternelles-gra",
+   "cat": "pub",
+   "x": -463.8,
+   "y": -962.2,
+   "title": "Maison d'Assistantes Maternelles Graine de Malice",
+   "text": "MAM tenue par Elisabeth Ussel, Véronique Dousson et Céline Chauwin.\n78 rue du Puy de Cros, 63210 Olby\nTél : 04 73 87 13 65",
+   "photo": {
+    "url": "photos/maison-d-assistantes-maternelles-gra-220279.jpg",
+    "alt": "Maison d'Assistantes Maternelles Graine de Malice",
+    "credit": "bicente01 · CC-BY-SA-4.0 · Panoramax"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": "https://www.olby.fr/services/annuaires-des-acteurs-locaux/assistantes-maternelles"
+   },
+   "source": "Site de la mairie",
+   "photos": [
+    {
+     "url": "photos/maison-d-assistantes-maternelles-gra-220279.jpg",
+     "alt": "Maison d'Assistantes Maternelles Graine de Malice",
+     "credit": "bicente01 · CC-BY-SA-4.0 · Panoramax"
+    },
+    {
+     "url": "photos/maison-d-assistantes-maternelles-gra-220438.jpg",
+     "alt": "Maison d'Assistantes Maternelles Graine de Malice",
+     "credit": "bicente01 · CC-BY-SA-4.0 · Panoramax"
+    }
+   ]
+  },
+  {
+   "id": "nouveau-lieu",
+   "cat": "dec",
+   "x": -657.6,
+   "y": -671.9,
+   "title": "Église Saint Pierre",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [],
+   "icon": "✝",
+   "model": {
+    "file": "models/nouveau-lieu.glb",
+    "v": 1793490675913,
+    "version": 1,
+    "x": -654.6,
+    "y": -671.2,
+    "scale": 1,
+    "rotation": 0,
+    "boost": 1,
+    "hideAt": [
+     [
+      -654.6,
+      -671.2
+     ]
+    ],
+    "source": "Claude (références + analyse + corrections)"
+   }
+  }
+ ],
+ "supabase": {
+  "url": "https://cqqesqoutshyutxgzyvo.supabase.co",
+  "anonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxcWVzcW91dHNoeXV0eGd6eXZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM0NTAxODEsImV4cCI6MjEwOTAyNjE4MX0.wp5V3Mz4aiIMQDHBhQJChDweDQP1a3-sXWz498yo5dE"
+ },
+ "plan": {
+  "offer": "base",
+  "poiIncluded": 20,
+  "services": [],
+  "offered": {}
+ },
+ "client": {
+  "contact": "",
+  "email": "",
+  "notes": "",
+  "mairie": {}
+ },
+ "mapGeneratedAt": "2026-10-30T01:51:26.822Z",
+ "icons": {
+  "enabled": false,
+  "cat": {},
+  "poi": {}
+ },
+ "gen": {
+  "types": []
+ },
+ "style": "maquette",
+ "licenses": {
+  "itinerary": {
+   "active": true,
+   "since": "2026-11-02",
+   "until": null
+  }
+ },
+ "publishedAt": "2026-11-02T10:35:19.618Z",
+ "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/",
+ "publication": {
+  "mode": "definitive",
+  "days": null,
+  "until": null,
+  "suspended": false,
+  "at": "2026-11-02T10:35:19.618Z"
+ }
+}
