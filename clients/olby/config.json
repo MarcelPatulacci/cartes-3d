@@ -308,8 +308,8 @@
   {
    "id": "mairie-d-olby",
    "cat": "pub",
-   "x": -627.3,
-   "y": -800.8,
+   "x": -611.7,
+   "y": -750,
    "title": "Mairie d'Olby",
    "text": "Mairie de la commune d'Olby. Ouverte le lundi de 13h30 à 18h, le mardi de 13h30 à 19h, le jeudi de 9h à 12h30 et le vendredi de 9h à 11h. Rencontre avec les élus sur rendez-vous.\n14 place de la Fontaine, 63210 Olby\nTél : 04 73 87 10 77",
    "photo": {
@@ -343,8 +343,8 @@
     "file": "models/mairie-d-olby.glb",
     "v": 1793629184019,
     "version": 1,
-    "x": -621.5,
-    "y": -799.9,
+    "x": -611.7,
+    "y": -750,
     "scale": 1,
     "rotation": 0,
     "hideAt": [
@@ -851,7 +851,7 @@
   "notes": "",
   "mairie": {}
  },
- "mapGeneratedAt": "2026-10-30T01:51:26.822Z",
+ "mapGeneratedAt": "2026-11-02T14:31:21.551Z",
  "icons": {
   "enabled": false,
   "cat": {},
@@ -868,13 +868,13 @@
    "until": null
   }
  },
- "publishedAt": "2026-11-02T14:19:52.658Z",
+ "publishedAt": "2026-11-02T14:54:42.109Z",
  "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/",
  "publication": {
   "mode": "definitive",
   "days": null,
   "until": null,
   "suspended": false,
-  "at": "2026-11-02T14:19:52.658Z"
+  "at": "2026-11-02T14:54:42.109Z"
  }
 }
