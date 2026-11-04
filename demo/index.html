@@ -83,14 +83,14 @@ button[disabled]{opacity:.4}
 .modes{display:-webkit-box;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -8px 30px}
 .mode{-webkit-box-flex:1;flex:1 1 300px;margin:8px;background:var(--pan);color:var(--tx);border:1px solid var(--line);border-radius:18px;padding:0;text-align:left;overflow:hidden;cursor:pointer;-webkit-transition:transform .18s,border-color .18s,box-shadow .18s;transition:transform .18s,border-color .18s,box-shadow .18s}
 .mode:hover,.mode:focus{-webkit-transform:translateY(-3px);transform:translateY(-3px);border-color:var(--red);box-shadow:0 18px 44px rgba(0,0,0,.45),0 0 0 1px rgba(215,47,76,.35);outline:none}
-.mode .ill{height:160px;background:linear-gradient(180deg,#241a2b,#1b1420);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.mode .ill{height:200px;background:linear-gradient(180deg,#241a2b,#1b1420);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 .mode .tx{padding:18px 20px 20px}.mode b{display:block;font-size:19px;font-weight:700;margin-bottom:6px}.mode .d{color:var(--mut);font-size:14.5px;line-height:1.5}
 .mode .go{display:inline-block;margin-top:14px;color:#ff8fab;font-weight:600;font-size:14px}
 .ill i{position:absolute;display:block}
 .ill .scr{left:20%;right:20%;top:24px;bottom:0;background:#fbfaf5;border-radius:9px 9px 0 0;box-shadow:0 10px 30px rgba(0,0,0,.4)}
 .ill .mapb{background:linear-gradient(135deg,#bcd3a8,#8fb37a 55%,#6f9b63)}
 .ill .pin{width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px rgba(255,255,255,.85)}
-.ill .ph{left:50%;margin-left:-40px;width:80px;top:16px;height:160px;border-radius:16px;background:#0b070d;padding:5px;box-shadow:0 0 0 1px #3a2c44,0 12px 30px rgba(0,0,0,.5)}
+.ill .ph{left:50%;margin-left:-48px;width:96px;top:16px;height:200px;border-radius:16px;background:#0b070d;padding:5px;box-shadow:0 0 0 1px #3a2c44,0 12px 30px rgba(0,0,0,.5)}
 .adm{display:-webkit-box;display:flex;background:linear-gradient(135deg,#2a1020,#1d1622 60%);border:1px solid #4a2236;border-radius:20px;overflow:hidden;margin:0 0 30px}
 .adm .txt{-webkit-box-flex:1;flex:1;padding:28px 30px}
 .adm h3{font-size:26px;margin:6px 0 10px;font-weight:700;letter-spacing:-.01em}
@@ -107,6 +107,16 @@ button[disabled]{opacity:.4}
 .shfoot{border-top:1px solid var(--line);margin-top:36px;padding-top:18px;color:#7d6f86;font-size:13px;display:-webkit-box;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .shfoot .sp{-webkit-box-flex:1;flex:1}
 .shfoot a{color:#ff8fab;text-decoration:none}
+.ill img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.ill .scr.sh0{overflow:hidden;background:#0b070d}
+.ill .ph img{border-radius:12px}
+.hshot{display:block;width:100%;padding:0;margin:0 0 38px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0b070d;cursor:pointer;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px rgba(215,47,76,.12);text-align:left}
+.hshot .bb{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;height:34px;padding:0 14px;background:#1b1420;border-bottom:1px solid var(--line)}
+.hshot .bb i{width:10px;height:10px;border-radius:50%;background:#3a2c44;margin-right:6px}
+.hshot .bb span{margin-left:10px;color:var(--mut);font-size:12.5px}
+.hshot img{display:block;width:100%;height:auto}
+.hshot .cta{position:absolute;right:18px;bottom:18px;background:var(--red);color:#fff;font-weight:600;font-size:14.5px;padding:11px 16px;border-radius:11px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.hshot:hover .cta{background:#e23b58}
 /* ---------- vues ---------- */
 #vw{position:fixed;top:0;left:0;right:0;bottom:0;display:none;background:var(--ink);color:var(--tx)}
 #vbar{position:absolute;top:0;left:0;right:0;height:56px;background:#0b030f;border-bottom:1px solid var(--line);display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;padding:0 12px;z-index:3}
@@ -187,6 +197,7 @@ button[disabled]{opacity:.4}
   <div class="shtop"><img class="alogo" src="../admin/logo-antemic.svg" alt="ANTEMIC"><span class="sp"></span><span class="val" id="sVal"></span><a class="btng" id="sMail" href="mailto:contact@antemic.fr">Nous contacter</a></div>
   <div class="shin">
     <div class="hero"><div class="clogo" id="sLogoBox" style="display:none"><img id="sLogo" alt=""></div><div><div class="eyebrow">Carte 3D interactive · démonstration</div><h1 id="sName"></h1><p>Voici la carte préparée pour votre commune. Découvrez son rendu dans chaque format de diffusion, puis essayez l’espace commune : c’est là que vous mettrez vous-même à jour les lieux.</p></div></div>
+    <button type="button" class="hshot" id="sShot" style="display:none" aria-label="Ouvrir la carte en pleine page"><div class="bb"><i></i><i></i><i></i><span id="sShotT">Carte en pleine page</span></div><img id="sShotI" alt="Aperçu de la carte 3D en pleine page"><span class="cta">Explorer la carte →</span></button>
     <div class="sect"><h2>Voir le rendu</h2><span>Passez d’un format à l’autre à tout moment.</span></div>
     <div class="modes" id="sModes"></div>
     <div id="sAdmin"></div>
@@ -328,6 +339,7 @@ button[disabled]{opacity:.4}
       if (!r || !r.slug) { $('serr').style.display = 'block'; return; }
       SH = r; SH.files = r.files || {}; SH.theme = r.theme || {};
       SH.modes = ((r.modes && r.modes.length) ? r.modes : ['page', 'site', 'mobile']).filter(function (m) { return MODES[m] && (m !== 'admin' || r.admin_code); });
+      if (r.modes && r.modes.indexOf('admin') >= 0 && !r.admin_code && window.console) console.warn(('admin_code' in r) ? 'Espace commune : code absent du lien (remettre la démo en ligne puis recréer le lien).' : 'Espace commune : fonction demo_share_open ancienne (relancer supabase/schema.sql).');
       try { sessionStorage.setItem('antemic-files-' + r.slug, JSON.stringify(SH.files)); if (r.admin_code) sessionStorage.setItem('antemic-demo-code-' + r.slug, r.admin_code); } catch (e) {}
       document.documentElement.style.setProperty('--acc', SH.theme.primary || '#d72f4c');
       document.title = r.name + ' — carte 3D interactive · ANTEMIC';
@@ -348,21 +360,29 @@ button[disabled]{opacity:.4}
     $('sName').textContent = SH.name + ' en 3D';
     $('sVal').textContent = 'Démonstration privée · jusqu’au ' + fmtDay(SH.expires_at);
     $('sFoot').textContent = 'Lien personnel, valable jusqu’au ' + fmtDay(SH.expires_at) + '. Lieux et contenus de démonstration, ajustés avec vous avant la mise en ligne.';
+    // aperçus réels de la carte de démo (captures faites à la mise en ligne), sinon illustrations
+    var D = asset('apercu/desk.jpg'), Mo = asset('apercu/mob.jpg'), im = function (u, a) { return '<img alt="' + esc(a) + '" src="' + esc(u) + '" loading="lazy">'; };
+    var ILL = {
+      page: D ? '<i class="scr sh0" style="left:7%;right:7%;top:22px">' + im(D, 'Carte en pleine page') + '</i>' : MODES.page.ill,
+      site: D ? '<i class="scr" style="left:16%;right:16%;top:22px;overflow:hidden"><i style="position:static;height:11px;background:var(--acc)"></i><i style="position:static;margin:8px 9% 6px;width:40%;height:6px;background:#d9d3cc;border-radius:3px"></i><i style="position:static;margin:0 9%;height:120px;border-radius:5px;overflow:hidden">' + im(D, 'Carte intégrée au site') + '</i><i style="position:static;margin:8px 9%;width:55%;height:5px;background:#e6e1db;border-radius:3px"></i></i>' : MODES.site.ill,
+      mobile: Mo ? '<i class="ph">' + im(Mo, 'Carte sur smartphone') + '</i>' : MODES.mobile.ill
+    };
+    if (D) { $('sShotI').src = D; $('sShotT').textContent = 'Carte de ' + SH.name + ' en pleine page'; $('sShot').style.display = ''; $('sShot').onclick = function () { openMode(SH.modes.indexOf('page') >= 0 ? 'page' : SH.modes[0]); }; }
     var box = $('sModes'); box.innerHTML = '';
     SH.modes.forEach(function (m) {
       if (m === 'admin') return; var M = MODES[m]; var b = document.createElement('button'); b.type = 'button'; b.className = 'mode';
-      b.innerHTML = '<div class="ill">' + M.ill + '</div><div class="tx"><b>' + esc(M.t) + '</b><span class="d">' + esc(M.d) + '</span><br><span class="go">Voir →</span></div>';
+      b.innerHTML = '<div class="ill">' + ILL[m] + '</div><div class="tx"><b>' + esc(M.t) + '</b><span class="d">' + esc(M.d) + '</span><br><span class="go">Voir →</span></div>';
       b.onclick = function () { openMode(m); }; box.appendChild(b);
     });
     var ad = $('sAdmin'); ad.innerHTML = '';
     if (SH.modes.indexOf('admin') >= 0) {
-      ad.innerHTML = '<div class="sect"><h2>Administrer votre carte</h2><span>Votre espace de gestion, tel que vous l’aurez.</span></div>'
+      ad.innerHTML = '<div class="sect"><h2>Administrer votre espace commune</h2><span>Personnalisez vos lieux : c’est l’outil que vous utiliserez au quotidien.</span></div>'
         + '<div class="adm"><div class="txt"><div class="eyebrow">Espace commune</div><h3>Modifiez vos lieux, la carte suit</h3>'
         + '<p>Essayez librement : chaque modification est enregistrée sur cette carte de démonstration, et vous la voyez aussitôt à côté.</p>'
         + '<ul><li>Titres et textes des vignettes</li><li>Jusqu’à 6 photos par lieu, avec leur crédit</li><li>Bouton et lien vers vos pages (agenda, réservation…)</li><li>Réglages d’affichage : heure du jour, soleil, ambiance sonore</li></ul>'
         + '<button type="button" class="btnr" id="sAdmGo">Ouvrir l’espace commune</button></div>'
         + '<div class="ill2"><i style="left:22px;top:24px;width:34%;height:24px;background:#2b2133"></i><i style="left:22px;top:58px;width:34%;height:40px;background:#251c2c;border:1px solid #d72f4c"></i><i style="left:22px;top:106px;width:34%;height:40px;background:#251c2c"></i><i style="left:22px;top:154px;width:34%;height:40px;background:#251c2c"></i><i style="left:22px;top:202px;width:34%;height:40px;background:#251c2c"></i>'
-        + '<i style="left:46%;top:24px;width:44%;height:16px;background:#3a2c44"></i><i class="mapb" style="left:46%;top:50px;width:44%;height:82px;background:linear-gradient(135deg,#bcd3a8,#6f9b63)"></i><i style="left:46%;top:142px;width:44%;height:9px;background:#3a2c44"></i><i style="left:46%;top:158px;width:36%;height:9px;background:#3a2c44"></i><i style="left:46%;top:186px;width:22%;height:28px;background:#d72f4c;border-radius:8px"></i></div></div>';
+        + '<i style="left:46%;top:24px;width:44%;height:16px;background:#3a2c44"></i><i class="mapb" style="left:46%;top:50px;width:44%;height:82px;overflow:hidden;background:linear-gradient(135deg,#bcd3a8,#6f9b63)">' + (D ? im(D, '') : '') + '</i><i style="left:46%;top:142px;width:44%;height:9px;background:#3a2c44"></i><i style="left:46%;top:158px;width:36%;height:9px;background:#3a2c44"></i><i style="left:46%;top:186px;width:22%;height:28px;background:#d72f4c;border-radius:8px"></i></div></div>';
       $('sAdmGo').onclick = function () { openMode('admin'); };
     }
   }
