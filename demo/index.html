@@ -11,8 +11,10 @@
   ouverture de la carte 3D (navigateurs récents) ou de la « visite en images » (appareils anciens : iPad 4 / iOS 10, sans WebGL 2).
   Fichiers lus dans le stockage privé Supabase « demos » par des adresses signées (6 h). Script volontairement compatible Safari 10 (ES5 + fetch).
   Lien prospect (ajout 2026-11-04) : ?k=<jeton> ouvre la démo SANS compte (fonction demo_share_open, adresses signées pour la durée du lien)
-  et propose l'affichage : pleine page, intégrée au site web de la commune (iframe), smartphone (cadre de téléphone + QR code).
-  &v=page|site|mobile ouvre directement un affichage (QR code du mode smartphone).
+  et propose l'affichage : pleine page, intégrée au site web de la commune (iframe), smartphone (cadre de téléphone + QR code),
+  et l'espace commune de démonstration (admin/?demo=<slug>, connexion automatique ; chaque enregistrement recharge la carte).
+  Charte ANTEMIC (noir, rouge, rose, Inter) ; logo de la commune conservé.
+  &v=page|site|mobile|admin ouvre directement un affichage (QR code du mode smartphone).
 -->
 <style>
 *{box-sizing:border-box}html,body{margin:0;height:100%}
@@ -50,62 +52,121 @@ button[disabled]{opacity:.4}
 #pop h2{margin:0 0 6px;font-size:21px}#pop p{margin:0 0 10px;white-space:pre-line;color:#463c4c}
 #pop .x{float:right;background:#eee;color:#1b1420;padding:6px 12px}
 #pop a.go{display:inline-block;background:#1b1420;color:#fff;text-decoration:none;padding:9px 14px;border-radius:10px;font-weight:600}
-/* lien prospect : choix de l'affichage */
-#share{display:none;min-height:100%;background:#f5f3f0;color:#1d1822}
-#share .in{max-width:1080px;margin:0 auto;padding:36px 22px 40px}
-#share .hd{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;margin-bottom:6px}
-#share .hd img{height:52px;margin-right:14px}
-#share h1{font-size:30px;margin:4px 0 6px;color:#1d1822}
-#share .sub{color:#5f5666;margin:0 0 26px;max-width:640px}
-#share .brand{color:var(--acc)}
-.modes{display:-webkit-box;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -8px}
-.mode{-webkit-box-flex:1;flex:1 1 280px;margin:8px;background:#fff;color:#1d1822;border:1px solid #e3ded8;border-radius:16px;padding:0;text-align:left;font-weight:400;overflow:hidden;box-shadow:0 2px 10px rgba(30,20,35,.05);-webkit-transition:transform .15s,box-shadow .15s;transition:transform .15s,box-shadow .15s}
-.mode:hover,.mode:focus{-webkit-transform:translateY(-3px);transform:translateY(-3px);box-shadow:0 10px 30px rgba(30,20,35,.12);outline:none;border-color:var(--acc)}
-.mode .ill{height:150px;background:#ece8e3;position:relative;overflow:hidden}
-.mode .tx{padding:16px 18px 18px}.mode b{display:block;font-size:19px;margin-bottom:4px}.mode span{color:#5f5666;font-size:14.5px}
-.mode .go{display:inline-block;margin-top:12px;color:var(--acc);font-weight:700;font-size:14.5px}
-/* illustrations (CSS) */
+/* ---------- lien prospect (charte ANTEMIC : noir #0F0414 / #16121A, rouge #D72F4C, rose #CC3366) ---------- */
+@font-face{font-family:Inter;font-weight:400;src:url(../fonts/inter-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:500;src:url(../fonts/inter-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:600;src:url(../fonts/inter-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Inter;font-weight:700;src:url(../fonts/inter-latin-700-normal.woff2) format('woff2')}
+:root{--ink:#0f0414;--ink2:#16121a;--pan:#1d1622;--pan2:#251c2c;--line:#33283b;--tx:#f1edf3;--mut:#a597ad;--red:#d72f4c;--pink:#cc3366}
+.sh,.sh button{font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+#share{display:none;min-height:100%;background:var(--ink);color:var(--tx);position:relative;overflow:hidden}
+#share:before{content:"";position:absolute;left:50%;top:-340px;width:1100px;height:700px;margin-left:-550px;background:radial-gradient(closest-side,rgba(215,47,76,.22),rgba(204,51,102,.08) 55%,rgba(15,4,20,0));pointer-events:none}
+.shtop{position:relative;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;max-width:1160px;margin:0 auto;padding:20px 24px}
+.shtop .alogo{height:22px;width:auto}
+.shtop .sp{-webkit-box-flex:1;flex:1}
+.shtop .val{color:var(--mut);font-size:13px;margin-right:16px}
+.btnr{display:inline-block;border:0;border-radius:10px;padding:10px 16px;background:var(--red);color:#fff;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer}
+.btnr:hover{background:#e23b58}
+.btng{display:inline-block;border:1px solid var(--line);border-radius:10px;padding:9px 15px;background:transparent;color:var(--tx);font-weight:600;font-size:14px;text-decoration:none;cursor:pointer}
+.btng:hover{border-color:#5a4566;background:#1f1725}
+.shin{position:relative;max-width:1160px;margin:0 auto;padding:28px 24px 48px}
+.hero{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;margin:6px 0 34px}
+.clogo{width:96px;height:96px;border-radius:22px;background:#fff;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;margin-right:26px;box-shadow:0 18px 50px rgba(0,0,0,.45);-ms-flex-negative:0;flex-shrink:0;overflow:hidden}
+.clogo img{max-width:80px;max-height:80px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--pink);text-transform:uppercase}
+.hero h1{font-size:44px;line-height:1.08;margin:8px 0 10px;font-weight:700;letter-spacing:-.02em}
+.hero p{color:#cbbdd3;font-size:16.5px;line-height:1.55;margin:0;max-width:660px}
+.sect{display:-webkit-box;display:flex;-webkit-box-align:baseline;align-items:baseline;margin:0 0 14px}
+.sect h2{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0}
+.sect span{color:#7d6f86;font-size:13px;margin-left:12px}
+@media (max-width:760px){.sect{display:block}.sect span{display:block;margin:4px 0 0}}
+.modes{display:-webkit-box;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -8px 30px}
+.mode{-webkit-box-flex:1;flex:1 1 300px;margin:8px;background:var(--pan);color:var(--tx);border:1px solid var(--line);border-radius:18px;padding:0;text-align:left;overflow:hidden;cursor:pointer;-webkit-transition:transform .18s,border-color .18s,box-shadow .18s;transition:transform .18s,border-color .18s,box-shadow .18s}
+.mode:hover,.mode:focus{-webkit-transform:translateY(-3px);transform:translateY(-3px);border-color:var(--red);box-shadow:0 18px 44px rgba(0,0,0,.45),0 0 0 1px rgba(215,47,76,.35);outline:none}
+.mode .ill{height:160px;background:linear-gradient(180deg,#241a2b,#1b1420);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.mode .tx{padding:18px 20px 20px}.mode b{display:block;font-size:19px;font-weight:700;margin-bottom:6px}.mode .d{color:var(--mut);font-size:14.5px;line-height:1.5}
+.mode .go{display:inline-block;margin-top:14px;color:#ff8fab;font-weight:600;font-size:14px}
 .ill i{position:absolute;display:block}
-.ill .scr{left:22%;right:22%;top:20px;bottom:0;background:#fff;border-radius:8px 8px 0 0;box-shadow:0 4px 18px rgba(0,0,0,.12)}
-.ill .mapb{background:-webkit-linear-gradient(135deg,#bcd3a8,#8fb37a 55%,#6f9b63);background:linear-gradient(135deg,#bcd3a8,#8fb37a 55%,#6f9b63)}
-.ill .acc{background:var(--acc)}
-.ill .ph{left:50%;margin-left:-38px;width:76px;top:14px;height:150px;border-radius:14px;background:#1d1822;padding:5px}
-#share .foot{margin-top:26px;color:#8a8090;font-size:13px}
-/* vues */
-#vw{position:fixed;top:0;left:0;right:0;bottom:0;display:none;background:#1d1822}
-#vbar{position:absolute;top:0;left:0;right:0;height:46px;background:#1d1822;color:#fff;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;padding:0 8px;z-index:3}
-#vbar .nm{font-weight:700;font-size:14px;margin:0 12px 0 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:30%}
-#vbar .seg{-webkit-box-flex:1;flex:1;text-align:center;white-space:nowrap;overflow-x:auto}
-#vbar button{padding:7px 12px;font-size:13.5px;background:transparent;border:1px solid #4a3f52;margin:0 3px;border-radius:999px}
-#vbar .seg button.on{background:var(--acc);border-color:var(--acc)}
-#vbody{position:absolute;top:46px;left:0;right:0;bottom:0;overflow:auto;-webkit-overflow-scrolling:touch;background:#f4f2ee}
+.ill .scr{left:20%;right:20%;top:24px;bottom:0;background:#fbfaf5;border-radius:9px 9px 0 0;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.ill .mapb{background:linear-gradient(135deg,#bcd3a8,#8fb37a 55%,#6f9b63)}
+.ill .pin{width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px rgba(255,255,255,.85)}
+.ill .ph{left:50%;margin-left:-40px;width:80px;top:16px;height:160px;border-radius:16px;background:#0b070d;padding:5px;box-shadow:0 0 0 1px #3a2c44,0 12px 30px rgba(0,0,0,.5)}
+.adm{display:-webkit-box;display:flex;background:linear-gradient(135deg,#2a1020,#1d1622 60%);border:1px solid #4a2236;border-radius:20px;overflow:hidden;margin:0 0 30px}
+.adm .txt{-webkit-box-flex:1;flex:1;padding:28px 30px}
+.adm h3{font-size:26px;margin:6px 0 10px;font-weight:700;letter-spacing:-.01em}
+.adm p{color:#cbbdd3;margin:0 0 16px;line-height:1.55;max-width:560px}
+.adm ul{list-style:none;padding:0;margin:0 0 22px}
+.adm li{padding:6px 0 6px 28px;position:relative;color:var(--tx);font-size:15px}
+.adm li:before{content:"";position:absolute;left:4px;top:11px;width:12px;height:7px;border-left:2px solid var(--pink);border-bottom:2px solid var(--pink);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+.adm .ill2{width:42%;max-width:440px;position:relative;min-height:260px;background:#150e19;border-left:1px solid #3b2030}
+.ill2 i{position:absolute;display:block;border-radius:6px}
+.steps{display:-webkit-box;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -8px}
+.step{-webkit-box-flex:1;flex:1 1 220px;margin:8px;padding:16px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(29,22,34,.6)}
+.step b{display:block;font-size:15px;margin:6px 0 4px}.step span{color:var(--mut);font-size:14px;line-height:1.5}
+.step .n{display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;background:var(--red);color:#fff;font-weight:700;font-size:13px}
+.shfoot{border-top:1px solid var(--line);margin-top:36px;padding-top:18px;color:#7d6f86;font-size:13px;display:-webkit-box;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.shfoot .sp{-webkit-box-flex:1;flex:1}
+.shfoot a{color:#ff8fab;text-decoration:none}
+/* ---------- vues ---------- */
+#vw{position:fixed;top:0;left:0;right:0;bottom:0;display:none;background:var(--ink);color:var(--tx)}
+#vbar{position:absolute;top:0;left:0;right:0;height:56px;background:#0b030f;border-bottom:1px solid var(--line);display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;padding:0 12px;z-index:3}
+#vbar .ib{width:38px;height:38px;padding:0;border:1px solid var(--line);background:transparent;color:var(--tx);border-radius:10px;font-size:16px;cursor:pointer;-ms-flex-negative:0;flex-shrink:0}
+#vbar .ib:hover{border-color:#5a4566;background:#1f1725}
+#vbar .alogo{height:17px;margin:0 12px 0 14px}
+#vbar .sep{width:1px;height:26px;background:var(--line);margin-right:12px}
+#vbar .cl{height:32px;width:auto;border-radius:7px;background:#fff;padding:2px;margin-right:10px}
+#vbar .nm{font-weight:700;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
+#vbar .seg{-webkit-box-flex:1;flex:1;text-align:center;white-space:nowrap;overflow-x:auto;padding:0 10px}
+#vbar .seg span{display:inline-block;background:#1b1420;border:1px solid var(--line);border-radius:12px;padding:3px}
+#vbar .seg button{padding:7px 14px;font-size:13.5px;font-weight:600;background:transparent;color:var(--mut);border:0;border-radius:9px;margin:0;cursor:pointer}
+#vbar .seg button:hover{color:var(--tx)}
+#vbar .seg button.on{background:var(--red);color:#fff}
+#vbar .ib+.ib{margin-left:6px}
+#vbody{position:absolute;top:56px;left:0;right:0;bottom:0;overflow:auto;-webkit-overflow-scrolling:touch;background:var(--ink)}
 #vbody iframe{border:0;display:block}
-/* maquette « site de la mairie » */
-.ws{font-family:Georgia,'Times New Roman',serif;color:#2a2a2a;background:#f4f2ee;min-height:100%}
-.ws .chrome{background:#dedad4;padding:8px 14px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;font:13px -apple-system,'Segoe UI',sans-serif;color:#555}
+#toast{position:fixed;right:18px;top:68px;background:#173a2b;color:#bff3d8;border:1px solid #2b6b4e;padding:11px 18px;border-radius:12px;font-weight:600;font-size:14px;box-shadow:0 14px 40px rgba(0,0,0,.45);display:none;z-index:9}
+/* maquette « site de la mairie » (aux couleurs de la commune, pas de la charte ANTEMIC) */
+.wsw{padding:22px;min-height:100%;background:var(--ink)}
+.ws{font-family:Georgia,'Times New Roman',serif;color:#2a2a2a;background:#f4f2ee;border-radius:12px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.5);max-width:1240px;margin:0 auto}
+.ws .chrome{background:#dedad4;padding:9px 14px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;font:13px Inter,-apple-system,'Segoe UI',sans-serif;color:#555}
 .ws .chrome i{width:11px;height:11px;border-radius:50%;background:#c9c4bc;display:inline-block;margin-right:6px}
 .ws .chrome span{-webkit-box-flex:1;flex:1;background:#fff;border-radius:6px;padding:5px 10px;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ws header{background:#fff;border-bottom:4px solid var(--acc);padding:16px 40px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}
 .ws header img{height:46px;margin-right:16px}.ws header b{font-size:23px;margin-right:32px}
-.ws nav{font:14px -apple-system,'Segoe UI',sans-serif;color:#555}.ws nav span{margin-right:22px}
+.ws nav{font:14px Inter,-apple-system,'Segoe UI',sans-serif;color:#555}.ws nav span{margin-right:22px}
 .ws main{max-width:1100px;margin:0 auto;padding:28px 40px 50px}
-.ws .crumbs{font:12px -apple-system,'Segoe UI',sans-serif;color:#888;margin-bottom:10px}
+.ws .crumbs{font:12px Inter,-apple-system,'Segoe UI',sans-serif;color:#888;margin-bottom:10px}
 .ws h2{font-size:32px;margin:0 0 10px}
-.ws p.lead{font:16px/1.6 -apple-system,'Segoe UI',sans-serif;color:#555;max-width:760px;margin:0 0 20px}
+.ws p.lead{font:16px/1.6 Inter,-apple-system,'Segoe UI',sans-serif;color:#555;max-width:760px;margin:0 0 20px}
 .ws .bars i{display:block;height:13px;background:#e6e2dc;border-radius:4px;margin:10px 0}
-.ws footer{background:#2f2f2f;color:#bbb;font:13px -apple-system,'Segoe UI',sans-serif;padding:28px 40px}
-.ws .note{font:12.5px -apple-system,'Segoe UI',sans-serif;color:#7c7480;background:#fff;border:1px dashed #d8d2ca;border-radius:10px;padding:10px 14px;margin-top:22px}
+.ws footer{background:#2f2f2f;color:#bbb;font:13px Inter,-apple-system,'Segoe UI',sans-serif;padding:28px 40px}
+.wsnote{max-width:1240px;margin:14px auto 0;color:var(--mut);font-size:13.5px;line-height:1.5;text-align:center}
 /* smartphone */
-.mob{min-height:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;padding:18px;background:#2a2230;color:#f1edf3}
+.mob{min-height:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;padding:18px;background:radial-gradient(closest-side,rgba(215,47,76,.12),rgba(15,4,20,0)) center/900px 900px no-repeat,var(--ink)}
 .phone{position:relative;width:390px;height:844px;border-radius:54px;padding:14px;background:#0b070d;box-shadow:0 0 0 2px #3a2c44,0 30px 80px rgba(0,0,0,.6);-webkit-transform-origin:center;transform-origin:center;-ms-flex-negative:0;flex-shrink:0}
 .phone iframe{width:100%;height:100%;border-radius:42px;background:#e9eee5}
 .notch{position:absolute;top:20px;left:50%;margin-left:-60px;width:120px;height:30px;border-radius:20px;background:#0b070d;z-index:2}
-.side{max-width:280px;margin-left:44px}
-.side h3{margin:0 0 8px;font-size:20px}.side p{color:#cfc4d6;font-size:14.5px;margin:0 0 14px}
-.side .qr{background:#fff;border-radius:14px;padding:12px;display:inline-block;line-height:0}
-.side .qr svg,.side .qr img{width:180px;height:180px}
-.side button{margin-top:14px;background:#3a2f42;font-size:14px}
-@media (max-width:760px){.ws header{padding:12px 16px;-ms-flex-wrap:wrap;flex-wrap:wrap}.ws nav{display:none}.ws main{padding:18px 16px 30px}.ws h2{font-size:24px}#vbar .nm{display:none}}
+.side{max-width:300px;margin-left:48px}
+.side h3{margin:8px 0 8px;font-size:22px;font-weight:700}.side p{color:#cbbdd3;font-size:14.5px;line-height:1.55;margin:0 0 16px}
+.side .qr{background:#fff;border-radius:16px;padding:14px;display:inline-block;line-height:0;box-shadow:0 14px 40px rgba(0,0,0,.4)}
+.side .qr svg,.side .qr img{width:176px;height:176px}
+.side .row{margin-top:16px}
+/* espace commune */
+.admw{position:absolute;top:0;left:0;right:0;bottom:0;display:-webkit-box;display:flex}
+.admw .a{-webkit-box-flex:1;flex:1 1 58%;min-width:0;position:relative;display:-webkit-box;display:flex;-webkit-box-orient:vertical;flex-direction:column}
+.admw .info{background:#2a1020;border-bottom:1px solid #4a2236;color:#f3d6df;font-size:13.5px;padding:9px 16px;line-height:1.45}
+.admw .info b{color:#fff}
+.admw .a iframe{-webkit-box-flex:1;flex:1;width:100%;min-height:0}
+.admw .m{-webkit-box-flex:1;flex:1 1 42%;min-width:0;max-width:720px;border-left:1px solid var(--line);background:var(--ink2);display:-webkit-box;display:flex;-webkit-box-orient:vertical;flex-direction:column}
+.admw .mh{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
+.admw .mh b{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);-webkit-box-flex:1;flex:1}
+.admw .mh .st{font-size:12.5px;color:#7fe0b0;margin-right:10px;opacity:0;-webkit-transition:opacity .3s;transition:opacity .3s}
+.admw .mh .st.on{opacity:1}
+.admw .m .fr{-webkit-box-flex:1;flex:1;position:relative}
+.admw .m iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+.admw .tg{display:none}
+@media (max-width:1000px){.admw .m{display:none;position:absolute;top:0;left:0;right:0;bottom:0;max-width:none;z-index:2}.admw.map .m{display:-webkit-box;display:flex}.admw .tg{display:inline-block}}
+@media (max-width:760px){.hero{display:block}.clogo{width:76px;height:76px;margin:0 0 16px}.hero h1{font-size:32px}.adm{display:block}.adm .ill2{display:none}.adm .txt{padding:22px}.shtop .val{display:none}.ws header{padding:12px 16px;-ms-flex-wrap:wrap;flex-wrap:wrap}.ws nav{display:none}.ws main{padding:18px 16px 30px}.ws h2{font-size:24px}.wsw{padding:0}.ws{border-radius:0}#vbar .alogo,#vbar .sep,#vbar .nm,#vbar .cl{display:none}#vbar .seg button{padding:7px 10px}}
 #serr{display:none;max-width:560px;margin:80px auto;padding:0 22px;color:#fff}#serr p{color:#cbb9d3}
 </style>
 </head>
@@ -122,14 +183,25 @@ button[disabled]{opacity:.4}
   <div id="list" style="display:none"></div>
   <p class="hint" id="cap"></p>
 </div>
-<div id="share"><div class="in">
-  <div class="hd"><img id="sLogo" alt="" style="display:none"><div><div class="brand" style="font-weight:800;letter-spacing:.12em;font-size:12px">ANTEMIC · CARTE 3D INTERACTIVE</div><h1 id="sName"></h1></div></div>
-  <p class="sub">Voici la carte 3D préparée pour votre commune. Choisissez comment la découvrir : vous pourrez passer d’un affichage à l’autre à tout moment.</p>
-  <div class="modes" id="sModes"></div>
-  <p class="foot" id="sFoot"></p>
-</div></div>
-<div id="serr"><div style="font-weight:800;letter-spacing:.12em;font-size:12px;color:#d72f4c">ANTEMIC · CARTES 3D</div><h1 style="font-size:26px">Ce lien n’est plus valable</h1><p id="serrT">Le lien de démonstration a expiré ou a été retiré. Contactez ANTEMIC pour en recevoir un nouveau : contact@antemic.fr</p></div>
-<div id="vw"><div id="vbar"><button type="button" id="vHome" title="Choisir l’affichage">◀</button><span class="nm" id="vNm"></span><span class="seg" id="vSeg"></span><button type="button" id="vFs" title="Plein écran">⤢</button></div><div id="vbody"></div></div>
+<div id="share" class="sh">
+  <div class="shtop"><img class="alogo" src="../admin/logo-antemic.svg" alt="ANTEMIC"><span class="sp"></span><span class="val" id="sVal"></span><a class="btng" id="sMail" href="mailto:contact@antemic.fr">Nous contacter</a></div>
+  <div class="shin">
+    <div class="hero"><div class="clogo" id="sLogoBox" style="display:none"><img id="sLogo" alt=""></div><div><div class="eyebrow">Carte 3D interactive · démonstration</div><h1 id="sName"></h1><p>Voici la carte préparée pour votre commune. Découvrez son rendu dans chaque format de diffusion, puis essayez l’espace commune : c’est là que vous mettrez vous-même à jour les lieux.</p></div></div>
+    <div class="sect"><h2>Voir le rendu</h2><span>Passez d’un format à l’autre à tout moment.</span></div>
+    <div class="modes" id="sModes"></div>
+    <div id="sAdmin"></div>
+    <div class="sect"><h2>Comment ça marche</h2></div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><b>ANTEMIC crée la carte</b><span>Relief, bâtiments, lieux, photos et textes de départ, aux couleurs de la commune.</span></div>
+      <div class="step"><span class="n">2</span><b>Vous l’intégrez</b><span>Une ligne de code dans votre site, un lien, un QR code sur vos supports.</span></div>
+      <div class="step"><span class="n">3</span><b>Vous la faites vivre</b><span>Titres, textes, photos et liens se modifient dans l’espace commune, sans compétence technique.</span></div>
+    </div>
+    <div class="shfoot"><span id="sFoot"></span><span class="sp"></span><span>ANTEMIC · cartes 3D pour les communes · <a href="mailto:contact@antemic.fr">contact@antemic.fr</a></span></div>
+  </div>
+</div>
+<div id="serr" class="sh"><img src="../admin/logo-antemic.svg" alt="ANTEMIC" style="height:20px;margin-bottom:22px"><h1 style="font-size:26px">Ce lien n’est plus valable</h1><p id="serrT">Le lien de démonstration a expiré ou a été retiré. Contactez ANTEMIC pour en recevoir un nouveau : contact@antemic.fr</p></div>
+<div id="vw" class="sh"><div id="vbar"><button type="button" class="ib" id="vHome" title="Accueil de la démonstration">◀</button><img class="alogo" src="../admin/logo-antemic.svg" alt="ANTEMIC"><span class="sep"></span><img class="cl" id="vCl" alt="" style="display:none"><span class="nm" id="vNm"></span><span class="seg"><span id="vSeg"></span></span><button type="button" class="ib" id="vRe" title="Recharger la carte">↻</button><button type="button" class="ib" id="vFs" title="Plein écran">⤢</button></div><div id="vbody"></div></div>
+<div id="toast"></div>
 <div id="visit"><div class="bar"><img id="vLogo" alt="" style="display:none"><b id="vName"></b><button type="button" id="vBack">✕ Fermer</button></div><div id="tabs"></div><div id="stage"><div id="frame"></div><div id="pop"></div></div></div>
 <script src="qrcode.js"></script>
 <script>
@@ -233,16 +305,20 @@ button[disabled]{opacity:.4}
   var QS = (function () { var o = {}; location.search.replace(/^\?/, '').split('&').forEach(function (kv) { if (!kv) return; var i = kv.indexOf('='); o[decodeURIComponent(i < 0 ? kv : kv.slice(0, i))] = i < 0 ? '' : decodeURIComponent(kv.slice(i + 1).replace(/\+/g, ' ')); }); return o; })();
   var SH = null;
   var MODES = {
-    page: { t: 'Pleine page', d: 'La carte seule, en plein écran, telle qu’elle s’ouvre depuis un lien ou un QR code.', ill: '<i class="scr mapb" style="left:12%;right:12%"></i><i class="acc" style="left:12%;right:12%;top:20px;height:10px;border-radius:8px 8px 0 0;opacity:.85"></i>' },
-    site: { t: 'Intégrée à votre site', d: 'Un exemple de page du site de la mairie, avec la carte insérée dans la page.', ill: '<i class="scr"></i><i class="acc" style="left:22%;right:22%;top:20px;height:12px;border-radius:8px 8px 0 0"></i><i style="left:27%;width:30%;top:42px;height:8px;background:#d9d3cc;border-radius:3px"></i><i class="mapb" style="left:27%;right:27%;top:58px;height:62px;border-radius:5px"></i><i style="left:27%;width:40%;top:128px;height:6px;background:#e6e1db;border-radius:3px"></i>' },
-    mobile: { t: 'Sur smartphone', d: 'La carte dans un téléphone, et un QR code pour l’essayer sur le vôtre.', ill: '<i class="ph"><i class="mapb" style="position:static;width:100%;height:100%;border-radius:10px"></i></i>' }
+    page: { t: 'Pleine page', s: 'Page', d: 'La carte seule, en plein écran, telle qu’elle s’ouvre depuis un lien ou un QR code.', ill: '<i class="scr mapb" style="left:10%;right:10%"></i><i class="pin" style="left:38%;top:70px"></i><i class="pin" style="left:58%;top:96px"></i><i class="pin" style="left:70%;top:62px"></i>' },
+    site: { t: 'Intégrée à votre site', s: 'Site web', d: 'Une page type du site de la mairie, avec la carte insérée dans la page.', ill: '<i class="scr"></i><i style="left:20%;right:20%;top:24px;height:12px;border-radius:9px 9px 0 0;background:var(--acc)"></i><i style="left:25%;width:30%;top:46px;height:8px;background:#d9d3cc;border-radius:3px"></i><i class="mapb" style="left:25%;right:25%;top:62px;height:66px;border-radius:6px"></i><i class="pin" style="left:44%;top:86px"></i><i style="left:25%;width:42%;top:138px;height:6px;background:#e6e1db;border-radius:3px"></i>' },
+    mobile: { t: 'Sur smartphone', s: 'Mobile', d: 'La carte dans un téléphone, et un QR code pour l’essayer sur le vôtre.', ill: '<i class="ph"><i class="mapb" style="position:static;width:100%;height:100%;border-radius:12px"></i></i><i class="pin" style="left:50%;top:80px"></i>' },
+    admin: { t: 'Espace commune', s: 'Gérer' }
   };
   var mairie = function (n) { return 'Mairie ' + (/^[aeiouyhâéèêîôûAEIOUYHÂÉÈÊÎÔÛ]/.test(n) ? 'd’' : 'de ') + n; };
-  var SHORT = { page: 'Page', site: 'Site web', mobile: 'Mobile' };
   var small = function () { return window.matchMedia && matchMedia('(max-width: 760px)').matches; };
   var track = function (m) { try { fetch(SB.url + '/rest/v1/rpc/demo_share_view', { method: 'POST', headers: hdr(false), body: JSON.stringify({ k: QS.k, m: m }) }); } catch (e) {} };
   var asset = function (f) { return !f ? '' : /^(https?:|data:)/.test(f) ? f : (SH.files[f.replace(/^\.\//, '')] || ''); };
   var viewerSrc = function () { return '../?c=' + encodeURIComponent(SH.slug) + '&files=1'; };
+  var fmtDay = function (d) { return new Date(d).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }); };
+  var toastT = null;
+  function toast(t) { var e = $('toast'); e.textContent = t; e.style.display = 'block'; clearTimeout(toastT); toastT = setTimeout(function () { e.style.display = 'none'; }, 3200); }
+  function fail(title, text) { $('serr').getElementsByTagName('h1')[0].textContent = title; $('serrT').textContent = text; $('serr').style.display = 'block'; }
 
   function shareStart() {
     $('app').style.display = 'none';
@@ -250,39 +326,54 @@ button[disabled]{opacity:.4}
       SB = j; return fetch(SB.url + '/rest/v1/rpc/demo_share_open', { method: 'POST', headers: hdr(false), body: JSON.stringify({ k: QS.k }) }).then(json);
     }).then(function (r) {
       if (!r || !r.slug) { $('serr').style.display = 'block'; return; }
-      SH = r; SH.files = r.files || {}; SH.theme = r.theme || {}; SH.modes = (r.modes && r.modes.length) ? r.modes : ['page', 'site', 'mobile'];
-      try { sessionStorage.setItem('antemic-files-' + r.slug, JSON.stringify(SH.files)); } catch (e) {}
+      SH = r; SH.files = r.files || {}; SH.theme = r.theme || {};
+      SH.modes = ((r.modes && r.modes.length) ? r.modes : ['page', 'site', 'mobile']).filter(function (m) { return MODES[m] && (m !== 'admin' || r.admin_code); });
+      try { sessionStorage.setItem('antemic-files-' + r.slug, JSON.stringify(SH.files)); if (r.admin_code) sessionStorage.setItem('antemic-demo-code-' + r.slug, r.admin_code); } catch (e) {}
       document.documentElement.style.setProperty('--acc', SH.theme.primary || '#d72f4c');
-      document.title = r.name + ' — carte 3D interactive';
+      document.title = r.name + ' — carte 3D interactive · ANTEMIC';
+      $('sMail').href = 'mailto:contact@antemic.fr?subject=' + encodeURIComponent('Carte 3D — ' + r.name);
       if (!modern) { // appareil ancien : seule la visite en images est possible
-        if (!SH.files['visite.json']) { $('serrT').textContent = 'Cet appareil est trop ancien pour afficher la carte 3D. Ouvrez ce lien sur un ordinateur, une tablette ou un smartphone récent.'; $('serr').getElementsByTagName('h1')[0].textContent = 'Appareil non compatible'; $('serr').style.display = 'block'; return; }
+        if (!SH.files['visite.json']) { fail('Appareil non compatible', 'Cet appareil est trop ancien pour afficher la carte 3D. Ouvrez ce lien sur un ordinateur, une tablette ou un smartphone récent.'); return; }
         track('images'); $('vBack').style.display = 'none';
         return fetch(SH.files['visite.json']).then(json).then(function (v) { visit(v, SH.files); });
       }
+      var lg = asset(SH.theme.logo); if (lg) { $('sLogo').src = lg; $('sLogoBox').style.display = ''; $('vCl').src = lg; $('vCl').style.display = ''; }
       var want = QS.v && SH.modes.indexOf(QS.v) >= 0 ? QS.v : (SH.modes.length === 1 ? SH.modes[0] : null);
-      if (want) openMode(want); else chooser();
-    }).catch(function (er) { $('serrT').textContent = 'Ouverture impossible (' + er.message + '). Réessayez dans un instant ou contactez ANTEMIC : contact@antemic.fr'; $('serr').getElementsByTagName('h1')[0].textContent = 'Démonstration indisponible'; $('serr').style.display = 'block'; });
+      if (want) openMode(want); else home();
+    }).catch(function (er) { fail('Démonstration indisponible', 'Ouverture impossible (' + er.message + '). Réessayez dans un instant ou contactez ANTEMIC : contact@antemic.fr'); });
   }
 
-  function chooser() {
-    SH.mode = null; $('vw').style.display = 'none'; $('vbody').innerHTML = ''; $('share').style.display = 'block';
-    $('sName').textContent = SH.name;
-    var lg = asset(SH.theme.logo); if (lg) { $('sLogo').src = lg; $('sLogo').style.display = ''; }
+  function home() {
+    SH.mode = null; $('vw').style.display = 'none'; $('vbody').innerHTML = ''; $('share').style.display = 'block'; window.scrollTo(0, 0);
+    $('sName').textContent = SH.name + ' en 3D';
+    $('sVal').textContent = 'Démonstration privée · jusqu’au ' + fmtDay(SH.expires_at);
+    $('sFoot').textContent = 'Lien personnel, valable jusqu’au ' + fmtDay(SH.expires_at) + '. Lieux et contenus de démonstration, ajustés avec vous avant la mise en ligne.';
     var box = $('sModes'); box.innerHTML = '';
     SH.modes.forEach(function (m) {
-      var M = MODES[m]; if (!M) return; var b = document.createElement('button'); b.type = 'button'; b.className = 'mode';
-      b.innerHTML = '<div class="ill">' + M.ill + '</div><div class="tx"><b>' + esc(M.t) + '</b><span>' + esc(M.d) + '</span><br><span class="go">Ouvrir →</span></div>';
+      if (m === 'admin') return; var M = MODES[m]; var b = document.createElement('button'); b.type = 'button'; b.className = 'mode';
+      b.innerHTML = '<div class="ill">' + M.ill + '</div><div class="tx"><b>' + esc(M.t) + '</b><span class="d">' + esc(M.d) + '</span><br><span class="go">Voir →</span></div>';
       b.onclick = function () { openMode(m); }; box.appendChild(b);
     });
-    $('sFoot').textContent = 'Démonstration privée, valable jusqu’au ' + new Date(SH.expires_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) + '. Contenus et lieux de démonstration, ajustés avec vous avant la mise en ligne.';
+    var ad = $('sAdmin'); ad.innerHTML = '';
+    if (SH.modes.indexOf('admin') >= 0) {
+      ad.innerHTML = '<div class="sect"><h2>Administrer votre carte</h2><span>Votre espace de gestion, tel que vous l’aurez.</span></div>'
+        + '<div class="adm"><div class="txt"><div class="eyebrow">Espace commune</div><h3>Modifiez vos lieux, la carte suit</h3>'
+        + '<p>Essayez librement : chaque modification est enregistrée sur cette carte de démonstration, et vous la voyez aussitôt à côté.</p>'
+        + '<ul><li>Titres et textes des vignettes</li><li>Jusqu’à 6 photos par lieu, avec leur crédit</li><li>Bouton et lien vers vos pages (agenda, réservation…)</li><li>Réglages d’affichage : heure du jour, soleil, ambiance sonore</li></ul>'
+        + '<button type="button" class="btnr" id="sAdmGo">Ouvrir l’espace commune</button></div>'
+        + '<div class="ill2"><i style="left:22px;top:24px;width:34%;height:24px;background:#2b2133"></i><i style="left:22px;top:58px;width:34%;height:40px;background:#251c2c;border:1px solid #d72f4c"></i><i style="left:22px;top:106px;width:34%;height:40px;background:#251c2c"></i><i style="left:22px;top:154px;width:34%;height:40px;background:#251c2c"></i><i style="left:22px;top:202px;width:34%;height:40px;background:#251c2c"></i>'
+        + '<i style="left:46%;top:24px;width:44%;height:16px;background:#3a2c44"></i><i class="mapb" style="left:46%;top:50px;width:44%;height:82px;background:linear-gradient(135deg,#bcd3a8,#6f9b63)"></i><i style="left:46%;top:142px;width:44%;height:9px;background:#3a2c44"></i><i style="left:46%;top:158px;width:36%;height:9px;background:#3a2c44"></i><i style="left:46%;top:186px;width:22%;height:28px;background:#d72f4c;border-radius:8px"></i></div></div>';
+      $('sAdmGo').onclick = function () { openMode('admin'); };
+    }
   }
 
-  function frame(w, h, title) { var f = document.createElement('iframe'); f.src = viewerSrc(); f.title = title || 'Carte 3D interactive'; f.setAttribute('allow', 'geolocation; fullscreen'); f.style.width = w; f.style.height = h; return f; }
+  function frame(w, h, title) { var f = document.createElement('iframe'); f.src = viewerSrc(); f.title = title || 'Carte 3D interactive'; f.setAttribute('allow', 'geolocation; fullscreen'); f.style.width = w; f.style.height = h; f.className = 'viewer'; return f; }
+  function reloadMaps() { var l = $('vbody').getElementsByTagName('iframe'); for (var i = 0; i < l.length; i++) if (l[i].className === 'viewer') l[i].src = viewerSrc(); }
 
   function openMode(m) {
     SH.mode = m; track(m); $('share').style.display = 'none'; $('vw').style.display = 'block'; $('vNm').textContent = SH.name;
     var seg = $('vSeg'); seg.innerHTML = '';
-    if (SH.modes.length > 1) SH.modes.forEach(function (k) { var b = document.createElement('button'); b.type = 'button'; b.textContent = small() ? SHORT[k] : MODES[k].t; if (k === m) b.className = 'on'; b.onclick = function () { if (k !== SH.mode) openMode(k); }; seg.appendChild(b); });
+    if (SH.modes.length > 1) SH.modes.forEach(function (k) { var b = document.createElement('button'); b.type = 'button'; b.textContent = small() ? MODES[k].s : MODES[k].t; if (k === m) b.className = 'on'; b.onclick = function () { if (k !== SH.mode) openMode(k); }; seg.appendChild(b); });
     $('vHome').style.display = SH.modes.length > 1 ? '' : 'none';
     var body = $('vbody'); body.innerHTML = ''; body.style.overflow = 'auto';
     $('vFs').style.display = m === 'page' && (document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen) ? '' : 'none';
@@ -290,16 +381,27 @@ button[disabled]{opacity:.4}
     if (m === 'site') {
       var site = (SH.site || 'https://www.mairie-exemple.fr').replace(/\/+$/, '');
       var lg = asset(SH.theme.logo);
-      var w = document.createElement('div'); w.className = 'ws';
-      w.innerHTML = '<div class="chrome"><i></i><i></i><i></i><span>' + esc(site) + '/decouvrir/plan-interactif</span></div>'
+      var w = document.createElement('div'); w.className = 'wsw';
+      w.innerHTML = '<div class="ws"><div class="chrome"><i></i><i></i><i></i><span>' + esc(site) + '/decouvrir/plan-interactif</span></div>'
         + '<header>' + (lg ? '<img alt="" src="' + esc(lg) + '">' : '') + '<b>' + esc(mairie(SH.name)) + '</b><nav><span>Ma commune</span><span>Démarches</span><span>Vie locale</span><span>Découvrir</span><span>Contact</span></nav></header>'
         + '<main><div class="crumbs">Accueil › Découvrir › Plan interactif</div><h2>Découvrez ' + esc(SH.name) + ' en 3D</h2>'
-        + '<p class="lead">Parcourez la commune, ses lieux, ses services et ses balades depuis cette page. La carte s’insère dans n’importe quelle page du site existant.</p>'
-        + '<div id="wsMap"></div><div class="bars"><i style="width:90%;margin-top:28px"></i><i style="width:75%"></i><i style="width:82%"></i></div>'
-        + '<div class="note">Exemple de mise en page : votre site réel n’est pas modifié. L’intégration se fait par une seule ligne de code (iframe) à coller dans la page, par votre prestataire web ou par nous.</div></main>'
-        + '<footer>' + esc(mairie(SH.name)) + ' · ' + esc(site.replace(/^https?:\/\//, '')) + '</footer>';
+        + '<p class="lead">Parcourez la commune, ses lieux, ses services et ses balades depuis cette page.</p>'
+        + '<div id="wsMap"></div><div class="bars"><i style="width:90%;margin-top:28px"></i><i style="width:75%"></i><i style="width:82%"></i></div></main>'
+        + '<footer>' + esc(mairie(SH.name)) + ' · ' + esc(site.replace(/^https?:\/\//, '')) + '</footer></div>'
+        + '<p class="wsnote">Exemple de mise en page : votre site réel n’est pas modifié. L’intégration tient en une ligne de code (iframe) à coller dans la page, par votre prestataire web ou par ANTEMIC.</p>';
       body.appendChild(w);
       var f = frame('100%', '680px'); f.style.borderRadius = '12px'; f.style.maxHeight = '80vh'; f.style.boxShadow = '0 6px 24px rgba(0,0,0,.12)'; $('wsMap').appendChild(f);
+      return;
+    }
+    if (m === 'admin') {
+      body.style.overflow = 'hidden';
+      var a = document.createElement('div'); a.className = 'admw'; a.id = 'admw';
+      a.innerHTML = '<div class="a"><div class="info"><b>Espace commune de démonstration.</b> Modifiez un lieu puis « Enregistrer » : la carte se met à jour. La position des lieux et les bâtiments 3D sont gérés par ANTEMIC. <button type="button" class="btng tg" id="aTg" style="padding:4px 10px;font-size:13px;margin-left:6px">Voir la carte</button></div></div>'
+        + '<div class="m"><div class="mh"><b>Aperçu de la carte</b><span class="st" id="aSt">✓ Mise à jour</span><button type="button" class="btng tg" id="aBack" style="padding:5px 10px;font-size:13px">◀ Retour à l’espace</button></div><div class="fr" id="aFr"></div></div>';
+      body.appendChild(a);
+      var ad = document.createElement('iframe'); ad.src = '../admin/?demo=' + encodeURIComponent(SH.slug); ad.title = 'Espace commune'; ad.className = 'admin'; a.firstChild.appendChild(ad);
+      $('aFr').appendChild(frame('100%', '100%'));
+      $('aTg').onclick = function () { a.className = 'admw map'; }; $('aBack').onclick = function () { a.className = 'admw'; };
       return;
     }
     // smartphone sur ordinateur : cadre de téléphone + QR code vers le même lien en mode smartphone
@@ -308,8 +410,8 @@ button[disabled]{opacity:.4}
     var link = location.href.replace(/[?#].*$/, '') + '?k=' + encodeURIComponent(QS.k) + '&v=mobile';
     var side = document.createElement('div'); side.className = 'side';
     var qr = ''; try { if (window.qrcode) { var q = qrcode(0, 'M'); q.addData(link); q.make(); qr = q.createSvgTag({ cellSize: 4, margin: 0 }); } } catch (e) { qr = ''; }
-    side.innerHTML = '<h3>Essayez-la sur votre téléphone</h3><p>' + (qr ? 'Scannez ce QR code avec l’appareil photo de votre smartphone : la carte s’ouvre directement, sans application à installer.' : 'Ouvrez ce lien sur votre smartphone : la carte s’ouvre directement, sans application à installer.') + '</p>'
-      + (qr ? '<div class="qr">' + qr + '</div>' : '') + '<br><button type="button" id="cpy">Copier le lien</button> <button type="button" id="rot">Paysage</button>';
+    side.innerHTML = '<div class="eyebrow">Sur votre téléphone</div><h3>Essayez-la en vrai</h3><p>' + (qr ? 'Scannez ce QR code avec l’appareil photo de votre smartphone : la carte s’ouvre directement, sans application à installer.' : 'Ouvrez ce lien sur votre smartphone : la carte s’ouvre directement, sans application à installer.') + '</p>'
+      + (qr ? '<div class="qr">' + qr + '</div>' : '') + '<div class="row"><button type="button" class="btng" id="cpy">Copier le lien</button> <button type="button" class="btng" id="rot">Paysage</button></div>';
     mob.appendChild(ph); mob.appendChild(side); body.appendChild(mob);
     $('cpy').onclick = function () { var b = this; try { navigator.clipboard.writeText(link).then(function () { b.textContent = 'Lien copié ✓'; }); } catch (e) { prompt('Lien à ouvrir sur le téléphone :', link); } };
     $('rot').onclick = function () { var l = ph.style.width === '844px'; ph.style.width = l ? '390px' : '844px'; ph.style.height = l ? '844px' : '390px'; this.textContent = l ? 'Paysage' : 'Portrait'; fitPhone(); };
@@ -317,12 +419,19 @@ button[disabled]{opacity:.4}
   }
   function fitPhone() {
     var ph = $('ph'); if (!ph) return; ph.style.transform = ''; ph.style.margin = '';
-    var b = $('vbody'), side = ph.nextSibling, wide = b.clientWidth > 900, sw = wide ? 340 : 0;
+    var b = $('vbody'), side = ph.nextSibling, wide = b.clientWidth > 900, sw = wide ? 360 : 0;
     if (side) side.style.display = wide ? '' : 'none';
     var w = ph.offsetWidth, h = ph.offsetHeight, k = Math.min(1, (b.clientHeight - 36) / h, (b.clientWidth - 36 - sw) / w);
     ph.style.transform = 'scale(' + k + ')'; ph.style.margin = (-(1 - k) * h / 2) + 'px ' + (-(1 - k) * w / 2) + 'px';
   }
-  $('vHome').onclick = chooser;
+  // enregistrement dans l'espace commune (iframe admin/?demo=…) : la carte de démo est rechargée avec les nouveaux contenus
+  window.addEventListener('message', function (e) {
+    if (e.origin !== location.origin || !e.data || e.data.antemic !== 'admin-saved' || !SH) return;
+    reloadMaps(); var st = $('aSt'); if (st) { st.className = 'st on'; setTimeout(function () { st.className = 'st'; }, 2600); }
+    toast('✓ Enregistré : la carte de démonstration est à jour');
+  }, false);
+  $('vHome').onclick = home;
+  $('vRe').onclick = reloadMaps;
   $('vFs').onclick = function () { var f = $('vbody').getElementsByTagName('iframe')[0], el = f || document.documentElement; (el.requestFullscreen || el.webkitRequestFullscreen).call(el); };
   if (QS.k) shareStart();
 })();
