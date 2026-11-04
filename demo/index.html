@@ -98,8 +98,6 @@ button[disabled]{opacity:.4}
 .adm ul{list-style:none;padding:0;margin:0 0 22px}
 .adm li{padding:6px 0 6px 28px;position:relative;color:var(--tx);font-size:15px}
 .adm li:before{content:"";position:absolute;left:4px;top:11px;width:12px;height:7px;border-left:2px solid var(--pink);border-bottom:2px solid var(--pink);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
-.adm .ill2{width:42%;max-width:440px;position:relative;min-height:260px;background:#150e19;border-left:1px solid #3b2030}
-.ill2 i{position:absolute;display:block;border-radius:6px}
 .steps{display:-webkit-box;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -8px}
 .step{-webkit-box-flex:1;flex:1 1 220px;margin:8px;padding:16px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(29,22,34,.6)}
 .step b{display:block;font-size:15px;margin:6px 0 4px}.step span{color:var(--mut);font-size:14px;line-height:1.5}
@@ -381,8 +379,7 @@ button[disabled]{opacity:.4}
         + '<p>Essayez librement : chaque modification est enregistrée sur cette carte de démonstration, et vous la voyez aussitôt à côté.</p>'
         + '<ul><li>Titres et textes des vignettes</li><li>Jusqu’à 6 photos par lieu, avec leur crédit</li><li>Bouton et lien vers vos pages (agenda, réservation…)</li><li>Réglages d’affichage : heure du jour, soleil, ambiance sonore</li></ul>'
         + '<button type="button" class="btnr" id="sAdmGo">Ouvrir l’espace commune</button></div>'
-        + '<div class="ill2"><i style="left:22px;top:24px;width:34%;height:24px;background:#2b2133"></i><i style="left:22px;top:58px;width:34%;height:40px;background:#251c2c;border:1px solid #d72f4c"></i><i style="left:22px;top:106px;width:34%;height:40px;background:#251c2c"></i><i style="left:22px;top:154px;width:34%;height:40px;background:#251c2c"></i><i style="left:22px;top:202px;width:34%;height:40px;background:#251c2c"></i>'
-        + '<i style="left:46%;top:24px;width:44%;height:16px;background:#3a2c44"></i><i class="mapb" style="left:46%;top:50px;width:44%;height:82px;overflow:hidden;background:linear-gradient(135deg,#bcd3a8,#6f9b63)">' + (D ? im(D, '') : '') + '</i><i style="left:46%;top:142px;width:44%;height:9px;background:#3a2c44"></i><i style="left:46%;top:158px;width:36%;height:9px;background:#3a2c44"></i><i style="left:46%;top:186px;width:22%;height:28px;background:#d72f4c;border-radius:8px"></i></div></div>';
+        + '</div>';
       $('sAdmGo').onclick = function () { openMode('admin'); };
     }
   }
