@@ -1,0 +1,1439 @@
+{
+ "name": "Église Saint-Jean-Baptiste – Vic-le-Comte",
+ "notes": "1) L'emprise est inclinée d'environ 5°. J'ai donc tourné la nef (rot −5°) et recentré son axe sur x≈4,75 : elle ne déborde plus de l'emprise rouge à l'est du côté sud, et j'ai recalculé la position des corniches, des corbeaux, des contreforts, des baies, de la souche et de la porte sud. 2) La pente du toit de la nef était trop forte : je l'ai abaissée (rise 1,8 → 1,3, soit environ 40 %), car les photos montrent des tuiles canal à faible pente. 3) La photo 5 montre que la travée du portail, au sud-ouest, monte presque jusqu'à la corniche de la nef. Je l'ai donc rehaussée (égout à 9,2 m, appentis collé sous l'égout de la nef) et j'ai prolongé le contrefort de jonction. 4) J'ai remonté l'appentis de la chapelle latérale (égout à 7,8 m, faîte vers 9 m) et descendu sa baie à remplage. 5) J'ai réaligné l'abside sur la pointe nord de l'emprise (D–E) et sur la nef tournée, et corrigé l'orientation des trois lancettes avec leurs arcs de décharge. 6) J'ai placé le clocher-mur à la jonction abside/nef, avec son ouverture vers le nord. 7) J'ai baissé le pilier-campanile et sa cloche sur le pignon sud, pour qu'ils restent au-dessus du nouveau faîtage. 8) J'ai rehaussé l'aile annexe ouest (égout à 4,2 m, faîte vers 5,7 m), comme le montrent les photos 1 et 5. 9) Les tuiles canal ont désormais un rouge-orangé un peu plus vif, qui reste légèrement terni.",
+ "parts": [
+  {
+   "type": "box",
+   "size": [
+    6.4,
+    12,
+    21.4
+   ],
+   "pos": [
+    4.75,
+    -2,
+    1.2
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#B89A6E"
+  },
+  {
+   "type": "gable",
+   "length": 21.4,
+   "width": 6.4,
+   "rise": 1.3,
+   "overhang": 0.35,
+   "pos": [
+    4.75,
+    10,
+    1.2
+   ],
+   "rot": [
+    0,
+    85,
+    0
+   ],
+   "color": "#B45E44"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.35,
+    0.3,
+    21.6
+   ],
+   "pos": [
+    1.46,
+    9.65,
+    0.91
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#A88C62"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.35,
+    0.3,
+    21.6
+   ],
+   "pos": [
+    8.04,
+    9.65,
+    1.49
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#A88C62"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.25,
+    13.5
+   ],
+   "pos": [
+    1.81,
+    8.9,
+    -3.27
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#A88C62"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    2.21,
+    8.6,
+    -8.56
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    2.03,
+    8.6,
+    -6.56
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    1.86,
+    8.6,
+    -4.57
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    1.68,
+    8.6,
+    -2.58
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    1.51,
+    8.6,
+    -0.59
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    1.34,
+    8.6,
+    1.4
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    8.82,
+    8.6,
+    -6.47
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    8.47,
+    8.6,
+    -2.49
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    8.12,
+    8.6,
+    1.49
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    7.77,
+    8.6,
+    5.48
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "pos": [
+    7.42,
+    8.6,
+    9.46
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#9E7E55"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.6,
+    9.5,
+    0.9
+   ],
+   "pos": [
+    9.09,
+    -2,
+    -8.86
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#B3946A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.6,
+    9.5,
+    0.9
+   ],
+   "pos": [
+    8.19,
+    -2,
+    1.5
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#B3946A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.6,
+    9.5,
+    0.9
+   ],
+   "pos": [
+    7.3,
+    -2,
+    11.66
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#B3946A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.12,
+    3.2,
+    0.7
+   ],
+   "pos": [
+    8.45,
+    3.5,
+    -3.7
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#3A4550"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.12,
+    3.2,
+    0.7
+   ],
+   "pos": [
+    7.63,
+    3.5,
+    5.76
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#3A4550"
+  },
+  {
+   "type": "box",
+   "size": [
+    1.2,
+    0.15,
+    0.12
+   ],
+   "pos": [
+    3.81,
+    8.4,
+    12
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#A88C62"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.7,
+    2.6,
+    0.12
+   ],
+   "pos": [
+    3.81,
+    5,
+    12
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#3A4550"
+  },
+  {
+   "type": "prism",
+   "points": [
+    [
+     2.5,
+     -9.7
+    ],
+    [
+     8.9,
+     -9.3
+    ],
+    [
+     9.4,
+     -12.5
+    ],
+    [
+     8.2,
+     -14.6
+    ],
+    [
+     4.4,
+     -15.5
+    ],
+    [
+     2.9,
+     -13.4
+    ]
+   ],
+   "height": 10.7,
+   "pos": [
+    0,
+    -2,
+    0
+   ],
+   "color": "#B39468"
+  },
+  {
+   "type": "prism",
+   "points": [
+    [
+     2.3,
+     -9.7
+    ],
+    [
+     9.1,
+     -9.3
+    ],
+    [
+     9.6,
+     -12.5
+    ],
+    [
+     8.35,
+     -14.8
+    ],
+    [
+     4.35,
+     -15.7
+    ],
+    [
+     2.7,
+     -13.5
+    ]
+   ],
+   "height": 0.4,
+   "pos": [
+    0,
+    8.35,
+    0
+   ],
+   "color": "#A88C62"
+  },
+  {
+   "type": "cone",
+   "radius": 4.1,
+   "height": 1.7,
+   "segments": 6,
+   "pos": [
+    5.9,
+    8.75,
+    -12.3
+   ],
+   "rot": [
+    0,
+    0,
+    0
+   ],
+   "color": "#B45E44"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.8,
+    9.6,
+    0.8
+   ],
+   "pos": [
+    8.2,
+    -2,
+    -14.6
+   ],
+   "rot": [
+    0,
+    35,
+    0
+   ],
+   "color": "#B3946A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.8,
+    9.6,
+    0.8
+   ],
+   "pos": [
+    4.4,
+    -2,
+    -15.5
+   ],
+   "rot": [
+    0,
+    -20,
+    0
+   ],
+   "color": "#B3946A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.8,
+    9.6,
+    0.8
+   ],
+   "pos": [
+    9.4,
+    -2,
+    -12.5
+   ],
+   "rot": [
+    0,
+    75,
+    0
+   ],
+   "color": "#B3946A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.8,
+    9.6,
+    0.8
+   ],
+   "pos": [
+    2.9,
+    -2,
+    -13.4
+   ],
+   "rot": [
+    0,
+    -70,
+    0
+   ],
+   "color": "#B3946A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.6,
+    3.2,
+    0.15
+   ],
+   "pos": [
+    6.33,
+    3.3,
+    -15.15
+   ],
+   "rot": [
+    0,
+    -13,
+    0
+   ],
+   "color": "#3A4550"
+  },
+  {
+   "type": "box",
+   "size": [
+    1.4,
+    0.3,
+    0.15
+   ],
+   "pos": [
+    6.35,
+    6.6,
+    -15.2
+   ],
+   "rot": [
+    0,
+    -13,
+    0
+   ],
+   "color": "#C9A06A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.6,
+    3.2,
+    0.15
+   ],
+   "pos": [
+    8.9,
+    3.3,
+    -13.5
+   ],
+   "rot": [
+    0,
+    60,
+    0
+   ],
+   "color": "#3A4550"
+  },
+  {
+   "type": "box",
+   "size": [
+    1.4,
+    0.3,
+    0.15
+   ],
+   "pos": [
+    8.95,
+    6.6,
+    -13.47
+   ],
+   "rot": [
+    0,
+    60,
+    0
+   ],
+   "color": "#C9A06A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.6,
+    3.2,
+    0.15
+   ],
+   "pos": [
+    3.57,
+    3.3,
+    -14.51
+   ],
+   "rot": [
+    0,
+    54,
+    0
+   ],
+   "color": "#3A4550"
+  },
+  {
+   "type": "box",
+   "size": [
+    1.4,
+    0.3,
+    0.15
+   ],
+   "pos": [
+    3.52,
+    6.6,
+    -14.55
+   ],
+   "rot": [
+    0,
+    54,
+    0
+   ],
+   "color": "#C9A06A"
+  },
+  {
+   "type": "box",
+   "size": [
+    2,
+    2.8,
+    0.9
+   ],
+   "pos": [
+    5.7,
+    9.8,
+    -9.56
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#C2A276"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.75,
+    1.15,
+    0.95
+   ],
+   "pos": [
+    5.7,
+    11.1,
+    -9.56
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#2E2A26"
+  },
+  {
+   "type": "cone",
+   "radius": 0.3,
+   "height": 0.45,
+   "segments": 8,
+   "pos": [
+    5.7,
+    11.3,
+    -9.56
+   ],
+   "color": "#6B5A3A"
+  },
+  {
+   "type": "gable",
+   "length": 1.1,
+   "width": 2.2,
+   "rise": 0.7,
+   "overhang": 0.05,
+   "pos": [
+    5.7,
+    12.6,
+    -9.56
+   ],
+   "rot": [
+    0,
+    85,
+    0
+   ],
+   "color": "#A8916E"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.08,
+    1.3,
+    0.08
+   ],
+   "pos": [
+    5.7,
+    13.2,
+    -9.56
+   ],
+   "color": "#3A3A3A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.5,
+    0.08,
+    0.08
+   ],
+   "pos": [
+    5.7,
+    14,
+    -9.56
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#3A3A3A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.35,
+    0.22,
+    0.03
+   ],
+   "pos": [
+    5.9,
+    14.3,
+    -9.56
+   ],
+   "color": "#3A3A3A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.5,
+    1.2,
+    0.5
+   ],
+   "pos": [
+    5.72,
+    10.6,
+    -2.93
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#B5533A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.8,
+    1,
+    0.8
+   ],
+   "pos": [
+    3.85,
+    10.3,
+    11.56
+   ],
+   "rot": [
+    0,
+    -5,
+    0
+   ],
+   "color": "#B89A6E"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.05,
+    0.9,
+    0.05
+   ],
+   "pos": [
+    3.55,
+    11.3,
+    11.56
+   ],
+   "color": "#3A3A3A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.05,
+    0.9,
+    0.05
+   ],
+   "pos": [
+    4.15,
+    11.3,
+    11.56
+   ],
+   "color": "#3A3A3A"
+  },
+  {
+   "type": "cone",
+   "radius": 0.32,
+   "height": 0.4,
+   "segments": 8,
+   "pos": [
+    3.85,
+    12.2,
+    11.56
+   ],
+   "color": "#3A3A3A"
+  },
+  {
+   "type": "cone",
+   "radius": 0.25,
+   "height": 0.4,
+   "segments": 8,
+   "pos": [
+    3.85,
+    11.45,
+    11.56
+   ],
+   "color": "#4A4A48"
+  },
+  {
+   "type": "box",
+   "size": [
+    3.8,
+    9.8,
+    8.5
+   ],
+   "pos": [
+    -0.15,
+    -2,
+    0.45
+   ],
+   "color": "#B4966B"
+  },
+  {
+   "type": "box",
+   "size": [
+    4.6,
+    0.2,
+    8.9
+   ],
+   "pos": [
+    -0.2,
+    8.4,
+    0.45
+   ],
+   "rot": [
+    0,
+    0,
+    16
+   ],
+   "color": "#B45E44"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.15,
+    2.8,
+    1.4
+   ],
+   "pos": [
+    -2.1,
+    3.6,
+    1
+   ],
+   "color": "#3A4550"
+  },
+  {
+   "type": "cone",
+   "radius": 0.7,
+   "height": 0.6,
+   "segments": 4,
+   "pos": [
+    -2.1,
+    6.4,
+    1
+   ],
+   "rot": [
+    0,
+    45,
+    0
+   ],
+   "color": "#3A4550"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.18,
+    3.6,
+    1.8
+   ],
+   "pos": [
+    -2.12,
+    3.4,
+    1
+   ],
+   "color": "#C9A06A"
+  },
+  {
+   "type": "box",
+   "size": [
+    3.6,
+    11.2,
+    7.2
+   ],
+   "pos": [
+    -0.4,
+    -2,
+    8.3
+   ],
+   "color": "#BFA27A"
+  },
+  {
+   "type": "box",
+   "size": [
+    4,
+    0.2,
+    7.5
+   ],
+   "pos": [
+    -0.5,
+    9.6,
+    8.3
+   ],
+   "rot": [
+    0,
+    0,
+    14
+   ],
+   "color": "#B45E44"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.3,
+    0.25,
+    7.2
+   ],
+   "pos": [
+    -2.25,
+    8.6,
+    8.3
+   ],
+   "color": "#A88C62"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.5,
+    4.6,
+    3
+   ],
+   "pos": [
+    -2.4,
+    0,
+    9
+   ],
+   "color": "#C9A87A"
+  },
+  {
+   "type": "cone",
+   "radius": 1.5,
+   "height": 1.4,
+   "segments": 4,
+   "pos": [
+    -2.4,
+    4.6,
+    9
+   ],
+   "rot": [
+    0,
+    45,
+    0
+   ],
+   "color": "#C9A87A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.2,
+    3,
+    1.7
+   ],
+   "pos": [
+    -2.7,
+    0,
+    9
+   ],
+   "color": "#A8473A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.2,
+    0.8,
+    1.7
+   ],
+   "pos": [
+    -2.68,
+    3,
+    9
+   ],
+   "color": "#7A6650"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.6,
+    0.4,
+    3.1
+   ],
+   "pos": [
+    -2.45,
+    2.9,
+    9
+   ],
+   "color": "#B8A07A"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.6,
+    9.5,
+    0.8
+   ],
+   "pos": [
+    -2.4,
+    -2,
+    4.7
+   ],
+   "color": "#B3946A"
+  },
+  {
+   "type": "prism",
+   "points": [
+    [
+     2,
+     -3.8
+    ],
+    [
+     -15.6,
+     -7.2
+    ],
+    [
+     -17.3,
+     0.8
+    ],
+    [
+     -1.6,
+     4.7
+    ]
+   ],
+   "height": 6.2,
+   "pos": [
+    0,
+    -2,
+    0
+   ],
+   "color": "#B09370"
+  },
+  {
+   "type": "hip",
+   "length": 18.4,
+   "width": 8.8,
+   "rise": 1.5,
+   "pos": [
+    -7.9,
+    4.2,
+    -1.4
+   ],
+   "rot": [
+    0,
+    -12.5,
+    0
+   ],
+   "color": "#BC6243"
+  },
+  {
+   "type": "box",
+   "size": [
+    2.6,
+    2.8,
+    0.12
+   ],
+   "pos": [
+    -0.3,
+    0,
+    -4.25
+   ],
+   "rot": [
+    0,
+    -11,
+    0
+   ],
+   "color": "#8A5A35"
+  },
+  {
+   "type": "box",
+   "size": [
+    2.6,
+    2.6,
+    0.12
+   ],
+   "pos": [
+    -9.5,
+    0,
+    -5.85
+   ],
+   "rot": [
+    0,
+    -11,
+    0
+   ],
+   "color": "#9A7A5A"
+  },
+  {
+   "type": "box",
+   "size": [
+    1.2,
+    0.8,
+    0.12
+   ],
+   "pos": [
+    -8,
+    1.6,
+    3.2
+   ],
+   "rot": [
+    0,
+    -14,
+    0
+   ],
+   "color": "#3A3A3A"
+  },
+  {
+   "type": "box",
+   "size": [
+    1,
+    2.2,
+    0.12
+   ],
+   "pos": [
+    -12,
+    0,
+    2.2
+   ],
+   "rot": [
+    0,
+    -14,
+    0
+   ],
+   "color": "#6B4A30"
+  },
+  {
+   "type": "box",
+   "size": [
+    0.12,
+    0.9,
+    1.2
+   ],
+   "pos": [
+    -17,
+    1.4,
+    -3.2
+   ],
+   "rot": [
+    0,
+    -12,
+    0
+   ],
+   "color": "#3A3A3A"
+  }
+ ],
+ "analysis": {
+  "photosRetenues": [
+   0,
+   1,
+   2,
+   5
+  ],
+  "photosEcartees": [
+   {
+    "indice": 3,
+    "raison": "Intérieur : cuve baptismale en granit posée sur un dallage. Rien d'exploitable pour l'extérieur."
+   },
+   {
+    "indice": 4,
+    "raison": "Intérieur : clé de voûte à huit nervures d'une voûte d'abside. Elle confirme seulement les voûtes d'ogives de l'abside citées dans la notice, sans rien apporter pour la maquette."
+   },
+   {
+    "indice": 6,
+    "raison": "Photo ancienne en noir et blanc légendée « Église, abside détails ». Elle montre une corniche à frise sculptée d'animaux et de têtes, une grande baie à remplage et une toiture d'aspect ardoise. Rien de cela ne correspond à l'abside de Saint-Jean (photo 1 : corbeaux simples, lancettes étroites, tuiles canal). Il s'agit très probablement de la Sainte-Chapelle de Vic-le-Comte, un autre édifice."
+   },
+   {
+    "indice": 7,
+    "raison": "Même série ancienne que la photo 6 (frise sculptée, grande baie à remplage). Probablement la Sainte-Chapelle de Vic-le-Comte, pas l'église Saint-Jean-Baptiste."
+   }
+  ],
+  "orientation": "Le corps principal de l'église suit l'axe Z sur environ 27 m, de z=-15,5 à z=+11,9, entre x≈2 et x≈9,3. Le chevet n'est pas à l'est : l'abside à pans coupés est au NORD (Z négatif), sur l'extrémité étroite D(9,3,-14,3)–E(3,-15,5), large d'environ 6,4 m. Le pignon sud de la nef est à z≈+11,9, entre A(7,11,9) et J(-2,2,10,8). La photo 5 est prise depuis l'ouest : l'abside est à gauche (nord), l'extrémité sud à droite. Le portail gothique en tiers-point (photo 2) s'ouvre sur le mur ouest, près de l'extrémité sud, vers [-2,2, 9]. Côté ouest, deux volumes s'accolent à la nef. Une chapelle latérale gothique couverte en appentis, avec une baie à remplage, occupe z -3,8 → 4,7 et avance jusqu'à x≈-2. Une travée basse en appentis, qui porte le portail, occupe z 4,7 → 11,9 (segment I(-1,6,4,7)–J(-2,2,10,8)). Une aile annexe basse et longue part vers l'ouest : F(2,-3,8) → G(-15,6,-7,2) → H(-17,3,0,8) → I(-1,6,4,7). Ce sont les dépendances à toits de tuiles visibles au premier plan de la photo 5 et à droite de l'abside sur la photo 1 (portes de remise en bois). Le petit clocher-mur à une baie est placé au faîte, à la jonction abside/nef, vers [5,5,-9,5]. Une cloche sur pilier couronne le pignon sud, vers [4,5,11,5]. Une souche de cheminée en brique dépasse du faîtage de la nef, vers [5,-3].",
+  "volumes": [
+   {
+    "nom": "Nef unique (romane, surélevée et voûtée d'ogives à l'époque gothique)",
+    "forme": "parallélépipède à toit à deux pans",
+    "centre": [
+     5,
+     1.2
+    ],
+    "longueur": 21.4,
+    "largeur": 6.8,
+    "hauteurEgout": 10,
+    "hauteurFaitage": 11.8,
+    "axe": "Z",
+    "toiture": "Deux pans à faible pente (≈25–30 %), tuiles canal rouges. Égout souligné d'une corniche en pierre avec une gouttière en zinc. L'ancienne corniche romane à corbeaux subsiste plus bas, vers 8,5 m.",
+    "couleurMur": "#B89A6E",
+    "couleurToit": "#B5583F"
+   },
+   {
+    "nom": "Abside gothique à pans coupés (chevet nord)",
+    "forme": "polygone à trois pans visibles plus deux pans droits, demi-hexagone allongé",
+    "centre": [
+     6,
+     -12.5
+    ],
+    "longueur": 6,
+    "largeur": 6.5,
+    "hauteurEgout": 8.7,
+    "hauteurFaitage": 10.6,
+    "axe": "Z",
+    "toiture": "Toit en croupe polygonale à faible pente, tuiles canal rouges, gouttière pendante grise. Corniche à corbeaux massifs sous l'égout.",
+    "couleurMur": "#B39468",
+    "couleurToit": "#B5583F"
+   },
+   {
+    "nom": "Clocher-mur (campenard) à une baie",
+    "forme": "mur-pignon étroit avec une arcade en plein cintre et une cloche, sommet en bâtière avec une croix et une girouette",
+    "centre": [
+     5.5,
+     -9.5
+    ],
+    "longueur": 0.9,
+    "largeur": 2,
+    "hauteurEgout": 12.5,
+    "hauteurFaitage": 13.8,
+    "axe": "X",
+    "toiture": "Petit chaperon de pierre à deux pentes, croix en fer forgé et girouette au sommet (≈15 m)",
+    "couleurMur": "#C2A276",
+    "couleurToit": "#A8916E"
+   },
+   {
+    "nom": "Chapelle latérale gothique ouest",
+    "forme": "parallélépipède à toit en appentis adossé à la nef",
+    "centre": [
+     0.2,
+     0.5
+    ],
+    "longueur": 8.5,
+    "largeur": 4.4,
+    "hauteurEgout": 6.8,
+    "hauteurFaitage": 8,
+    "axe": "Z",
+    "toiture": "Appentis à pente vers l'ouest, tuiles canal rouges, rive en bois",
+    "couleurMur": "#B4966B",
+    "couleurToit": "#B85A40"
+   },
+   {
+    "nom": "Travée basse sud-ouest (mur du portail)",
+    "forme": "parallélépipède en appentis adossé à la nef",
+    "centre": [
+     0,
+     8.3
+    ],
+    "longueur": 7.2,
+    "largeur": 4.4,
+    "hauteurEgout": 6.5,
+    "hauteurFaitage": 7.6,
+    "axe": "Z",
+    "toiture": "Appentis en tuiles canal",
+    "couleurMur": "#BFA27A",
+    "couleurToit": "#B5583F"
+   },
+   {
+    "nom": "Aile annexe ouest (dépendances et remises)",
+    "forme": "parallélépipède bas, toit à deux pans terminé en croupe à l'ouest",
+    "centre": [
+     -8.2,
+     -1.6
+    ],
+    "longueur": 17.5,
+    "largeur": 8,
+    "hauteurEgout": 3.8,
+    "hauteurFaitage": 5.2,
+    "axe": "14° (axe X tourné de 14° vers le sud, de H/G vers I/F)",
+    "toiture": "Deux pans à faible pente, tuiles mécaniques ou canal orangées, débord de toit en bois",
+    "couleurMur": "#B09370",
+    "couleurToit": "#C0603F"
+   },
+   {
+    "nom": "Pilier-campanile du pignon sud",
+    "forme": "petit dé de pierre portant une cloche dans une armature en fer",
+    "centre": [
+     4.5,
+     11.5
+    ],
+    "longueur": 0.8,
+    "largeur": 0.8,
+    "hauteurEgout": 12.3,
+    "hauteurFaitage": 13.5,
+    "axe": "Z",
+    "toiture": "Couronnement en ferronnerie avec une cloche apparente",
+    "couleurMur": "#B89A6E",
+    "couleurToit": "#4A4A48"
+   }
+  ],
+  "elementsDistinctifs": [
+   "Abside gothique à pans coupés avec des contreforts plats aux angles. Chaque pan porte une lancette étroite en plein cintre, ébrasée, surmontée d'un arc de décharge mouluré brisé retombant sur des cordons.",
+   "Corniche romane à corbeaux massifs et simples sous l'égout de l'abside, et ancienne corniche à corbeaux conservée à mi-hauteur sur la nef, sous la surélévation gothique (deux lignes de corbeaux superposées).",
+   "Petit clocher-mur à une baie en plein cintre, avec cloche apparente, croix et girouette, dressé au faîte à la jonction abside/nef.",
+   "Cloche sur un pilier, dans une armature en fer forgé, au sommet du pignon sud.",
+   "Portail gothique en tiers-point à quatre ou cinq voussures toriques, retombant sur des colonnettes en faisceau. Les chapiteaux forment une frise continue de feuillages. Porte à deux vantaux en bois peint rouge brique (#A8473A), avec un linteau trilobé et des clous forgés.",
+   "Grande baie gothique à remplage (réseau trilobé) éclairant la chapelle latérale ouest.",
+   "Appareil en grand moyen appareil d'arkose ou de grès dorés, nuancés du beige au roux et à l'ocre orangé (#C9A06A, #9E7E55, #B89A6E), avec quelques blocs gris. Ce n'est pas de la pierre volcanique sombre.",
+   "Toitures basses en tuiles canal rouges typiques de la Limagne, avec des gouttières et descentes en zinc gris.",
+   "Souche de cheminée en brique rouge sur le faîtage de la nef."
+  ],
+  "incertitudes": [
+   "L'orientation nord du chevet découle du croisement entre la photo 5 (abside à gauche, annexes au premier plan) et l'emprise, dont l'extrémité nord est la plus étroite. Un chevet au sud n'est pas totalement exclu.",
+   "La largeur de la nef est ambiguë. Le mur ouest passe de x≈2 (moitié nord) à x≈-2 (moitié sud). J'ai considéré la partie x -2 → 2 comme des volumes accolés plus bas (chapelle, travée du portail), mais la nef pourrait être plus large au sud.",
+   "La position exacte du portail est incertaine : mur ouest près de l'angle sud-ouest, ou pignon sud. La photo 2 ne montre pas de pignon au-dessus de la porte, ce qui suggère un mur latéral.",
+   "Les hauteurs sont estimées d'après les portes de remise (≈2,8 m) et les proportions des photos 1 et 5. La hauteur IGN de 13,5 m correspond probablement au clocher-mur ou à la cloche du pignon, pas au faîtage de la nef (≈11,8 m).",
+   "Je n'ai pas pu vérifier la hauteur ni la forme de toit de l'aile annexe ouest (≈18 × 8 m), qui pourrait regrouper plusieurs bâtiments de hauteurs différentes.",
+   "La couleur des toits vue d'avion (#af9386) est plus terne que les tuiles neuves visibles sur les photos. Un ton intermédiaire usé (#B07A62) peut convenir à la maquette.",
+   "J'ai écarté les photos 6 et 7 en les attribuant à la Sainte-Chapelle de Vic-le-Comte. Si elles montraient bien Saint-Jean, il faudrait ajouter à l'abside une frise sculptée et une grande baie à remplage."
+  ]
+ }
+}

@@ -65,7 +65,7 @@
   }
  ],
  "modules": {
-  "itinerary": false,
+  "itinerary": true,
   "transit": false,
   "music": true,
   "time": true,
@@ -75,36 +75,6 @@
  "villages": [],
  "view": {},
  "pois": [
-  {
-   "id": "nouveau-lieu",
-   "cat": "pub",
-   "x": 15.3,
-   "y": -383.7,
-   "title": "Mairie",
-   "text": "La mairie de Vic-le-Comte se situe dans le bourg ancien, près de la place de l’Hôtel de Ville. Un point de départ pour explorer les rues et les places du centre.",
-   "photo": {
-    "url": "photos/nouveau-lieu-4683986.jpg",
-    "alt": "Mairie",
-    "credit": ""
-   },
-   "button": {
-    "label": "En savoir plus",
-    "url": "https://www.vic-le-comte.fr/"
-   },
-   "photos": [
-    {
-     "url": "photos/nouveau-lieu-4683986.jpg",
-     "alt": "Mairie",
-     "credit": ""
-    },
-    {
-     "url": "photos/nouveau-lieu-4684025.jpg",
-     "alt": "Mairie",
-     "credit": ""
-    }
-   ],
-   "icon": "⚑"
-  },
   {
    "id": "nouveau-lieu-2",
    "cat": "pub",
@@ -152,7 +122,25 @@
      "alt": "La Sainte Chapelle",
      "credit": ""
     }
-   ]
+   ],
+   "model": {
+    "file": "models/nouveau-lieu-2_v001.glb",
+    "v": 1793780886943,
+    "version": 1,
+    "x": 257.17,
+    "y": -455.87,
+    "dz": -0.11,
+    "rotation": -101.9,
+    "scale": 1,
+    "hideAt": [
+     [
+      258.8957746478873,
+      -456.9676056338028
+     ]
+    ],
+    "idx": 6044,
+    "source": "Blender (addon ANTEMIC)"
+   }
   },
   {
    "id": "eglise-saint-jean-baptiste",
@@ -161,13 +149,741 @@
    "y": -576.5,
    "title": "Église Saint-Jean-Baptiste",
    "icon": "♜",
+   "text": "Eglise Saint-Jean-Baptiste est un édifice religieux situé au cœur de la commune de Vic-le-Comte (Puy-de-Dôme), à l'adresse suivante : 84 Place Saint-Jean, 63270 Vic-le-Comte.",
+   "photo": {
+    "url": "photos/eglise-saint-jean-baptiste-438370.jpg",
+    "alt": "Église Saint-Jean-Baptiste",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [
+    {
+     "url": "photos/eglise-saint-jean-baptiste-438370.jpg",
+     "alt": "Église Saint-Jean-Baptiste",
+     "credit": ""
+    },
+    {
+     "url": "photos/eglise-saint-jean-baptiste-438339.jpg",
+     "alt": "Église Saint-Jean-Baptiste",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "brigade-de-proximite-de-gendarmerie-",
+   "cat": "pub",
+   "x": 694,
+   "y": -676,
+   "title": "Gendarmerie de Vic-le-Comte",
+   "text": "Gendarmerie\n90 rue lucien jarrige 63270",
+   "photo": {
+    "url": "photos/brigade-de-proximite-de-gendarmerie--7525614.jpg",
+    "alt": "Brigade de Proximité de Gendarmerie de Vic-le-Comte",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/brigade-de-proximite-de-gendarmerie--7525614.jpg",
+     "alt": "Brigade de Proximité de Gendarmerie de Vic-le-Comte",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "mairie-de-vic-le-comte",
+   "cat": "pub",
+   "x": 13,
+   "y": -397,
+   "title": "Mairie de Vic-le-Comte",
+   "text": "Mairie\nplace de l'hôtel de ville",
+   "icon": "⚑",
+   "photo": {
+    "url": "photos/mairie-de-vic-le-comte-6128027.jpg",
+    "alt": "Mairie de Vic-le-Comte",
+    "credit": ""
+   },
+   "button": {
+    "label": "Site de la ville",
+    "url": "https://www.vic-le-comte.fr/"
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/mairie-de-vic-le-comte-6128027.jpg",
+     "alt": "Mairie de Vic-le-Comte",
+     "credit": ""
+    },
+    {
+     "url": "photos/mairie-de-vic-le-comte-6128056.jpg",
+     "alt": "Mairie de Vic-le-Comte",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "centre-de-secours-de-vic-le-comte",
+   "cat": "pub",
+   "x": 763,
+   "y": -84,
+   "title": "Caserne de pompiers",
+   "text": "Caserne de pompiers\n483 rue du puits 63270",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "college-de-la-comte",
+   "cat": "pub",
+   "x": -352,
+   "y": -281,
+   "title": "Collège de la Comte",
+   "text": "Collège\n179 place de la molière",
+   "icon": "✎",
+   "photo": {
+    "url": "photos/college-de-la-comte-7260236.jpg",
+    "alt": "Collège de la Comte",
+    "credit": ""
+   },
+   "button": {
+    "label": "Informations",
+    "url": "https://www.vic-le-comte.fr/college-comte-henri-bertrand-63-puy-de-dome-auvergne-rhone-alpes"
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/college-de-la-comte-7260236.jpg",
+     "alt": "Collège de la Comte",
+     "credit": ""
+    },
+    {
+     "url": "photos/college-de-la-comte-7260187.jpg",
+     "alt": "Collège de la Comte",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "ecole-elementaire-jacques-prevert",
+   "cat": "pub",
+   "x": 0,
+   "y": -357,
+   "title": "École Élémentaire Jacques Prévert",
+   "text": "Enseignement primaire\nplace de la résistance",
+   "icon": "✎",
+   "photo": {
+    "url": "photos/ecole-elementaire-jacques-prevert-488399.jpg",
+    "alt": "École Élémentaire Jacques Prévert",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/ecole-elementaire-jacques-prevert-488399.jpg",
+     "alt": "École Élémentaire Jacques Prévert",
+     "credit": ""
+    },
+    {
+     "url": "photos/ecole-elementaire-jacques-prevert-488447.jpg",
+     "alt": "École Élémentaire Jacques Prévert",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "ecole-maternelle-elsa-triolet",
+   "cat": "pub",
+   "x": -5,
+   "y": -193,
+   "title": "École Maternelle Elsa Triolet",
+   "text": "Enseignement primaire\n133 rue des grands creux",
+   "icon": "✎",
+   "photo": {
+    "url": "photos/ecole-maternelle-elsa-triolet-558246.jpg",
+    "alt": "École Maternelle Elsa Triolet",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/ecole-maternelle-elsa-triolet-558246.jpg",
+     "alt": "École Maternelle Elsa Triolet",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "ecole-elementaire-marcel-pagnol",
+   "cat": "pub",
+   "x": -2587,
+   "y": 1785,
+   "title": "École Élémentaire Marcel Pagnol",
+   "text": "Enseignement primaire\nboulevard du chambon",
+   "icon": "✎",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "mond-averne-communaute-pole-service-",
+   "cat": "pub",
+   "x": 82,
+   "y": -411,
+   "title": "Mond'Averne Communauté, Pôle Service à la Population",
+   "text": "Siège d'EPCI\n16 boulevard de Beussat 63270",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "poste-de-vic-le-comte",
+   "cat": "pub",
+   "x": 41,
+   "y": -403,
+   "title": "Poste de Vic-le-Comte",
+   "text": "Poste\nParvis de l'Hôtel de ville",
+   "icon": "✉",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "parc-montcervier",
+   "cat": "pub",
+   "x": 539,
+   "y": -212,
+   "title": "Parc Montcervier",
+   "text": "Espace public",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "ecole-maternelle-sonia-delaunay",
+   "cat": "pub",
+   "x": -2604,
+   "y": 1814,
+   "title": "École Maternelle Sonia Delaunay",
+   "text": "Enseignement primaire\nboulevard du chambon 63270",
+   "icon": "✎",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "complexe-sportif-omnisport-andre-bos",
+   "cat": "pub",
+   "x": 1008,
+   "y": -303,
+   "title": "Complexe Sportif Omnisport André Boste",
+   "text": "Salle de gym du complexe sportif André Boste : salle de gym, couloir desservant les vestiaires et un bureau réservé aux entraîneurs et aux membres du bureau, salle de musculation et salle d’activités (chorégraphies, échauffement, sport adapté). \n\nComplexe sportif André Boste : salle omnisports avec vestiaires basket, deux entrées (entrée principale avec buvette et local chambre froide, local matériel en entrant à gauche, entrée des joueurs sur la droite), vestiaires foot. \n\nExtérieur complexe : terrain d’honneur de foot, terrain annexe et 3e terrain en construction, gradins qui donnent sur le terrain d’honneur, terrains de pétanque avec local dédié à l’association de pétanque Les amis vicomtois, piste d’athlétisme. Le stade dispose également d'un terrain de tennis couvert et de plusieurs autres terrains extérieurs.",
+   "icon": "◉",
+   "photo": {
+    "url": "photos/complexe-sportif-omnisport-andre-bos-1426523.jpg",
+    "alt": "Complexe Sportif Omnisport André Boste",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/complexe-sportif-omnisport-andre-bos-1426523.jpg",
+     "alt": "Complexe Sportif Omnisport André Boste",
+     "credit": ""
+    },
+    {
+     "url": "photos/complexe-sportif-omnisport-andre-bos-1426456.jpg",
+     "alt": "Complexe Sportif Omnisport André Boste",
+     "credit": ""
+    },
+    {
+     "url": "photos/complexe-sportif-omnisport-andre-bos-1426488.jpg",
+     "alt": "Complexe Sportif Omnisport André Boste",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "piscine-val-d-allier-comte",
+   "cat": "pub",
+   "x": -2200,
+   "y": 689,
+   "title": "Piscine Val d'Allier Comté",
+   "text": "La piscine Val d’Allier Comté, de Mond’Arverne Communauté, située à Longues (Rue de Vignolat, commune de Vic-le-Comte), est un espace éducatif, sportif et de loisirs, ouvert à tous. Elle répond à toutes les normes d’accessibilité.",
+   "icon": "◉",
+   "photo": {
+    "url": "photos/piscine-val-d-allier-comte-1636741.jpg",
+    "alt": "Piscine Val d'Allier Comté",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/piscine-val-d-allier-comte-1636741.jpg",
+     "alt": "Piscine Val d'Allier Comté",
+     "credit": ""
+    },
+    {
+     "url": "photos/piscine-val-d-allier-comte-1636797.jpg",
+     "alt": "Piscine Val d'Allier Comté",
+     "credit": ""
+    },
+    {
+     "url": "photos/piscine-val-d-allier-comte-1698509.jpg",
+     "alt": "Piscine Val d'Allier Comté",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "place-de-la-resistance",
+   "cat": "pub",
+   "x": -19,
+   "y": -376,
+   "title": "Place de la Résistance",
+   "text": "Espace public",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "motoclub-vicomtois",
+   "cat": "pub",
+   "x": 960,
+   "y": -1876,
+   "title": "Motoclub Vicomtois",
+   "text": "Sports mécaniques\n place de l'hôtel de ville",
+   "icon": "◉",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "place-des-marronniers",
+   "cat": "pub",
+   "x": -1987,
+   "y": -1148,
+   "title": "Place des Marronniers",
+   "text": "Espace public",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "place-de-verdun",
+   "cat": "pub",
+   "x": -197,
+   "y": 108,
+   "title": "Place de Verdun",
+   "text": "Espace public",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "gymnase-de-la-moliere",
+   "cat": "pub",
+   "x": -385,
+   "y": -158,
+   "title": "Gymnase de la Molière",
+   "text": "Complexe sportif couvert\nla molière",
+   "icon": "◉",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "la-maison-du-temps-libre",
+   "cat": "pub",
+   "x": -2468,
+   "y": 1049,
+   "title": "la Maison du Temps Libre",
+   "text": "Salle de spectacle ou conférence",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "espace-louis-paulet",
+   "cat": "pub",
+   "x": 272,
+   "y": -650,
+   "title": "Espace Louis Paulet",
+   "text": "Salle de spectacle ou conférence",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "halle-du-jeu-de-paume",
+   "cat": "pub",
+   "x": 211,
+   "y": -552,
+   "title": "Halle du Jeu de Paume",
+   "text": "Salle de spectacle ou conférence",
+   "photo": {
+    "url": "photos/halle-du-jeu-de-paume-380562.jpg",
+    "alt": "Halle du Jeu de Paume",
+    "credit": ""
+   },
+   "button": {
+    "label": "Informations",
+    "url": "https://www.vic-le-comte.fr/salles-reservation--63--puy-de-dome--auvergne-rhone-alpes"
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/halle-du-jeu-de-paume-380562.jpg",
+     "alt": "Halle du Jeu de Paume",
+     "credit": ""
+    },
+    {
+     "url": "photos/halle-du-jeu-de-paume-380586.jpg",
+     "alt": "Halle du Jeu de Paume",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "dojo-du-puy-blanc",
+   "cat": "pub",
+   "x": -901,
+   "y": -429,
+   "title": "Dojo du Puy Blanc",
+   "text": "Complexe sportif couvert",
+   "icon": "◉",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "france-service-de-vic-le-comte",
+   "cat": "pub",
+   "x": 37,
+   "y": -396,
+   "title": "France Service de Vic le Comte",
+   "text": "Divers public ou administratif\nParvis de l'Hôtel de ville",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "ehpad-jbe-bargoin",
+   "cat": "pub",
+   "x": 669,
+   "y": -170,
+   "title": "EHPAD Jbe Bargoin",
+   "text": "Maison de retraite",
+   "icon": "✚",
+   "photo": {
+    "url": "photos/ehpad-jbe-bargoin-6283694.jpg",
+    "alt": "EHPAD Jbe Bargoin",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/ehpad-jbe-bargoin-6283694.jpg",
+     "alt": "EHPAD Jbe Bargoin",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "pharmacie-de-la-comte",
+   "cat": "com",
+   "x": -2705.4,
+   "y": 1643.6,
+   "title": "Pharmacie de la Comté",
+   "text": "",
+   "icon": "✚",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "OpenStreetMap",
+   "photos": []
+  },
+  {
+   "id": "vic-le-comte-longues",
+   "cat": "pub",
+   "x": -2690.5,
+   "y": 1586.7,
+   "title": "Vic-le-Comte Longues",
+   "text": "63270\nTél : +33473397425\nHoraires : Mo-Fr 06:15-19:30; Sa 06:30-12:30,15:00-19:30; PH off; 2024 May 20 off",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "OpenStreetMap",
+   "photos": []
+  },
+  {
+   "id": "mediatheque",
+   "cat": "pub",
+   "x": 39.2,
+   "y": -387,
+   "title": "Médiathèque",
+   "text": "Horaires : Tu,Fr 15:00-18:30; We 09:30-12:00,13:30-18:00; Sa 09:30-12:00,14:00-17:00",
+   "photo": {
+    "url": "photos/mediatheque-2680599.jpg",
+    "alt": "Médiathèque",
+    "credit": ""
+   },
+   "button": {
+    "label": "Horaires",
+    "url": "https://mediatheques.mond-arverne.fr/reseau/library/12101"
+   },
+   "source": "OpenStreetMap",
+   "photos": [
+    {
+     "url": "photos/mediatheque-2680599.jpg",
+     "alt": "Médiathèque",
+     "credit": ""
+    },
+    {
+     "url": "photos/mediatheque-2680621.jpg",
+     "alt": "Médiathèque",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "gare-de-vic-le-comte",
+   "cat": "com",
+   "x": -2792.6,
+   "y": 1984,
+   "title": "Gare de Vic-le-Comte",
    "text": "",
    "photo": null,
    "button": {
     "label": "En savoir plus",
     "url": ""
    },
+   "source": "OpenStreetMap",
    "photos": []
+  },
+  {
+   "id": "hollywood-pizza",
+   "cat": "res",
+   "x": -2679.4,
+   "y": 1754.1,
+   "title": "Hollywood Pizza",
+   "text": "Tél : +33986264339\nHoraires : We, Th, Su 18:30-22:30; Fr, Sa 18:30-23:00",
+   "icon": "☕",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "OpenStreetMap",
+   "photos": []
+  },
+  {
+   "id": "maison-de-sante-de-la-compte",
+   "cat": "com",
+   "x": -2645,
+   "y": 1790.3,
+   "title": "Maison de santé de la Compté",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "OpenStreetMap",
+   "photos": []
+  },
+  {
+   "id": "cabinet-medical-moliere",
+   "cat": "com",
+   "x": -200.2,
+   "y": -242.1,
+   "title": "Cabinet médical Molière",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "OpenStreetMap",
+   "photos": []
+  },
+  {
+   "id": "nouveau-lieu",
+   "cat": "pub",
+   "x": -2109.3,
+   "y": 666.7,
+   "title": "Tennis Club",
+   "text": "",
+   "photo": {
+    "url": "photos/nouveau-lieu-1811572.jpg",
+    "alt": "Tennis Club",
+    "credit": ""
+   },
+   "button": {
+    "label": "Site du Club",
+    "url": "https://tcviclecomte.wordpress.com/"
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-1811572.jpg",
+     "alt": "Tennis Club",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "nouveau-lieu-3",
+   "cat": "pub",
+   "x": 176.9,
+   "y": -545.2,
+   "title": "Fontaine",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [],
+   "model": {
+    "file": "models/nouveau-lieu-3_v002.glb",
+    "v": 1793786986539,
+    "version": 2,
+    "x": 177.28,
+    "y": -548.18,
+    "dz": 0.18,
+    "rotation": 0,
+    "scale": 1,
+    "hideAt": [],
+    "source": "Blender (addon ANTEMIC)"
+   }
+  },
+  {
+   "id": "nouveau-lieu-4",
+   "cat": "com",
+   "x": 663.1,
+   "y": -87.9,
+   "title": "Cabinet Médical Pasteur",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "Informations",
+    "url": "https://prendre-mon-rdv.com/search/medecin-generaliste/vic-le-comte--63--france"
+   },
+   "photos": []
+  },
+  {
+   "id": "nouveau-lieu-5",
+   "cat": "pub",
+   "x": -2320,
+   "y": 746.8,
+   "title": "Mult-accueils collectif - A pas Comté",
+   "text": "Mond’Arverne Communauté a ouvert deux nouvelles structures pour l’accueil des tout-petits en ce début d’année, dont l’une à Longues située à proximité de la piscine Val d’Allier Comté.          \nCe nouveau centre multi-accueil dont les travaux avaient débuté en juillet 2017 a ouvert ses portes le lundi 11 janvier 2021.    ",
+   "photo": {
+    "url": "photos/nouveau-lieu-5-7784335.jpg",
+    "alt": "Mult-accueils collectif - A pas Comté",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-5-7784335.jpg",
+     "alt": "Mult-accueils collectif - A pas Comté",
+     "credit": ""
+    }
+   ]
   }
  ],
  "supabase": {
@@ -176,7 +892,9 @@
  },
  "plan": {
   "offer": "base",
-  "poiIncluded": 20
+  "poiIncluded": 20,
+  "services": [],
+  "offered": {}
  },
  "client": {
   "contact": "Emilie De Miras Villeneuve",
@@ -213,6 +931,32 @@
   "cat": {},
   "poi": {}
  },
- "publishedAt": "2026-11-01T06:42:17.242Z",
- "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/"
+ "publishedAt": "2026-11-04T10:55:56.401Z",
+ "publishedTo": "https://antemic3d.github.io/cartes-3d/",
+ "itinerary": {
+  "speed": 1,
+  "order": "optimise",
+  "pickOnMap": true,
+  "revealRadius": 100
+ },
+ "licenses": {
+  "itinerary": {
+   "active": false,
+   "since": "2026-11-01",
+   "until": "2026-11-01"
+  },
+  "priority": {
+   "active": false,
+   "since": "2026-11-01",
+   "until": "2026-11-01"
+  }
+ },
+ "objects": [],
+ "publication": {
+  "mode": "definitive",
+  "days": null,
+  "until": null,
+  "suspended": false,
+  "at": "2026-11-04T10:55:56.401Z"
+ }
 }
