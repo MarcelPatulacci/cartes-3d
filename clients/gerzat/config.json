@@ -1,0 +1,754 @@
+{
+ "schema": 1,
+ "slug": "gerzat",
+ "name": "Gerzat",
+ "insee": "63164",
+ "codePostal": "63360",
+ "website": "http://www.ville-gerzat.fr/",
+ "createdAt": "2026-11-01T13:09:16.950Z",
+ "theme": {
+  "primary": "#244b40",
+  "accent": "#c76c50",
+  "paper": "#fbfaf5",
+  "font": "Inter",
+  "titleFont": "Georgia",
+  "logo": "",
+  "fonts": []
+ },
+ "texts": {
+  "sub": "PUY-DE-DÔME",
+  "eyebrow": "UNE AUTRE FAÇON DE DÉCOUVRIR",
+  "title": "La commune,\nen perspective.",
+  "intro": "Prenez de la hauteur et découvrez Gerzat en trois dimensions.",
+  "welcomeKicker": "BIENVENUE À GERZAT",
+  "welcomeTitle": "Bienvenue à Gerzat",
+  "welcomeText": "",
+  "welcomeLink": null,
+  "territoryName": "La commune de Gerzat",
+  "territory": "Ses limites sont celles de la maquette",
+  "footer": "",
+  "status": "La commune de Gerzat",
+  "about": ""
+ },
+ "categories": [
+  {
+   "id": "pub",
+   "label": "Bâtiments publics",
+   "icon": "⌂"
+  },
+  {
+   "id": "com",
+   "label": "Commerces & services",
+   "icon": "◈"
+  },
+  {
+   "id": "res",
+   "label": "Restaurants & hébergements",
+   "icon": "☕"
+  },
+  {
+   "id": "dec",
+   "label": "Patrimoine",
+   "icon": "✦"
+  },
+  {
+   "id": "nat",
+   "label": "Nature & paysages",
+   "icon": "❀"
+  }
+ ],
+ "modules": {
+  "itinerary": false,
+  "transit": false,
+  "music": true,
+  "time": true,
+  "sun": true,
+  "sunDate": false
+ },
+ "villages": [],
+ "view": {},
+ "pois": [
+  {
+   "id": "complexe-sportif-georges-fustier",
+   "cat": "pub",
+   "x": -275,
+   "y": 397,
+   "title": "Complexe Sportif Georges Fustier",
+   "text": "Il s’étend sur une superficie totale de 9 hectares et comprend :\n\nUn parcours santé avec deux tracés (1 600 m et 700 m)\nUn plateau multisports\nTrois terrains engazonnés et un stabilisé\nUn gymnase comprenant une halle de 1000 m2 et des locaux annexes (vestiaires, salle de réunion, vestiaires-douches)",
+   "icon": "◉",
+   "photo": {
+    "url": "photos/complexe-sportif-georges-fustier-2431627.jpg",
+    "alt": "Complexe Sportif Georges Fustier",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/complexe-sportif-georges-fustier-2431627.jpg",
+     "alt": "Complexe Sportif Georges Fustier",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "complexe-sportif-marcel-paul",
+   "cat": "pub",
+   "x": -2364,
+   "y": -317,
+   "title": "Complexe Sportif Marcel Paul",
+   "text": "Stade",
+   "icon": "◉",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "groupe-scolaire-jean-jaures",
+   "cat": "pub",
+   "x": -1002,
+   "y": 319,
+   "title": "Groupe Scolaire Jean Jaurès",
+   "text": "Enseignement primaire\n76 avenue de la gare",
+   "icon": "✎",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "section-specialisee-du-college-anato",
+   "cat": "pub",
+   "x": -459,
+   "y": 91,
+   "title": "Section Spécialisée du Collège Anatole France",
+   "text": "Autre établissement d'enseignement\nrue anatole france",
+   "icon": "✎",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "groupe-scolaire-simone-godard",
+   "cat": "pub",
+   "x": -1063,
+   "y": -377,
+   "title": "Groupe Scolaire Simone Godard",
+   "text": "Enseignement primaire\n5 allée anthony bardin",
+   "icon": "✎",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "groupe-scolaire-jules-ferry",
+   "cat": "pub",
+   "x": -1177,
+   "y": -862,
+   "title": "Groupe Scolaire Jules Ferry",
+   "text": "Enseignement primaire\nrue pierre mendès france",
+   "icon": "✎",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "square-de-la-resistance",
+   "cat": "pub",
+   "x": -1096,
+   "y": 946,
+   "title": "Square de la Résistance",
+   "text": "Espace public",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "parc-de-la-treille",
+   "cat": "pub",
+   "x": -818,
+   "y": -321,
+   "title": "Parc de la Treille",
+   "text": "Ouvert en 2005, le parc de la Treille s’étend sur une surface de 12 300 m2.\nLa source qui coule en cascade jusqu’au bassin, un phare en surplomb, les jeux d’enfants, le parcours pédagogique pour identifier les nombreuses variétés d’arbres, le jeu des chemins et des changements d’ambiance constituent autant d’éléments d’agrément de ce parc.",
+   "photo": {
+    "url": "photos/parc-de-la-treille-7877194.jpg",
+    "alt": "Parc de la Treille",
+    "credit": ""
+   },
+   "button": {
+    "label": "Détails",
+    "url": "https://www.ville-gerzat.fr/decouvrir-gerzat/detente-jeux-promenades/le-parc-de-la-treille/"
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/parc-de-la-treille-7877194.jpg",
+     "alt": "Parc de la Treille",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "square-des-anciens-combattants-d-a-f",
+   "cat": "pub",
+   "x": -1359,
+   "y": -478,
+   "title": "Square des Anciens Combattants d'A.F.N.",
+   "text": "Espace public",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "centre-de-secours-de-gerzat",
+   "cat": "pub",
+   "x": -347,
+   "y": 70,
+   "title": "Centre de Secours de Gerzat",
+   "text": "Caserne de pompiers\n3 rue anatole france 63360",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "commissariat-de-police-de-gerzat",
+   "cat": "pub",
+   "x": -278,
+   "y": 83,
+   "title": "Commissariat de Police de Gerzat",
+   "text": "Police\n5 rue anatole france 63360",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "poste-de-gerzat",
+   "cat": "pub",
+   "x": -1194,
+   "y": -413,
+   "title": "Poste de Gerzat",
+   "text": "Poste\n1 rue de la mairie",
+   "icon": "✉",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "gendarmerie-de-gerzat",
+   "cat": "pub",
+   "x": -19,
+   "y": 1457,
+   "title": "Gendarmerie de Gerzat",
+   "text": "Gendarmerie\ngare de péage clermont gerzat rd 210",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "stade-de-la-luminerie",
+   "cat": "pub",
+   "x": -1513,
+   "y": -916,
+   "title": "Stade de la Luminerie",
+   "text": "Stade\nrue jules guesdes",
+   "icon": "◉",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "college-anatole-france",
+   "cat": "pub",
+   "x": -476,
+   "y": 59,
+   "title": "Collège Anatole France",
+   "text": "Collège\nrue anatole france",
+   "icon": "✎",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "groupe-scolaire-jules-ferry-2",
+   "cat": "pub",
+   "x": -1090,
+   "y": -872,
+   "title": "Groupe Scolaire Jules Ferry",
+   "text": "Enseignement primaire\nrue pierre mendès france",
+   "icon": "✎",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "ehpad-la-maison-du-marronnier-blanc",
+   "cat": "pub",
+   "x": -642,
+   "y": 422,
+   "title": "EHPAD la Maison du Marronnier Blanc",
+   "text": "Maison de retraite\n1 rue des marronniers",
+   "icon": "✚",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "square-germaine-albisetti",
+   "cat": "pub",
+   "x": -647,
+   "y": 364,
+   "title": "Square Germaine Albisetti",
+   "text": "Espace public",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "gymnase-joseph-cronier",
+   "cat": "pub",
+   "x": -1020,
+   "y": -877,
+   "title": "Gymnase Joseph Cronier",
+   "text": "Complexe sportif couvert\nrue mendes france",
+   "icon": "◉",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "gymnase-christian-fournier",
+   "cat": "pub",
+   "x": -711,
+   "y": 294,
+   "title": "Gymnase Christian Fournier",
+   "text": "Complexe sportif couvert\nrue sous les ors",
+   "icon": "◉",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "IGN BD TOPO",
+   "photos": []
+  },
+  {
+   "id": "la-vague",
+   "cat": "pub",
+   "x": -210,
+   "y": 120,
+   "title": "La Vague",
+   "text": "Studios de musiques actuelles - Radio Arverne",
+   "photo": {
+    "url": "photos/la-vague-2942628.jpg",
+    "alt": "la Vague",
+    "credit": ""
+   },
+   "button": {
+    "label": "Site Radio Arverne",
+    "url": "https://radioarverne.com/"
+   },
+   "source": "IGN BD TOPO",
+   "photos": [
+    {
+     "url": "photos/la-vague-2942628.jpg",
+     "alt": "la Vague",
+     "credit": ""
+    },
+    {
+     "url": "photos/la-vague-2942660.jpg",
+     "alt": "la Vague",
+     "credit": ""
+    },
+    {
+     "url": "photos/la-vague-2942703.jpg",
+     "alt": "la Vague",
+     "credit": ""
+    },
+    {
+     "url": "photos/la-vague-2942739.jpg",
+     "alt": "la Vague",
+     "credit": ""
+    },
+    {
+     "url": "photos/la-vague-2942773.jpg",
+     "alt": "la Vague",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "theatre-municipal-cornillon",
+   "cat": "com",
+   "x": -1242.4,
+   "y": -404,
+   "title": "Théâtre municipal Cornillon",
+   "text": "Lieu de spectacle vivant d'une capacité de 353 places assises proposant concerts, théâtre, danse. La programmation est disponible à l'Office Culturel gerzatois.\n3 Place de Verdun\n63360 Gerzat",
+   "photo": {
+    "url": "photos/theatre-municipal-cornillon-8131947.jpg",
+    "alt": "Théâtre municipal Cornillon",
+    "credit": ""
+   },
+   "button": {
+    "label": "Saison culturelle",
+    "url": "https://culturegerzat.wixsite.com/culturegerzat/billeterie"
+   },
+   "source": "OpenStreetMap",
+   "photos": [
+    {
+     "url": "photos/theatre-municipal-cornillon-8131947.jpg",
+     "alt": "Théâtre municipal Cornillon",
+     "credit": ""
+    },
+    {
+     "url": "photos/theatre-municipal-cornillon-8131912.jpg",
+     "alt": "Théâtre municipal Cornillon",
+     "credit": ""
+    },
+    {
+     "url": "photos/theatre-municipal-cornillon-8131892.jpg",
+     "alt": "Théâtre municipal Cornillon",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "chronopost-clermont-ferrand",
+   "cat": "pub",
+   "x": -1866.7,
+   "y": 652.6,
+   "title": "Chronopost Clermont-Ferrand",
+   "text": "11 Avenue du Sancy\n63360 Gerzat",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "source": "OpenStreetMap",
+   "photos": []
+  },
+  {
+   "id": "hotel-de-ville",
+   "cat": "pub",
+   "x": -1246.1,
+   "y": -478.2,
+   "title": "Hôtel de Ville",
+   "text": "Place de la Liberté\n63360\nTél : +33 4 73 25 00 14\nHoraires : Mo-Fr 08:00-12:00,13:00-17:00",
+   "photo": {
+    "url": "photos/hotel-de-ville-8001817.jpg",
+    "alt": "Hôtel de Ville",
+    "credit": ""
+   },
+   "button": {
+    "label": "Site de la ville",
+    "url": "https://www.ville-gerzat.fr/"
+   },
+   "source": "OpenStreetMap",
+   "photos": [
+    {
+     "url": "photos/hotel-de-ville-8001817.jpg",
+     "alt": "Hôtel de Ville",
+     "credit": ""
+    },
+    {
+     "url": "photos/hotel-de-ville-8002086.jpg",
+     "alt": "Hôtel de Ville",
+     "credit": ""
+    },
+    {
+     "url": "photos/hotel-de-ville-8001883.jpg",
+     "alt": "Hôtel de Ville",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "bibliotheque-alphonse-daudet",
+   "cat": "pub",
+   "x": -632.7,
+   "y": -260.2,
+   "title": "Bibliothèque Alphonse-Daudet",
+   "text": "Rue Moulin du Roy\nHoraires : Tu 16:00-19:00; We 10:00-19:00, Fr 16:00-19:00, Sa 10:00-19:00",
+   "photo": {
+    "url": "photos/bibliotheque-alphonse-daudet-2772425.jpg",
+    "alt": "Bibliothèque Alphonse-Daudet",
+    "credit": ""
+   },
+   "button": {
+    "label": "Informations",
+    "url": "https://bibliotheques-clermontmetropole.eu/iguana/www.main.cls?v=41eb6c7d-f1d5-424e-a886-8a59b0beaae7"
+   },
+   "source": "OpenStreetMap",
+   "photos": [
+    {
+     "url": "photos/bibliotheque-alphonse-daudet-2772425.jpg",
+     "alt": "Bibliothèque Alphonse-Daudet",
+     "credit": ""
+    },
+    {
+     "url": "photos/bibliotheque-alphonse-daudet-2772307.jpg",
+     "alt": "Bibliothèque Alphonse-Daudet",
+     "credit": ""
+    },
+    {
+     "url": "photos/bibliotheque-alphonse-daudet-2772490.jpg",
+     "alt": "Bibliothèque Alphonse-Daudet",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "nouveau-lieu",
+   "cat": "dec",
+   "x": -1222,
+   "y": -417.8,
+   "title": "Eglise de Saint-Bonnet",
+   "text": "Édifiée au XIIe siècle, elle a été fortifiée et entourée de hauts murs au XIVe siècle lors de la guerre de Cent Ans pour servir de fort au village. Elle est mentionnée dans l'Armorial de Guillaume Revel vers 1460. Elle possède un plan allongé se terminant par une abside semi-circulaire, un transept non saillant, ainsi qu'un portail en plein cintre surmonté d'un oculus en façade",
+   "photo": {
+    "url": "photos/nouveau-lieu-1055892.jpg",
+    "alt": "Eglise de Saint-Bonnet",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-1055892.jpg",
+     "alt": "Eglise de Saint-Bonnet",
+     "credit": ""
+    },
+    {
+     "url": "photos/nouveau-lieu-1055917.jpg",
+     "alt": "Eglise de Saint-Bonnet",
+     "credit": ""
+    }
+   ],
+   "icon": "♜",
+   "model": {
+    "file": "models/nouveau-lieu_v002.glb",
+    "v": 1793801403169,
+    "version": 2,
+    "x": -1231.71,
+    "y": -424.53,
+    "dz": -0.12,
+    "rotation": 0,
+    "scale": 1,
+    "hideAt": [
+     [
+      -1227.607619047619,
+      -423.4761904761905
+     ]
+    ],
+    "source": "Blender (addon ANTEMIC)"
+   }
+  },
+  {
+   "id": "nouveau-lieu-2",
+   "cat": "pub",
+   "x": -214.6,
+   "y": 213.7,
+   "title": "Salle Le Galion",
+   "text": "Cet ensemble, réalisé par la commune de Gerzat, est un équipement structurant permettant des activités promouvant les forces vives de la ville.\n\nPour toute demande de location, merci de nous contacter.\n\nLe Galion comprend deux salles qui peuvent être mises à la disposition des associations, des particuliers ou des organismes divers qui en feront la demande en Mairie de Gerzat :\n\n– Salle n° 1 : sa capacité est de 500 places assises ou 700 debout.\n– Salle n° 2 : sa capacité est de 150 places assises.\nEn cas de dépassement, l’utilisateur pourrait voir sa responsabilité civile et pénale engagées.\nLa Mairie reste prioritaire pour l’utilisation de cet ensemble.",
+   "photo": {
+    "url": "photos/nouveau-lieu-2-1928434.jpg",
+    "alt": "Salle Le Galion",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-2-1928434.jpg",
+     "alt": "Salle Le Galion",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "nouveau-lieu-3",
+   "cat": "pub",
+   "x": -242.1,
+   "y": 113.8,
+   "title": "Ecole de musique - L'onde",
+   "text": "",
+   "photo": {
+    "url": "photos/nouveau-lieu-3-2079144.jpg",
+    "alt": "Ecole de musique - L'onde",
+    "credit": ""
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-3-2079144.jpg",
+     "alt": "Ecole de musique - L'onde",
+     "credit": ""
+    }
+   ]
+  },
+  {
+   "id": "nouveau-lieu-4",
+   "cat": "pub",
+   "x": -1143.1,
+   "y": -303.4,
+   "title": "Pôle social Jacques Decorps",
+   "text": "Pôle Social Jacques Decorps C.C.A.S. - S.A.A.D. et Crèche",
+   "photo": {
+    "url": "photos/nouveau-lieu-4-3605698.jpg",
+    "alt": "Pôle social Jacques Decorps",
+    "credit": ""
+   },
+   "button": {
+    "label": "Informations",
+    "url": "https://www.ville-gerzat.fr/vivre-a-gerzat/vie-sociale/action-sociale/"
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-4-3605698.jpg",
+     "alt": "Pôle social Jacques Decorps",
+     "credit": ""
+    }
+   ]
+  }
+ ],
+ "supabase": {
+  "url": "https://cqqesqoutshyutxgzyvo.supabase.co",
+  "anonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxcWVzcW91dHNoeXV0eGd6eXZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM0NTAxODEsImV4cCI6MjEwOTAyNjE4MX0.wp5V3Mz4aiIMQDHBhQJChDweDQP1a3-sXWz498yo5dE"
+ },
+ "plan": {
+  "offer": "base",
+  "poiIncluded": 20
+ },
+ "client": {
+  "contact": "",
+  "email": "",
+  "notes": ""
+ },
+ "gen": {
+  "types": [
+   "mairie"
+  ],
+  "realChurches": true,
+  "quality": 2
+ },
+ "mapGeneratedAt": "2026-11-01T13:11:18.643Z",
+ "icons": {
+  "enabled": false,
+  "cat": {},
+  "poi": {}
+ },
+ "promotedAt": "2026-11-04T13:18:11.573Z",
+ "terrain": {
+  "smooth": 2,
+  "flat": false
+ },
+ "communes": [],
+ "objects": [
+  {
+   "id": "obj-mesh_0",
+   "name": "Mesh_0",
+   "source": "Blender",
+   "model": {
+    "file": "models/obj-mesh_0_v001.glb",
+    "v": 1793801301027,
+    "version": 1,
+    "x": -1231.71,
+    "y": -424.53,
+    "dz": -0.12,
+    "rotation": 0,
+    "scale": 1,
+    "hideAt": [
+     [
+      -1227.607619047619,
+      -423.4761904761905
+     ]
+    ],
+    "source": "Blender (addon ANTEMIC)"
+   }
+  }
+ ],
+ "publishedAt": "2026-11-04T14:47:48.964Z",
+ "publishedTo": "https://antemic3d.github.io/cartes-3d/",
+ "publication": {
+  "mode": "definitive",
+  "days": null,
+  "until": null,
+  "suspended": false,
+  "at": "2026-11-04T14:47:48.964Z"
+ }
+}
