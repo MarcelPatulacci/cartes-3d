@@ -545,8 +545,8 @@
   {
    "id": "aire-de-covoiturage",
    "cat": "pub",
-   "x": 1061.2,
-   "y": -518.2,
+   "x": 1048.9,
+   "y": -521.2,
    "title": "Aire de Covoiturage",
    "text": "9 Rue de la Liberté\n63870 Orcines",
    "button": {
@@ -565,7 +565,11 @@
      "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
     }
    ],
-   "icon": "Ⓟ"
+   "icon": "Ⓟ",
+   "orig": {
+    "x": 1061.2,
+    "y": -518.2
+   }
   },
   {
    "id": "aire-de-camping-car-orcines",
@@ -948,7 +952,28 @@
      "alt": "Ecole Publique Orcines",
      "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
     }
-   ]
+   ],
+   "modelPrev": {
+    "file": "models/ecole-publique-orcines.glb",
+    "v": 1793781599702,
+    "version": 1,
+    "x": 662.6,
+    "y": -2170.5,
+    "scale": 1,
+    "rotation": 0,
+    "hideAt": [
+     [
+      662.6,
+      -2174.5
+     ]
+    ],
+    "source": "Import ecole-publique-orcines.glb",
+    "orig": {
+     "x": 662.6,
+     "y": -2174.5
+    },
+    "level": "model3"
+   }
   },
   {
    "id": "le-chalet",
@@ -1159,6 +1184,21 @@
      "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
     }
    ]
+  },
+  {
+   "id": "nouveau-lieu",
+   "cat": "dec",
+   "x": -2674.1,
+   "y": -1832.4,
+   "title": "Puy-De-Dôme",
+   "text": "",
+   "photo": null,
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [],
+   "icon": "♜"
   }
  ],
  "supabase": {
@@ -1170,13 +1210,13 @@
   "poiIncluded": 25,
   "services": [
    {
-    "id": "model2",
-    "label": "Bâtiment 3D sur mesure — niveau Détaillé",
-    "price": 390,
+    "id": "model3",
+    "label": "Monument 3D — niveau Remarquable",
+    "price": 790,
     "qty": 1,
     "note": "Ecole Publique Orcines",
     "poi": "ecole-publique-orcines",
-    "date": "2026-11-01",
+    "date": "2026-11-04",
     "offered": false
    }
   ],
@@ -1226,16 +1266,17 @@
   "types": []
  },
  "terrain": {
-  "smooth": 2,
+  "smooth": 0,
   "flat": false
  },
  "communes": [],
  "publication": {
   "mode": "definitive",
-  "days": null,
   "until": null,
-  "suspended": false,
-  "at": "2026-11-02T20:11:02.790Z"
+  "suspended": true,
+  "days": null,
+  "at": "2026-11-02T20:11:02.790Z",
+  "changedAt": "2026-11-04T13:35:26.420Z"
  },
  "quotes": [
   {
@@ -1289,7 +1330,7 @@
    "total": 2481,
    "totalTtc": 2977.2,
    "file": "DEV-20261102-63263-2_orcines.pdf",
-   "status": "actif",
+   "status": "annule",
    "tier": "bourg",
    "data": {
     "plan": {
@@ -1339,7 +1380,123 @@
     "pois": 43
    },
    "rev": 4,
-   "correctedAt": "2026-11-02T20:08:53.573Z"
+   "correctedAt": "2026-11-02T20:08:53.573Z",
+   "cancelledAt": "2026-11-02T20:42:43.207Z"
+  },
+  {
+   "num": "DEV-20261102-63263-3",
+   "date": "2026-11-02T20:38:25.166Z",
+   "total": 2481,
+   "totalTtc": 2977.2,
+   "file": "DEV-20261102-63263-3_orcines.pdf",
+   "status": "annule",
+   "tier": "bourg",
+   "data": {
+    "plan": {
+     "offer": "base",
+     "poiIncluded": 25,
+     "services": [
+      {
+       "id": "model2",
+       "label": "Bâtiment 3D sur mesure — niveau Détaillé",
+       "price": 390,
+       "qty": 1,
+       "note": "Ecole Publique Orcines",
+       "poi": "ecole-publique-orcines",
+       "date": "2026-11-01",
+       "offered": false
+      }
+     ],
+     "offered": {
+      "model:tennis-club-orcines": true,
+      "model:salle-omnisports": true,
+      "model:mairie": true
+     },
+     "discounts": {
+      "services": {
+       "type": "pct",
+       "value": 30
+      }
+     },
+     "tierAuto": false,
+     "tier": "bourg",
+     "launchOffer": true
+    },
+    "licenses": {
+     "itinerary": {
+      "active": true,
+      "since": "2026-10-31",
+      "until": null,
+      "note": "carte de démonstration"
+     }
+    },
+    "client": {
+     "contact": "",
+     "email": "",
+     "notes": "Carte de démonstration. Configuration remise au standard v0.0.1 le 31/10/2026 (ancienne config : _cahier1/config.json).",
+     "mairie": {}
+    },
+    "pois": 44
+   },
+   "rev": 2,
+   "correctedAt": "2026-11-02T20:41:55.760Z",
+   "cancelledAt": "2026-11-02T20:42:41.103Z"
+  },
+  {
+   "num": "DEV-20261102-63263-4",
+   "date": "2026-11-02T20:42:44.104Z",
+   "total": 2481,
+   "totalTtc": 2977.2,
+   "file": "DEV-20261102-63263-4_orcines.pdf",
+   "status": "actif",
+   "tier": "bourg",
+   "data": {
+    "plan": {
+     "offer": "base",
+     "poiIncluded": 25,
+     "services": [
+      {
+       "id": "model2",
+       "label": "Bâtiment 3D sur mesure — niveau Détaillé",
+       "price": 390,
+       "qty": 1,
+       "note": "Ecole Publique Orcines",
+       "poi": "ecole-publique-orcines",
+       "date": "2026-11-01",
+       "offered": false
+      }
+     ],
+     "offered": {
+      "model:tennis-club-orcines": true,
+      "model:salle-omnisports": true,
+      "model:mairie": true
+     },
+     "discounts": {
+      "services": {
+       "type": "pct",
+       "value": 30
+      }
+     },
+     "tierAuto": false,
+     "tier": "bourg",
+     "launchOffer": true
+    },
+    "licenses": {
+     "itinerary": {
+      "active": true,
+      "since": "2026-10-31",
+      "until": null,
+      "note": "carte de démonstration"
+     }
+    },
+    "client": {
+     "contact": "",
+     "email": "",
+     "notes": "Carte de démonstration. Configuration remise au standard v0.0.1 le 31/10/2026 (ancienne config : _cahier1/config.json).",
+     "mairie": {}
+    },
+    "pois": 44
+   }
   }
  ]
 }
