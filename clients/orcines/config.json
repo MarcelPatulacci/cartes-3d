@@ -1465,7 +1465,7 @@
     "version": 1,
     "x": 366.3,
     "y": 1538.8,
-    "scale": 3.5,
+    "scale": 5,
     "rotation": -15,
     "hideAt": [],
     "source": "Import croix_ternant.glb",
@@ -1532,7 +1532,7 @@
   "launchOffer": true
  },
  "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
- "publishedAt": "2026-11-05T22:14:04.006Z",
+ "publishedAt": "2026-11-05T22:18:55.132Z",
  "brandPalette": [
   "#f7f7f7",
   "#f2f2f2",
@@ -1571,7 +1571,7 @@
   "days": 30,
   "until": "2026-12-05T22:59:59.000Z",
   "suspended": false,
-  "at": "2026-11-05T22:14:04.006Z"
+  "at": "2026-11-05T22:18:55.132Z"
  },
  "quotes": [
   {
