@@ -1532,7 +1532,7 @@
   "launchOffer": true
  },
  "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
- "publishedAt": "2026-11-05T21:42:13.917Z",
+ "publishedAt": "2026-11-05T21:43:06.111Z",
  "brandPalette": [
   "#f7f7f7",
   "#f2f2f2",
@@ -1567,11 +1567,11 @@
  },
  "communes": [],
  "publication": {
-  "mode": "definitive",
-  "days": null,
-  "until": null,
+  "mode": "temporaire",
+  "days": 30,
+  "until": "2026-12-05T22:59:59.000Z",
   "suspended": false,
-  "at": "2026-11-05T21:42:13.917Z"
+  "at": "2026-11-05T21:43:06.111Z"
  },
  "quotes": [
   {
