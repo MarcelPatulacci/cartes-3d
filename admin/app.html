@@ -66,6 +66,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px}
 .gal figure{position:relative;margin:0}.gal img{width:100%;height:110px;object-fit:cover;border-radius:10px;background:#33283b;display:block}
 .gal figure.main img{outline:3px solid var(--red);outline-offset:-3px}
+.gal input.nocredit{border-color:#e0a030}
 .gal .tools{position:absolute;top:5px;right:5px;display:flex;gap:4px}
 .gal .tools button{border:0;border-radius:6px;background:#000b;color:#fff;font-size:12px;padding:3px 7px}
 .gal input{margin-top:4px;font-size:11px;padding:5px 7px}
@@ -146,7 +147,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
     <label>Photos <span id="photoCount" class="hint"></span></label>
     <div class="gal" id="gal"></div>
     <div class="drop"><span>＋</span><input id="photoFile" type="file" accept="image/jpeg,image/png,image/webp" multiple></div>
-    <p class="hint">Jusqu’à 6 photos. La première (encadrée) est la photo principale ; ◀ pour avancer une photo. JPEG, PNG ou WebP, réduites automatiquement (1 600 px). Utilisez des photos dont vous détenez les droits et indiquez le crédit.</p>
+    <p class="hint">Jusqu’à 6 photos. La première (encadrée) est la photo principale ; ◀ pour avancer une photo. JPEG, PNG ou WebP, réduites automatiquement (1 600 px). Utilisez des photos dont vous détenez les droits et indiquez sous chacune ses sources / crédits (auteur, licence, site ou adresse de la page) : ils s’affichent sous la photo dans la carte.</p>
     <label for="text">Texte</label><textarea id="text" maxlength="4000"></textarea><div class="count" id="textCount"></div>
     <div class="row"><div><label for="bLabel">Libellé du bouton</label><input id="bLabel" type="text" maxlength="40" placeholder="En savoir plus"></div>
     <div><label for="bUrl">Lien du bouton (vide = pas de bouton)</label><input id="bUrl" type="text" placeholder="www.exemple.fr"></div></div>
@@ -317,7 +318,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
       const t = document.createElement('div'); t.className = 'tools';
       if (i > 0) { const b = document.createElement('button'); b.type = 'button'; b.textContent = '◀'; b.title = 'Avancer'; b.onclick = () => { [S.photos[i - 1], S.photos[i]] = [S.photos[i], S.photos[i - 1]]; drawGal(); preview(); }; t.append(b); }
       const x = document.createElement('button'); x.type = 'button'; x.textContent = '✕'; x.title = 'Retirer'; x.onclick = () => { S.photos.splice(i, 1); drawGal(); preview(); }; t.append(x); fig.append(t);
-      const cr = document.createElement('input'); cr.type = 'text'; cr.placeholder = 'Crédit (auteur)'; cr.maxLength = 200; cr.value = q.credit || ''; cr.oninput = () => { q.credit = cr.value; }; fig.append(cr);
+      const cr = document.createElement('input'); cr.type = 'text'; cr.placeholder = 'Sources / crédits'; cr.title = 'Sources / crédits de la photo : auteur, licence, site ou adresse de la page'; cr.maxLength = 200; cr.value = q.credit || ''; const mark = () => cr.classList.toggle('nocredit', !cr.value.trim()); mark(); cr.oninput = () => { q.credit = cr.value; mark(); }; fig.append(cr);
       g.append(fig);
     });
   }
@@ -339,7 +340,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
         if (!up.ok) throw new Error('Envoi de la photo refusé (' + up.status + ').');
         q.url = `${sb().url}/storage/v1/object/public/photos/${name}`; delete q.blob;
       }
-      patch.photos = S.photos.map(q => ({ url: q.url, credit: (q.credit || '').trim() })); patch.photo_url = patch.photos[0]?.url || '';
+      patch.photos = S.photos.map(q => ({ url: q.url, credit: (q.credit || '').trim().slice(0, 200) })); patch.photo_url = patch.photos[0]?.url || '';
       const send = (body) => fetch(`${sb().url}/rest/v1/pois?client_id=eq.${encodeURIComponent(S.slug)}&poi_id=eq.${encodeURIComponent(S.cur.poi_id)}`, { method: 'PATCH', headers: { ...H(true), Prefer: 'return=representation' }, body: JSON.stringify(body) });
       let r = await send(patch);
       if (!r.ok && (r.status === 400 || r.status === 401 || r.status === 403) && /photos/.test(await r.clone().text())) { const { photos, ...p1 } = patch; r = await send(p1); if (r.ok) $('#saveMsg').dataset.warn = '1'; } // base sans galerie : 1 photo

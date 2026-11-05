@@ -300,7 +300,7 @@ button[disabled]{opacity:.4}
   }
   function card(q) {
     var ph = q.photo ? (/^https?:/.test(q.photo) ? q.photo : MAP[q.photo]) : '';
-    var p = $('pop'); p.innerHTML = '<button type="button" class="x">✕</button>' + (ph ? '<img alt="" src="' + esc(ph) + '">' : '') + '<h2>' + esc(q.title) + '</h2><p>' + esc(q.text) + '</p>' + (q.button && q.button.url ? '<a class="go" target="_blank" rel="noopener" href="' + esc(q.button.url) + '">' + esc(q.button.label || 'En savoir plus') + '</a>' : '');
+    var p = $('pop'); p.innerHTML = '<button type="button" class="x">✕</button>' + (ph ? '<img alt="" src="' + esc(ph) + '">' + (q.credit ? '<small style="display:block;margin:-6px 0 10px;font-size:11px;color:#8a8090">Sources / crédits : ' + esc(q.credit) + '</small>' : '') : '') + '<h2>' + esc(q.title) + '</h2><p>' + esc(q.text) + '</p>' + (q.button && q.button.url ? '<a class="go" target="_blank" rel="noopener" href="' + esc(q.button.url) + '">' + esc(q.button.label || 'En savoir plus') + '</a>' : '');
     p.firstChild.onclick = function () { p.style.display = 'none'; }; p.style.display = 'block'; p.scrollTop = 0;
   }
   $('stage').onclick = function () { $('pop').style.display = 'none'; };
