@@ -124,6 +124,10 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
         <label class="opt"><input type="checkbox" id="oTime"> Heure du jour (jour / nuit)</label>
         <label class="opt"><input type="checkbox" id="oSun"> Soleil visible</label>
         <label class="opt"><input type="checkbox" id="oMusic"> Ambiance musicale</label></div>
+      <div class="group"><b>Saison et heure à l’ouverture</b>
+        <label class="opt" id="oSeasonRow" hidden>Saison <select id="oSeason" style="flex:1"><option value="auto">Saison du jour</option><option value="printemps">Printemps</option><option value="ete">Été</option><option value="automne">Automne</option><option value="hiver">Hiver</option></select></label>
+        <label class="opt">Heure <input type="range" id="oHour" min="0" max="24" step="0.25" style="flex:1"> <span id="oHourV" class="hint"></span></label>
+        <span class="hint" id="oSeasonHint" hidden>Les visiteurs peuvent ensuite changer de saison dans le panneau de l’heure.</span></div>
       <div id="optItin" class="group" hidden><b>Itinéraires</b>
         <label class="opt">Vitesse du tracé <input type="range" id="oSpeed" min="0.25" max="3" step="0.25" style="flex:1"> <span id="oSpeedV" class="hint"></span></label>
         <label class="opt"><input type="radio" name="oOrd" value="optimise"> Ordre le plus rapide</label>
@@ -220,6 +224,9 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
     const mod = Object.assign({ time: true, sun: true, music: true }, S.cfg.modules || {});
     let row = null; try { const r = await fetch(sb().url + '/rest/v1/client_options?client_id=eq.' + encodeURIComponent(S.slug) + '&select=*', { headers: H() }); if (r.ok) row = (await r.json())[0] || null; } catch (e) {}
     $('#oTime').checked = row?.show_time ?? mod.time; $('#oSun').checked = row?.show_sun ?? mod.sun; $('#oMusic').checked = row?.show_music ?? mod.music;
+    // saison et heure à l'ouverture (mode saisons activé par ANTEMIC : config.season.on) ; null en base = réglage ANTEMIC
+    const sea = S.cfg.season || {}; const seaOn = sea.on !== false; $('#oSeasonRow').hidden = $('#oSeasonHint').hidden = !seaOn; // actif par défaut
+    $('#oSeason').value = row?.season || sea.saison || 'auto'; $('#oHour').value = row?.start_hour ?? sea.heure ?? 15; showHour();
     // options acquises : leurs réglages apparaissent ici
     S.itin = Object.assign({ speed: 1, order: 'optimise', pickOnMap: true }, S.cfg.itinerary || {}, row?.itinerary || {});
     $('#optItin').hidden = !LIC('itinerary');
@@ -240,17 +247,22 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
     }
   }
   $('#oSpeed').addEventListener('input', () => { $('#oSpeedV').textContent = '× ' + $('#oSpeed').value; });
+  function showHour() { const m = Math.round(+$('#oHour').value * 60) % 1440; $('#oHourV').textContent = String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
+  $('#oHour').addEventListener('input', showHour);
   async function saveOpts() {
     $('#optMsg').textContent = 'Enregistrement…';
     try { await fresh();
-      const r = await fetch(sb().url + '/rest/v1/client_options?on_conflict=client_id', { method: 'POST', headers: { ...H(true), Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify({ client_id: S.slug, show_time: $('#oTime').checked, show_sun: $('#oSun').checked, show_music: $('#oMusic').checked, updated_by: S.email || (S.slug + '@clients.antemic.fr'),
+      const body = { client_id: S.slug, show_time: $('#oTime').checked, show_sun: $('#oSun').checked, show_music: $('#oMusic').checked, start_hour: +$('#oHour').value, ...(S.cfg.season?.on !== false ? { season: $('#oSeason').value } : {}), updated_by: S.email || (S.slug + '@clients.antemic.fr'),
         ...(LIC('itinerary') ? { itinerary: { speed: +$('#oSpeed').value, order: document.querySelector('[name=oOrd]:checked')?.value || 'optimise', pickOnMap: $('#oPick').checked } } : {}),
-        ...(LIC('customIcons') && S.cfg.icons?.enabled ? { icons: S.icons } : {}) }) });
+        ...(LIC('customIcons') && S.cfg.icons?.enabled ? { icons: S.icons } : {}) };
+      const put = (b) => fetch(sb().url + '/rest/v1/client_options?on_conflict=client_id', { method: 'POST', headers: { ...H(true), Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify(b) });
+      let r = await put(body), old = false;
+      if (r.status === 400) { const { season, start_hour, ...rest } = body; r = await put(rest); old = r.ok; } // base pas encore à jour (schema.sql) : autres réglages enregistrés quand même
       if (!r.ok) throw new Error(r.status === 404 ? 'option indisponible (base à mettre à jour par ANTEMIC)' : 'refus ' + r.status);
-      $('#optMsg').textContent = DEMO ? 'Enregistré : la carte de démonstration est mise à jour.' : 'Enregistré : visible au prochain chargement de la carte.'; notify('options');
+      $('#optMsg').textContent = old ? 'Enregistré, sauf la saison et l’heure (base à mettre à jour par ANTEMIC).' : DEMO ? 'Enregistré : la carte de démonstration est mise à jour.' : 'Enregistré : visible au prochain chargement de la carte.'; notify('options');
     } catch (e) { $('#optMsg').textContent = 'Erreur : ' + e.message; }
   }
-  ['oTime', 'oSun', 'oMusic', 'oSpeed', 'oPick'].forEach(id => $('#' + id).addEventListener('change', saveOpts)); document.querySelectorAll('[name=oOrd]').forEach(r => r.addEventListener('change', saveOpts));
+  ['oTime', 'oSun', 'oMusic', 'oSpeed', 'oPick', 'oSeason', 'oHour'].forEach(id => $('#' + id).addEventListener('change', saveOpts)); document.querySelectorAll('[name=oOrd]').forEach(r => r.addEventListener('change', saveOpts));
   async function load() {
     loadOpts();
     const r = await fetch(sb().url + '/rest/v1/pois?client_id=eq.' + encodeURIComponent(S.slug) + '&select=*&order=title', { headers: H() });
