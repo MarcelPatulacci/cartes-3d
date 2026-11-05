@@ -284,8 +284,6 @@ footer small{font-size:7px;letter-spacing:1.7px;display:block;margin-top:8px;col
 .season-row button[aria-pressed=true]{color:var(--ink,#22302a);background:color-mix(in srgb,var(--ink,#22302a) 9%,transparent);border-color:color-mix(in srgb,var(--ink,#22302a) 14%,transparent)}
 .season-row button:focus-visible{outline:2px solid var(--accent,#d72f4c);outline-offset:1px}
 .time-panel>[hidden]{display:none!important}
-.date-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:9px;padding-top:9px;border-top:1px solid color-mix(in srgb,var(--ink,#22302a) 10%,transparent);font-size:11px;color:var(--muted,#6f7a70)}
-.date-row label{display:flex;align-items:center;gap:7px}.date-row input{font:inherit;color:var(--ink,#22302a);background:#fff8;border:1px solid #0001;border-radius:7px;padding:3px 6px}
 .time-panel{position:absolute;bottom:62px;left:50%;transform:translateX(-50%);width:420px;padding:16px 22px 12px;background:color-mix(in srgb,var(--paper) 95%,transparent);border:1px solid #fff9;border-radius:13px;box-shadow:0 8px 40px color-mix(in srgb,var(--primary) 8%,transparent);backdrop-filter:blur(10px)}
 .time-heading{display:flex;align-items:center;gap:12px}
 .time-heading>div{flex:1}
@@ -615,7 +613,7 @@ body.edit .pin{cursor:move}
 :root[data-style=metropole] .tsearch input,:root[data-style=metropole] .cat-select{color-scheme:dark}
 :root[data-style=metropole] .cat-select option{color:#f2f4f7;background:#16181e}
 :root[data-style=metropole] #tbarCount,:root[data-style=metropole] .tp-open b,:root[data-style=metropole] #timeValue{font-family:var(--mono)}
-:root[data-style=metropole] #routePanel input[type=text],:root[data-style=metropole] #routePanel input[type=search],:root[data-style=metropole] #tourList,:root[data-style=metropole] .sugg,:root[data-style=metropole] .date-row input{background:#1d2027}
+:root[data-style=metropole] #routePanel input[type=text],:root[data-style=metropole] #routePanel input[type=search],:root[data-style=metropole] #tourList,:root[data-style=metropole] .sugg{background:#1d2027}
 :root[data-style=metropole] .sugg li:hover,:root[data-style=metropole] .sugg li.on,:root[data-style=metropole] .titem:hover{background:#262a33}
 :root[data-style=metropole] #routeLocate{background:#1d2027}
 :root[data-style=metropole] .tour-n span{background:#16181e;color:var(--ink)}
@@ -741,7 +739,6 @@ body.edit .pin{cursor:move}
     <div class="range-row"><span>☀</span><input id="time" aria-label="Heure de la journée" type="range" min="0" max="24" value="15" step="0.05"><span>☾</span></div>
     <div class="time-ticks"><button data-hour="6">Aube</button><button data-hour="12">Midi</button><button data-hour="18">Crépuscule</button><button data-hour="23">Nuit</button></div>
     <div class="season-row" id="seasonRow" role="group" aria-label="Saison" hidden><button type="button" data-season="printemps" aria-pressed="false"><span aria-hidden="true">✿</span>Printemps</button><button type="button" data-season="ete" aria-pressed="false"><span aria-hidden="true">☀&#xFE0E;</span>Été</button><button type="button" data-season="automne" aria-pressed="false"><span aria-hidden="true">❦</span>Automne</button><button type="button" data-season="hiver" aria-pressed="false"><span aria-hidden="true">❄&#xFE0E;</span>Hiver</button></div>
-    <div class="date-row" id="sunDateRow" hidden><label>Date <input id="sunDate" type="date" aria-label="Date pour la position du soleil"></label><small id="sunTimes"></small></div>
     <div class="music-player"><button id="musicPlay" aria-label="Lire la musique" aria-pressed="false">▶</button><div class="music-title"><strong>Nappes douces</strong><span id="musicStatus" aria-live="polite">Ambiance musicale · générée en direct</span></div><input id="musicVolume" type="range" min="0" max="100" step="1" value="15" aria-label="Volume de la musique"><output id="musicVolumeValue" for="musicVolume">15 %</output></div>
   </div>
   <button class="tp-open" id="tpOpen" type="button" hidden aria-label="Afficher le panneau de l’heure et de la musique"><span>☀</span> <b id="tpOpenTime">15:00</b> <span class="tp-sep">·</span> <span>♪</span> <span class="tp-up">▴</span></button>
@@ -754,6 +751,6 @@ body.edit .pin{cursor:move}
 <p>Relief : IGN RGE ALTI®. Bâtiments, routes, cours d’eau, forêts et limites : IGN BD TOPO® et Admin Express. Les teintes du sol sont une interprétation pastel des orthophotographies IGN BD ORTHO®. Données publiées sous Licence Ouverte Etalab 2.0. Les hauteurs des bâtiments sont celles mesurées par l’IGN ; toitures, fenêtres, arbres, oiseaux et nuages sont des interprétations.</p>
 <p id="aboutExtra"></p>
 <p class="made">Conception : <a href="https://antemic.fr" target="_blank" rel="noopener">ANTEMIC</a>, studio 3D, Clermont-Ferrand.</p></dialog>
-<script src="app.js?v=mw3rmoi3"></script>
+<script src="app.js?v=mw3wb50z"></script>
 </body>
 </html>
