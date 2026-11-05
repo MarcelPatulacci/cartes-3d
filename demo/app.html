@@ -413,7 +413,7 @@ button[disabled]{opacity:.4}
     if (m === 'admin') {
       body.style.overflow = 'hidden';
       var a = document.createElement('div'); a.className = 'admw'; a.id = 'admw';
-      a.innerHTML = '<div class="a"><div class="info"><b>Espace commune de démonstration.</b> Modifiez un lieu puis « Enregistrer » : la carte se met à jour. La position des lieux et les bâtiments 3D sont gérés par ANTEMIC. <button type="button" class="btng tg" id="aTg" style="padding:4px 10px;font-size:13px;margin-left:6px">Voir la carte</button></div></div>'
+      a.innerHTML = '<div class="a"><div class="info">' + (/-demo(-\d+)?$/.test(SH.slug) ? '<b>Espace commune de démonstration.</b> Modifiez un lieu puis « Enregistrer » : la carte se met à jour.' : '<b>Espace commune de votre carte.</b> Modifiez un lieu puis « Enregistrer » : la carte publiée est mise à jour.') + ' La position des lieux et les bâtiments 3D sont gérés par ANTEMIC. <button type="button" class="btng tg" id="aTg" style="padding:4px 10px;font-size:13px;margin-left:6px">Voir la carte</button></div></div>'
         + '<div class="m"><div class="mh"><b>Aperçu de la carte</b><span class="st" id="aSt">✓ Mise à jour</span><button type="button" class="btng tg" id="aBack" style="padding:5px 10px;font-size:13px">◀ Retour à l’espace</button></div><div class="fr" id="aFr"></div></div>';
       body.appendChild(a);
       var ad = document.createElement('iframe'); ad.src = '../admin/?demo=' + encodeURIComponent(SH.slug); ad.title = 'Espace commune'; ad.className = 'admin'; a.firstChild.appendChild(ad);

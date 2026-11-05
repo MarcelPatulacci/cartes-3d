@@ -227,6 +227,11 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
     $('#oTime').checked = row?.show_time ?? mod.time; $('#oSun').checked = row?.show_sun ?? mod.sun; $('#oMusic').checked = row?.show_music ?? mod.music;
     // saison et heure à l'ouverture (mode saisons activé par ANTEMIC : config.season.on) ; null en base = réglage ANTEMIC
     const sea = S.cfg.season || {}; const seaOn = sea.on !== false; $('#oSeasonRow').hidden = $('#oSeasonHint').hidden = !seaOn; // actif par défaut
+    // colonnes season / start_hour présentes dans la base ? (schema.sql relancé) ; sinon réglages grisés, rien n'est promis
+    S.seaCols = true; try { const t = await fetch(sb().url + '/rest/v1/client_options?select=season,start_hour&limit=1', { headers: H() }); S.seaCols = t.ok; } catch (e) {}
+    $('#oSeason').disabled = $('#oHour').disabled = !S.seaCols;
+    $('#oSeasonHint').hidden = !seaOn && S.seaCols; $('#oSeasonHint').style.color = S.seaCols ? '' : '#e7a33c';
+    $('#oSeasonHint').textContent = S.seaCols ? 'Les visiteurs peuvent ensuite changer de saison dans le panneau de l’heure.' : 'Saison et heure à l’ouverture : bientôt disponibles (mise à jour de la base en cours chez ANTEMIC). En attendant, la carte s’ouvre sur la saison du jour.';
     $('#oSeason').value = row?.season || sea.saison || 'auto'; $('#oHour').value = row?.start_hour ?? sea.heure ?? 15; showHour();
     // options acquises : leurs réglages apparaissent ici
     S.itin = Object.assign({ speed: 1, order: 'optimise', pickOnMap: true }, S.cfg.itinerary || {}, row?.itinerary || {});
@@ -253,7 +258,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--red);width:16px;height
   async function saveOpts() {
     $('#optMsg').textContent = 'Enregistrement…';
     try { await fresh();
-      const body = { client_id: S.slug, show_time: $('#oTime').checked, show_sun: $('#oSun').checked, show_music: $('#oMusic').checked, start_hour: +$('#oHour').value, ...(S.cfg.season?.on !== false ? { season: $('#oSeason').value } : {}), updated_by: S.email || (S.slug + '@clients.antemic.fr'),
+      const body = { client_id: S.slug, show_time: $('#oTime').checked, show_sun: $('#oSun').checked, show_music: $('#oMusic').checked, ...(S.seaCols ? { start_hour: +$('#oHour').value, ...(S.cfg.season?.on !== false ? { season: $('#oSeason').value } : {}) } : {}), updated_by: S.email || (S.slug + '@clients.antemic.fr'),
         ...(LIC('itinerary') ? { itinerary: { speed: +$('#oSpeed').value, order: document.querySelector('[name=oOrd]:checked')?.value || 'optimise', pickOnMap: $('#oPick').checked } } : {}),
         ...(LIC('customIcons') && S.cfg.icons?.enabled ? { icons: S.icons } : {}) };
       const put = (b) => fetch(sb().url + '/rest/v1/client_options?on_conflict=client_id', { method: 'POST', headers: { ...H(true), Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify(b) });
