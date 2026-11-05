@@ -5,7 +5,7 @@
  "insee": "63263",
  "codePostal": "63870",
  "website": "https://www.orcines.fr/",
- "createdAt": "2026-10-29T00:00:00.000Z",
+ "createdAt": "2026-11-04T13:35:02.138Z",
  "client": {
   "contact": "",
   "email": "",
@@ -90,7 +90,8 @@
  "itinerary": {
   "speed": 1,
   "order": "optimise",
-  "pickOnMap": true
+  "pickOnMap": true,
+  "revealRadius": 100
  },
  "zoneMode": "villages",
  "villages": [
@@ -219,8 +220,18 @@
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/les-bicyclettes-du-grenier-6462718.jpg",
+    "alt": "Les bicyclettes du grenier",
+    "credit": "à renseigner"
+   },
+   "photos": [
+    {
+     "url": "photos/les-bicyclettes-du-grenier-6462718.jpg",
+     "alt": "Les bicyclettes du grenier",
+     "credit": "à renseigner"
+    }
+   ]
   },
   {
    "id": "pharmacie",
@@ -233,8 +244,18 @@
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/pharmacie-6637510.jpg",
+    "alt": "Pharmacie",
+    "credit": "Google street view"
+   },
+   "photos": [
+    {
+     "url": "photos/pharmacie-6637510.jpg",
+     "alt": "Pharmacie",
+     "credit": "Google street view"
+    }
+   ]
   },
   {
    "id": "bar-tabac-presse-l-arborifontain",
@@ -263,16 +284,30 @@
   {
    "id": "sancy-camp",
    "cat": "com",
-   "x": 2316.2,
-   "y": -950.7,
-   "title": "Sancy camp",
-   "text": "36 bis rue de la Chaloux - La baraque\n63870 ORCINES",
+   "x": 2318.7,
+   "y": -885,
+   "title": "We-Van Clermont-Ferrand",
+   "text": "36 bis rue de la Chaloux - La baraque\n63870 ORCINES\n\n04 73 77 61 90",
    "button": {
     "label": "En savoir plus",
-    "url": ""
+    "url": "https://www.google.com/aclk?sa=L&pf=1&ai=DChsSEwiJyuacovGXAxX4jGgJHXZ_KvwYACICCAEQABoCd2Y&co=1&ase=2&gclid=Cj0KCQiA77DXBhCHARIsAHf2MNo-KIT5zicGvwfjnLxOG2s_UPb9rPuEAq1EazDrFRH596Z_2z7ZeYwaAlh9EALw_wcB&cid=CAASsAHkaOIEU_EdO3OaRlhTrDsvJSxzqxPfUFZNvaBB_Uh5PtwbQjr426tyUhTH6poMTajEkNfrMtgCBU81EcVnjLaS16tzpCugPh97el9YsK00j0QaSoZ6VaS6iAepzZ0GiXcipHO0j7mXoRGvdL6QuIg3CpkQcmE4fYGLTez630zDKARK3lRW_QmESDZnfqqz2nx1GYsSQ5w3NBm0epIIMFqAGkLQQTokOEa0G9ZYaOZp8g&cce=2&category=acrcp_v1_32&sig=AOD64_3kpaaOBgN162TP5xpF79Mc_TebMg&q&nis=4&adurl=https://www.we-van.com/minibus/location-minibus-clermont-ferrand-france-17.php?gad_source%3D1%26gad_campaignid%3D21874523714%26gbraid%3D0AAAAABgusuOajWjk9MQ4FAjUP7mPKm9FW%26gclid%3DCj0KCQiA77DXBhCHARIsAHf2MNo-KIT5zicGvwfjnLxOG2s_UPb9rPuEAq1EazDrFRH596Z_2z7ZeYwaAlh9EALw_wcB&ved=2ahUKEwiDud-covGXAxUhRKQEHSVlEWAQ0Qx6BAhJEAs"
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/sancy-camp-6937973.jpg",
+    "alt": "We-Van Clermont-Ferrand",
+    "credit": "Google street view"
+   },
+   "photos": [
+    {
+     "url": "photos/sancy-camp-6937973.jpg",
+     "alt": "We-Van Clermont-Ferrand",
+     "credit": "Google street view"
+    }
+   ],
+   "orig": {
+    "x": 2316.2,
+    "y": -950.7
+   }
   },
   {
    "id": "stations-bees",
@@ -309,8 +344,18 @@
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/la-ferme-des-sonnailles-5654155.jpg",
+    "alt": "La Ferme des Sonnailles",
+    "credit": "ferme des sonailles"
+   },
+   "photos": [
+    {
+     "url": "photos/la-ferme-des-sonnailles-5654155.jpg",
+     "alt": "La Ferme des Sonnailles",
+     "credit": "ferme des sonailles"
+    }
+   ]
   },
   {
    "id": "gaec-penysarcenat",
@@ -372,15 +417,15 @@
     "url": ""
    },
    "photo": {
-    "url": "photos/carrefour-express.jpg",
+    "url": "photos/carrefour-express-9585250.jpg",
     "alt": "Carrefour Express",
-    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    "credit": "carrefour Express Orcines"
    },
    "photos": [
     {
-     "url": "photos/carrefour-express.jpg",
+     "url": "photos/carrefour-express-9585250.jpg",
      "alt": "Carrefour Express",
-     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+     "credit": "carrefour Express Orcines"
     }
    ]
   },
@@ -515,8 +560,19 @@
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/parking-du-col-des-goules-1097076.jpg",
+    "alt": "Parking du Col des Goules",
+    "credit": "Radio France - Mickaël Chailloux"
+   },
+   "photos": [
+    {
+     "url": "photos/parking-du-col-des-goules-1097076.jpg",
+     "alt": "Parking du Col des Goules",
+     "credit": "Radio France - Mickaël Chailloux"
+    }
+   ],
+   "icon": "Ⓟ"
   },
   {
    "id": "borne-electrique",
@@ -530,25 +586,41 @@
     "url": ""
    },
    "photo": {
-    "url": "photos/borne-electrique.jpg",
+    "url": "photos/borne-electrique-8825184.jpg",
     "alt": "Borne Electrique",
-    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    "credit": "Aurélien Chauchat"
    },
    "photos": [
     {
-     "url": "photos/borne-electrique.jpg",
+     "url": "photos/borne-electrique-8825184.jpg",
      "alt": "Borne Electrique",
-     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+     "credit": "Aurélien Chauchat"
     }
-   ]
+   ],
+   "model": {
+    "file": "models/borne-electrique.glb",
+    "v": 1793900868174,
+    "version": 1,
+    "x": 1103.4,
+    "y": -565.3,
+    "scale": 1,
+    "rotation": 70,
+    "hideAt": [],
+    "source": "Import borne elec.glb",
+    "orig": {
+     "x": 1103.4,
+     "y": -565.3
+    },
+    "level": "model3"
+   }
   },
   {
    "id": "aire-de-covoiturage",
    "cat": "pub",
-   "x": 1048.9,
-   "y": -521.2,
+   "x": 1061.2,
+   "y": -518.2,
    "title": "Aire de Covoiturage",
-   "text": "9 Rue de la Liberté\n63870 Orcines",
+   "text": "9 rue de la Liberté\n63870 Orcines",
    "button": {
     "label": "En savoir plus",
     "url": ""
@@ -593,7 +665,8 @@
      "alt": "Aire de Camping-Car Orcines",
      "credit": "sogefi sig (Panoramax, CC BY-SA 4.0)"
     }
-   ]
+   ],
+   "icon": "⛺"
   },
   {
    "id": "salle-des-fetes-de-ternant",
@@ -620,8 +693,19 @@
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/cimetiere-de-ternant-1296076.jpg",
+    "alt": "Cimetiere de Ternant",
+    "credit": ""
+   },
+   "photos": [
+    {
+     "url": "photos/cimetiere-de-ternant-1296076.jpg",
+     "alt": "Cimetiere de Ternant",
+     "credit": ""
+    }
+   ],
+   "icon": "✝"
   },
   {
    "id": "cimetiere-orcines",
@@ -723,16 +807,30 @@
   {
    "id": "terrain-de-bmx",
    "cat": "pub",
-   "x": 976.8,
-   "y": -210.9,
+   "x": 1090.1,
+   "y": -67.4,
    "title": "Terrain de Bmx",
    "text": "56 route de limoges\n63870 Orcines",
    "button": {
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/terrain-de-bmx-470502.jpg",
+    "alt": "Terrain de Bmx",
+    "credit": ""
+   },
+   "photos": [
+    {
+     "url": "photos/terrain-de-bmx-470502.jpg",
+     "alt": "Terrain de Bmx",
+     "credit": ""
+    }
+   ],
+   "orig": {
+    "x": 976.8,
+    "y": -210.9
+   }
   },
   {
    "id": "tennis-club-orcines",
@@ -745,8 +843,18 @@
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": [],
+   "photo": {
+    "url": "photos/tennis-club-orcines-333635.jpg",
+    "alt": "Tennis Club Orcines",
+    "credit": "Tennis Club Orcines"
+   },
+   "photos": [
+    {
+     "url": "photos/tennis-club-orcines-333635.jpg",
+     "alt": "Tennis Club Orcines",
+     "credit": "Tennis Club Orcines"
+    }
+   ],
    "model": {
     "file": "models/tennis-club-orcines.glb",
     "v": 1793462444394,
@@ -841,6 +949,11 @@
      "url": "photos/l-atelier.jpg",
      "alt": "L'Atelier",
      "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    },
+    {
+     "url": "photos/l-atelier-8710155.jpg",
+     "alt": "L'Atelier",
+     "credit": "à renseigner"
     }
    ]
   },
@@ -855,8 +968,18 @@
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/bibliotheque-8698059.jpg",
+    "alt": "Bibliotheque",
+    "credit": ""
+   },
+   "photos": [
+    {
+     "url": "photos/bibliotheque-8698059.jpg",
+     "alt": "Bibliotheque",
+     "credit": ""
+    }
+   ]
   },
   {
    "id": "mairie",
@@ -942,15 +1065,15 @@
     "url": ""
    },
    "photo": {
-    "url": "photos/ecole-publique-orcines.jpg",
+    "url": "photos/ecole-publique-orcines-6120607.jpg",
     "alt": "Ecole Publique Orcines",
-    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    "credit": "Google street view"
    },
    "photos": [
     {
-     "url": "photos/ecole-publique-orcines.jpg",
+     "url": "photos/ecole-publique-orcines-6120607.jpg",
      "alt": "Ecole Publique Orcines",
-     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+     "credit": "Google street view"
     }
    ],
    "modelPrev": {
@@ -1000,30 +1123,6 @@
    ]
   },
   {
-   "id": "le-relais-des-puys",
-   "cat": "res",
-   "x": 1765.4,
-   "y": -1019,
-   "title": "Le Relais des Puys",
-   "text": "Hôtel Restaurant\n59 route de La Baraque\n63870 ORCINES\nTél : 04 73 62 10 51",
-   "button": {
-    "label": "En savoir plus",
-    "url": ""
-   },
-   "photo": {
-    "url": "photos/le-relais-des-puys.jpg",
-    "alt": "Le Relais des Puys",
-    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
-   },
-   "photos": [
-    {
-     "url": "photos/le-relais-des-puys.jpg",
-     "alt": "Le Relais des Puys",
-     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
-    }
-   ]
-  },
-  {
    "id": "le-p-tit-casse-graine",
    "cat": "res",
    "x": 783.4,
@@ -1058,8 +1157,18 @@
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/le-petit-graillou-5708720.jpg",
+    "alt": "Le Petit Graillou",
+    "credit": "Le Petit Graillou"
+   },
+   "photos": [
+    {
+     "url": "photos/le-petit-graillou-5708720.jpg",
+     "alt": "Le Petit Graillou",
+     "credit": "Le Petit Graillou"
+    }
+   ]
   },
   {
    "id": "le-resto-d-epicure",
@@ -1073,15 +1182,15 @@
     "url": ""
    },
    "photo": {
-    "url": "photos/le-resto-d-epicure.jpg",
+    "url": "photos/le-resto-d-epicure-5492893.jpg",
     "alt": "Le Resto d'Epicure",
-    "credit": "Clermont63 (Wikimedia Commons, CC BY-SA 3.0)"
+    "credit": "à renseigner"
    },
    "photos": [
     {
-     "url": "photos/le-resto-d-epicure.jpg",
+     "url": "photos/le-resto-d-epicure-5492893.jpg",
      "alt": "Le Resto d'Epicure",
-     "credit": "Clermont63 (Wikimedia Commons, CC BY-SA 3.0)"
+     "credit": "à renseigner"
     }
    ]
   },
@@ -1096,8 +1205,18 @@
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/h-tel-restaurant-les-hirondelles-9658252.jpg",
+    "alt": "Hôtel Restaurant Les Hirondelles",
+    "credit": "Hôtel Restaurant Les Hirondelles"
+   },
+   "photos": [
+    {
+     "url": "photos/h-tel-restaurant-les-hirondelles-9658252.jpg",
+     "alt": "Hôtel Restaurant Les Hirondelles",
+     "credit": "Hôtel Restaurant Les Hirondelles"
+    }
+   ]
   },
   {
    "id": "c-t-tiretaine-by-nathalie",
@@ -1110,8 +1229,28 @@
     "label": "En savoir plus",
     "url": ""
    },
-   "photo": null,
-   "photos": []
+   "photo": {
+    "url": "photos/c-t-tiretaine-by-nathalie-6262782.jpg",
+    "alt": "Côté Tiretaine By Nathalie",
+    "credit": "à renseigner"
+   },
+   "photos": [
+    {
+     "url": "photos/c-t-tiretaine-by-nathalie-6262782.jpg",
+     "alt": "Côté Tiretaine By Nathalie",
+     "credit": "à renseigner"
+    },
+    {
+     "url": "photos/c-t-tiretaine-by-nathalie-6262831.jpg",
+     "alt": "Côté Tiretaine By Nathalie",
+     "credit": "à renseigner"
+    },
+    {
+     "url": "photos/c-t-tiretaine-by-nathalie-6262878.jpg",
+     "alt": "Côté Tiretaine By Nathalie",
+     "credit": "à renseigner"
+    }
+   ]
   },
   {
    "id": "auberge-de-la-fontaine-du-berger",
@@ -1125,15 +1264,15 @@
     "url": ""
    },
    "photo": {
-    "url": "photos/auberge-de-la-fontaine-du-berger.jpg",
+    "url": "photos/auberge-de-la-fontaine-du-berger-1005115.jpg",
     "alt": "Auberge de La Fontaine du Berger",
-    "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+    "credit": "Auberge de La Fontaine du Berger"
    },
    "photos": [
     {
-     "url": "photos/auberge-de-la-fontaine-du-berger.jpg",
+     "url": "photos/auberge-de-la-fontaine-du-berger-1005115.jpg",
      "alt": "Auberge de La Fontaine du Berger",
-     "credit": "Campanu (Panoramax, CC BY-SA 4.0)"
+     "credit": "Auberge de La Fontaine du Berger"
     }
    ]
   },
@@ -1198,7 +1337,144 @@
     "url": ""
    },
    "photos": [],
-   "icon": "♜"
+   "icon": "♜",
+   "model": {
+    "file": "models/nouveau-lieu_v001.glb",
+    "v": 1793894230294,
+    "version": 1,
+    "x": -2661.32,
+    "y": -1836.23,
+    "dz": 8.93,
+    "rotation": -153.71,
+    "scale": 0.6997,
+    "hideAt": [
+     [
+      -2683.3959999999997,
+      -1828.336
+     ],
+     [
+      -2692.4625,
+      -1816.9375
+     ],
+     [
+      -2668.7400000000002,
+      -1806.33
+     ],
+     [
+      -2684.25,
+      -1801.6166666666668
+     ],
+     [
+      -2654.825,
+      -1832.625
+     ],
+     [
+      -2697.875,
+      -1841.85
+     ]
+    ],
+    "source": "Blender (addon ANTEMIC)"
+   }
+  },
+  {
+   "id": "nouveau-lieu-2",
+   "cat": "dec",
+   "x": -2688.5,
+   "y": -1894.8,
+   "title": "Temple de Mercure",
+   "text": "",
+   "photo": {
+    "url": "photos/nouveau-lieu-2-5549083.jpg",
+    "alt": "Temple de Mercure",
+    "credit": "à renseigner"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-2-5549083.jpg",
+     "alt": "Temple de Mercure",
+     "credit": "à renseigner"
+    },
+    {
+     "url": "photos/nouveau-lieu-2-5549234.jpg",
+     "alt": "Temple de Mercure",
+     "credit": "Jodie Way"
+    }
+   ],
+   "icon": "♜",
+   "orig": {
+    "x": -2671.7,
+    "y": -1868.6
+   }
+  },
+  {
+   "id": "nouveau-lieu-3",
+   "cat": "pub",
+   "x": 1021.8,
+   "y": -27,
+   "title": "Terrain de football",
+   "text": "",
+   "photo": {
+    "url": "photos/nouveau-lieu-3-554646.jpg",
+    "alt": "Terrain de football",
+    "credit": "AS ORCINES FOOT"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-3-554646.jpg",
+     "alt": "Terrain de football",
+     "credit": "AS ORCINES FOOT"
+    }
+   ],
+   "icon": "⚑"
+  },
+  {
+   "id": "nouveau-lieu-4",
+   "cat": "dec",
+   "x": 366.3,
+   "y": 1538.8,
+   "title": "Croix de Ternant",
+   "text": "",
+   "photo": {
+    "url": "photos/nouveau-lieu-4-2470880.jpg",
+    "alt": "Croix de Ternant",
+    "credit": "à renseigner"
+   },
+   "button": {
+    "label": "En savoir plus",
+    "url": ""
+   },
+   "photos": [
+    {
+     "url": "photos/nouveau-lieu-4-2470880.jpg",
+     "alt": "Croix de Ternant",
+     "credit": "à renseigner"
+    }
+   ],
+   "icon": "✝",
+   "model": {
+    "file": "models/nouveau-lieu-4.glb",
+    "v": 1793904198702,
+    "version": 1,
+    "x": 366.3,
+    "y": 1538.8,
+    "scale": 3.5,
+    "rotation": -15,
+    "hideAt": [],
+    "source": "Import croix_ternant.glb",
+    "orig": {
+     "x": 366.3,
+     "y": 1538.8
+    },
+    "level": "model3"
+   }
   }
  ],
  "supabase": {
@@ -1218,6 +1494,26 @@
     "poi": "ecole-publique-orcines",
     "date": "2026-11-04",
     "offered": false
+   },
+   {
+    "id": "model3",
+    "label": "Monument 3D — niveau Remarquable",
+    "price": 790,
+    "qty": 1,
+    "note": "Borne Electrique",
+    "poi": "borne-electrique",
+    "date": "2026-11-05",
+    "offered": false
+   },
+   {
+    "id": "model3",
+    "label": "Monument 3D — niveau Remarquable",
+    "price": 790,
+    "qty": 1,
+    "note": "Croix de Ternant",
+    "poi": "nouveau-lieu-4",
+    "date": "2026-11-05",
+    "offered": false
    }
   ],
   "offered": {
@@ -1236,7 +1532,7 @@
   "launchOffer": true
  },
  "mapGeneratedAt": "2026-10-30T03:15:21.958Z",
- "publishedAt": "2026-11-02T20:11:02.790Z",
+ "publishedAt": "2026-11-05T21:42:13.917Z",
  "brandPalette": [
   "#f7f7f7",
   "#f2f2f2",
@@ -1261,7 +1557,7 @@
   "poi": {}
  },
  "objects": [],
- "publishedTo": "https://marcelpatulacci.github.io/cartes-3d/",
+ "publishedTo": "https://antemic3d.github.io/cartes-3d/",
  "gen": {
   "types": []
  },
@@ -1272,11 +1568,10 @@
  "communes": [],
  "publication": {
   "mode": "definitive",
-  "until": null,
-  "suspended": true,
   "days": null,
-  "at": "2026-11-02T20:11:02.790Z",
-  "changedAt": "2026-11-04T13:35:26.420Z"
+  "until": null,
+  "suspended": false,
+  "at": "2026-11-05T21:42:13.917Z"
  },
  "quotes": [
   {
@@ -1497,6 +1792,82 @@
     },
     "pois": 44
    }
+  }
+ ],
+ "demoOnline": {
+  "at": "2026-11-05T18:57:46.195Z",
+  "views": 13,
+  "v": 3,
+  "admin": true,
+  "shot": {
+   "saison": "ete",
+   "heure": 10
+  }
+ },
+ "promotedAt": "2026-11-04T14:52:34.202Z",
+ "season": {
+  "on": true,
+  "mode": "saison",
+  "saison": "printemps",
+  "jour": 15,
+  "mois": 7,
+  "heure": 15,
+  "decor": true
+ },
+ "removedAntennas": [
+  {
+   "x": 1894,
+   "y": -1057,
+   "h": 30.1,
+   "at": "2026-11-05"
+  },
+  {
+   "x": 4110,
+   "y": -2359,
+   "h": 22.1,
+   "at": "2026-11-05"
+  },
+  {
+   "x": -77,
+   "y": 1061,
+   "h": 35.5,
+   "at": "2026-11-05"
+  },
+  {
+   "x": -19,
+   "y": 1039,
+   "h": 35.5,
+   "at": "2026-11-05"
+  },
+  {
+   "x": -57,
+   "y": 1054,
+   "h": 35.5,
+   "at": "2026-11-05"
+  },
+  {
+   "x": 4030,
+   "y": -2241,
+   "h": 27.6,
+   "at": "2026-11-05"
+  },
+  {
+   "x": -2658,
+   "y": -1815,
+   "h": 89,
+   "at": "2026-11-05"
+  },
+  {
+   "x": 65,
+   "y": -2851,
+   "h": 24.3,
+   "at": "2026-11-05"
+  },
+  {
+   "x": -2678,
+   "y": -1836,
+   "h": 99,
+   "at": "2026-11-05"
   }
  ]
 }
